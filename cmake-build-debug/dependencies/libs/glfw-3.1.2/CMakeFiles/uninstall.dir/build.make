@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.1.3\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Elias\Desktop\BLANK OpenGL"
+CMAKE_SOURCE_DIR = D:\DATA\Documents\gitHub\Vivid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug"
+CMAKE_BINARY_DIR = D:\DATA\Documents\gitHub\Vivid\cmake-build-debug
 
 # Utility rule file for uninstall.
 
@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug"
 include dependencies/libs/glfw-3.1.2/CMakeFiles/uninstall.dir/progress.make
 
 dependencies/libs/glfw-3.1.2/CMakeFiles/uninstall:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1\DEPEND~1\libs\GLFW-3~1.2 && "C:\Program Files\JetBrains\CLion 2017.1.3\bin\cmake\bin\cmake.exe" -P "C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/cmake_uninstall.cmake"
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs\glfw-3.1.2 && "C:\Program Files\JetBrains\CLion 2017.1.3\bin\cmake\bin\cmake.exe" -P D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/cmake_uninstall.cmake
 
 uninstall: dependencies/libs/glfw-3.1.2/CMakeFiles/uninstall
 uninstall: dependencies/libs/glfw-3.1.2/CMakeFiles/uninstall.dir/build.make
@@ -66,10 +66,10 @@ dependencies/libs/glfw-3.1.2/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : dependencies/libs/glfw-3.1.2/CMakeFiles/uninstall.dir/build
 
 dependencies/libs/glfw-3.1.2/CMakeFiles/uninstall.dir/clean:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1\DEPEND~1\libs\GLFW-3~1.2 && $(CMAKE_COMMAND) -P CMakeFiles\uninstall.dir\cmake_clean.cmake
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs\glfw-3.1.2 && $(CMAKE_COMMAND) -P CMakeFiles\uninstall.dir\cmake_clean.cmake
 .PHONY : dependencies/libs/glfw-3.1.2/CMakeFiles/uninstall.dir/clean
 
 dependencies/libs/glfw-3.1.2/CMakeFiles/uninstall.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Elias\Desktop\BLANK OpenGL" "C:\Users\Elias\Desktop\BLANK OpenGL\dependencies\libs\glfw-3.1.2" "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug" "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\dependencies\libs\glfw-3.1.2" "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\dependencies\libs\glfw-3.1.2\CMakeFiles\uninstall.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\DATA\Documents\gitHub\Vivid D:\DATA\Documents\gitHub\Vivid\dependencies\libs\glfw-3.1.2 D:\DATA\Documents\gitHub\Vivid\cmake-build-debug D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs\glfw-3.1.2 D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs\glfw-3.1.2\CMakeFiles\uninstall.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : dependencies/libs/glfw-3.1.2/CMakeFiles/uninstall.dir/depend
 

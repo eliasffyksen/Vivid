@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.1.3\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Elias\Desktop\BLANK OpenGL"
+CMAKE_SOURCE_DIR = D:\DATA\Documents\gitHub\Vivid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug"
+CMAKE_BINARY_DIR = D:\DATA\Documents\gitHub\Vivid\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -123,14 +123,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\CMakeFiles" "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\dependencies\libs\CMakeFiles\progress.marks"
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\CMakeFiles" 0
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs\CMakeFiles\progress.marks
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/clean
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/clean
 .PHONY : clean
 
 # The main clean target
@@ -140,22 +140,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/preinstall
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/preinstall
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 dependencies/libs/CMakeFiles/GLEW_1130.dir/rule:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/CMakeFiles/GLEW_1130.dir/rule
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/CMakeFiles/GLEW_1130.dir/rule
 .PHONY : dependencies/libs/CMakeFiles/GLEW_1130.dir/rule
 
 # Convenience name for target.
@@ -165,7 +165,7 @@ GLEW_1130: dependencies/libs/CMakeFiles/GLEW_1130.dir/rule
 
 # fast build rule for target.
 GLEW_1130/fast:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\CMakeFiles\GLEW_1130.dir\build.make dependencies/libs/CMakeFiles/GLEW_1130.dir/build
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\CMakeFiles\GLEW_1130.dir\build.make dependencies/libs/CMakeFiles/GLEW_1130.dir/build
 .PHONY : GLEW_1130/fast
 
 glew-1.13.0/src/glew.obj: glew-1.13.0/src/glew.c.obj
@@ -174,7 +174,7 @@ glew-1.13.0/src/glew.obj: glew-1.13.0/src/glew.c.obj
 
 # target to build an object file
 glew-1.13.0/src/glew.c.obj:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\CMakeFiles\GLEW_1130.dir\build.make dependencies/libs/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.obj
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\CMakeFiles\GLEW_1130.dir\build.make dependencies/libs/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.obj
 .PHONY : glew-1.13.0/src/glew.c.obj
 
 glew-1.13.0/src/glew.i: glew-1.13.0/src/glew.c.i
@@ -183,7 +183,7 @@ glew-1.13.0/src/glew.i: glew-1.13.0/src/glew.c.i
 
 # target to preprocess a source file
 glew-1.13.0/src/glew.c.i:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\CMakeFiles\GLEW_1130.dir\build.make dependencies/libs/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.i
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\CMakeFiles\GLEW_1130.dir\build.make dependencies/libs/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.i
 .PHONY : glew-1.13.0/src/glew.c.i
 
 glew-1.13.0/src/glew.s: glew-1.13.0/src/glew.c.s
@@ -192,7 +192,7 @@ glew-1.13.0/src/glew.s: glew-1.13.0/src/glew.c.s
 
 # target to generate assembly for a file
 glew-1.13.0/src/glew.c.s:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\CMakeFiles\GLEW_1130.dir\build.make dependencies/libs/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.s
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\CMakeFiles\GLEW_1130.dir\build.make dependencies/libs/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.s
 .PHONY : glew-1.13.0/src/glew.c.s
 
 # Help Target
@@ -222,6 +222,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

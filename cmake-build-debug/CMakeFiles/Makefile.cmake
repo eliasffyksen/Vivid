@@ -81,7 +81,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/BLANKOpenGL.dir/DependInfo.cmake"
+  "CMakeFiles/Vivid.dir/DependInfo.cmake"
   "dependencies/libs/CMakeFiles/GLEW_1130.dir/DependInfo.cmake"
   "dependencies/libs/glfw-3.1.2/CMakeFiles/uninstall.dir/DependInfo.cmake"
   "dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"

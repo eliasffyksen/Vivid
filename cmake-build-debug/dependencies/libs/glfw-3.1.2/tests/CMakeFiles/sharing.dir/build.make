@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.1.3\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Elias\Desktop\BLANK OpenGL"
+CMAKE_SOURCE_DIR = D:\DATA\Documents\gitHub\Vivid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug"
+CMAKE_BINARY_DIR = D:\DATA\Documents\gitHub\Vivid\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/depend.make
@@ -59,16 +59,16 @@ include dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/flags.make
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/sharing.c.obj: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/flags.make
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/sharing.c.obj: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/includes_C.rsp
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/sharing.c.obj: ../dependencies/libs/glfw-3.1.2/tests/sharing.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/sharing.c.obj"
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1\DEPEND~1\libs\GLFW-3~1.2\tests && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\sharing.dir\sharing.c.obj   -c "C:\Users\Elias\Desktop\BLANK OpenGL\dependencies\libs\glfw-3.1.2\tests\sharing.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/sharing.c.obj"
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs\glfw-3.1.2\tests && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\sharing.dir\sharing.c.obj   -c D:\DATA\Documents\gitHub\Vivid\dependencies\libs\glfw-3.1.2\tests\sharing.c
 
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/sharing.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sharing.dir/sharing.c.i"
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1\DEPEND~1\libs\GLFW-3~1.2\tests && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Elias\Desktop\BLANK OpenGL\dependencies\libs\glfw-3.1.2\tests\sharing.c" > CMakeFiles\sharing.dir\sharing.c.i
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs\glfw-3.1.2\tests && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\DATA\Documents\gitHub\Vivid\dependencies\libs\glfw-3.1.2\tests\sharing.c > CMakeFiles\sharing.dir\sharing.c.i
 
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/sharing.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sharing.dir/sharing.c.s"
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1\DEPEND~1\libs\GLFW-3~1.2\tests && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Elias\Desktop\BLANK OpenGL\dependencies\libs\glfw-3.1.2\tests\sharing.c" -o CMakeFiles\sharing.dir\sharing.c.s
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs\glfw-3.1.2\tests && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\DATA\Documents\gitHub\Vivid\dependencies\libs\glfw-3.1.2\tests\sharing.c -o CMakeFiles\sharing.dir\sharing.c.s
 
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/sharing.c.obj.requires:
 
@@ -94,8 +94,8 @@ sharing_EXTERNAL_OBJECTS =
 ../bin/release_WIN64_0_0/sharing.exe: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/linklibs.rsp
 ../bin/release_WIN64_0_0/sharing.exe: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/objects1.rsp
 ../bin/release_WIN64_0_0/sharing.exe: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable ..\..\..\..\..\bin\release_WIN64_0_0\sharing.exe"
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1\DEPEND~1\libs\GLFW-3~1.2\tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\sharing.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable ..\..\..\..\..\bin\release_WIN64_0_0\sharing.exe"
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs\glfw-3.1.2\tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\sharing.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/build: ../bin/release_WIN64_0_0/sharing.exe
@@ -107,10 +107,10 @@ dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/requires: dependencies
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/requires
 
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/clean:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1\DEPEND~1\libs\GLFW-3~1.2\tests && $(CMAKE_COMMAND) -P CMakeFiles\sharing.dir\cmake_clean.cmake
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs\glfw-3.1.2\tests && $(CMAKE_COMMAND) -P CMakeFiles\sharing.dir\cmake_clean.cmake
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/clean
 
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Elias\Desktop\BLANK OpenGL" "C:\Users\Elias\Desktop\BLANK OpenGL\dependencies\libs\glfw-3.1.2\tests" "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug" "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\dependencies\libs\glfw-3.1.2\tests" "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\dependencies\libs\glfw-3.1.2\tests\CMakeFiles\sharing.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\DATA\Documents\gitHub\Vivid D:\DATA\Documents\gitHub\Vivid\dependencies\libs\glfw-3.1.2\tests D:\DATA\Documents\gitHub\Vivid\cmake-build-debug D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs\glfw-3.1.2\tests D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs\glfw-3.1.2\tests\CMakeFiles\sharing.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/depend
 

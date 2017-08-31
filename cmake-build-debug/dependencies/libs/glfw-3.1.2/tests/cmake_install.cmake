@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests
+# Install script for directory: D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/GLTest")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/BLANKOpenGL")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

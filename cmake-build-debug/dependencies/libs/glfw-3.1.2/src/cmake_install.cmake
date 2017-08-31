@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src
+# Install script for directory: D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/GLTest")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/BLANKOpenGL")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -28,6 +28,6 @@ if(NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/libglfw3.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/libglfw3.a")
 endif()
 

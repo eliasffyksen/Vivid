@@ -47,23 +47,13 @@ RM = "C:\Program Files\JetBrains\CLion 2017.1.3\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Elias\Desktop\BLANK OpenGL"
+CMAKE_SOURCE_DIR = D:\DATA\Documents\gitHub\Vivid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug"
+CMAKE_BINARY_DIR = D:\DATA\Documents\gitHub\Vivid\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -110,6 +100,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -123,9 +123,9 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\CMakeFiles" "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -154,17 +154,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named BLANKOpenGL
+# Target rules for targets named Vivid
 
 # Build rule for target.
-BLANKOpenGL: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 BLANKOpenGL
-.PHONY : BLANKOpenGL
+Vivid: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 Vivid
+.PHONY : Vivid
 
 # fast build rule for target.
-BLANKOpenGL/fast:
-	$(MAKE) -f CMakeFiles\BLANKOpenGL.dir\build.make CMakeFiles/BLANKOpenGL.dir/build
-.PHONY : BLANKOpenGL/fast
+Vivid/fast:
+	$(MAKE) -f CMakeFiles\Vivid.dir\build.make CMakeFiles/Vivid.dir/build
+.PHONY : Vivid/fast
 
 #=============================================================================
 # Target rules for targets named GLEW_1130
@@ -510,7 +510,7 @@ src/main.obj: src/main.cpp.obj
 
 # target to build an object file
 src/main.cpp.obj:
-	$(MAKE) -f CMakeFiles\BLANKOpenGL.dir\build.make CMakeFiles/BLANKOpenGL.dir/src/main.cpp.obj
+	$(MAKE) -f CMakeFiles\Vivid.dir\build.make CMakeFiles/Vivid.dir/src/main.cpp.obj
 .PHONY : src/main.cpp.obj
 
 src/main.i: src/main.cpp.i
@@ -519,7 +519,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles\BLANKOpenGL.dir\build.make CMakeFiles/BLANKOpenGL.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles\Vivid.dir\build.make CMakeFiles/Vivid.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -528,7 +528,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles\BLANKOpenGL.dir\build.make CMakeFiles/BLANKOpenGL.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles\Vivid.dir\build.make CMakeFiles/Vivid.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -537,12 +537,12 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... list_install_components
-	@echo ... BLANKOpenGL
+	@echo ... Vivid
 	@echo ... install/local
 	@echo ... install
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... list_install_components
 	@echo ... install/strip
 	@echo ... GLEW_1130
 	@echo ... uninstall

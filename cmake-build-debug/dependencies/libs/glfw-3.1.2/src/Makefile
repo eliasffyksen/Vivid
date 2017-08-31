@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.1.3\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Elias\Desktop\BLANK OpenGL"
+CMAKE_SOURCE_DIR = D:\DATA\Documents\gitHub\Vivid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug"
+CMAKE_BINARY_DIR = D:\DATA\Documents\gitHub\Vivid\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -123,14 +123,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\CMakeFiles" "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\dependencies\libs\glfw-3.1.2\src\CMakeFiles\progress.marks"
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\CMakeFiles" 0
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs\glfw-3.1.2\src\CMakeFiles\progress.marks
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/src/clean
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/src/clean
 .PHONY : clean
 
 # The main clean target
@@ -140,22 +140,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/src/preinstall
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/src/preinstall
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/rule:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/rule
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/rule
 .PHONY : dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/rule
 
 # Convenience name for target.
@@ -165,7 +165,7 @@ glfw: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/rule
 
 # fast build rule for target.
 glfw/fast:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/build
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/build
 .PHONY : glfw/fast
 
 context.obj: context.c.obj
@@ -174,7 +174,7 @@ context.obj: context.c.obj
 
 # target to build an object file
 context.c.obj:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/context.c.obj
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/context.c.obj
 .PHONY : context.c.obj
 
 context.i: context.c.i
@@ -183,7 +183,7 @@ context.i: context.c.i
 
 # target to preprocess a source file
 context.c.i:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/context.c.i
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/context.c.i
 .PHONY : context.c.i
 
 context.s: context.c.s
@@ -192,7 +192,7 @@ context.s: context.c.s
 
 # target to generate assembly for a file
 context.c.s:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/context.c.s
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/context.c.s
 .PHONY : context.c.s
 
 init.obj: init.c.obj
@@ -201,7 +201,7 @@ init.obj: init.c.obj
 
 # target to build an object file
 init.c.obj:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/init.c.obj
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/init.c.obj
 .PHONY : init.c.obj
 
 init.i: init.c.i
@@ -210,7 +210,7 @@ init.i: init.c.i
 
 # target to preprocess a source file
 init.c.i:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/init.c.i
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/init.c.i
 .PHONY : init.c.i
 
 init.s: init.c.s
@@ -219,7 +219,7 @@ init.s: init.c.s
 
 # target to generate assembly for a file
 init.c.s:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/init.c.s
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/init.c.s
 .PHONY : init.c.s
 
 input.obj: input.c.obj
@@ -228,7 +228,7 @@ input.obj: input.c.obj
 
 # target to build an object file
 input.c.obj:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/input.c.obj
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/input.c.obj
 .PHONY : input.c.obj
 
 input.i: input.c.i
@@ -237,7 +237,7 @@ input.i: input.c.i
 
 # target to preprocess a source file
 input.c.i:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/input.c.i
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/input.c.i
 .PHONY : input.c.i
 
 input.s: input.c.s
@@ -246,7 +246,7 @@ input.s: input.c.s
 
 # target to generate assembly for a file
 input.c.s:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/input.c.s
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/input.c.s
 .PHONY : input.c.s
 
 monitor.obj: monitor.c.obj
@@ -255,7 +255,7 @@ monitor.obj: monitor.c.obj
 
 # target to build an object file
 monitor.c.obj:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/monitor.c.obj
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/monitor.c.obj
 .PHONY : monitor.c.obj
 
 monitor.i: monitor.c.i
@@ -264,7 +264,7 @@ monitor.i: monitor.c.i
 
 # target to preprocess a source file
 monitor.c.i:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/monitor.c.i
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/monitor.c.i
 .PHONY : monitor.c.i
 
 monitor.s: monitor.c.s
@@ -273,7 +273,7 @@ monitor.s: monitor.c.s
 
 # target to generate assembly for a file
 monitor.c.s:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/monitor.c.s
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/monitor.c.s
 .PHONY : monitor.c.s
 
 wgl_context.obj: wgl_context.c.obj
@@ -282,7 +282,7 @@ wgl_context.obj: wgl_context.c.obj
 
 # target to build an object file
 wgl_context.c.obj:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/wgl_context.c.obj
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/wgl_context.c.obj
 .PHONY : wgl_context.c.obj
 
 wgl_context.i: wgl_context.c.i
@@ -291,7 +291,7 @@ wgl_context.i: wgl_context.c.i
 
 # target to preprocess a source file
 wgl_context.c.i:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/wgl_context.c.i
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/wgl_context.c.i
 .PHONY : wgl_context.c.i
 
 wgl_context.s: wgl_context.c.s
@@ -300,7 +300,7 @@ wgl_context.s: wgl_context.c.s
 
 # target to generate assembly for a file
 wgl_context.c.s:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/wgl_context.c.s
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/wgl_context.c.s
 .PHONY : wgl_context.c.s
 
 win32_init.obj: win32_init.c.obj
@@ -309,7 +309,7 @@ win32_init.obj: win32_init.c.obj
 
 # target to build an object file
 win32_init.c.obj:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_init.c.obj
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_init.c.obj
 .PHONY : win32_init.c.obj
 
 win32_init.i: win32_init.c.i
@@ -318,7 +318,7 @@ win32_init.i: win32_init.c.i
 
 # target to preprocess a source file
 win32_init.c.i:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_init.c.i
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_init.c.i
 .PHONY : win32_init.c.i
 
 win32_init.s: win32_init.c.s
@@ -327,7 +327,7 @@ win32_init.s: win32_init.c.s
 
 # target to generate assembly for a file
 win32_init.c.s:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_init.c.s
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_init.c.s
 .PHONY : win32_init.c.s
 
 win32_monitor.obj: win32_monitor.c.obj
@@ -336,7 +336,7 @@ win32_monitor.obj: win32_monitor.c.obj
 
 # target to build an object file
 win32_monitor.c.obj:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_monitor.c.obj
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_monitor.c.obj
 .PHONY : win32_monitor.c.obj
 
 win32_monitor.i: win32_monitor.c.i
@@ -345,7 +345,7 @@ win32_monitor.i: win32_monitor.c.i
 
 # target to preprocess a source file
 win32_monitor.c.i:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_monitor.c.i
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_monitor.c.i
 .PHONY : win32_monitor.c.i
 
 win32_monitor.s: win32_monitor.c.s
@@ -354,7 +354,7 @@ win32_monitor.s: win32_monitor.c.s
 
 # target to generate assembly for a file
 win32_monitor.c.s:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_monitor.c.s
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_monitor.c.s
 .PHONY : win32_monitor.c.s
 
 win32_time.obj: win32_time.c.obj
@@ -363,7 +363,7 @@ win32_time.obj: win32_time.c.obj
 
 # target to build an object file
 win32_time.c.obj:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_time.c.obj
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_time.c.obj
 .PHONY : win32_time.c.obj
 
 win32_time.i: win32_time.c.i
@@ -372,7 +372,7 @@ win32_time.i: win32_time.c.i
 
 # target to preprocess a source file
 win32_time.c.i:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_time.c.i
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_time.c.i
 .PHONY : win32_time.c.i
 
 win32_time.s: win32_time.c.s
@@ -381,7 +381,7 @@ win32_time.s: win32_time.c.s
 
 # target to generate assembly for a file
 win32_time.c.s:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_time.c.s
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_time.c.s
 .PHONY : win32_time.c.s
 
 win32_tls.obj: win32_tls.c.obj
@@ -390,7 +390,7 @@ win32_tls.obj: win32_tls.c.obj
 
 # target to build an object file
 win32_tls.c.obj:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_tls.c.obj
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_tls.c.obj
 .PHONY : win32_tls.c.obj
 
 win32_tls.i: win32_tls.c.i
@@ -399,7 +399,7 @@ win32_tls.i: win32_tls.c.i
 
 # target to preprocess a source file
 win32_tls.c.i:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_tls.c.i
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_tls.c.i
 .PHONY : win32_tls.c.i
 
 win32_tls.s: win32_tls.c.s
@@ -408,7 +408,7 @@ win32_tls.s: win32_tls.c.s
 
 # target to generate assembly for a file
 win32_tls.c.s:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_tls.c.s
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_tls.c.s
 .PHONY : win32_tls.c.s
 
 win32_window.obj: win32_window.c.obj
@@ -417,7 +417,7 @@ win32_window.obj: win32_window.c.obj
 
 # target to build an object file
 win32_window.c.obj:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_window.c.obj
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_window.c.obj
 .PHONY : win32_window.c.obj
 
 win32_window.i: win32_window.c.i
@@ -426,7 +426,7 @@ win32_window.i: win32_window.c.i
 
 # target to preprocess a source file
 win32_window.c.i:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_window.c.i
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_window.c.i
 .PHONY : win32_window.c.i
 
 win32_window.s: win32_window.c.s
@@ -435,7 +435,7 @@ win32_window.s: win32_window.c.s
 
 # target to generate assembly for a file
 win32_window.c.s:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_window.c.s
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/win32_window.c.s
 .PHONY : win32_window.c.s
 
 window.obj: window.c.obj
@@ -444,7 +444,7 @@ window.obj: window.c.obj
 
 # target to build an object file
 window.c.obj:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/window.c.obj
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/window.c.obj
 .PHONY : window.c.obj
 
 window.i: window.c.i
@@ -453,7 +453,7 @@ window.i: window.c.i
 
 # target to preprocess a source file
 window.c.i:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/window.c.i
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/window.c.i
 .PHONY : window.c.i
 
 window.s: window.c.s
@@ -462,7 +462,7 @@ window.s: window.c.s
 
 # target to generate assembly for a file
 window.c.s:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/window.c.s
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/window.c.s
 .PHONY : window.c.s
 
 winmm_joystick.obj: winmm_joystick.c.obj
@@ -471,7 +471,7 @@ winmm_joystick.obj: winmm_joystick.c.obj
 
 # target to build an object file
 winmm_joystick.c.obj:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/winmm_joystick.c.obj
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/winmm_joystick.c.obj
 .PHONY : winmm_joystick.c.obj
 
 winmm_joystick.i: winmm_joystick.c.i
@@ -480,7 +480,7 @@ winmm_joystick.i: winmm_joystick.c.i
 
 # target to preprocess a source file
 winmm_joystick.c.i:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/winmm_joystick.c.i
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/winmm_joystick.c.i
 .PHONY : winmm_joystick.c.i
 
 winmm_joystick.s: winmm_joystick.c.s
@@ -489,7 +489,7 @@ winmm_joystick.s: winmm_joystick.c.s
 
 # target to generate assembly for a file
 winmm_joystick.c.s:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/winmm_joystick.c.s
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/winmm_joystick.c.s
 .PHONY : winmm_joystick.c.s
 
 # Help Target
@@ -552,6 +552,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

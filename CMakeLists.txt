@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.7)
-project(BLANKOpenGL)
+project(Vivid)
 
 set (VERSION_MAJOR 0)
 set (VERSION_MINOR 0)

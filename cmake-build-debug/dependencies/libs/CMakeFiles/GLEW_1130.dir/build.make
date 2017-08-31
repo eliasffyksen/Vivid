@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.1.3\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Elias\Desktop\BLANK OpenGL"
+CMAKE_SOURCE_DIR = D:\DATA\Documents\gitHub\Vivid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug"
+CMAKE_BINARY_DIR = D:\DATA\Documents\gitHub\Vivid\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include dependencies/libs/CMakeFiles/GLEW_1130.dir/depend.make
@@ -59,16 +59,16 @@ include dependencies/libs/CMakeFiles/GLEW_1130.dir/flags.make
 dependencies/libs/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.obj: dependencies/libs/CMakeFiles/GLEW_1130.dir/flags.make
 dependencies/libs/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.obj: dependencies/libs/CMakeFiles/GLEW_1130.dir/includes_C.rsp
 dependencies/libs/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.obj: ../dependencies/libs/glew-1.13.0/src/glew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object dependencies/libs/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.obj"
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1\DEPEND~1\libs && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\GLEW_1130.dir\glew-1.13.0\src\glew.c.obj   -c "C:\Users\Elias\Desktop\BLANK OpenGL\dependencies\libs\glew-1.13.0\src\glew.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object dependencies/libs/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.obj"
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\GLEW_1130.dir\glew-1.13.0\src\glew.c.obj   -c D:\DATA\Documents\gitHub\Vivid\dependencies\libs\glew-1.13.0\src\glew.c
 
 dependencies/libs/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.i"
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1\DEPEND~1\libs && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Elias\Desktop\BLANK OpenGL\dependencies\libs\glew-1.13.0\src\glew.c" > CMakeFiles\GLEW_1130.dir\glew-1.13.0\src\glew.c.i
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\DATA\Documents\gitHub\Vivid\dependencies\libs\glew-1.13.0\src\glew.c > CMakeFiles\GLEW_1130.dir\glew-1.13.0\src\glew.c.i
 
 dependencies/libs/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.s"
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1\DEPEND~1\libs && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Elias\Desktop\BLANK OpenGL\dependencies\libs\glew-1.13.0\src\glew.c" -o CMakeFiles\GLEW_1130.dir\glew-1.13.0\src\glew.c.s
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\DATA\Documents\gitHub\Vivid\dependencies\libs\glew-1.13.0\src\glew.c -o CMakeFiles\GLEW_1130.dir\glew-1.13.0\src\glew.c.s
 
 dependencies/libs/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.obj.requires:
 
@@ -91,9 +91,9 @@ GLEW_1130_EXTERNAL_OBJECTS =
 dependencies/libs/libGLEW_1130.a: dependencies/libs/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.obj
 dependencies/libs/libGLEW_1130.a: dependencies/libs/CMakeFiles/GLEW_1130.dir/build.make
 dependencies/libs/libGLEW_1130.a: dependencies/libs/CMakeFiles/GLEW_1130.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libGLEW_1130.a"
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1\DEPEND~1\libs && $(CMAKE_COMMAND) -P CMakeFiles\GLEW_1130.dir\cmake_clean_target.cmake
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1\DEPEND~1\libs && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\GLEW_1130.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libGLEW_1130.a"
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs && $(CMAKE_COMMAND) -P CMakeFiles\GLEW_1130.dir\cmake_clean_target.cmake
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\GLEW_1130.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 dependencies/libs/CMakeFiles/GLEW_1130.dir/build: dependencies/libs/libGLEW_1130.a
@@ -105,10 +105,10 @@ dependencies/libs/CMakeFiles/GLEW_1130.dir/requires: dependencies/libs/CMakeFile
 .PHONY : dependencies/libs/CMakeFiles/GLEW_1130.dir/requires
 
 dependencies/libs/CMakeFiles/GLEW_1130.dir/clean:
-	cd /d C:\Users\Elias\Desktop\BLANKO~1\CMAKE-~1\DEPEND~1\libs && $(CMAKE_COMMAND) -P CMakeFiles\GLEW_1130.dir\cmake_clean.cmake
+	cd /d D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs && $(CMAKE_COMMAND) -P CMakeFiles\GLEW_1130.dir\cmake_clean.cmake
 .PHONY : dependencies/libs/CMakeFiles/GLEW_1130.dir/clean
 
 dependencies/libs/CMakeFiles/GLEW_1130.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Elias\Desktop\BLANK OpenGL" "C:\Users\Elias\Desktop\BLANK OpenGL\dependencies\libs" "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug" "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\dependencies\libs" "C:\Users\Elias\Desktop\BLANK OpenGL\cmake-build-debug\dependencies\libs\CMakeFiles\GLEW_1130.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\DATA\Documents\gitHub\Vivid D:\DATA\Documents\gitHub\Vivid\dependencies\libs D:\DATA\Documents\gitHub\Vivid\cmake-build-debug D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\dependencies\libs\CMakeFiles\GLEW_1130.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : dependencies/libs/CMakeFiles/GLEW_1130.dir/depend
 

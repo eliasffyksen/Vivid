@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps/glad.c" "C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/__/deps/glad.c.obj"
-  "C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/examples/heightmap.c" "C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/heightmap.c.obj"
+  "D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps/glad.c" "D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/__/deps/glad.c.obj"
+  "D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/examples/heightmap.c" "D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/heightmap.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -28,7 +28,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

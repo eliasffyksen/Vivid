@@ -1,4 +1,4 @@
-prefix=C:/Program Files (x86)/GLTest
+prefix=C:/Program Files (x86)/BLANKOpenGL
 exec_prefix=${prefix}
 includedir=${prefix}/include
 libdir=${exec_prefix}/lib

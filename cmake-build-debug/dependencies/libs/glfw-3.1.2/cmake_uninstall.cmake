@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/install_manifest.txt\"")
+if (NOT EXISTS "D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/install_manifest.txt\"")
 endif()
 
-file(READ "C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/install_manifest.txt" files)
+file(READ "D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

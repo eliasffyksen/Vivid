@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;CMake Files\dependencies\;CMake Files\dependencies\libs\;CMake Files\dependencies\libs\glfw-3.1.2\;CMake Files\dependencies\libs\glfw-3.1.2\src\;CMake Files\dependencies\libs\glfw-3.1.2\docs\;CMake Files\dependencies\libs\glfw-3.1.2\examples\;CMake Files\dependencies\libs\glfw-3.1.2\tests\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="uninstall">
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/Makefile&quot;  VERBOSE=1 uninstall"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/Makefile&quot;  VERBOSE=1 uninstall"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="glfw">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/src"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/src"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -42,8 +42,8 @@
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
 					<Add option="-D_GLFW_USE_CONFIG_H"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/src"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/src"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -52,15 +52,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/Makefile&quot;  VERBOSE=1 glfw"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/Makefile&quot;  VERBOSE=1 glfw"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="glfw/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/src"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/src"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -73,8 +73,8 @@
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
 					<Add option="-D_GLFW_USE_CONFIG_H"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/src"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/src"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -83,15 +83,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/Makefile&quot;  VERBOSE=1 glfw/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/Makefile&quot;  VERBOSE=1 glfw/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="boing">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/boing.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/boing.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -103,8 +103,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -113,15 +113,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 boing"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 boing"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="boing/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/boing.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/boing.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -133,8 +133,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -143,15 +143,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 boing/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 boing/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="simple">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/simple.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/simple.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -163,8 +163,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -173,15 +173,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 simple"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 simple"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="simple/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/simple.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/simple.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -193,8 +193,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -203,15 +203,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 simple/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 simple/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gears">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/gears.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/gears.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -223,8 +223,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -233,15 +233,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 gears"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 gears"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gears/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/gears.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/gears.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -253,8 +253,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -263,15 +263,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 gears/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 gears/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="wave">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/wave.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/wave.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -283,8 +283,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -293,15 +293,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 wave"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 wave"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="wave/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/wave.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/wave.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -313,8 +313,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -323,15 +323,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 wave/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 wave/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="particles">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/particles.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/particles.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -343,8 +343,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -353,15 +353,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 particles"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 particles"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="particles/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/particles.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/particles.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -373,8 +373,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -383,15 +383,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 particles/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 particles/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="heightmap">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/heightmap.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/heightmap.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -403,8 +403,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -413,15 +413,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 heightmap"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 heightmap"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="heightmap/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/heightmap.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/heightmap.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -433,8 +433,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -443,15 +443,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 heightmap/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 heightmap/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="splitview">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/splitview.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/splitview.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -463,8 +463,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -473,15 +473,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 splitview"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 splitview"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="splitview/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/splitview.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/splitview.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -493,8 +493,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -503,15 +503,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 splitview/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 splitview/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/examples/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="clipboard">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/clipboard.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/clipboard.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -523,8 +523,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -533,15 +533,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clipboard"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clipboard"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="clipboard/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/clipboard.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/clipboard.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -553,8 +553,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -563,15 +563,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clipboard/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clipboard/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="joysticks">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/joysticks.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/joysticks.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -583,8 +583,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -593,15 +593,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 joysticks"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 joysticks"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="joysticks/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/joysticks.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/joysticks.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -613,8 +613,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -623,15 +623,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 joysticks/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 joysticks/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="events">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/events.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/events.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -643,8 +643,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -653,15 +653,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 events"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 events"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="events/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/events.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/events.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -673,8 +673,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -683,15 +683,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 events/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 events/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="msaa">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/msaa.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/msaa.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -703,8 +703,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -713,15 +713,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 msaa"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 msaa"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="msaa/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/msaa.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/msaa.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -733,8 +733,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -743,15 +743,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 msaa/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 msaa/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="iconify">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/iconify.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/iconify.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -763,8 +763,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -773,15 +773,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 iconify"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 iconify"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="iconify/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/iconify.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/iconify.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -793,8 +793,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -803,15 +803,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 iconify/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 iconify/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gamma">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/gamma.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/gamma.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -823,8 +823,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -833,15 +833,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 gamma"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 gamma"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gamma/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/gamma.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/gamma.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -853,8 +853,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -863,15 +863,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 gamma/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 gamma/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="glfwinfo">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/glfwinfo.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/glfwinfo.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -883,8 +883,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -893,15 +893,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 glfwinfo"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 glfwinfo"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="glfwinfo/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/glfwinfo.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/glfwinfo.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -913,8 +913,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -923,15 +923,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 glfwinfo/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 glfwinfo/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="monitors">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/monitors.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/monitors.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -943,8 +943,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -953,15 +953,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 monitors"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 monitors"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="monitors/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/monitors.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/monitors.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -973,8 +973,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -983,15 +983,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 monitors/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 monitors/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="reopen">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/reopen.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/reopen.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -1003,8 +1003,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -1013,15 +1013,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 reopen"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 reopen"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="reopen/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/reopen.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/reopen.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -1033,8 +1033,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -1043,15 +1043,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 reopen/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 reopen/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="cursor">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/cursor.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/cursor.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -1063,8 +1063,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -1073,15 +1073,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 cursor"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 cursor"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="cursor/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/cursor.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/cursor.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -1093,8 +1093,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -1103,15 +1103,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 cursor/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 cursor/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="empty">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/empty.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/empty.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1123,8 +1123,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -1133,15 +1133,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 empty"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 empty"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="empty/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/empty.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/empty.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1153,8 +1153,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -1163,15 +1163,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 empty/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 empty/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="sharing">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/sharing.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/sharing.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1183,8 +1183,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -1193,15 +1193,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 sharing"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 sharing"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="sharing/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/sharing.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/sharing.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1213,8 +1213,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -1223,15 +1223,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 sharing/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 sharing/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="tearing">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/tearing.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/tearing.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1243,8 +1243,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -1253,15 +1253,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 tearing"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 tearing"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="tearing/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/tearing.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/tearing.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1273,8 +1273,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -1283,15 +1283,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 tearing/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 tearing/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="threads">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/threads.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/threads.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1303,8 +1303,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -1313,15 +1313,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 threads"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 threads"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="threads/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/threads.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/threads.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1333,8 +1333,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -1343,15 +1343,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 threads/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 threads/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="title">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/title.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/title.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1363,8 +1363,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -1373,15 +1373,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 title"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 title"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="title/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/title.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/title.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1393,8 +1393,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -1403,15 +1403,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 title/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 title/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="windows">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/windows.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/windows.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1423,8 +1423,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -1433,15 +1433,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 windows"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 windows"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="windows/fast">
-				<Option output="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0/windows.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Elias/Desktop/BLANK OpenGL/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/windows.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1453,8 +1453,8 @@
 					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
 					<Add option="-DUNICODE"/>
 					<Add option="-DWINVER=0x0501"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include"/>
-					<Add directory="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include"/>
+					<Add directory="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward"/>
@@ -1463,17 +1463,17 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-7.1.0-posix-seh-rt_v5-rev2/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 windows/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 windows/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/glfw_config.h">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/src/glfw_config.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps/getopt.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps/getopt.c">
 			<Option target="particles"/>
 			<Option target="clipboard"/>
 			<Option target="events"/>
@@ -1484,7 +1484,7 @@
 			<Option target="monitors"/>
 			<Option target="tearing"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps/getopt.h">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps/getopt.h">
 			<Option target="particles"/>
 			<Option target="clipboard"/>
 			<Option target="events"/>
@@ -1495,209 +1495,209 @@
 			<Option target="monitors"/>
 			<Option target="tearing"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps/glad.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps/glad.c">
 			<Option target="heightmap"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps/glad/glad.h">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps/glad/glad.h">
 			<Option target="heightmap"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps/tinycthread.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps/tinycthread.c">
 			<Option target="particles"/>
 			<Option target="empty"/>
 			<Option target="threads"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/deps/tinycthread.h">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/deps/tinycthread.h">
 			<Option target="particles"/>
 			<Option target="empty"/>
 			<Option target="threads"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/examples/boing.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/examples/boing.c">
 			<Option target="boing"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/examples/gears.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/examples/gears.c">
 			<Option target="gears"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/examples/heightmap.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/examples/heightmap.c">
 			<Option target="heightmap"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/examples/particles.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/examples/particles.c">
 			<Option target="particles"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/examples/simple.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/examples/simple.c">
 			<Option target="simple"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/examples/splitview.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/examples/splitview.c">
 			<Option target="splitview"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/examples/wave.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/examples/wave.c">
 			<Option target="wave"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include/GLFW/glfw3.h">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include/GLFW/glfw3.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/include/GLFW/glfw3native.h">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/include/GLFW/glfw3native.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/context.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/context.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/init.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/init.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/input.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/input.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/internal.h">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/internal.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/monitor.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/monitor.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/wgl_context.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/wgl_context.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/wgl_context.h">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/wgl_context.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/win32_init.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/win32_init.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/win32_monitor.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/win32_monitor.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/win32_platform.h">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/win32_platform.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/win32_time.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/win32_time.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/win32_tls.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/win32_tls.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/win32_tls.h">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/win32_tls.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/win32_window.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/win32_window.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/window.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/window.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/winmm_joystick.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/winmm_joystick.c">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/winmm_joystick.h">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/winmm_joystick.h">
 			<Option target="glfw"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests/clipboard.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests/clipboard.c">
 			<Option target="clipboard"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests/cursor.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests/cursor.c">
 			<Option target="cursor"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests/empty.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests/empty.c">
 			<Option target="empty"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests/events.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests/events.c">
 			<Option target="events"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests/gamma.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests/gamma.c">
 			<Option target="gamma"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests/glfwinfo.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests/glfwinfo.c">
 			<Option target="glfwinfo"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests/iconify.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests/iconify.c">
 			<Option target="iconify"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests/joysticks.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests/joysticks.c">
 			<Option target="joysticks"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests/monitors.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests/monitors.c">
 			<Option target="monitors"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests/msaa.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests/msaa.c">
 			<Option target="msaa"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests/reopen.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests/reopen.c">
 			<Option target="reopen"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests/sharing.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests/sharing.c">
 			<Option target="sharing"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests/tearing.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests/tearing.c">
 			<Option target="tearing"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests/threads.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests/threads.c">
 			<Option target="threads"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests/title.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests/title.c">
 			<Option target="title"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests/windows.c">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests/windows.c">
 			<Option target="windows"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/CMakeLists.txt">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/config.h.in">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/config.h.in">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/CMakeLists.txt">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\dependencies\libs\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/CMakeLists.txt">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\dependencies\libs\glfw-3.1.2\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/cmake_uninstall.cmake.in">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/cmake_uninstall.cmake.in">
 			<Option virtualFolder="CMake Files\dependencies\libs\glfw-3.1.2\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/CMakeLists.txt">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\dependencies\libs\glfw-3.1.2\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/cmake_uninstall.cmake.in">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/cmake_uninstall.cmake.in">
 			<Option virtualFolder="CMake Files\dependencies\libs\glfw-3.1.2\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/glfw3Config.cmake.in">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/glfw3Config.cmake.in">
 			<Option virtualFolder="CMake Files\dependencies\libs\glfw-3.1.2\src\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/glfw_config.h.in">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/glfw_config.h.in">
 			<Option virtualFolder="CMake Files\dependencies\libs\glfw-3.1.2\src\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/glfw3.pc.in">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/glfw3.pc.in">
 			<Option virtualFolder="CMake Files\dependencies\libs\glfw-3.1.2\src\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/CMakeLists.txt">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\dependencies\libs\glfw-3.1.2\src\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/glfw3Config.cmake.in">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/glfw3Config.cmake.in">
 			<Option virtualFolder="CMake Files\dependencies\libs\glfw-3.1.2\src\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/glfw_config.h.in">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/glfw_config.h.in">
 			<Option virtualFolder="CMake Files\dependencies\libs\glfw-3.1.2\src\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/glfw3.pc.in">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/glfw3.pc.in">
 			<Option virtualFolder="CMake Files\dependencies\libs\glfw-3.1.2\src\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/src/CMakeLists.txt">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\dependencies\libs\glfw-3.1.2\src\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/docs/Doxyfile.in">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/docs/Doxyfile.in">
 			<Option virtualFolder="CMake Files\dependencies\libs\glfw-3.1.2\docs\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/docs/Doxyfile.in">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/docs/Doxyfile.in">
 			<Option virtualFolder="CMake Files\dependencies\libs\glfw-3.1.2\docs\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/examples/CMakeLists.txt">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/examples/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\dependencies\libs\glfw-3.1.2\examples\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/examples/CMakeLists.txt">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/examples/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\dependencies\libs\glfw-3.1.2\examples\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests/CMakeLists.txt">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\dependencies\libs\glfw-3.1.2\tests\"/>
 		</Unit>
-		<Unit filename="C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs/glfw-3.1.2/tests/CMakeLists.txt">
+		<Unit filename="D:/DATA/Documents/gitHub/Vivid/dependencies/libs/glfw-3.1.2/tests/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\dependencies\libs\glfw-3.1.2\tests\"/>
 		</Unit>
 	</Project>

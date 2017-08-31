@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Elias/Desktop/BLANK OpenGL/dependencies/libs
+# Install script for directory: D:/DATA/Documents/gitHub/Vivid/dependencies/libs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/GLTest")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/BLANKOpenGL")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -29,7 +29,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Elias/Desktop/BLANK OpenGL/cmake-build-debug/dependencies/libs/glfw-3.1.2/cmake_install.cmake")
+  include("D:/DATA/Documents/gitHub/Vivid/cmake-build-debug/dependencies/libs/glfw-3.1.2/cmake_install.cmake")
 
 endif()
 
