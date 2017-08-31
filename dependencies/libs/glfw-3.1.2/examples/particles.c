@@ -1,5 +1,5 @@
 //========================================================================
-// A simple particle vivid with threaded physics
+// A simple particle engine with threaded physics
 // Copyright (c) Marcus Geelnard
 // Copyright (c) Camilla Berglund <elmindreda@elmindreda.org>
 //
@@ -142,7 +142,7 @@ const unsigned char floor_texture[ F_TEX_WIDTH * F_TEX_HEIGHT ] = {
 
 
 //========================================================================
-// These are fixed constants that control the particle vivid. In a
+// These are fixed constants that control the particle engine. In a
 // modular world, these values should be variables...
 //========================================================================
 
@@ -338,7 +338,7 @@ static void update_particle(PARTICLE *p, float dt)
 
 
 //========================================================================
-// The main frame for the particle vivid. Called once per frame.
+// The main frame for the particle engine. Called once per frame.
 //========================================================================
 
 static void particle_engine(double t, float dt)

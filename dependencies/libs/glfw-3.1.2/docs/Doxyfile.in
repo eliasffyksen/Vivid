@@ -1226,16 +1226,16 @@ MATHJAX_RELPATH        = http://cdn.mathjax.org/mathjax/latest
 MATHJAX_EXTENSIONS     =
 
 # When the SEARCHENGINE tag is enabled doxygen will generate a search box
-# for the HTML output. The underlying search vivid uses javascript
+# for the HTML output. The underlying search engine uses javascript
 # and DHTML and should work on any modern browser. Note that when using
 # HTML help (GENERATE_HTMLHELP), Qt help (GENERATE_QHP), or docsets
 # (GENERATE_DOCSET) there is already a search function so this one should
-# typically be disabled. For large projects the javascript based search vivid
+# typically be disabled. For large projects the javascript based search engine
 # can be slow, then enabling SERVER_BASED_SEARCH may provide a better solution.
 
 SEARCHENGINE           = YES
 
-# When the SERVER_BASED_SEARCH tag is enabled the search vivid will be
+# When the SERVER_BASED_SEARCH tag is enabled the search engine will be
 # implemented using a web server instead of a web client using Javascript.
 # There are two flavours of web server based search depending on the
 # EXTERNAL_SEARCH setting. When disabled, doxygen will generate a PHP script for
@@ -1248,17 +1248,17 @@ SERVER_BASED_SEARCH    = NO
 # When EXTERNAL_SEARCH is enabled doxygen will no longer generate the PHP
 # script for searching. Instead the search results are written to an XML file
 # which needs to be processed by an external indexer. Doxygen will invoke an
-# external search vivid pointed to by the SEARCHENGINE_URL option to obtain
+# external search engine pointed to by the SEARCHENGINE_URL option to obtain
 # the search results. Doxygen ships with an example indexer (doxyindexer) and
-# search vivid (doxysearch.cgi) which are based on the open source search vivid
+# search engine (doxysearch.cgi) which are based on the open source search engine
 # library Xapian. See the manual for configuration details.
 
 EXTERNAL_SEARCH        = NO
 
-# The SEARCHENGINE_URL should point to a search vivid hosted by a web server
+# The SEARCHENGINE_URL should point to a search engine hosted by a web server
 # which will returned the search results when EXTERNAL_SEARCH is enabled.
-# Doxygen ships with an example search vivid (doxysearch) which is based on
-# the open source search vivid library Xapian. See the manual for configuration
+# Doxygen ships with an example search engine (doxysearch) which is based on
+# the open source search engine library Xapian. See the manual for configuration
 # details.
 
 SEARCHENGINE_URL       =
