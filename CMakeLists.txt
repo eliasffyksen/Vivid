@@ -10,6 +10,7 @@ set(VERSION_MINOR 1)
 
 # Find the platform of the compiling system
 if (WIN32)
+	SET(EXE_ARGUMENT ${EXE_ARGUMENT} WIN32)
 	if (CMAKE_SIZEOF_VOID_P EQUAL 8)
 		set(PLATFORM WIN64)
 	else ()
@@ -76,5 +77,5 @@ set(ALL_LIBS
 # Adds all the source files (CLion automatically does this when creating a file)
 set(SOURCE_FILES src/config.h src/main.cpp src/graphics/shader.h src/graphics/shader.cpp src/graphics/window.h src/graphics/window.cpp)
 
-add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+add_executable(${PROJECT_NAME} ${EXE_ARGUMENT} ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} ${ALL_LIBS})
