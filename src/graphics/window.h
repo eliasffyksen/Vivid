@@ -8,7 +8,7 @@
 #include <GLFW/glfw3.h>
 
 
-namespace engine {
+namespace vivid {
 	namespace graphics {
 
 		class Window {

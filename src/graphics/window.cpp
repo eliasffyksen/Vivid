@@ -5,7 +5,7 @@
 #include "window.h"
 #include <iostream>
 
-namespace engine {
+namespace vivid {
 	namespace graphics {
 
 		void framebuffer_size_callback(GLFWwindow* window, int width, int height);

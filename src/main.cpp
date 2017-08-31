@@ -11,7 +11,7 @@
 
 int main()
 {
-	using namespace engine;
+	using namespace vivid;
 	using namespace graphics;
 
 	Window window("Window!!", 800, 600);

@@ -8,7 +8,7 @@
 #include <iostream>
 #include "GL/glew.h"
 
-namespace engine {
+namespace vivid {
 	namespace graphics {
 
 		class Shader {

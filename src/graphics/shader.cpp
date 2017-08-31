@@ -9,7 +9,7 @@
 #include <algorithm>
 
 
-namespace engine {
+namespace vivid {
 	namespace graphics {
 		
 		GLuint Shader::LoadShaders(const char* vertex_file_path, const char* fragment_file_path) { // Not my code:))
