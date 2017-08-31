@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gears.dir/gears.c.obj"
-  "../../../../../bin/release_WIN64_0_0/gears.pdb"
-  "../../../../../bin/release_WIN64_0_0/gears.exe"
-  "../../../../../bin/release_WIN64_0_0/gears.exe.manifest"
+  "../../../../../bin/debug/gears.pdb"
+  "../../../../../bin/debug/gears.exe"
+  "../../../../../bin/debug/gears.exe.manifest"
   "libgears.dll.a"
 )
 

@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/sharing.dir/sharing.c.obj"
-  "../../../../../bin/release_WIN64_0_0/sharing.pdb"
-  "../../../../../bin/release_WIN64_0_0/sharing.exe"
-  "../../../../../bin/release_WIN64_0_0/sharing.exe.manifest"
+  "../../../../../bin/debug/sharing.pdb"
+  "../../../../../bin/debug/sharing.exe"
+  "../../../../../bin/debug/sharing.exe.manifest"
   "libsharing.dll.a"
 )
 

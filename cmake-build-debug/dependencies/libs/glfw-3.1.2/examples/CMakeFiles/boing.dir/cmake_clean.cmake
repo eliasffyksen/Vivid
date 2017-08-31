@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/boing.dir/boing.c.obj"
-  "../../../../../bin/release_WIN64_0_0/boing.pdb"
-  "../../../../../bin/release_WIN64_0_0/boing.exe"
-  "../../../../../bin/release_WIN64_0_0/boing.exe.manifest"
+  "../../../../../bin/debug/boing.pdb"
+  "../../../../../bin/debug/boing.exe"
+  "../../../../../bin/debug/boing.exe.manifest"
   "libboing.dll.a"
 )
 

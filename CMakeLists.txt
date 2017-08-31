@@ -3,7 +3,7 @@ project(Vivid)
 
 set (VERSION_MAJOR 0)
 set (VERSION_MINOR 0)
-set (DEBUG false)
+set (DEBUG true)
 
 if (WIN32)
     if(CMAKE_SIZEOF_VOID_P EQUAL 8)
@@ -67,7 +67,7 @@ set(ALL_LIBS
 
 
 
-set(SOURCE_FILES src/main.cpp)
+set(SOURCE_FILES src/main.cpp src/test.cpp)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 

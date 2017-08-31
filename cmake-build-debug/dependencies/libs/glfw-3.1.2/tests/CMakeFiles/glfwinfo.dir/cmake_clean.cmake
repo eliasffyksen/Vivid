@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/glfwinfo.dir/glfwinfo.c.obj"
   "CMakeFiles/glfwinfo.dir/__/deps/getopt.c.obj"
-  "../../../../../bin/release_WIN64_0_0/glfwinfo.pdb"
-  "../../../../../bin/release_WIN64_0_0/glfwinfo.exe"
-  "../../../../../bin/release_WIN64_0_0/glfwinfo.exe.manifest"
+  "../../../../../bin/debug/glfwinfo.pdb"
+  "../../../../../bin/debug/glfwinfo.exe"
+  "../../../../../bin/debug/glfwinfo.exe.manifest"
   "libglfwinfo.dll.a"
 )
 

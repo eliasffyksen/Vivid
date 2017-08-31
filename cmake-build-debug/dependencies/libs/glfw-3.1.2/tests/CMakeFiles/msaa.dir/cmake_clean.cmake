@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/msaa.dir/msaa.c.obj"
   "CMakeFiles/msaa.dir/__/deps/getopt.c.obj"
-  "../../../../../bin/release_WIN64_0_0/msaa.pdb"
-  "../../../../../bin/release_WIN64_0_0/msaa.exe"
-  "../../../../../bin/release_WIN64_0_0/msaa.exe.manifest"
+  "../../../../../bin/debug/msaa.pdb"
+  "../../../../../bin/debug/msaa.exe"
+  "../../../../../bin/debug/msaa.exe.manifest"
   "libmsaa.dll.a"
 )
 

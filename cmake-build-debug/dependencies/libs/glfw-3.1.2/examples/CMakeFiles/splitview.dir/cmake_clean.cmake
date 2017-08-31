@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/splitview.dir/splitview.c.obj"
-  "../../../../../bin/release_WIN64_0_0/splitview.pdb"
-  "../../../../../bin/release_WIN64_0_0/splitview.exe"
-  "../../../../../bin/release_WIN64_0_0/splitview.exe.manifest"
+  "../../../../../bin/debug/splitview.pdb"
+  "../../../../../bin/debug/splitview.exe"
+  "../../../../../bin/debug/splitview.exe.manifest"
   "libsplitview.dll.a"
 )
 

@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/events.dir/events.c.obj"
   "CMakeFiles/events.dir/__/deps/getopt.c.obj"
-  "../../../../../bin/release_WIN64_0_0/events.pdb"
-  "../../../../../bin/release_WIN64_0_0/events.exe"
-  "../../../../../bin/release_WIN64_0_0/events.exe.manifest"
+  "../../../../../bin/debug/events.pdb"
+  "../../../../../bin/debug/events.exe"
+  "../../../../../bin/debug/events.exe.manifest"
   "libevents.dll.a"
 )
 

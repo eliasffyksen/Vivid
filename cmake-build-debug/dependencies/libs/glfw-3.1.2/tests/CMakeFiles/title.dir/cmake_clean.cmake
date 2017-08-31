@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/title.dir/title.c.obj"
-  "../../../../../bin/release_WIN64_0_0/title.pdb"
-  "../../../../../bin/release_WIN64_0_0/title.exe"
-  "../../../../../bin/release_WIN64_0_0/title.exe.manifest"
+  "../../../../../bin/debug/title.pdb"
+  "../../../../../bin/debug/title.exe"
+  "../../../../../bin/debug/title.exe.manifest"
   "libtitle.dll.a"
 )
 

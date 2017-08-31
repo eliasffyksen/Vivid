@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/threads.dir/threads.c.obj"
   "CMakeFiles/threads.dir/__/deps/tinycthread.c.obj"
-  "../../../../../bin/release_WIN64_0_0/threads.pdb"
-  "../../../../../bin/release_WIN64_0_0/threads.exe"
-  "../../../../../bin/release_WIN64_0_0/threads.exe.manifest"
+  "../../../../../bin/debug/threads.pdb"
+  "../../../../../bin/debug/threads.exe"
+  "../../../../../bin/debug/threads.exe.manifest"
   "libthreads.dll.a"
 )
 

@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gamma.dir/gamma.c.obj"
   "CMakeFiles/gamma.dir/__/deps/getopt.c.obj"
-  "../../../../../bin/release_WIN64_0_0/gamma.pdb"
-  "../../../../../bin/release_WIN64_0_0/gamma.exe"
-  "../../../../../bin/release_WIN64_0_0/gamma.exe.manifest"
+  "../../../../../bin/debug/gamma.pdb"
+  "../../../../../bin/debug/gamma.exe"
+  "../../../../../bin/debug/gamma.exe.manifest"
   "libgamma.dll.a"
 )
 

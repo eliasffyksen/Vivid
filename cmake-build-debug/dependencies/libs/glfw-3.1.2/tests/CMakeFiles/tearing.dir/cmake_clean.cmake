@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/tearing.dir/tearing.c.obj"
   "CMakeFiles/tearing.dir/__/deps/getopt.c.obj"
-  "../../../../../bin/release_WIN64_0_0/tearing.pdb"
-  "../../../../../bin/release_WIN64_0_0/tearing.exe"
-  "../../../../../bin/release_WIN64_0_0/tearing.exe.manifest"
+  "../../../../../bin/debug/tearing.pdb"
+  "../../../../../bin/debug/tearing.exe"
+  "../../../../../bin/debug/tearing.exe.manifest"
   "libtearing.dll.a"
 )
 

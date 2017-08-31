@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/clipboard.dir/clipboard.c.obj"
   "CMakeFiles/clipboard.dir/__/deps/getopt.c.obj"
-  "../../../../../bin/release_WIN64_0_0/clipboard.pdb"
-  "../../../../../bin/release_WIN64_0_0/clipboard.exe"
-  "../../../../../bin/release_WIN64_0_0/clipboard.exe.manifest"
+  "../../../../../bin/debug/clipboard.pdb"
+  "../../../../../bin/debug/clipboard.exe"
+  "../../../../../bin/debug/clipboard.exe.manifest"
   "libclipboard.dll.a"
 )
 

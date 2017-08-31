@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cursor.dir/cursor.c.obj"
-  "../../../../../bin/release_WIN64_0_0/cursor.pdb"
-  "../../../../../bin/release_WIN64_0_0/cursor.exe"
-  "../../../../../bin/release_WIN64_0_0/cursor.exe.manifest"
+  "../../../../../bin/debug/cursor.pdb"
+  "../../../../../bin/debug/cursor.exe"
+  "../../../../../bin/debug/cursor.exe.manifest"
   "libcursor.dll.a"
 )
 

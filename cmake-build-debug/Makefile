@@ -531,6 +531,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles\Vivid.dir\build.make CMakeFiles/Vivid.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/test.obj: src/test.cpp.obj
+
+.PHONY : src/test.obj
+
+# target to build an object file
+src/test.cpp.obj:
+	$(MAKE) -f CMakeFiles\Vivid.dir\build.make CMakeFiles/Vivid.dir/src/test.cpp.obj
+.PHONY : src/test.cpp.obj
+
+src/test.i: src/test.cpp.i
+
+.PHONY : src/test.i
+
+# target to preprocess a source file
+src/test.cpp.i:
+	$(MAKE) -f CMakeFiles\Vivid.dir\build.make CMakeFiles/Vivid.dir/src/test.cpp.i
+.PHONY : src/test.cpp.i
+
+src/test.s: src/test.cpp.s
+
+.PHONY : src/test.s
+
+# target to generate assembly for a file
+src/test.cpp.s:
+	$(MAKE) -f CMakeFiles\Vivid.dir\build.make CMakeFiles/Vivid.dir/src/test.cpp.s
+.PHONY : src/test.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -573,6 +600,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/test.obj
+	@echo ... src/test.i
+	@echo ... src/test.s
 .PHONY : help
 
 

@@ -2,9 +2,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/particles.dir/particles.c.obj"
   "CMakeFiles/particles.dir/__/deps/tinycthread.c.obj"
   "CMakeFiles/particles.dir/__/deps/getopt.c.obj"
-  "../../../../../bin/release_WIN64_0_0/particles.pdb"
-  "../../../../../bin/release_WIN64_0_0/particles.exe"
-  "../../../../../bin/release_WIN64_0_0/particles.exe.manifest"
+  "../../../../../bin/debug/particles.pdb"
+  "../../../../../bin/debug/particles.exe"
+  "../../../../../bin/debug/particles.exe.manifest"
   "libparticles.dll.a"
 )
 

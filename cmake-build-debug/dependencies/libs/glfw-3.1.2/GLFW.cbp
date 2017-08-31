@@ -90,8 +90,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="boing">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/boing.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/boing.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -120,8 +120,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="boing/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/boing.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/boing.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -150,8 +150,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="simple">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/simple.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/simple.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -180,8 +180,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="simple/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/simple.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/simple.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -210,8 +210,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="gears">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/gears.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/gears.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -240,8 +240,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="gears/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/gears.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/gears.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -270,8 +270,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="wave">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/wave.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/wave.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -300,8 +300,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="wave/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/wave.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/wave.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -330,8 +330,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="particles">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/particles.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/particles.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -360,8 +360,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="particles/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/particles.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/particles.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -390,8 +390,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="heightmap">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/heightmap.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/heightmap.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -420,8 +420,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="heightmap/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/heightmap.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/heightmap.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -450,8 +450,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="splitview">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/splitview.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/splitview.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -480,8 +480,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="splitview/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/splitview.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/splitview.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -510,8 +510,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="clipboard">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/clipboard.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/clipboard.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -540,8 +540,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="clipboard/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/clipboard.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/clipboard.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -570,8 +570,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="joysticks">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/joysticks.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/joysticks.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -600,8 +600,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="joysticks/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/joysticks.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/joysticks.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -630,8 +630,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="events">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/events.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/events.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -660,8 +660,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="events/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/events.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/events.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -690,8 +690,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="msaa">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/msaa.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/msaa.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -720,8 +720,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="msaa/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/msaa.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/msaa.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -750,8 +750,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="iconify">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/iconify.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/iconify.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -780,8 +780,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="iconify/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/iconify.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/iconify.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -810,8 +810,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="gamma">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/gamma.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/gamma.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -840,8 +840,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="gamma/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/gamma.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/gamma.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -870,8 +870,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="glfwinfo">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/glfwinfo.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/glfwinfo.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -900,8 +900,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="glfwinfo/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/glfwinfo.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/glfwinfo.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -930,8 +930,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="monitors">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/monitors.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/monitors.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -960,8 +960,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="monitors/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/monitors.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/monitors.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -990,8 +990,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="reopen">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/reopen.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/reopen.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -1020,8 +1020,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="reopen/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/reopen.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/reopen.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -1050,8 +1050,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="cursor">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/cursor.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/cursor.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -1080,8 +1080,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="cursor/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/cursor.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/cursor.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -1110,8 +1110,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="empty">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/empty.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/empty.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1140,8 +1140,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="empty/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/empty.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/empty.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1170,8 +1170,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="sharing">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/sharing.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/sharing.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1200,8 +1200,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="sharing/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/sharing.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/sharing.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1230,8 +1230,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="tearing">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/tearing.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/tearing.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1260,8 +1260,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="tearing/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/tearing.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/tearing.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1290,8 +1290,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="threads">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/threads.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/threads.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1320,8 +1320,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="threads/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/threads.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/threads.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1350,8 +1350,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="title">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/title.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/title.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1380,8 +1380,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="title/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/title.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/title.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1410,8 +1410,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="windows">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/windows.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/windows.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>
@@ -1440,8 +1440,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="windows/fast">
-				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0/windows.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/release_WIN64_0_0"/>
+				<Option output="D:/DATA/Documents/gitHub/Vivid/bin/debug/windows.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DATA/Documents/gitHub/Vivid/bin/debug"/>
 				<Option object_output="./"/>
 				<Option type="0"/>
 				<Option compiler="gcc"/>

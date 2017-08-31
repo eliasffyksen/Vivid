@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/monitors.dir/monitors.c.obj"
   "CMakeFiles/monitors.dir/__/deps/getopt.c.obj"
-  "../../../../../bin/release_WIN64_0_0/monitors.pdb"
-  "../../../../../bin/release_WIN64_0_0/monitors.exe"
-  "../../../../../bin/release_WIN64_0_0/monitors.exe.manifest"
+  "../../../../../bin/debug/monitors.pdb"
+  "../../../../../bin/debug/monitors.exe"
+  "../../../../../bin/debug/monitors.exe.manifest"
   "libmonitors.dll.a"
 )
 

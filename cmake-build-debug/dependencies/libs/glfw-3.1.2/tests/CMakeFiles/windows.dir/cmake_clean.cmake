@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/windows.dir/windows.c.obj"
-  "../../../../../bin/release_WIN64_0_0/windows.pdb"
-  "../../../../../bin/release_WIN64_0_0/windows.exe"
-  "../../../../../bin/release_WIN64_0_0/windows.exe.manifest"
+  "../../../../../bin/debug/windows.pdb"
+  "../../../../../bin/debug/windows.exe"
+  "../../../../../bin/debug/windows.exe.manifest"
   "libwindows.dll.a"
 )
 

@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/joysticks.dir/joysticks.c.obj"
-  "../../../../../bin/release_WIN64_0_0/joysticks.pdb"
-  "../../../../../bin/release_WIN64_0_0/joysticks.exe"
-  "../../../../../bin/release_WIN64_0_0/joysticks.exe.manifest"
+  "../../../../../bin/debug/joysticks.pdb"
+  "../../../../../bin/debug/joysticks.exe"
+  "../../../../../bin/debug/joysticks.exe.manifest"
   "libjoysticks.dll.a"
 )
 

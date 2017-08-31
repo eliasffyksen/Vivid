@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/reopen.dir/reopen.c.obj"
-  "../../../../../bin/release_WIN64_0_0/reopen.pdb"
-  "../../../../../bin/release_WIN64_0_0/reopen.exe"
-  "../../../../../bin/release_WIN64_0_0/reopen.exe.manifest"
+  "../../../../../bin/debug/reopen.pdb"
+  "../../../../../bin/debug/reopen.exe"
+  "../../../../../bin/debug/reopen.exe.manifest"
   "libreopen.dll.a"
 )
 

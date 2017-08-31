@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/heightmap.dir/heightmap.c.obj"
   "CMakeFiles/heightmap.dir/__/deps/glad.c.obj"
-  "../../../../../bin/release_WIN64_0_0/heightmap.pdb"
-  "../../../../../bin/release_WIN64_0_0/heightmap.exe"
-  "../../../../../bin/release_WIN64_0_0/heightmap.exe.manifest"
+  "../../../../../bin/debug/heightmap.pdb"
+  "../../../../../bin/debug/heightmap.exe"
+  "../../../../../bin/debug/heightmap.exe.manifest"
   "libheightmap.dll.a"
 )
 

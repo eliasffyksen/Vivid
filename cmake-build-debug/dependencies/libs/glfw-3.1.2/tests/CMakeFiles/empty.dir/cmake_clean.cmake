@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/empty.dir/empty.c.obj"
   "CMakeFiles/empty.dir/__/deps/tinycthread.c.obj"
-  "../../../../../bin/release_WIN64_0_0/empty.pdb"
-  "../../../../../bin/release_WIN64_0_0/empty.exe"
-  "../../../../../bin/release_WIN64_0_0/empty.exe.manifest"
+  "../../../../../bin/debug/empty.pdb"
+  "../../../../../bin/debug/empty.exe"
+  "../../../../../bin/debug/empty.exe.manifest"
   "libempty.dll.a"
 )
 

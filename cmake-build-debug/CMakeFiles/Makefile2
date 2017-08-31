@@ -66,7 +66,7 @@ CMakeFiles/Vivid.dir/all: dependencies/libs/CMakeFiles/GLEW_1130.dir/all
 CMakeFiles/Vivid.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f CMakeFiles\Vivid.dir\build.make CMakeFiles/Vivid.dir/depend
 	$(MAKE) -f CMakeFiles\Vivid.dir\build.make CMakeFiles/Vivid.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target Vivid"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=3,4,5 "Built target Vivid"
 .PHONY : CMakeFiles/Vivid.dir/all
 
 # Include target in all.
@@ -76,7 +76,7 @@ all: CMakeFiles/Vivid.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Vivid.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles 18
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/Vivid.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/Vivid.dir/rule
@@ -235,7 +235,7 @@ dependencies/libs/glfw-3.1.2/src/preinstall:
 dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32,33,34,35 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=24,25,26,27,28,29,30,31,32,33,34,35,36 "Built target glfw"
 .PHONY : dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 
 # Include target in all.
@@ -302,7 +302,7 @@ dependencies/libs/glfw-3.1.2/examples/preinstall:
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\boing.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\boing.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target boing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=6,7 "Built target boing"
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/all
 
 # Include target in all.
@@ -339,7 +339,7 @@ clean: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/clean
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\simple.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\simple.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=61,62 "Built target simple"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=62,63 "Built target simple"
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/all
 
 # Include target in all.
@@ -376,7 +376,7 @@ clean: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/clean
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\gears.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\gears.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=21,22 "Built target gears"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=22,23 "Built target gears"
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/all
 
 # Include target in all.
@@ -413,7 +413,7 @@ clean: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/clean
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\wave.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\wave.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=73,74 "Built target wave"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=74,75 "Built target wave"
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/all
 
 # Include target in all.
@@ -450,7 +450,7 @@ clean: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/clean
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=53,54,55,56 "Built target particles"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=54,55,56,57 "Built target particles"
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/all
 
 # Include target in all.
@@ -487,7 +487,7 @@ clean: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/clean
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\heightmap.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\heightmap.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=39,40,41 "Built target heightmap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=40,41,42 "Built target heightmap"
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/all
 
 # Include target in all.
@@ -524,7 +524,7 @@ clean: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/clean
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\splitview.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\splitview.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=63,64 "Built target splitview"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=64,65 "Built target splitview"
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/all
 
 # Include target in all.
@@ -609,7 +609,7 @@ dependencies/libs/glfw-3.1.2/tests/preinstall:
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\clipboard.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\clipboard.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=7,8,9 "Built target clipboard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=8,9,10 "Built target clipboard"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/all
 
 # Include target in all.
@@ -646,7 +646,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\joysticks.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\joysticks.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=45,46 "Built target joysticks"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=46,47 "Built target joysticks"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/all
 
 # Include target in all.
@@ -683,7 +683,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/events.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\events.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/events.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\events.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/events.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=15,16,17 "Built target events"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=16,17,18 "Built target events"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/events.dir/all
 
 # Include target in all.
@@ -720,7 +720,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/events.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/msaa.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\msaa.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/msaa.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\msaa.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/msaa.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=50,51,52 "Built target msaa"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=51,52,53 "Built target msaa"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/msaa.dir/all
 
 # Include target in all.
@@ -757,7 +757,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/msaa.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/iconify.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\iconify.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/iconify.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\iconify.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/iconify.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=42,43,44 "Built target iconify"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=43,44,45 "Built target iconify"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/iconify.dir/all
 
 # Include target in all.
@@ -794,7 +794,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/iconify.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/gamma.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\gamma.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/gamma.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\gamma.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/gamma.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=18,19,20 "Built target gamma"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=19,20,21 "Built target gamma"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/gamma.dir/all
 
 # Include target in all.
@@ -831,7 +831,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/gamma.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\glfwinfo.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\glfwinfo.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=36,37,38 "Built target glfwinfo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=37,38,39 "Built target glfwinfo"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/all
 
 # Include target in all.
@@ -868,7 +868,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/monitors.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\monitors.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/monitors.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\monitors.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/monitors.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=47,48,49 "Built target monitors"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=48,49,50 "Built target monitors"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/monitors.dir/all
 
 # Include target in all.
@@ -905,7 +905,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/monitors.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/reopen.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\reopen.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/reopen.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\reopen.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/reopen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=57,58 "Built target reopen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=58,59 "Built target reopen"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/reopen.dir/all
 
 # Include target in all.
@@ -942,7 +942,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/reopen.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/cursor.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\cursor.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/cursor.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\cursor.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/cursor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=10,11 "Built target cursor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=11,12 "Built target cursor"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/cursor.dir/all
 
 # Include target in all.
@@ -979,7 +979,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/cursor.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/empty.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\empty.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/empty.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\empty.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/empty.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=12,13,14 "Built target empty"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=13,14,15 "Built target empty"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/empty.dir/all
 
 # Include target in all.
@@ -1016,7 +1016,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/empty.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\sharing.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\sharing.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=59,60 "Built target sharing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=60,61 "Built target sharing"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/all
 
 # Include target in all.
@@ -1053,7 +1053,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/tearing.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\tearing.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/tearing.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\tearing.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/tearing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=65,66,67 "Built target tearing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=66,67,68 "Built target tearing"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/tearing.dir/all
 
 # Include target in all.
@@ -1090,7 +1090,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/tearing.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/threads.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\threads.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/threads.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\threads.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/threads.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=68,69,70 "Built target threads"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=69,70,71 "Built target threads"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/threads.dir/all
 
 # Include target in all.
@@ -1127,7 +1127,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/threads.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\title.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\title.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=71,72 "Built target title"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=72,73 "Built target title"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/all
 
 # Include target in all.
@@ -1164,7 +1164,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/windows.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\windows.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/windows.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\windows.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/windows.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=75,76 "Built target windows"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\DATA\Documents\gitHub\Vivid\cmake-build-debug\CMakeFiles --progress-num=76,77 "Built target windows"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/windows.dir/all
 
 # Include target in all.
