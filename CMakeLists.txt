@@ -67,7 +67,7 @@ set(ALL_LIBS
 
 
 
-set(SOURCE_FILES src/main.cpp src/test.cpp)
+set(SOURCE_FILES src/main.cpp)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
