@@ -1,3 +1,6 @@
-.idea/
-cmake-build-debug/
-bin/debug/
+.idea
+.idea/*
+cmake-build-debug
+cmake-build-debug/*
+bin/debug
+bin/debug/*
