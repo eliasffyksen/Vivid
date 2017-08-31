@@ -1,1 +1,0 @@
--lglu32 -lopengl32 dependencies/libs/glfw-3.1.2/src/libglfw3.a dependencies/libs/libGLEW_1130.a -lglu32 -lopengl32 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

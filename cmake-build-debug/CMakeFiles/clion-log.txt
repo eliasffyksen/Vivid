@@ -1,7 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2017.1.3\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\DATA\Documents\gitHub\Vivid
--- Could NOT find Doxygen (missing:  DOXYGEN_EXECUTABLE) 
--- Using Win32 for window creation
--- Using WGL for context creation
--- Configuring done
--- Generating done
--- Build files have been written to: D:/DATA/Documents/gitHub/Vivid/cmake-build-debug
