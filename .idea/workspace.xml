@@ -2,33 +2,33 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="BLANKOpenGL" targetName="iconify" />
-      <config projectName="BLANKOpenGL" targetName="msaa" />
-      <config projectName="BLANKOpenGL" targetName="threads" />
-      <config projectName="BLANKOpenGL" targetName="BLANKOpenGL" />
-      <config projectName="BLANKOpenGL" targetName="tearing" />
-      <config projectName="BLANKOpenGL" targetName="joysticks" />
-      <config projectName="BLANKOpenGL" targetName="clipboard" />
-      <config projectName="BLANKOpenGL" targetName="simple" />
-      <config projectName="BLANKOpenGL" targetName="empty" />
-      <config projectName="BLANKOpenGL" targetName="glfwinfo" />
-      <config projectName="BLANKOpenGL" targetName="heightmap" />
-      <config projectName="BLANKOpenGL" targetName="sharing" />
-      <config projectName="BLANKOpenGL" targetName="reopen" />
-      <config projectName="BLANKOpenGL" targetName="uninstall" />
-      <config projectName="BLANKOpenGL" targetName="monitors" />
-      <config projectName="BLANKOpenGL" targetName="splitview" />
-      <config projectName="BLANKOpenGL" targetName="glfw" />
-      <config projectName="BLANKOpenGL" targetName="windows" />
-      <config projectName="BLANKOpenGL" targetName="cursor" />
-      <config projectName="BLANKOpenGL" targetName="events" />
-      <config projectName="BLANKOpenGL" targetName="wave" />
-      <config projectName="BLANKOpenGL" targetName="title" />
-      <config projectName="BLANKOpenGL" targetName="gamma" />
-      <config projectName="BLANKOpenGL" targetName="particles" />
-      <config projectName="BLANKOpenGL" targetName="gears" />
-      <config projectName="BLANKOpenGL" targetName="GLEW_1130" />
-      <config projectName="BLANKOpenGL" targetName="boing" />
+      <config projectName="Vivid" targetName="glfwinfo" />
+      <config projectName="Vivid" targetName="joysticks" />
+      <config projectName="Vivid" targetName="splitview" />
+      <config projectName="Vivid" targetName="windows" />
+      <config projectName="Vivid" targetName="threads" />
+      <config projectName="Vivid" targetName="sharing" />
+      <config projectName="Vivid" targetName="boing" />
+      <config projectName="Vivid" targetName="gamma" />
+      <config projectName="Vivid" targetName="reopen" />
+      <config projectName="Vivid" targetName="msaa" />
+      <config projectName="Vivid" targetName="tearing" />
+      <config projectName="Vivid" targetName="monitors" />
+      <config projectName="Vivid" targetName="clipboard" />
+      <config projectName="Vivid" targetName="simple" />
+      <config projectName="Vivid" targetName="iconify" />
+      <config projectName="Vivid" targetName="glfw" />
+      <config projectName="Vivid" targetName="title" />
+      <config projectName="Vivid" targetName="wave" />
+      <config projectName="Vivid" targetName="empty" />
+      <config projectName="Vivid" targetName="cursor" />
+      <config projectName="Vivid" targetName="Vivid" />
+      <config projectName="Vivid" targetName="GLEW_1130" />
+      <config projectName="Vivid" targetName="uninstall" />
+      <config projectName="Vivid" targetName="heightmap" />
+      <config projectName="Vivid" targetName="events" />
+      <config projectName="Vivid" targetName="gears" />
+      <config projectName="Vivid" targetName="particles" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -52,8 +52,8 @@
       <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+            <state relative-caret-position="185">
+              <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -162,53 +162,11 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BLANKOpenGL" />
+              <option name="myItemId" value="Vivid" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BLANK OpenGL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BLANKOpenGL" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BLANK OpenGL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BLANKOpenGL" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BLANK OpenGL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dependencies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BLANKOpenGL" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BLANK OpenGL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
+              <option name="myItemId" value="Vivid" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -249,7 +207,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BLANKOpenGL">
+  <component name="RunManager" selected="Application.Vivid">
     <configuration default="true" type="CLion_Remote" factoryName="GDB Remote Debug" remoteCommand="" symbolFile="" sysroot="">
       <method />
     </configuration>
@@ -432,12 +390,12 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="BLANKOpenGL" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BLANKOpenGL" TARGET_NAME="BLANKOpenGL" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BLANKOpenGL" RUN_TARGET_NAME="BLANKOpenGL">
+    <configuration default="false" name="Vivid" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Vivid" TARGET_NAME="Vivid" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Vivid" RUN_TARGET_NAME="Vivid">
       <envs />
       <method />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Application.BLANKOpenGL" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Vivid" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -460,12 +418,12 @@
       <workItem from="1504125015775" duration="3600000" />
       <workItem from="1504160302020" duration="8764000" />
       <workItem from="1504169751797" duration="956000" />
-      <workItem from="1504172147412" duration="14000" />
+      <workItem from="1504172147412" duration="80000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15044000" />
+    <option name="totallyTimeSpent" value="15110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-14" y="-14" width="3868" height="2098" extended-state="6" />
@@ -806,8 +764,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        <state relative-caret-position="185">
+          <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
           <folding />
         </state>
       </provider>
