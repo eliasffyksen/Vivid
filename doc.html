@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+	<head>
+		<style>
+			h1, h5{
+				margin: 5px;
+			}
+			.path, .type{
+				color: #4B95F3;
+			}
+			table {
+				border-collapse: collapse;
+				width: 100%;
+			}
+			td{
+				padding: 10px;
+			}
+			td.first{
+				color: #F66;
+				width: 500px;
+			}
+			td.last{
+				color: #F66;
+				width: 100px;
+			}
+			tr:nth-child(odd) {background: #EEE}
+			tr:nth-child(even) {background: #FFF}
+		</style>
+	</head>
+	<body>
+
+		<!-- ###################################################################### WINDOW CLASS ################################################################################## -->
+
+		<br>
+		<h1>Window</h1>
+		<h5 class=type>CLASS</h5>
+		<i class=path>vivid::graphics::Window</i>
+		<br>
+		<br>
+		<h3>Functions:</h3>
+		<table>
+			<tr>
+				<td class=first>Window(const char* <strong>title</strong>, int <strong>width</strong>, int <strong>height</strong>)</td>
+				<td>Constructor that takes inn <strong>title</strong>, <strong>width</strong> and <strong>height</strong> for the window that is being created</td>
+				<td class=last><i>void</i></td>
+			</tr>
+			<tr>
+				<td class=first>init()</td>
+				<td>Initiates the window</td>
+				<td class=last><i>void</i></td>
+			</tr>
+			<tr>
+				<td class=first>clear()</td>
+				<td>Clears the window</td>
+				<td class=last><i>void</i></td>
+			</tr>
+			<tr>
+				<td class=first>update()</td>
+				<td>Updates the window</td>
+				<td class=last><i>void</i></td>
+			</tr>
+			<tr>
+				<td class=first>isClosed()</td>
+				<td>Checks if the window is closed. Returns true if the window is closed</td>
+				<td class=last><i>bool</i></td>
+			</tr>
+			<tr>
+				<td class=first>getWidth()</td>
+				<td>Gets the width of the window</td>
+				<td class=last><i>int</i></td>
+			</tr>
+			<tr>
+				<td class=first>getHeight()</td>
+				<td>Gets the height of the window</td>
+				<td class=last><i>int</i></td>
+			</tr>
+		</table>
+		<br>
+		<br>
+		<br>
+		<hr>
+
+
+		<!-- ###################################################################### SHADER CLASS ################################################################################## -->
+
+		<br>
+		<h1>Shader</h1>
+		<h5 class=type>CLASS</h5>
+		<i class=path>vivid::graphics::Window</i>
+		<br>
+		<br>
+		<h3>Functions:</h3>
+		<table>
+			<tr>
+				<td class=first>Shader(std::string <strong>path</strong>)</td>
+				<td>Constructor that takes inn the <strong>path</strong> to the desired shader</td>
+				<td class=last><i>void</i></td>
+			</tr>
+				<tr>
+					<td class=first>bind()</td>
+					<td>I have no idea what this shit does!</td>
+					<td class=last><i>void</i></td>
+				</tr>
+		</table>
+		<br>
+		<br>
+		<h3>Static Functions:</h3>
+		<table>
+			<tr>
+				<td class=first>LoadShaders(const char *<strong>vertex_file_path</strong>, const char *<strong>fragment_file_path</strong></td>
+				<td>Loads shader from <strong>vertex_file_path</strong> and <strong>fragment_file_path</strong></td>
+				<td class=last><i>GLuint</i></td>
+			</tr>
+		</table>
+		<br>
+		<br>
+		<br>
+		<hr>
+
+	</body>
+</html>
