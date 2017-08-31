@@ -40,7 +40,6 @@ namespace vivid {
 			}
 			glfwMakeContextCurrent(window);
 
-
 			glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
 			return true;
