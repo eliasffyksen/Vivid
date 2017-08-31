@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.7)
 project(Vivid)
 
 set (VERSION_MAJOR 0)
-set (VERSION_MINOR 0)
+set (VERSION_MINOR 1)
 set (DEBUG true)
 
 if (WIN32)
@@ -67,7 +67,7 @@ set(ALL_LIBS
 
 
 
-set(SOURCE_FILES src/main.cpp)
+set(SOURCE_FILES src/main.cpp src/graphics/shader.h src/graphics/shader.cpp src/graphics/window.h src/graphics/window.cpp)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
