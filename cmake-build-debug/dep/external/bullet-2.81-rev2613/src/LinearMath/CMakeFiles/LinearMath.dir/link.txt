@@ -1,0 +1,2 @@
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe qc libLinearMath.a  CMakeFiles/LinearMath.dir/btAlignedAllocator.cpp.obj CMakeFiles/LinearMath.dir/btConvexHull.cpp.obj CMakeFiles/LinearMath.dir/btConvexHullComputer.cpp.obj CMakeFiles/LinearMath.dir/btGeometryUtil.cpp.obj CMakeFiles/LinearMath.dir/btPolarDecomposition.cpp.obj CMakeFiles/LinearMath.dir/btQuickprof.cpp.obj CMakeFiles/LinearMath.dir/btSerializer.cpp.obj CMakeFiles/LinearMath.dir/btVector3.cpp.obj
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ranlib.exe libLinearMath.a
