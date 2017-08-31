@@ -11,9 +11,9 @@
 #define PLATFORM WIN64
 
 #if DEBUG
-#define LOG(x) std::cout << x  << std::endl
+	#define LOG(x) std::cout << x  << std::endl
 #else
-#define LOG(x)
+	#define LOG(x)
 #endif
 
 #endif
