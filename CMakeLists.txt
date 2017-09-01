@@ -46,6 +46,11 @@ endif ()
 file(GLOB RES_FILES res/*)
 file(COPY ${RES_FILES} DESTINATION "${PROJECT_SOURCE_DIR}/${RELEASE_FOLDER}")
 
+# Adds a copy of the source code for reference in release builds
+if(NOT DEBUG)
+	file(COPY src DESTINATION "${PROJECT_SOURCE_DIR}/${RELEASE_FOLDER}")
+endif()
+
 # Setting output folder to the bin folder
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/${RELEASE_FOLDER}")
 
