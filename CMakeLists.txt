@@ -3,9 +3,9 @@ cmake_minimum_required(VERSION 3.7)
 #----PROJECT VARIABLES----#
 project(Vivid)
 
-set(DEBUG true)
+set(DEBUG false)
 set(VERSION_MAJOR 0)
-set(VERSION_MINOR 1)
+set(VERSION_MINOR 2)
 #-------------------------#
 
 # Find the platform of the compiling system
@@ -48,7 +48,9 @@ file(COPY ${RES_FILES} DESTINATION "${PROJECT_SOURCE_DIR}/${RELEASE_FOLDER}")
 
 # Adds a copy of the source code for reference in release builds
 if(NOT DEBUG)
-	file(COPY src DESTINATION "${PROJECT_SOURCE_DIR}/${RELEASE_FOLDER}")
+#	file(COPY src DESTINATION "${PROJECT_SOURCE_DIR}/${RELEASE_FOLDER}")
+	add_custom_target(create_zip COMMAND ${CMAKE_COMMAND} -E tar "cfv"
+			"archive.zip" --format=zip "src")
 endif()
 
 # Setting output folder to the bin folder
