@@ -9,8 +9,7 @@
 #include "graphics/window.h"
 #include "graphics/shader.h"
 
-int main()
-{
+int main() {
 	using namespace vivid;
 	using namespace graphics;
 
@@ -36,7 +35,7 @@ int main()
 	static const GLfloat g_vertex_buffer_data[] = {
 			-1.0f, -1.0f, 0.0f,
 			1.0f, -1.0f, 0.0f,
-			0.0f,  1.0f, 0.0f,
+			0.0f, 1.0f, 0.0f,
 	};
 
 	GLuint vertexBuffer;
@@ -46,7 +45,7 @@ int main()
 
 	while (!window.isClosed()) {
 		window.clear();
-		
+
 		simple.bind();
 
 		// 1rst attribute buffer : vertices
@@ -70,6 +69,6 @@ int main()
 	glDeleteBuffers(1, &vertexBuffer);
 	glDeleteVertexArrays(1, &VertexArrayID);
 
-    return 0;
+	return 0;
 }
 

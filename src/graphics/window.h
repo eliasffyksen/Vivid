@@ -13,13 +13,12 @@ namespace vivid {
 
 		class Window {
 		private:
-			const char* title;
+			const char *title;
 			int width, height;
 
-			GLFWwindow* window;
+			GLFWwindow *window;
 		public:
-			Window(const char* name, int width, int height);
-
+			Window(const char *name, int width, int height);
 			~Window();
 
 			void update();
