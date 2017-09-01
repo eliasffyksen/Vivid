@@ -5,7 +5,7 @@ project(Vivid)
 
 set(DEBUG false)
 set(VERSION_MAJOR 0)
-set(VERSION_MINOR 2)
+set(VERSION_MINOR 1)
 #-------------------------#
 
 # Find the platform of the compiling system
@@ -16,7 +16,7 @@ if (WIN32)
 	else ()
 		set(PLATFORM WIN32)
 	endif ()
-endif ()
+endif (WIN32)
 
 # Create the configuration file for the C++ code
 configure_file(
@@ -29,9 +29,9 @@ set(CMAKE_CXX_STANDARD 11)
 # Set the correct output folder
 if (DEBUG)
 	set(RELEASE_FOLDER bin/debug)
-else ()
+else (DEBUG)
 	set(RELEASE_FOLDER bin/release_${PLATFORM}/${VERSION_MAJOR}.${VERSION_MINOR})
-endif ()
+endif (DEBUG)
 
 # Delete any existing bin files
 file(REMOVE_RECURSE ${RELEASE_FOLDER})
@@ -46,15 +46,13 @@ endif ()
 file(GLOB RES_FILES res/*)
 file(COPY ${RES_FILES} DESTINATION "${PROJECT_SOURCE_DIR}/${RELEASE_FOLDER}")
 
-# Adds a copy of the source code for reference in release builds
-if(NOT DEBUG)
-#	file(COPY src DESTINATION "${PROJECT_SOURCE_DIR}/${RELEASE_FOLDER}")
-	add_custom_target(create_zip COMMAND ${CMAKE_COMMAND} -E tar "cfv"
-			"archive.zip" --format=zip "src")
-endif()
-
 # Setting output folder to the bin folder
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/${RELEASE_FOLDER}")
+
+# Adds a copy of the source code for reference in release builds
+if (NOT DEBUG)
+	file(COPY src DESTINATION "${PROJECT_SOURCE_DIR}/${RELEASE_FOLDER}")
+endif (NOT DEBUG)
 
 # Include OpenGL (Would be a shame to forget doing this...)
 find_package(OpenGL REQUIRED)
