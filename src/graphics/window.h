@@ -6,45 +6,53 @@
 #define GLTEST_WINDOW_H
 
 #include <GLFW/glfw3.h>
+#include <iostream>
+#include "../config.h"
 
 
 namespace vivid {
-	namespace graphics {
+    namespace graphics {
 
 #define MAX_KEYS 1024
 #define MAX_MOUSE_BUTTONS 32
 
-		class Window {
-		private:
-			const char *title;
-			int width, height;
+        class Window {
+        private:
+            const char *title;
+            int width, height;
 
-            GLFWwindow* window;
+            GLFWwindow *window;
 
             bool keys[MAX_KEYS];
             bool mouseButtons[MAX_MOUSE_BUTTONS];
             double mouseX, mouseY;
-		public:
-			Window(const char *name, int width, int height);
-			~Window();
+        public:
+            Window(const char *name, int width, int height);
 
-			void update();
-			void clear() const;
-			bool isClosed() const;
+            ~Window();
 
-            inline bool isKeyPressed(int key){ if(key < MAX_KEYS && key > 0) return keys[key];}
-			inline bool isMouseButtonPressed(int button){ if(button < MAX_MOUSE_BUTTONS && button > 0) return mouseButtons[button];}
+            void update();
+            void clear() const;
 
-			inline int getWidth() const { return width; }
-			inline int getHeight() const { return height; }
+            bool isClosed() const;
+            bool isKeyPressed(int key) const;
+            bool isMouseButtonPressed(int button) const;
 
-		private:
-			bool init();
-            static void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-            static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
-		};
+            void getCursorPosition(double &x, double &y) const;
 
-	}
+            inline int getWidth() const { return width; }
+            inline int getHeight() const { return height; }
+
+        private:
+            bool init();
+
+            static void framebufferSizeCallback(GLFWwindow *window, int width, int height);
+            static void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);
+            static void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods);
+            static void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos);
+        };
+
+    }
 }
 
 #endif //GLTEST_WINDOW_H

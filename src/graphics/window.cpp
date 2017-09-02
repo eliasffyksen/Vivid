@@ -45,8 +45,11 @@ namespace vivid {
 
             glfwMakeContextCurrent(window);
             glfwSetWindowUserPointer(window, this);
-            glfwSetFramebufferSizeCallback(window, Window::framebuffer_size_callback);
-            glfwSetKeyCallback(window, Window::key_callback);
+
+            glfwSetFramebufferSizeCallback(window, Window::framebufferSizeCallback);
+            glfwSetKeyCallback(window, Window::keyCallback);
+            glfwSetMouseButtonCallback(window, Window::mouseButtonCallback);
+            glfwSetCursorPosCallback(window, Window::cursorPositionCallback);
 
             return true;
         }
@@ -68,20 +71,54 @@ namespace vivid {
             return glfwWindowShouldClose(window) == 1;
         }
 
-        void Window::framebuffer_size_callback(GLFWwindow *window, int width, int height) {
-            Window *win = (Window *)glfwGetWindowUserPointer(window);
+        void Window::framebufferSizeCallback(GLFWwindow *window, int width, int height) {
+            Window *win = (Window *) glfwGetWindowUserPointer(window);
             win->width = width;
             win->height = height;
 
             glViewport(0, 0, width, height);
         }
 
-        void Window::key_callback(GLFWwindow *window, int key, int scancode, int action, int mods) {
-            Window *win = (Window *)glfwGetWindowUserPointer(window);
-            if(action == GLFW_PRESS)
+        void Window::keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods) {
+            Window *win = (Window *) glfwGetWindowUserPointer(window);
+
+            if (action == GLFW_PRESS)
                 win->keys[key] = true;
-            else if(action == GLFW_RELEASE)
+            else if (action == GLFW_RELEASE)
                 win->keys[key] = false;
+        }
+
+        void Window::mouseButtonCallback(GLFWwindow *window, int button, int action, int mods) {
+            Window *win = (Window *) glfwGetWindowUserPointer(window);
+
+            if (action == GLFW_PRESS)
+                win->mouseButtons[button] = true;
+            else if (action == GLFW_RELEASE)
+                win->mouseButtons[button] = false;
+        }
+
+        void Window::cursorPositionCallback(GLFWwindow *window, double xpos, double ypos) {
+            Window *win = (Window *) glfwGetWindowUserPointer(window);
+
+            win->mouseX = xpos;
+            win->mouseY = ypos;
+        }
+
+        bool Window::isKeyPressed(int key){
+            if(key < MAX_KEYS && key >= 0)
+                return keys[key];
+            return false;
+        }
+
+        bool Window::isMouseButtonPressed(int button){
+            if(button < MAX_MOUSE_BUTTONS && button >= 0)
+                return mouseButtons[button];
+            return false;
+        }
+
+        void Window::getCursorPosition(double &x, double &y) {
+            x = mouseX;
+            y = mouseY;
         }
 
     }

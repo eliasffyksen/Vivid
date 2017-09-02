@@ -466,7 +466,7 @@ The callback function receives the new size of the framebuffer when it is
 resized, which can for example be used to update the OpenGL viewport.
 
 @code
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+void framebufferSizeCallback(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
 }

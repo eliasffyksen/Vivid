@@ -199,7 +199,7 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
 The key callback, like other window related callbacks, are set per-window.
 
 @code
-glfwSetKeyCallback(window, key_callback);
+glfwSetKeyCallback(window, keyCallback);
 @endcode
 
 In order for event callbacks to be called when events occur, you need to process

@@ -137,9 +137,9 @@ Keyboard input</h1>
 <h2><a class="anchor" id="input_key"></a>
 Key input</h2>
 <p>If you wish to be notified when a physical key is pressed or released or when it repeats, set a key callback.</p>
-<div class="fragment"><div class="line"><a class="code" href="group__input.html#ga7e496507126f35ea72f01b2e6ef6d155">glfwSetKeyCallback</a>(window, key_callback);</div>
+<div class="fragment"><div class="line"><a class="code" href="group__input.html#ga7e496507126f35ea72f01b2e6ef6d155">glfwSetKeyCallback</a>(window, keyCallback);</div>
 </div><!-- fragment --><p>The callback function receives the <a class="el" href="group__keys.html">keyboard key</a>, platform-specific scancode, key action and <a class="el" href="group__mods.html">modifier bits</a>.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> key_callback(<a class="code" href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a>* window, <span class="keywordtype">int</span> key, <span class="keywordtype">int</span> scancode, <span class="keywordtype">int</span> action, <span class="keywordtype">int</span> mods)</div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> keyCallback(<a class="code" href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a>* window, <span class="keywordtype">int</span> key, <span class="keywordtype">int</span> scancode, <span class="keywordtype">int</span> action, <span class="keywordtype">int</span> mods)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">if</span> (key == <a class="code" href="group__keys.html#gabf48fcc3afbe69349df432b470c96ef2">GLFW_KEY_E</a> &amp;&amp; action == <a class="code" href="group__input.html#ga2485743d0b59df3791c45951c4195265">GLFW_PRESS</a>)</div>
 <div class="line">        activate_airship();</div>
@@ -253,9 +253,9 @@ Cursor enter/leave events</h2>
 </div><!-- fragment --><h2><a class="anchor" id="input_mouse_button"></a>
 Mouse button input</h2>
 <p>If you wish to be notified when a mouse button is pressed or released, set a mouse button callback.</p>
-<div class="fragment"><div class="line"><a class="code" href="group__input.html#gaef49b72d84d615bca0a6ed65485e035d">glfwSetMouseButtonCallback</a>(window, mouse_button_callback);</div>
+<div class="fragment"><div class="line"><a class="code" href="group__input.html#gaef49b72d84d615bca0a6ed65485e035d">glfwSetMouseButtonCallback</a>(window, mouseButtonCallback);</div>
 </div><!-- fragment --><p>The callback function receives the <a class="el" href="group__buttons.html">mouse button</a>, button action and <a class="el" href="group__mods.html">modifier bits</a>.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> mouse_button_callback(<a class="code" href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a>* window, <span class="keywordtype">int</span> button, <span class="keywordtype">int</span> action, <span class="keywordtype">int</span> mods)</div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> mouseButtonCallback(<a class="code" href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a>* window, <span class="keywordtype">int</span> button, <span class="keywordtype">int</span> action, <span class="keywordtype">int</span> mods)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">if</span> (button == <a class="code" href="group__buttons.html#ga3e2f2cf3c4942df73cc094247d275e74">GLFW_MOUSE_BUTTON_RIGHT</a> &amp;&amp; action == <a class="code" href="group__input.html#ga2485743d0b59df3791c45951c4195265">GLFW_PRESS</a>)</div>
 <div class="line">        popup_menu();</div>

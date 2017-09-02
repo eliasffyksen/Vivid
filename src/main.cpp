@@ -45,11 +45,12 @@ int main()
 	glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
 
+    double x, y;
+
 	while (!window.isClosed()) {
 
-        if(window.isKeyPressed(GLFW_KEY_A)){
-            LOG("A is pressed");
-        }
+        window.getCursorPosition(x, y);
+        LOG("X: " << x << "\tY: " << y);
 
 		window.clear();
 

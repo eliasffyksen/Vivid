@@ -167,13 +167,13 @@ Checking the window close flag</h2>
 <h2><a class="anchor" id="quick_key_input"></a>
 Receiving input events</h2>
 <p>Each window has a large number of callbacks that can be set to receive all the various kinds of events. To receive key press and release events, create a key callback function.</p>
-<div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> key_callback(<a class="code" href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a>* window, <span class="keywordtype">int</span> key, <span class="keywordtype">int</span> scancode, <span class="keywordtype">int</span> action, <span class="keywordtype">int</span> mods)</div>
+<div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> keyCallback(<a class="code" href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a>* window, <span class="keywordtype">int</span> key, <span class="keywordtype">int</span> scancode, <span class="keywordtype">int</span> action, <span class="keywordtype">int</span> mods)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">if</span> (key == <a class="code" href="group__keys.html#gaac6596c350b635c245113b81c2123b93">GLFW_KEY_ESCAPE</a> &amp;&amp; action == <a class="code" href="group__input.html#ga2485743d0b59df3791c45951c4195265">GLFW_PRESS</a>)</div>
 <div class="line">        <a class="code" href="group__window.html#ga49c449dde2a6f87d996f4daaa09d6708">glfwSetWindowShouldClose</a>(window, GL_TRUE);</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>The key callback, like other window related callbacks, are set per-window.</p>
-<div class="fragment"><div class="line"><a class="code" href="group__input.html#ga7e496507126f35ea72f01b2e6ef6d155">glfwSetKeyCallback</a>(window, key_callback);</div>
+<div class="fragment"><div class="line"><a class="code" href="group__input.html#ga7e496507126f35ea72f01b2e6ef6d155">glfwSetKeyCallback</a>(window, keyCallback);</div>
 </div><!-- fragment --><p>In order for event callbacks to be called when events occur, you need to process events as described below.</p>
 <h2><a class="anchor" id="quick_render"></a>
 Rendering with OpenGL</h2>
@@ -216,7 +216,7 @@ Putting it together</h1>
 <div class="line">    fputs(description, stderr);</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> key_callback(<a class="code" href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a>* window, <span class="keywordtype">int</span> key, <span class="keywordtype">int</span> scancode, <span class="keywordtype">int</span> action, <span class="keywordtype">int</span> mods)</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> keyCallback(<a class="code" href="group__window.html#ga3c96d80d363e67d13a41b5d1821f3242">GLFWwindow</a>* window, <span class="keywordtype">int</span> key, <span class="keywordtype">int</span> scancode, <span class="keywordtype">int</span> action, <span class="keywordtype">int</span> mods)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">if</span> (key == <a class="code" href="group__keys.html#gaac6596c350b635c245113b81c2123b93">GLFW_KEY_ESCAPE</a> &amp;&amp; action == <a class="code" href="group__input.html#ga2485743d0b59df3791c45951c4195265">GLFW_PRESS</a>)</div>
 <div class="line">        <a class="code" href="group__window.html#ga49c449dde2a6f87d996f4daaa09d6708">glfwSetWindowShouldClose</a>(window, GL_TRUE);</div>
@@ -241,7 +241,7 @@ Putting it together</h1>
 <div class="line">    <a class="code" href="group__context.html#ga1c04dc242268f827290fe40aa1c91157">glfwMakeContextCurrent</a>(window);</div>
 <div class="line">    <a class="code" href="group__context.html#ga6d4e0cdf151b5e579bd67f13202994ed">glfwSwapInterval</a>(1);</div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="group__input.html#ga7e496507126f35ea72f01b2e6ef6d155">glfwSetKeyCallback</a>(window, key_callback);</div>
+<div class="line">    <a class="code" href="group__input.html#ga7e496507126f35ea72f01b2e6ef6d155">glfwSetKeyCallback</a>(window, keyCallback);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">while</span> (!<a class="code" href="group__window.html#ga24e02fbfefbb81fc45320989f8140ab5">glfwWindowShouldClose</a>(window))</div>
 <div class="line">    {</div>
