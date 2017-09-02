@@ -9,17 +9,18 @@
 #include "graphics/window.h"
 #include "graphics/shader.h"
 
+#include "config.h"
+
 int main()
 {
 	using namespace vivid;
 	using namespace graphics;
 
-	Window window("Window!!", 800, 600);
-	glClearColor(0.2f, 0.3f, 0.8f, 1.0f);
+	Window window("Window!!", 1920, 1200);
 
-	glewExperimental = GL_TRUE;
+    glewExperimental = GL_TRUE;
 	if (glewInit() != GLEW_OK) {
-		fprintf(stderr, "Failed to initialize GLEW\n");
+		LOG("Failed to initialize GLEW\n");
 		getchar();
 		glfwTerminate();
 		return -1;
