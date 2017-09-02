@@ -40,7 +40,7 @@ namespace vivid {
 			}
 			glfwMakeContextCurrent(window);
 
-			glfwSetFramebufferSizeCallback(window, Window::framebuffer_size_callback);
+			glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
 			return true;
 		}
@@ -62,16 +62,8 @@ namespace vivid {
 			return glfwWindowShouldClose(window) == 1;
 		}
 
-<<<<<<< HEAD
-		void Window::framebuffer_size_callback(GLFWwindow* window, int width, int height) {
-=======
 		void framebuffer_size_callback(GLFWwindow *window, int width, int height) {
->>>>>>> b3a5b9127baa0510a7c44012b750173bc1b1268c
 			glViewport(0, 0, width, height);
-		}
-
-		void Window::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods){
-
 		}
 
 	}
