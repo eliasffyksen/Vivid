@@ -170,7 +170,7 @@ static void refresh_joysticks(void)
 
             if (!j->present)
             {
-                printf("Found joystick %i named \'%s\' with %i axes, %i buttons\n",
+                printf("Found joystick %i named \'%s\' with %i axes, %i mouseButtons\n",
                        i + 1, j->name, j->axis_count, j->button_count);
 
                 joystick_count++;

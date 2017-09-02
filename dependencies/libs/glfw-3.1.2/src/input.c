@@ -104,7 +104,7 @@ static void setStickyKeys(_GLFWwindow* window, int enabled)
     window->stickyKeys = enabled;
 }
 
-// Set sticky mouse buttons mode for the specified window
+// Set sticky mouse mouseButtons mode for the specified window
 //
 static void setStickyMouseButtons(_GLFWwindow* window, int enabled)
 {
@@ -115,7 +115,7 @@ static void setStickyMouseButtons(_GLFWwindow* window, int enabled)
     {
         int i;
 
-        // Release all sticky mouse buttons
+        // Release all sticky mouse mouseButtons
         for (i = 0;  i <= GLFW_MOUSE_BUTTON_LAST;  i++)
         {
             if (window->mouseButtons[i] == _GLFW_STICK)

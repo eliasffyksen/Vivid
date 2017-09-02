@@ -92,7 +92,7 @@ Modules</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__mods"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mods.html">Modifier key flags</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:group__buttons"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__buttons.html">Mouse buttons</a></td></tr>
+<tr class="memitem:group__buttons"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__buttons.html">Mouse mouseButtons</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__shapes"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__shapes.html">Standard cursor shapes</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,7 +187,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga6271d46a5901ec2c99601ccf4dd14731"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the values of all axes of the specified joystick.  <a href="#ga6271d46a5901ec2c99601ccf4dd14731">More...</a><br /></td></tr>
 <tr class="separator:ga6271d46a5901ec2c99601ccf4dd14731"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gace54cd930dcd502e118fe4021384ce1b"><td class="memItemLeft" align="right" valign="top">const unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gace54cd930dcd502e118fe4021384ce1b">glfwGetJoystickButtons</a> (int joy, int *count)</td></tr>
-<tr class="memdesc:gace54cd930dcd502e118fe4021384ce1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the state of all buttons of the specified joystick.  <a href="#gace54cd930dcd502e118fe4021384ce1b">More...</a><br /></td></tr>
+<tr class="memdesc:gace54cd930dcd502e118fe4021384ce1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the state of all mouseButtons of the specified joystick.  <a href="#gace54cd930dcd502e118fe4021384ce1b">More...</a><br /></td></tr>
 <tr class="separator:gace54cd930dcd502e118fe4021384ce1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac8d7f6107e05cfd106cfba973ab51e19"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gac8d7f6107e05cfd106cfba973ab51e19">glfwGetJoystickName</a> (int joy)</td></tr>
 <tr class="memdesc:gac8d7f6107e05cfd106cfba973ab51e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the specified joystick.  <a href="#gac8d7f6107e05cfd106cfba973ab51e19">More...</a><br /></td></tr>
@@ -728,7 +728,7 @@ Key and button actions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This function returns the state of all buttons of the specified joystick. Each element in the array is either <code>GLFW_PRESS</code> or <code>GLFW_RELEASE</code>.</p>
+<p>This function returns the state of all mouseButtons of the specified joystick. Each element in the array is either <code>GLFW_PRESS</code> or <code>GLFW_RELEASE</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">joy</td><td>The <a class="el" href="group__joysticks.html">joystick</a> to query. </td></tr>
@@ -1262,7 +1262,7 @@ Key and button actions</h2></td></tr>
 <li><code>GLFW_CURSOR_DISABLED</code> hides and grabs the cursor, providing virtual and unlimited cursor movement. This is useful for implementing for example 3D camera controls.</li>
 </ul>
 <p>If the mode is <code>GLFW_STICKY_KEYS</code>, the value must be either <code>GL_TRUE</code> to enable sticky keys, or <code>GL_FALSE</code> to disable it. If sticky keys are enabled, a key press will ensure that <a class="el" href="group__input.html#gadd341da06bc8d418b4dc3a3518af9ad2">glfwGetKey</a> returns <code>GLFW_PRESS</code> the next time it is called even if the key had been released before the call. This is useful when you are only interested in whether keys have been pressed but not when or in which order.</p>
-<p>If the mode is <code>GLFW_STICKY_MOUSE_BUTTONS</code>, the value must be either <code>GL_TRUE</code> to enable sticky mouse buttons, or <code>GL_FALSE</code> to disable it. If sticky mouse buttons are enabled, a mouse button press will ensure that <a class="el" href="group__input.html#gac1473feacb5996c01a7a5a33b5066704">glfwGetMouseButton</a> returns <code>GLFW_PRESS</code> the next time it is called even if the mouse button had been released before the call. This is useful when you are only interested in whether mouse buttons have been pressed but not when or in which order.</p>
+<p>If the mode is <code>GLFW_STICKY_MOUSE_BUTTONS</code>, the value must be either <code>GL_TRUE</code> to enable sticky mouse mouseButtons, or <code>GL_FALSE</code> to disable it. If sticky mouse mouseButtons are enabled, a mouse button press will ensure that <a class="el" href="group__input.html#gac1473feacb5996c01a7a5a33b5066704">glfwGetMouseButton</a> returns <code>GLFW_PRESS</code> the next time it is called even if the mouse button had been released before the call. This is useful when you are only interested in whether mouse mouseButtons have been pressed but not when or in which order.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">window</td><td>The window whose input mode to set. </td></tr>
@@ -1344,7 +1344,7 @@ Key and button actions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This function sets the mouse button callback of the specified window, which is called when a mouse button is pressed or released.</p>
-<p>When a window loses input focus, it will generate synthetic mouse button release events for all pressed mouse buttons. You can tell these events from user-generated events by the fact that the synthetic ones are generated after the focus loss event has been processed, i.e. after the <a class="el" href="group__window.html#ga25d1c584edb375d7711c5c3548ba711f">window focus callback</a> has been called.</p>
+<p>When a window loses input focus, it will generate synthetic mouse button release events for all pressed mouse mouseButtons. You can tell these events from user-generated events by the fact that the synthetic ones are generated after the focus loss event has been processed, i.e. after the <a class="el" href="group__window.html#ga25d1c584edb375d7711c5c3548ba711f">window focus callback</a> has been called.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">window</td><td>The window whose callback to set. </td></tr>

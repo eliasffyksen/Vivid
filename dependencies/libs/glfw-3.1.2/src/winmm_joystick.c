@@ -135,8 +135,8 @@ const unsigned char* _glfwPlatformGetJoystickButtons(int joy, int* count)
         (*count)++;
     }
 
-    // Virtual buttons - Inject data from hats
-    // Each hat is exposed as 4 buttons which exposes 8 directions with
+    // Virtual mouseButtons - Inject data from hats
+    // Each hat is exposed as 4 mouseButtons which exposes 8 directions with
     // concurrent button presses
     // NOTE: this API exposes only one hat
 

@@ -385,7 +385,7 @@ a mouse button callback.
 glfwSetMouseButtonCallback(window, mouse_button_callback);
 @endcode
 
-The callback function receives the [mouse button](@ref buttons), button action
+The callback function receives the [mouse button](@ref mouseButtons), button action
 and [modifier bits](@ref mods).
 
 @code
@@ -398,7 +398,7 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 
 The action is one of `GLFW_PRESS` or `GLFW_RELEASE`.
 
-Mouse button states for [named buttons](@ref buttons) are also saved in
+Mouse button states for [named mouseButtons](@ref mouseButtons) are also saved in
 per-window state arrays that can be polled with @ref glfwGetMouseButton.
 
 @code
@@ -422,14 +422,14 @@ input mode.
 glfwSetInputMode(window, GLFW_STICKY_MOUSE_BUTTONS, 1);
 @endcode
 
-When sticky mouse buttons mode is enabled, the pollable state of a mouse button
+When sticky mouse mouseButtons mode is enabled, the pollable state of a mouse button
 will remain `GLFW_PRESS` until the state of that button is polled with @ref
 glfwGetMouseButton.  Once it has been polled, if a mouse button release event
 had been processed in the meantime, the state will reset to `GLFW_RELEASE`,
 otherwise it will remain `GLFW_PRESS`.
 
 The `GLFW_MOUSE_BUTTON_LAST` constant holds the highest value of any
-[named button](@ref buttons).
+[named button](@ref mouseButtons).
 
 
 @subsection scrolling Scroll input
@@ -489,7 +489,7 @@ Each element in the returned array is a value between -1.0 and 1.0.
 
 @subsection joystick_button Joystick button states
 
-The states of all buttons of a joystick are returned by @ref
+The states of all mouseButtons of a joystick are returned by @ref
 glfwGetJoystickButtons.  See the reference documentation for the lifetime of the
 returned array.
 

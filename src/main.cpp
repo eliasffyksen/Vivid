@@ -46,6 +46,11 @@ int main()
 	glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
 
 	while (!window.isClosed()) {
+
+        if(window.isKeyPressed(GLFW_KEY_A)){
+            LOG("A is pressed");
+        }
+
 		window.clear();
 
 		simple.bind();

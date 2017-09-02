@@ -12,7 +12,7 @@ namespace vivid {
 	namespace graphics {
 
 #define MAX_KEYS 1024
-#define MAX_BUTTONS 32
+#define MAX_MOUSE_BUTTONS 32
 
 		class Window {
 		private:
@@ -21,9 +21,9 @@ namespace vivid {
 
             GLFWwindow* window;
 
-            static bool keys[MAX_KEYS];
-            static bool buttons[MAX_BUTTONS];
-            static double mouseX, mouseY;
+            bool keys[MAX_KEYS];
+            bool mouseButtons[MAX_MOUSE_BUTTONS];
+            double mouseX, mouseY;
 		public:
 			Window(const char *name, int width, int height);
 			~Window();
@@ -31,6 +31,9 @@ namespace vivid {
 			void update();
 			void clear() const;
 			bool isClosed() const;
+
+            inline bool isKeyPressed(int key){ if(key < MAX_KEYS && key > 0) return keys[key];}
+			inline bool isMouseButtonPressed(int button){ if(button < MAX_MOUSE_BUTTONS && button > 0) return mouseButtons[button];}
 
 			inline int getWidth() const { return width; }
 			inline int getHeight() const { return height; }

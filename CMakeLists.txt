@@ -10,7 +10,10 @@ set(VERSION_MINOR 1)
 
 # Find the platform of the compiling system
 if (WIN32)
-	SET(EXE_ARGUMENT ${EXE_ARGUMENT} WIN32)
+	if(NOT DEBUG)
+		SET(EXE_ARGUMENT ${EXE_ARGUMENT} WIN32)
+	endif()
+
 	if (CMAKE_SIZEOF_VOID_P EQUAL 8)
 		set(PLATFORM WIN64)
 	else ()

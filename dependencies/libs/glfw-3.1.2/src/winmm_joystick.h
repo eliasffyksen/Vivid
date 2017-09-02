@@ -36,7 +36,7 @@
 typedef struct _GLFWjoystickWinMM
 {
     float           axes[6];
-    unsigned char   buttons[36]; // 32 buttons plus one hat
+    unsigned char   buttons[36]; // 32 mouseButtons plus one hat
     char*           name;
 } _GLFWjoystickWinMM;
 

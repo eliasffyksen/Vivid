@@ -261,7 +261,7 @@ Mouse button input</h2>
 <div class="line">        popup_menu();</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>The action is one of <code>GLFW_PRESS</code> or <code>GLFW_RELEASE</code>.</p>
-<p>Mouse button states for <a class="el" href="group__buttons.html">named buttons</a> are also saved in per-window state arrays that can be polled with <a class="el" href="group__input.html#gac1473feacb5996c01a7a5a33b5066704">glfwGetMouseButton</a>.</p>
+<p>Mouse button states for <a class="el" href="group__buttons.html">named mouseButtons</a> are also saved in per-window state arrays that can be polled with <a class="el" href="group__input.html#gac1473feacb5996c01a7a5a33b5066704">glfwGetMouseButton</a>.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> state = <a class="code" href="group__input.html#gac1473feacb5996c01a7a5a33b5066704">glfwGetMouseButton</a>(window, <a class="code" href="group__buttons.html#gaf37100431dcd5082d48f95ee8bc8cd56">GLFW_MOUSE_BUTTON_LEFT</a>);</div>
 <div class="line"><span class="keywordflow">if</span> (state == <a class="code" href="group__input.html#ga2485743d0b59df3791c45951c4195265">GLFW_PRESS</a>)</div>
 <div class="line">    upgrade_cow();</div>
@@ -269,7 +269,7 @@ Mouse button input</h2>
 <p>This function only returns cached mouse button event state. It does not poll the system for the current state of the mouse button.</p>
 <p>Whenever you poll state, you risk missing the state change you are looking for. If a pressed mouse button is released again before you poll its state, you will have missed the button press. The recommended solution for this is to use a mouse button callback, but there is also the <code>GLFW_STICKY_MOUSE_BUTTONS</code> input mode.</p>
 <div class="fragment"><div class="line"><a class="code" href="group__input.html#gaa92336e173da9c8834558b54ee80563b">glfwSetInputMode</a>(window, <a class="code" href="glfw3_8h.html#a4d7ce8ce71030c3b04e2b78145bc59d1">GLFW_STICKY_MOUSE_BUTTONS</a>, 1);</div>
-</div><!-- fragment --><p>When sticky mouse buttons mode is enabled, the pollable state of a mouse button will remain <code>GLFW_PRESS</code> until the state of that button is polled with <a class="el" href="group__input.html#gac1473feacb5996c01a7a5a33b5066704">glfwGetMouseButton</a>. Once it has been polled, if a mouse button release event had been processed in the meantime, the state will reset to <code>GLFW_RELEASE</code>, otherwise it will remain <code>GLFW_PRESS</code>.</p>
+</div><!-- fragment --><p>When sticky mouse mouseButtons mode is enabled, the pollable state of a mouse button will remain <code>GLFW_PRESS</code> until the state of that button is polled with <a class="el" href="group__input.html#gac1473feacb5996c01a7a5a33b5066704">glfwGetMouseButton</a>. Once it has been polled, if a mouse button release event had been processed in the meantime, the state will reset to <code>GLFW_RELEASE</code>, otherwise it will remain <code>GLFW_PRESS</code>.</p>
 <p>The <code>GLFW_MOUSE_BUTTON_LAST</code> constant holds the highest value of any <a class="el" href="group__buttons.html">named button</a>.</p>
 <h2><a class="anchor" id="scrolling"></a>
 Scroll input</h2>
@@ -294,7 +294,7 @@ Joystick axis states</h2>
 </div><!-- fragment --><p>Each element in the returned array is a value between -1.0 and 1.0.</p>
 <h2><a class="anchor" id="joystick_button"></a>
 Joystick button states</h2>
-<p>The states of all buttons of a joystick are returned by <a class="el" href="group__input.html#gace54cd930dcd502e118fe4021384ce1b">glfwGetJoystickButtons</a>. See the reference documentation for the lifetime of the returned array.</p>
+<p>The states of all mouseButtons of a joystick are returned by <a class="el" href="group__input.html#gace54cd930dcd502e118fe4021384ce1b">glfwGetJoystickButtons</a>. See the reference documentation for the lifetime of the returned array.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> count;</div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* axes = <a class="code" href="group__input.html#gace54cd930dcd502e118fe4021384ce1b">glfwGetJoystickButtons</a>(<a class="code" href="group__joysticks.html#ga34a0443d059e9f22272cd4669073f73d">GLFW_JOYSTICK_1</a>, &amp;count);</div>
 </div><!-- fragment --><p>Each element in the returned array is either <code>GLFW_PRESS</code> or <code>GLFW_RELEASE</code>.</p>
