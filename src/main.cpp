@@ -9,14 +9,10 @@
 #include "graphics/window.h"
 #include "graphics/shader.h"
 
-<<<<<<< HEAD
 #include "config.h"
 
 int main()
 {
-=======
-int main() {
->>>>>>> b3a5b9127baa0510a7c44012b750173bc1b1268c
 	using namespace vivid;
 	using namespace graphics;
 

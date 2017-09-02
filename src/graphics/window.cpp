@@ -8,8 +8,6 @@
 namespace vivid {
 	namespace graphics {
 
-		void framebuffer_size_callback(GLFWwindow *window, int width, int height);
-
 		Window::Window(const char *title, int width, int height) {
 			this->title = title;
 			this->width = width;
@@ -62,11 +60,7 @@ namespace vivid {
 			return glfwWindowShouldClose(window) == 1;
 		}
 
-<<<<<<< HEAD
 		void Window::framebuffer_size_callback(GLFWwindow* window, int width, int height) {
-=======
-		void framebuffer_size_callback(GLFWwindow *window, int width, int height) {
->>>>>>> b3a5b9127baa0510a7c44012b750173bc1b1268c
 			glViewport(0, 0, width, height);
 		}
 
