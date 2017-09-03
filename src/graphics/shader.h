@@ -17,7 +17,7 @@ namespace vivid {
 		private:
 			GLuint programID;
 		public:
-			Shader(std::string path);
+			explicit Shader(std::string path);
 			~Shader();
 			
 			void bind() const;
