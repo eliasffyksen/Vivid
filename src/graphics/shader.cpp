@@ -8,7 +8,6 @@
 #include <fstream>
 #include <algorithm>
 
-
 namespace vivid {
 	namespace graphics {
 		

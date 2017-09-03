@@ -5,7 +5,6 @@
 #include "window.h"
 #include <iostream>
 
-
 namespace vivid {
 	namespace graphics {
 		

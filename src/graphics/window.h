@@ -8,7 +8,6 @@
 #include <iostream>
 #include "../config.h"
 
-
 namespace vivid {
 	namespace graphics {
 
