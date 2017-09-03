@@ -8,9 +8,7 @@ namespace vivid {
 	namespace graphics {
 		
 		Window::Window(const char* title, int width, int height)
-			: title(title), width(width), height(height)
-		{
-			
+				: title(title), width(width), height(height) {
 			if (!init())
 				glfwTerminate();
 			
@@ -64,6 +62,7 @@ namespace vivid {
 		
 		void Window::update() {
 			glfwSwapBuffers(window);
+			resetInput();
 			glfwPollEvents();
 		}
 		
@@ -72,7 +71,7 @@ namespace vivid {
 		}
 		
 		void Window::framebufferSizeCallback(GLFWwindow* window, int width, int height) {
-			Window* win = (Window*) glfwGetWindowUserPointer(window);
+			auto win = (Window*) glfwGetWindowUserPointer(window);
 			win->width = width;
 			win->height = height;
 			
@@ -131,14 +130,14 @@ namespace vivid {
 		
 		bool Window::isKeyClicked(int key) const {
 			if (key < MAX_KEYS && key >= 0)
-				return keys_down[key];
+				return keys_clicked[key];
 			return false;
 		}
 		
 		bool Window::isKeyClicked(const std::string& alias) const {
 			auto res = aliases.find(alias);
 			if (res != aliases.end()) {
-				return isKeyPressed(res->second);
+				return isKeyClicked(res->second);
 			}
 			return false;
 		}
@@ -159,14 +158,14 @@ namespace vivid {
 		
 		bool Window::isMouseButtonClicked(int button) const {
 			if (button < MAX_MOUSE_BUTTONS && button >= 0)
-				return mouseButtons_down[button];
+				return mouseButtons_clicked[button];
 			return false;
 		}
 		
 		bool Window::isMouseButtonClicked(const std::string& alias) const {
 			auto res = aliases.find(alias);
 			if (res != aliases.end()) {
-				return isMouseButtonPressed(res->second);
+				return isMouseButtonClicked(res->second);
 			}
 			return false;
 		}

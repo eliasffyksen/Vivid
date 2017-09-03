@@ -35,7 +35,6 @@ namespace vivid {
 			
 			void update();
 			void clear() const;
-			
 			bool isClosed() const;
 			
 			void resetInput();
