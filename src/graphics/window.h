@@ -58,5 +58,9 @@ namespace vivid {
 			static void cursorPositionCallback(GLFWwindow* window, double xpos, double ypos);
 		};
 		
+		enum KEYS {
+		
+		};
+		
 	}
 }

@@ -50,7 +50,6 @@ int main() {
 		LOG(window.isKeyPressed("A"));
 		
 		window.clear();
-		
 		simple.bind();
 		
 		// 1rst attribute buffer : vertices

@@ -109,8 +109,9 @@ namespace vivid {
 		}
 		
 		bool Window::isKeyPressed(const std::string& alias) const {
-			if(aliasExists(alias)) {
-				return isKeyPressed(aliases[alias]);
+			auto res = aliases.find(alias);
+			if(res != aliases.end()) {
+				return isKeyPressed(res->second);
 			}
 			return false;
 		}
@@ -122,8 +123,9 @@ namespace vivid {
 		}
 		
 		bool Window::isMouseButtonPressed(const std::string& alias) const {
-			if(aliasExists(alias)) {
-				return isMouseButtonPressed(aliases[alias]);
+			auto res = aliases.find(alias);
+			if(res != aliases.end()) {
+				return isMouseButtonPressed(res->second);
 			}
 			return false;
 		}
@@ -142,9 +144,7 @@ namespace vivid {
 		}
 		
 		void Window::deleteAlias(const std::string& alias) {
-			if(aliasExists(alias)) {
-				aliases.erase(alias);
-			}
+			aliases.erase(alias);
 		}
 		
 	}
