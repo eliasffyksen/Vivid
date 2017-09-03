@@ -16,7 +16,7 @@ int main()
 	using namespace vivid;
 	using namespace graphics;
 
-	Window window("Window!!", 1920, 1200);
+	Window window("Window!!", 800, 600);
 
     glewExperimental = GL_TRUE;
 	if (glewInit() != GLEW_OK) {
