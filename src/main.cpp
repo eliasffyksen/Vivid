@@ -1,5 +1,4 @@
 // Include standard headers
-#include <stdio.h>
 #include <iostream>
 
 #include <GL/glew.h>
@@ -19,7 +18,7 @@ int main() {
 	
 	glewExperimental = GL_TRUE;
 	if (glewInit() != GLEW_OK) {
-		LOG("Failed to initialize GLEW\n");
+		ERROR("Failed to initialize GLEW\n");
 		getchar();
 		glfwTerminate();
 		return -1;
@@ -44,12 +43,11 @@ int main() {
 	glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
 	
-	double x, y;
+	window.registerAlias("A", 65);
 	
 	while (!window.isClosed()) {
 		
-		window.getCursorPosition(x, y);
-		LOG("X: " << x << "\tY: " << y);
+		LOG(window.isKeyPressed("A"));
 		
 		window.clear();
 		

@@ -3,7 +3,6 @@
 //
 
 #include "window.h"
-#include <iostream>
 
 namespace vivid {
 	namespace graphics {
@@ -16,17 +15,16 @@ namespace vivid {
 			if (!init())
 				glfwTerminate();
 			
-			for (int i = 0;i < MAX_KEYS;i++)
+			for (int i = 0; i < MAX_KEYS; i++)
 				keys[i] = false;
-			for (int i = 0;i < MAX_MOUSE_BUTTONS;i++)
+			for (int i = 0; i < MAX_MOUSE_BUTTONS; i++)
 				mouseButtons[i] = false;
 			
 		}
 		
 		bool Window::init() {
 			if (!glfwInit()) {
-				std::cout << "Failed to initialize GLFW." << std::endl;
-				
+				ERROR("Failed to initialize GLFW.\n");
 				return false;
 			}
 			
@@ -36,7 +34,7 @@ namespace vivid {
 			glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // To make MacOS happy; should not be needed
 			glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 			
-			window = glfwCreateWindow(width, height, title, NULL, NULL);
+			window = glfwCreateWindow(width, height, title, nullptr, nullptr);
 			if (!window) {
 				glfwTerminate();
 				std::cout << "Failed to create window..." << std::endl;
@@ -80,7 +78,7 @@ namespace vivid {
 		}
 		
 		void Window::keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
-			Window* win = (Window*) glfwGetWindowUserPointer(window);
+			auto win = (Window*) glfwGetWindowUserPointer(window);
 			
 			if (action == GLFW_PRESS)
 				win->keys[key] = true;
@@ -89,7 +87,7 @@ namespace vivid {
 		}
 		
 		void Window::mouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
-			Window* win = (Window*) glfwGetWindowUserPointer(window);
+			auto win = (Window*) glfwGetWindowUserPointer(window);
 			
 			if (action == GLFW_PRESS)
 				win->mouseButtons[button] = true;
@@ -97,16 +95,23 @@ namespace vivid {
 				win->mouseButtons[button] = false;
 		}
 		
-		void Window::cursorPositionCallback(GLFWwindow* window, double xpos, double ypos) {
-			Window* win = (Window*) glfwGetWindowUserPointer(window);
+		void Window::cursorPositionCallback(GLFWwindow* window, double xPos, double yPos) {
+			auto win = (Window*) glfwGetWindowUserPointer(window);
 			
-			win->mouseX = xpos;
-			win->mouseY = ypos;
+			win->mouseX = xPos;
+			win->mouseY = yPos;
 		}
 		
 		bool Window::isKeyPressed(int key) const {
 			if (key < MAX_KEYS && key >= 0)
 				return keys[key];
+			return false;
+		}
+		
+		bool Window::isKeyPressed(const std::string& alias) const {
+			if(aliasExists(alias)) {
+				return isKeyPressed(aliases[alias]);
+			}
 			return false;
 		}
 		
@@ -116,9 +121,30 @@ namespace vivid {
 			return false;
 		}
 		
+		bool Window::isMouseButtonPressed(const std::string& alias) const {
+			if(aliasExists(alias)) {
+				return isMouseButtonPressed(aliases[alias]);
+			}
+			return false;
+		}
+		
 		void Window::getCursorPosition(double& x, double& y) const {
 			x = mouseX;
 			y = mouseY;
+		}
+		
+		bool Window::aliasExists(const std::string& alias) const {
+			return aliases.find(alias) != aliases.end();
+		}
+		
+		void Window::registerAlias(const std::string& alias, int key) {
+			aliases[alias] = key;
+		}
+		
+		void Window::deleteAlias(const std::string& alias) {
+			if(aliasExists(alias)) {
+				aliases.erase(alias);
+			}
 		}
 		
 	}

@@ -5,6 +5,8 @@
 #pragma once
 
 #include <GLFW/glfw3.h>
+#include <unordered_map>
+#include <string>
 #include <iostream>
 #include "../config.h"
 
@@ -21,6 +23,7 @@ namespace vivid {
 			
 			GLFWwindow* window;
 			
+			mutable std::unordered_map<std::string, int> aliases;
 			bool keys[MAX_KEYS];
 			bool mouseButtons[MAX_MOUSE_BUTTONS];
 			double mouseX, mouseY;
@@ -32,14 +35,20 @@ namespace vivid {
 			void clear() const;
 			
 			bool isClosed() const;
+			
 			bool isKeyPressed(int key) const;
+			bool isKeyPressed(const std::string& alias) const;
 			bool isMouseButtonPressed(int button) const;
+			bool isMouseButtonPressed(const std::string& alias) const;
+			
+			bool aliasExists(const std::string& alias) const;
+			void registerAlias(const std::string& alias, int key);
+			void deleteAlias(const std::string& alias);
 			
 			void getCursorPosition(double& x, double& y) const;
 			
 			inline int getWidth() const { return width; }
 			inline int getHeight() const { return height; }
-		
 		private:
 			bool init();
 			
