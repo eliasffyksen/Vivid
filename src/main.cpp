@@ -1,5 +1,4 @@
 // Include standard headers
-#include <stdio.h>
 #include <iostream>
 
 #include <GL/glew.h>
@@ -11,51 +10,48 @@
 
 #include "config.h"
 
-int main()
-{
+int main() {
 	using namespace vivid;
 	using namespace graphics;
-
-	Window window("Window!!", 1920, 1200);
-
-    glewExperimental = GL_TRUE;
+	
+	Window window("Window!!", 800, 600);
+	
+	glewExperimental = GL_TRUE;
 	if (glewInit() != GLEW_OK) {
-		LOG("Failed to initialize GLEW\n");
+		ERROR("Failed to initialize GLEW\n");
 		getchar();
 		glfwTerminate();
 		return -1;
 	}
-
+	
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
-
+	
 	GLuint VertexArrayID;
 	glGenVertexArrays(1, &VertexArrayID);
 	glBindVertexArray(VertexArrayID);
-
+	
 	Shader simple("shaders/simple");
-
+	
 	static const GLfloat g_vertex_buffer_data[] = {
 			-1.0f, -1.0f, 0.0f,
 			1.0f, -1.0f, 0.0f,
 			0.0f, 1.0f, 0.0f,
 	};
-
+	
 	GLuint vertexBuffer;
 	glGenBuffers(1, &vertexBuffer);
 	glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
-
-    double x, y;
-
+	
+	window.registerAlias("A", 65);
+	
 	while (!window.isClosed()) {
-
-        window.getCursorPosition(x, y);
-        LOG("X: " << x << "\tY: " << y);
-
+		
+		LOG(window.isKeyPressed("A"));
+		
 		window.clear();
-
 		simple.bind();
-
+		
 		// 1rst attribute buffer : vertices
 		glEnableVertexAttribArray(0);
 		glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
@@ -67,16 +63,16 @@ int main()
 				0,                  // stride
 				nullptr            // array buffer offset
 		);
-
+		
 		glDrawArrays(GL_TRIANGLES, 0, 3);
 		glDisableVertexAttribArray(0);
-
+		
 		window.update();
 	}
-
+	
 	glDeleteBuffers(1, &vertexBuffer);
 	glDeleteVertexArrays(1, &VertexArrayID);
-
+	
 	return 0;
 }
 
