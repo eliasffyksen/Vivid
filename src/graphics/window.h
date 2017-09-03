@@ -24,8 +24,10 @@ namespace vivid {
 			GLFWwindow* window;
 			
 			mutable std::unordered_map<std::string, int> aliases;
-			bool keys[MAX_KEYS];
-			bool mouseButtons[MAX_MOUSE_BUTTONS];
+			bool keys_down[MAX_KEYS];
+			bool keys_clicked[MAX_KEYS];
+			bool mouseButtons_down[MAX_MOUSE_BUTTONS];
+			bool mouseButtons_clicked[MAX_MOUSE_BUTTONS];
 			double mouseX, mouseY;
 		public:
 			Window(const char* name, int width, int height);
@@ -36,14 +38,19 @@ namespace vivid {
 			
 			bool isClosed() const;
 			
+			void resetInput();
 			bool isKeyPressed(int key) const;
 			bool isKeyPressed(const std::string& alias) const;
+			bool isKeyClicked(int key) const;
+			bool isKeyClicked(const std::string& alias) const;
 			bool isMouseButtonPressed(int button) const;
 			bool isMouseButtonPressed(const std::string& alias) const;
+			bool isMouseButtonClicked(int button) const;
+			bool isMouseButtonClicked(const std::string& alias) const;
 			
 			bool aliasExists(const std::string& alias) const;
-			void registerAlias(const std::string& alias, int key);
-			void deleteAlias(const std::string& alias);
+			void registerAlias(const std::string& alias, int key) const;
+			void deleteAlias(const std::string& alias) const;
 			
 			void getCursorPosition(double& x, double& y) const;
 			

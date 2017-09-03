@@ -7,19 +7,21 @@
 namespace vivid {
 	namespace graphics {
 		
-		Window::Window(const char* title, int width, int height) {
-			this->title = title;
-			this->width = width;
-			this->height = height;
+		Window::Window(const char* title, int width, int height)
+			: title(title), width(width), height(height)
+		{
 			
 			if (!init())
 				glfwTerminate();
 			
 			for (int i = 0; i < MAX_KEYS; i++)
-				keys[i] = false;
+				keys_down[i] = false;
+			for (int i = 0; i < MAX_KEYS; i++)
+				keys_clicked[i] = false;
 			for (int i = 0; i < MAX_MOUSE_BUTTONS; i++)
-				mouseButtons[i] = false;
-			
+				mouseButtons_down[i] = false;
+			for (int i = 0; i < MAX_MOUSE_BUTTONS; i++)
+				mouseButtons_clicked[i] = false;
 		}
 		
 		bool Window::init() {
@@ -80,19 +82,23 @@ namespace vivid {
 		void Window::keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
 			auto win = (Window*) glfwGetWindowUserPointer(window);
 			
-			if (action == GLFW_PRESS)
-				win->keys[key] = true;
-			else if (action == GLFW_RELEASE)
-				win->keys[key] = false;
+			if (action == GLFW_PRESS) {
+				if (!win->keys_down[key])
+					win->keys_clicked[key] = true;
+				win->keys_down[key] = true;
+			} else if (action == GLFW_RELEASE)
+				win->keys_down[key] = false;
 		}
 		
 		void Window::mouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
 			auto win = (Window*) glfwGetWindowUserPointer(window);
 			
-			if (action == GLFW_PRESS)
-				win->mouseButtons[button] = true;
-			else if (action == GLFW_RELEASE)
-				win->mouseButtons[button] = false;
+			if (action == GLFW_PRESS) {
+				if (!win->mouseButtons_down[button])
+					win->mouseButtons_clicked[button] = true;
+				win->mouseButtons_down[button] = true;
+			} else if (action == GLFW_RELEASE)
+				win->mouseButtons_down[button] = false;
 		}
 		
 		void Window::cursorPositionCallback(GLFWwindow* window, double xPos, double yPos) {
@@ -102,15 +108,36 @@ namespace vivid {
 			win->mouseY = yPos;
 		}
 		
+		void Window::resetInput() {
+			for (int i = 0; i < MAX_KEYS; i++)
+				keys_clicked[i] = false;
+			for (int i = 0; i < MAX_MOUSE_BUTTONS; i++)
+				mouseButtons_clicked[i] = false;
+		}
+		
 		bool Window::isKeyPressed(int key) const {
 			if (key < MAX_KEYS && key >= 0)
-				return keys[key];
+				return keys_down[key];
 			return false;
 		}
 		
 		bool Window::isKeyPressed(const std::string& alias) const {
 			auto res = aliases.find(alias);
-			if(res != aliases.end()) {
+			if (res != aliases.end()) {
+				return isKeyPressed(res->second);
+			}
+			return false;
+		}
+		
+		bool Window::isKeyClicked(int key) const {
+			if (key < MAX_KEYS && key >= 0)
+				return keys_down[key];
+			return false;
+		}
+		
+		bool Window::isKeyClicked(const std::string& alias) const {
+			auto res = aliases.find(alias);
+			if (res != aliases.end()) {
 				return isKeyPressed(res->second);
 			}
 			return false;
@@ -118,13 +145,27 @@ namespace vivid {
 		
 		bool Window::isMouseButtonPressed(int button) const {
 			if (button < MAX_MOUSE_BUTTONS && button >= 0)
-				return mouseButtons[button];
+				return mouseButtons_down[button];
 			return false;
 		}
 		
 		bool Window::isMouseButtonPressed(const std::string& alias) const {
 			auto res = aliases.find(alias);
-			if(res != aliases.end()) {
+			if (res != aliases.end()) {
+				return isMouseButtonPressed(res->second);
+			}
+			return false;
+		}
+		
+		bool Window::isMouseButtonClicked(int button) const {
+			if (button < MAX_MOUSE_BUTTONS && button >= 0)
+				return mouseButtons_down[button];
+			return false;
+		}
+		
+		bool Window::isMouseButtonClicked(const std::string& alias) const {
+			auto res = aliases.find(alias);
+			if (res != aliases.end()) {
 				return isMouseButtonPressed(res->second);
 			}
 			return false;
@@ -139,11 +180,11 @@ namespace vivid {
 			return aliases.find(alias) != aliases.end();
 		}
 		
-		void Window::registerAlias(const std::string& alias, int key) {
+		void Window::registerAlias(const std::string& alias, int key) const {
 			aliases[alias] = key;
 		}
 		
-		void Window::deleteAlias(const std::string& alias) {
+		void Window::deleteAlias(const std::string& alias) const {
 			aliases.erase(alias);
 		}
 		
