@@ -1,0 +1,73 @@
+//
+// Created by Ole on 29.08.2017.
+//
+
+#include "window.h"
+
+namespace vivid {
+	namespace graphics {
+		
+		Window::Window(const char* title, int width, int height)
+				: title(title), width(width), height(height) {
+			if (!init())
+				glfwTerminate();
+
+		}
+		
+		bool Window::init() {
+			using namespace vivid;
+
+			if (!glfwInit()) {
+				ERROR("Failed to initialize GLFW.\n");
+				return false;
+			}
+			
+			glfwWindowHint(GLFW_SAMPLES, 4);
+			glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+			glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+			glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // To make MacOS happy; should not be needed
+			glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+			
+			window = glfwCreateWindow(width, height, title, nullptr, nullptr);
+			if (!window) {
+				glfwTerminate();
+				std::cout << "Failed to create window..." << std::endl;
+				return false;
+			}
+			
+			glfwMakeContextCurrent(window);
+			initWindowPointer(window);
+			setWindowPointer(window, VIVID_WINDOW_PNTR, this);
+			
+			glfwSetFramebufferSizeCallback(window, Window::framebufferSizeCallback);
+			
+			return true;
+		}
+		
+		Window::~Window() {
+			glfwTerminate();
+		}
+		
+		void Window::clear() const {
+			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		}
+		
+		void Window::update() {
+			glfwSwapBuffers(window);
+			glfwPollEvents();
+		}
+		
+		bool Window::isClosed() const {
+			return glfwWindowShouldClose(window) == 1;
+		}
+		
+		void Window::framebufferSizeCallback(GLFWwindow* window, int width, int height) {
+			Window* win = getWindowPointer<Window>(window, VIVID_WINDOW_PNTR);
+			win->width = width;
+			win->height = height;
+			
+			glViewport(0, 0, width, height);
+		}
+		
+	}
+}

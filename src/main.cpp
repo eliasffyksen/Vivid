@@ -5,8 +5,7 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 
-#include "graphics/window.h"
-#include "graphics/shader.h"
+#include "vivid/vivid.h"
 
 #include "config.h"
 
