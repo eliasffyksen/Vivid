@@ -5,6 +5,7 @@
 #pragma once
 
 #include <Windows.h>
+#include "../vivid.h"
 
 namespace vivid {
 	

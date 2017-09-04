@@ -3,7 +3,6 @@
 #include <unistd.h>
 
 #include "vivid/vivid.h"
-#include "vivid/util/timer.h"
 
 #include "config.h"
 
@@ -12,6 +11,7 @@ int main() {
 	using namespace graphics;
 	
 	Window window("Window!!", 800, 600);
+	Input input(window.window);
 	
 	glewExperimental = GL_TRUE;
 	if (glewInit() != GLEW_OK) {
@@ -46,6 +46,9 @@ int main() {
 	timer.reset();
 	
 	while (!window.isClosed()) {
+		if(input.getKey(GLFW_KEY_A)){
+			LOG("DOWN");
+		}
 		float delta = timer.elapsed();
 		window.clear();
 		simple.bind();

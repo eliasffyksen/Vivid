@@ -9,6 +9,8 @@
 
 #include "graphics/window.h"
 #include "graphics/shader.h"
+#include "util/timer.h"
+#include "input/input.h"
 
 #define VIVID_PNTR_MAX 16
 
