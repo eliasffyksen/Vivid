@@ -1,10 +1,6 @@
 // Include standard headers
 #include <iostream>
 
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
-#include <glm/glm.hpp>
-
 #include "vivid/vivid.h"
 
 #include "config.h"
@@ -44,8 +40,6 @@ int main() {
 
 	
 	while (!window.isClosed()) {
-		if(window.isKeyPressed(Window::A))
-			LOG("IT'S GOING DOWN");
 		
 		window.clear();
 		simple.bind();

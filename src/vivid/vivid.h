@@ -4,6 +4,7 @@
 
 #pragma once
 
+#include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
 #include "graphics/window.h"
@@ -16,12 +17,11 @@
 
 namespace vivid{
 
-	template <typename P>
 	inline static void initWindowPointer(GLFWwindow* window){ glfwSetWindowUserPointer(window, new void*[VIVID_PNTR_MAX]);}
 
 	template <typename P>
 	static P* getWindowPointer(GLFWwindow* window, int pointerID){
-		P** ptrList = glfwGetWindowUserPointer(window);
+		P** ptrList = (P**) glfwGetWindowUserPointer(window);
 		P* ptr = ptrList[pointerID];
 		return ptr;
 	}

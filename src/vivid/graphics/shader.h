@@ -5,7 +5,7 @@
 #pragma once
 
 #include <iostream>
-#include "GL/glew.h"
+#include "../vivid.h"
 
 namespace vivid {
 	namespace graphics {

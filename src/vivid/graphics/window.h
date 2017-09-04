@@ -4,7 +4,6 @@
 
 #pragma once
 
-#include <GLFW/glfw3.h>
 #include <unordered_map>
 #include <string>
 #include <iostream>
