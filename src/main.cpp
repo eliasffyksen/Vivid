@@ -42,12 +42,11 @@ int main() {
 	glGenBuffers(1, &vertexBuffer);
 	glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
-	
-	window.registerAlias("A", 65);
+
 	
 	while (!window.isClosed()) {
-		
-		LOG(window.isKeyPressed("A"));
+		if(window.isKeyPressed(Window::A))
+			LOG("IT'S GOING DOWN");
 		
 		window.clear();
 		simple.bind();
