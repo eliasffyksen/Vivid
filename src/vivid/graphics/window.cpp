@@ -18,7 +18,7 @@ namespace vivid {
 			using namespace vivid;
 
 			if (!glfwInit()) {
-				ERROR("Failed to initialize GLFW.\n");
+				LOGE("Failed to initialize GLFW.\n");
 				return false;
 			}
 			
@@ -40,6 +40,7 @@ namespace vivid {
 			setWindowPointer(window, VIVID_WINDOW_PNTR, this);
 			
 			glfwSetFramebufferSizeCallback(window, Window::framebufferSizeCallback);
+			glfwSwapInterval(0); // disables VSync
 			
 			return true;
 		}
@@ -62,7 +63,7 @@ namespace vivid {
 		}
 		
 		void Window::framebufferSizeCallback(GLFWwindow* window, int width, int height) {
-			Window* win = getWindowPointer<Window>(window, VIVID_WINDOW_PNTR);
+			auto win = getWindowPointer<Window>(window, VIVID_WINDOW_PNTR);
 			win->width = width;
 			win->height = height;
 			

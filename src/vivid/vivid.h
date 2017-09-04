@@ -30,4 +30,5 @@ namespace vivid{
 		void** ptrList = (void **) glfwGetWindowUserPointer(window);
 		ptrList[pointerID] = pointer;
 	}
+	
 }

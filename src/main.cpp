@@ -1,7 +1,9 @@
 // Include standard headers
 #include <iostream>
+#include <unistd.h>
 
 #include "vivid/vivid.h"
+#include "vivid/util/timer.h"
 
 #include "config.h"
 
@@ -13,7 +15,7 @@ int main() {
 	
 	glewExperimental = GL_TRUE;
 	if (glewInit() != GLEW_OK) {
-		ERROR("Failed to initialize GLEW\n");
+		LOGE("Failed to initialize GLEW\n");
 		getchar();
 		glfwTerminate();
 		return -1;
@@ -37,10 +39,14 @@ int main() {
 	glGenBuffers(1, &vertexBuffer);
 	glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
-
+	
+	float fpsTimer = 0.0f;
+	int fpsCount = 0;
+	Timer timer;
+	timer.reset();
 	
 	while (!window.isClosed()) {
-		
+		float delta = timer.elapsed();
 		window.clear();
 		simple.bind();
 		
@@ -60,6 +66,13 @@ int main() {
 		glDisableVertexAttribArray(0);
 		
 		window.update();
+		fpsTimer += delta;
+		fpsCount++;
+		if(fpsTimer >= 1) {
+			fpsTimer--;
+			LOG(fpsCount << " fps");
+			fpsCount = 0;
+		}
 	}
 	
 	glDeleteBuffers(1, &vertexBuffer);

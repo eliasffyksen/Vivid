@@ -83,7 +83,7 @@ set(ALL_LIBS
 		)
 
 # Adds all the source files (CLion automatically does this when creating a file)
-set(SOURCE_FILES src/config.h src/main.cpp src/vivid/graphics/shader.h src/vivid/graphics/shader.cpp src/vivid/graphics/window.h src/vivid/graphics/window.cpp src/vivid/vivid.h)
+set(SOURCE_FILES src/config.h src/main.cpp src/vivid/graphics/shader.h src/vivid/graphics/shader.cpp src/vivid/graphics/window.h src/vivid/graphics/window.cpp src/vivid/vivid.h src/vivid/util/timer.h)
 
 add_executable(${PROJECT_NAME} ${EXE_ARGUMENT} ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} ${ALL_LIBS})
