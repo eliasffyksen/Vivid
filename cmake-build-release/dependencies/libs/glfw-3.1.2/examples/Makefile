@@ -38,19 +38,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\programs\CLion\CLion 2017.2.1\bin\cmake\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\programs\CLion\CLion 2017.2.1\bin\cmake\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "D:\workspace_programming\Workspace C++\CL projects\Vivid"
+CMAKE_SOURCE_DIR = C:\Users\Ole\Documents\programming\c++\Vivid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release"
+CMAKE_BINARY_DIR = C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"D:\programs\CLion\CLion 2017.2.1\bin\cmake\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -79,7 +79,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"D:\programs\CLion\CLion 2017.2.1\bin\cmake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,49 +90,49 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	"D:\programs\CLion\CLion 2017.2.1\bin\cmake\bin\cmake.exe" -P cmake_install.cmake
+	"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	"D:\programs\CLion\CLion 2017.2.1\bin\cmake\bin\cmake.exe" -P cmake_install.cmake
+	"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	"D:\programs\CLion\CLion 2017.2.1\bin\cmake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	"D:\programs\CLion\CLion 2017.2.1\bin\cmake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	"D:\programs\CLion\CLion 2017.2.1\bin\cmake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	"D:\programs\CLion\CLion 2017.2.1\bin\cmake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples\CMakeFiles\progress.marks"
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples\CMakeFiles\progress.marks
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/clean
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/clean
 .PHONY : clean
 
 # The main clean target
@@ -142,22 +142,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/preinstall
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/preinstall
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/rule:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/rule
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/rule
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/rule
 
 # Convenience name for target.
@@ -167,12 +167,12 @@ boing: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/rule
 
 # fast build rule for target.
 boing/fast:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\boing.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/build
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\boing.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/build
 .PHONY : boing/fast
 
 # Convenience name for target.
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/rule:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/rule
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/rule
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/rule
 
 # Convenience name for target.
@@ -182,12 +182,12 @@ simple: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/rule
 
 # fast build rule for target.
 simple/fast:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\simple.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/build
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\simple.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/build
 .PHONY : simple/fast
 
 # Convenience name for target.
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/rule:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/rule
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/rule
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/rule
 
 # Convenience name for target.
@@ -197,12 +197,12 @@ gears: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/rule
 
 # fast build rule for target.
 gears/fast:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\gears.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/build
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\gears.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/build
 .PHONY : gears/fast
 
 # Convenience name for target.
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/rule:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/rule
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/rule
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/rule
 
 # Convenience name for target.
@@ -212,12 +212,12 @@ wave: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/rule
 
 # fast build rule for target.
 wave/fast:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\wave.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/build
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\wave.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/build
 .PHONY : wave/fast
 
 # Convenience name for target.
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/rule:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/rule
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/rule
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/rule
 
 # Convenience name for target.
@@ -227,12 +227,12 @@ particles: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/rule
 
 # fast build rule for target.
 particles/fast:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/build
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/build
 .PHONY : particles/fast
 
 # Convenience name for target.
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/rule:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/rule
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/rule
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/rule
 
 # Convenience name for target.
@@ -242,12 +242,12 @@ heightmap: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/rule
 
 # fast build rule for target.
 heightmap/fast:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\heightmap.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/build
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\heightmap.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/build
 .PHONY : heightmap/fast
 
 # Convenience name for target.
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/rule:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/rule
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/rule
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/rule
 
 # Convenience name for target.
@@ -257,7 +257,7 @@ splitview: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/rule
 
 # fast build rule for target.
 splitview/fast:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\splitview.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/build
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\splitview.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/build
 .PHONY : splitview/fast
 
 __/deps/getopt.obj: __/deps/getopt.c.obj
@@ -266,7 +266,7 @@ __/deps/getopt.obj: __/deps/getopt.c.obj
 
 # target to build an object file
 __/deps/getopt.c.obj:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.obj
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.obj
 .PHONY : __/deps/getopt.c.obj
 
 __/deps/getopt.i: __/deps/getopt.c.i
@@ -275,7 +275,7 @@ __/deps/getopt.i: __/deps/getopt.c.i
 
 # target to preprocess a source file
 __/deps/getopt.c.i:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.i
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.i
 .PHONY : __/deps/getopt.c.i
 
 __/deps/getopt.s: __/deps/getopt.c.s
@@ -284,7 +284,7 @@ __/deps/getopt.s: __/deps/getopt.c.s
 
 # target to generate assembly for a file
 __/deps/getopt.c.s:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.s
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.s
 .PHONY : __/deps/getopt.c.s
 
 __/deps/glad.obj: __/deps/glad.c.obj
@@ -293,7 +293,7 @@ __/deps/glad.obj: __/deps/glad.c.obj
 
 # target to build an object file
 __/deps/glad.c.obj:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\heightmap.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/__/deps/glad.c.obj
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\heightmap.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/__/deps/glad.c.obj
 .PHONY : __/deps/glad.c.obj
 
 __/deps/glad.i: __/deps/glad.c.i
@@ -302,7 +302,7 @@ __/deps/glad.i: __/deps/glad.c.i
 
 # target to preprocess a source file
 __/deps/glad.c.i:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\heightmap.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/__/deps/glad.c.i
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\heightmap.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/__/deps/glad.c.i
 .PHONY : __/deps/glad.c.i
 
 __/deps/glad.s: __/deps/glad.c.s
@@ -311,7 +311,7 @@ __/deps/glad.s: __/deps/glad.c.s
 
 # target to generate assembly for a file
 __/deps/glad.c.s:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\heightmap.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/__/deps/glad.c.s
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\heightmap.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/__/deps/glad.c.s
 .PHONY : __/deps/glad.c.s
 
 __/deps/tinycthread.obj: __/deps/tinycthread.c.obj
@@ -320,7 +320,7 @@ __/deps/tinycthread.obj: __/deps/tinycthread.c.obj
 
 # target to build an object file
 __/deps/tinycthread.c.obj:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.obj
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.obj
 .PHONY : __/deps/tinycthread.c.obj
 
 __/deps/tinycthread.i: __/deps/tinycthread.c.i
@@ -329,7 +329,7 @@ __/deps/tinycthread.i: __/deps/tinycthread.c.i
 
 # target to preprocess a source file
 __/deps/tinycthread.c.i:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.i
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.i
 .PHONY : __/deps/tinycthread.c.i
 
 __/deps/tinycthread.s: __/deps/tinycthread.c.s
@@ -338,7 +338,7 @@ __/deps/tinycthread.s: __/deps/tinycthread.c.s
 
 # target to generate assembly for a file
 __/deps/tinycthread.c.s:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.s
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.s
 .PHONY : __/deps/tinycthread.c.s
 
 boing.obj: boing.c.obj
@@ -347,7 +347,7 @@ boing.obj: boing.c.obj
 
 # target to build an object file
 boing.c.obj:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\boing.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/boing.c.obj
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\boing.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/boing.c.obj
 .PHONY : boing.c.obj
 
 boing.i: boing.c.i
@@ -356,7 +356,7 @@ boing.i: boing.c.i
 
 # target to preprocess a source file
 boing.c.i:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\boing.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/boing.c.i
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\boing.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/boing.c.i
 .PHONY : boing.c.i
 
 boing.s: boing.c.s
@@ -365,7 +365,7 @@ boing.s: boing.c.s
 
 # target to generate assembly for a file
 boing.c.s:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\boing.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/boing.c.s
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\boing.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/boing.c.s
 .PHONY : boing.c.s
 
 gears.obj: gears.c.obj
@@ -374,7 +374,7 @@ gears.obj: gears.c.obj
 
 # target to build an object file
 gears.c.obj:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\gears.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/gears.c.obj
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\gears.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/gears.c.obj
 .PHONY : gears.c.obj
 
 gears.i: gears.c.i
@@ -383,7 +383,7 @@ gears.i: gears.c.i
 
 # target to preprocess a source file
 gears.c.i:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\gears.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/gears.c.i
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\gears.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/gears.c.i
 .PHONY : gears.c.i
 
 gears.s: gears.c.s
@@ -392,7 +392,7 @@ gears.s: gears.c.s
 
 # target to generate assembly for a file
 gears.c.s:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\gears.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/gears.c.s
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\gears.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/gears.c.s
 .PHONY : gears.c.s
 
 heightmap.obj: heightmap.c.obj
@@ -401,7 +401,7 @@ heightmap.obj: heightmap.c.obj
 
 # target to build an object file
 heightmap.c.obj:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\heightmap.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/heightmap.c.obj
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\heightmap.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/heightmap.c.obj
 .PHONY : heightmap.c.obj
 
 heightmap.i: heightmap.c.i
@@ -410,7 +410,7 @@ heightmap.i: heightmap.c.i
 
 # target to preprocess a source file
 heightmap.c.i:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\heightmap.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/heightmap.c.i
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\heightmap.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/heightmap.c.i
 .PHONY : heightmap.c.i
 
 heightmap.s: heightmap.c.s
@@ -419,7 +419,7 @@ heightmap.s: heightmap.c.s
 
 # target to generate assembly for a file
 heightmap.c.s:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\heightmap.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/heightmap.c.s
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\heightmap.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/heightmap.c.s
 .PHONY : heightmap.c.s
 
 particles.obj: particles.c.obj
@@ -428,7 +428,7 @@ particles.obj: particles.c.obj
 
 # target to build an object file
 particles.c.obj:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.obj
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.obj
 .PHONY : particles.c.obj
 
 particles.i: particles.c.i
@@ -437,7 +437,7 @@ particles.i: particles.c.i
 
 # target to preprocess a source file
 particles.c.i:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.i
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.i
 .PHONY : particles.c.i
 
 particles.s: particles.c.s
@@ -446,7 +446,7 @@ particles.s: particles.c.s
 
 # target to generate assembly for a file
 particles.c.s:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.s
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.s
 .PHONY : particles.c.s
 
 simple.obj: simple.c.obj
@@ -455,7 +455,7 @@ simple.obj: simple.c.obj
 
 # target to build an object file
 simple.c.obj:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\simple.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/simple.c.obj
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\simple.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/simple.c.obj
 .PHONY : simple.c.obj
 
 simple.i: simple.c.i
@@ -464,7 +464,7 @@ simple.i: simple.c.i
 
 # target to preprocess a source file
 simple.c.i:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\simple.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/simple.c.i
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\simple.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/simple.c.i
 .PHONY : simple.c.i
 
 simple.s: simple.c.s
@@ -473,7 +473,7 @@ simple.s: simple.c.s
 
 # target to generate assembly for a file
 simple.c.s:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\simple.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/simple.c.s
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\simple.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/simple.c.s
 .PHONY : simple.c.s
 
 splitview.obj: splitview.c.obj
@@ -482,7 +482,7 @@ splitview.obj: splitview.c.obj
 
 # target to build an object file
 splitview.c.obj:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\splitview.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/splitview.c.obj
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\splitview.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/splitview.c.obj
 .PHONY : splitview.c.obj
 
 splitview.i: splitview.c.i
@@ -491,7 +491,7 @@ splitview.i: splitview.c.i
 
 # target to preprocess a source file
 splitview.c.i:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\splitview.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/splitview.c.i
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\splitview.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/splitview.c.i
 .PHONY : splitview.c.i
 
 splitview.s: splitview.c.s
@@ -500,7 +500,7 @@ splitview.s: splitview.c.s
 
 # target to generate assembly for a file
 splitview.c.s:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\splitview.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/splitview.c.s
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\splitview.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/splitview.c.s
 .PHONY : splitview.c.s
 
 wave.obj: wave.c.obj
@@ -509,7 +509,7 @@ wave.obj: wave.c.obj
 
 # target to build an object file
 wave.c.obj:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\wave.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/wave.c.obj
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\wave.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/wave.c.obj
 .PHONY : wave.c.obj
 
 wave.i: wave.c.i
@@ -518,7 +518,7 @@ wave.i: wave.c.i
 
 # target to preprocess a source file
 wave.c.i:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\wave.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/wave.c.i
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\wave.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/wave.c.i
 .PHONY : wave.c.i
 
 wave.s: wave.c.s
@@ -527,7 +527,7 @@ wave.s: wave.c.s
 
 # target to generate assembly for a file
 wave.c.s:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\wave.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/wave.c.s
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\wave.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/wave.c.s
 .PHONY : wave.c.s
 
 # Help Target
@@ -590,6 +590,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,4 +1,4 @@
-# Install script for directory: D:/workspace_programming/Workspace C++/CL projects/Vivid/dependencies/libs/glfw-3.1.2/tests
+# Install script for directory: C:/Users/Ole/Documents/programming/c++/Vivid/dependencies/libs/glfw-3.1.2/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

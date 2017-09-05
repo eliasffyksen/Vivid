@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "D:/workspace_programming/Workspace C++/CL projects/Vivid/dependencies/libs/glfw-3.1.2/deps/getopt.c" "D:/workspace_programming/Workspace C++/CL projects/Vivid/cmake-build-release/dependencies/libs/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/__/deps/getopt.c.obj"
-  "D:/workspace_programming/Workspace C++/CL projects/Vivid/dependencies/libs/glfw-3.1.2/tests/clipboard.c" "D:/workspace_programming/Workspace C++/CL projects/Vivid/cmake-build-release/dependencies/libs/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/clipboard.c.obj"
+  "C:/Users/Ole/Documents/programming/c++/Vivid/dependencies/libs/glfw-3.1.2/deps/getopt.c" "C:/Users/Ole/Documents/programming/c++/Vivid/cmake-build-release/dependencies/libs/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/__/deps/getopt.c.obj"
+  "C:/Users/Ole/Documents/programming/c++/Vivid/dependencies/libs/glfw-3.1.2/tests/clipboard.c" "C:/Users/Ole/Documents/programming/c++/Vivid/cmake-build-release/dependencies/libs/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/clipboard.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -28,7 +28,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "D:/workspace_programming/Workspace C++/CL projects/Vivid/cmake-build-release/dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "C:/Users/Ole/Documents/programming/c++/Vivid/cmake-build-release/dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

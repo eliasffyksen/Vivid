@@ -4,9 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/workspace_programming/Workspace C++/CL projects/Vivid/src/main.cpp" "D:/workspace_programming/Workspace C++/CL projects/Vivid/cmake-build-release/CMakeFiles/Vivid.dir/src/main.cpp.obj"
-  "D:/workspace_programming/Workspace C++/CL projects/Vivid/src/vivid/graphics/shader.cpp" "D:/workspace_programming/Workspace C++/CL projects/Vivid/cmake-build-release/CMakeFiles/Vivid.dir/src/vivid/graphics/shader.cpp.obj"
-  "D:/workspace_programming/Workspace C++/CL projects/Vivid/src/vivid/graphics/window.cpp" "D:/workspace_programming/Workspace C++/CL projects/Vivid/cmake-build-release/CMakeFiles/Vivid.dir/src/vivid/graphics/window.cpp.obj"
+  "C:/Users/Ole/Documents/programming/c++/Vivid/src/main.cpp" "C:/Users/Ole/Documents/programming/c++/Vivid/cmake-build-release/CMakeFiles/Vivid.dir/src/main.cpp.obj"
+  "C:/Users/Ole/Documents/programming/c++/Vivid/src/vivid/graphics/shader.cpp" "C:/Users/Ole/Documents/programming/c++/Vivid/cmake-build-release/CMakeFiles/Vivid.dir/src/vivid/graphics/shader.cpp.obj"
+  "C:/Users/Ole/Documents/programming/c++/Vivid/src/vivid/graphics/window.cpp" "C:/Users/Ole/Documents/programming/c++/Vivid/cmake-build-release/CMakeFiles/Vivid.dir/src/vivid/graphics/window.cpp.obj"
+  "C:/Users/Ole/Documents/programming/c++/Vivid/src/vivid/input/input.cpp" "C:/Users/Ole/Documents/programming/c++/Vivid/cmake-build-release/CMakeFiles/Vivid.dir/src/vivid/input/input.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -26,8 +27,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "D:/workspace_programming/Workspace C++/CL projects/Vivid/cmake-build-release/dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
-  "D:/workspace_programming/Workspace C++/CL projects/Vivid/cmake-build-release/dependencies/libs/CMakeFiles/GLEW_1130.dir/DependInfo.cmake"
+  "C:/Users/Ole/Documents/programming/c++/Vivid/cmake-build-release/dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "C:/Users/Ole/Documents/programming/c++/Vivid/cmake-build-release/dependencies/libs/CMakeFiles/GLEW_1130.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

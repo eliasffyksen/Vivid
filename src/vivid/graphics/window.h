@@ -17,11 +17,9 @@ namespace vivid {
 		class Window {
 		public:
 			GLFWwindow *window;
-
 		private:
 			const char *title;
 			int width, height;
-
 		public:
 			Window(const char *name, int width, int height);
 			~Window();

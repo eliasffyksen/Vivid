@@ -44,19 +44,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\programs\CLion\CLion 2017.2.1\bin\cmake\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\programs\CLion\CLion 2017.2.1\bin\cmake\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "D:\workspace_programming\Workspace C++\CL projects\Vivid"
+CMAKE_SOURCE_DIR = C:\Users\Ole\Documents\programming\c++\Vivid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release"
+CMAKE_BINARY_DIR = C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release
 
 #=============================================================================
 # Target rules for target CMakeFiles/Vivid.dir
@@ -66,7 +66,7 @@ CMakeFiles/Vivid.dir/all: dependencies/libs/CMakeFiles/GLEW_1130.dir/all
 CMakeFiles/Vivid.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f CMakeFiles\Vivid.dir\build.make CMakeFiles/Vivid.dir/depend
 	$(MAKE) -f CMakeFiles\Vivid.dir\build.make CMakeFiles/Vivid.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=3,4,5,6 "Built target Vivid"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=3,4,5,6,7 "Built target Vivid"
 .PHONY : CMakeFiles/Vivid.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/Vivid.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Vivid.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 19
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 20
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/Vivid.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : CMakeFiles/Vivid.dir/rule
 
 # Convenience name for target.
@@ -123,7 +123,7 @@ dependencies/libs/preinstall: dependencies/libs/glfw-3.1.2/preinstall
 dependencies/libs/CMakeFiles/GLEW_1130.dir/all:
 	$(MAKE) -f dependencies\libs\CMakeFiles\GLEW_1130.dir\build.make dependencies/libs/CMakeFiles/GLEW_1130.dir/depend
 	$(MAKE) -f dependencies\libs\CMakeFiles\GLEW_1130.dir\build.make dependencies/libs/CMakeFiles/GLEW_1130.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=1,2 "Built target GLEW_1130"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=1,2 "Built target GLEW_1130"
 .PHONY : dependencies/libs/CMakeFiles/GLEW_1130.dir/all
 
 # Include target in all.
@@ -133,9 +133,9 @@ all: dependencies/libs/CMakeFiles/GLEW_1130.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/CMakeFiles/GLEW_1130.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 2
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/CMakeFiles/GLEW_1130.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/CMakeFiles/GLEW_1130.dir/rule
 
 # Convenience name for target.
@@ -160,6 +160,7 @@ clean: dependencies/libs/CMakeFiles/GLEW_1130.dir/clean
 dependencies/libs/glfw-3.1.2/all: dependencies/libs/glfw-3.1.2/src/all
 dependencies/libs/glfw-3.1.2/all: dependencies/libs/glfw-3.1.2/examples/all
 dependencies/libs/glfw-3.1.2/all: dependencies/libs/glfw-3.1.2/tests/all
+dependencies/libs/glfw-3.1.2/all: dependencies/libs/glfw-3.1.2/docs/all
 
 .PHONY : dependencies/libs/glfw-3.1.2/all
 
@@ -168,6 +169,7 @@ dependencies/libs/glfw-3.1.2/clean: dependencies/libs/glfw-3.1.2/CMakeFiles/unin
 dependencies/libs/glfw-3.1.2/clean: dependencies/libs/glfw-3.1.2/src/clean
 dependencies/libs/glfw-3.1.2/clean: dependencies/libs/glfw-3.1.2/examples/clean
 dependencies/libs/glfw-3.1.2/clean: dependencies/libs/glfw-3.1.2/tests/clean
+dependencies/libs/glfw-3.1.2/clean: dependencies/libs/glfw-3.1.2/docs/clean
 
 .PHONY : dependencies/libs/glfw-3.1.2/clean
 
@@ -175,6 +177,7 @@ dependencies/libs/glfw-3.1.2/clean: dependencies/libs/glfw-3.1.2/tests/clean
 dependencies/libs/glfw-3.1.2/preinstall: dependencies/libs/glfw-3.1.2/src/preinstall
 dependencies/libs/glfw-3.1.2/preinstall: dependencies/libs/glfw-3.1.2/examples/preinstall
 dependencies/libs/glfw-3.1.2/preinstall: dependencies/libs/glfw-3.1.2/tests/preinstall
+dependencies/libs/glfw-3.1.2/preinstall: dependencies/libs/glfw-3.1.2/docs/preinstall
 
 .PHONY : dependencies/libs/glfw-3.1.2/preinstall
 
@@ -185,14 +188,14 @@ dependencies/libs/glfw-3.1.2/preinstall: dependencies/libs/glfw-3.1.2/tests/prei
 dependencies/libs/glfw-3.1.2/CMakeFiles/uninstall.dir/all:
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\CMakeFiles\uninstall.dir\build.make dependencies/libs/glfw-3.1.2/CMakeFiles/uninstall.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\CMakeFiles\uninstall.dir\build.make dependencies/libs/glfw-3.1.2/CMakeFiles/uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num= "Built target uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num= "Built target uninstall"
 .PHONY : dependencies/libs/glfw-3.1.2/CMakeFiles/uninstall.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/CMakeFiles/uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/CMakeFiles/uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/CMakeFiles/uninstall.dir/rule
 
 # Convenience name for target.
@@ -235,7 +238,7 @@ dependencies/libs/glfw-3.1.2/src/preinstall:
 dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\src\CMakeFiles\glfw.dir\build.make dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=25,26,27,28,29,30,31,32,33,34,35,36,37 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=27,28,29,30,31,32,33,34,35,36,37,38,39 "Built target glfw"
 .PHONY : dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 
 # Include target in all.
@@ -245,9 +248,9 @@ all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 13
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 13
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/rule
 
 # Convenience name for target.
@@ -302,7 +305,7 @@ dependencies/libs/glfw-3.1.2/examples/preinstall:
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\boing.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\boing.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=7,8 "Built target boing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=8,9 "Built target boing"
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/all
 
 # Include target in all.
@@ -312,9 +315,9 @@ all: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 15
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 15
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/rule
 
 # Convenience name for target.
@@ -339,7 +342,7 @@ clean: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/clean
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\simple.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\simple.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=63,64 "Built target simple"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=65,66 "Built target simple"
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/all
 
 # Include target in all.
@@ -349,9 +352,9 @@ all: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 15
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 15
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/rule
 
 # Convenience name for target.
@@ -376,7 +379,7 @@ clean: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/simple.dir/clean
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\gears.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\gears.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=23,24 "Built target gears"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=25,26 "Built target gears"
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/all
 
 # Include target in all.
@@ -386,9 +389,9 @@ all: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 15
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 15
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/rule
 
 # Convenience name for target.
@@ -413,7 +416,7 @@ clean: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/gears.dir/clean
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\wave.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\wave.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=75,76 "Built target wave"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=77,78 "Built target wave"
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/all
 
 # Include target in all.
@@ -423,9 +426,9 @@ all: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 15
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 15
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/rule
 
 # Convenience name for target.
@@ -450,7 +453,7 @@ clean: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/clean
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=55,56,57,58 "Built target particles"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=57,58,59,60 "Built target particles"
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/all
 
 # Include target in all.
@@ -460,9 +463,9 @@ all: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 17
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 17
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/rule
 
 # Convenience name for target.
@@ -487,7 +490,7 @@ clean: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/clean
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\heightmap.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\heightmap.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=41,42,43 "Built target heightmap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=43,44,45 "Built target heightmap"
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/all
 
 # Include target in all.
@@ -497,9 +500,9 @@ all: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 16
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 16
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/rule
 
 # Convenience name for target.
@@ -524,7 +527,7 @@ clean: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/clean
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\splitview.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\examples\CMakeFiles\splitview.dir\build.make dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=65,66 "Built target splitview"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=67,68 "Built target splitview"
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/all
 
 # Include target in all.
@@ -534,9 +537,9 @@ all: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 15
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 15
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/rule
 
 # Convenience name for target.
@@ -609,7 +612,7 @@ dependencies/libs/glfw-3.1.2/tests/preinstall:
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\clipboard.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\clipboard.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=9,10,11 "Built target clipboard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=10,11,12 "Built target clipboard"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/all
 
 # Include target in all.
@@ -619,9 +622,9 @@ all: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 16
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 16
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/rule
 
 # Convenience name for target.
@@ -646,7 +649,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/clipboard.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\joysticks.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\joysticks.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=47,48 "Built target joysticks"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=49,50 "Built target joysticks"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/all
 
 # Include target in all.
@@ -656,9 +659,9 @@ all: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 15
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 15
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/rule
 
 # Convenience name for target.
@@ -683,7 +686,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/joysticks.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/events.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\events.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/events.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\events.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/events.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=17,18,19 "Built target events"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=19,20,21 "Built target events"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/events.dir/all
 
 # Include target in all.
@@ -693,9 +696,9 @@ all: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/events.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/events.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 16
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 16
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/events.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/events.dir/rule
 
 # Convenience name for target.
@@ -720,7 +723,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/events.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/msaa.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\msaa.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/msaa.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\msaa.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/msaa.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=52,53,54 "Built target msaa"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=54,55,56 "Built target msaa"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/msaa.dir/all
 
 # Include target in all.
@@ -730,9 +733,9 @@ all: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/msaa.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/msaa.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 16
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 16
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/msaa.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/msaa.dir/rule
 
 # Convenience name for target.
@@ -757,7 +760,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/msaa.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/iconify.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\iconify.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/iconify.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\iconify.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/iconify.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=44,45,46 "Built target iconify"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=46,47,48 "Built target iconify"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/iconify.dir/all
 
 # Include target in all.
@@ -767,9 +770,9 @@ all: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/iconify.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/iconify.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 16
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 16
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/iconify.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/iconify.dir/rule
 
 # Convenience name for target.
@@ -794,7 +797,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/iconify.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/gamma.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\gamma.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/gamma.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\gamma.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/gamma.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=20,21,22 "Built target gamma"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=22,23,24 "Built target gamma"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/gamma.dir/all
 
 # Include target in all.
@@ -804,9 +807,9 @@ all: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/gamma.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/gamma.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 16
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 16
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/gamma.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/gamma.dir/rule
 
 # Convenience name for target.
@@ -831,7 +834,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/gamma.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\glfwinfo.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\glfwinfo.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=38,39,40 "Built target glfwinfo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=40,41,42 "Built target glfwinfo"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/all
 
 # Include target in all.
@@ -841,9 +844,9 @@ all: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 16
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 16
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/rule
 
 # Convenience name for target.
@@ -868,7 +871,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/glfwinfo.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/monitors.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\monitors.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/monitors.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\monitors.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/monitors.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=49,50,51 "Built target monitors"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=51,52,53 "Built target monitors"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/monitors.dir/all
 
 # Include target in all.
@@ -878,9 +881,9 @@ all: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/monitors.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/monitors.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 16
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 16
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/monitors.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/monitors.dir/rule
 
 # Convenience name for target.
@@ -905,7 +908,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/monitors.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/reopen.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\reopen.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/reopen.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\reopen.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/reopen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=59,60 "Built target reopen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=61,62 "Built target reopen"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/reopen.dir/all
 
 # Include target in all.
@@ -915,9 +918,9 @@ all: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/reopen.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/reopen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 15
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 15
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/reopen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/reopen.dir/rule
 
 # Convenience name for target.
@@ -942,7 +945,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/reopen.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/cursor.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\cursor.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/cursor.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\cursor.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/cursor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=12,13 "Built target cursor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=13,14 "Built target cursor"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/cursor.dir/all
 
 # Include target in all.
@@ -952,9 +955,9 @@ all: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/cursor.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/cursor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 15
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 15
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/cursor.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/cursor.dir/rule
 
 # Convenience name for target.
@@ -979,7 +982,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/cursor.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/empty.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\empty.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/empty.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\empty.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/empty.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=14,15,16 "Built target empty"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=16,17,18 "Built target empty"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/empty.dir/all
 
 # Include target in all.
@@ -989,9 +992,9 @@ all: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/empty.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/empty.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 16
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 16
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/empty.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/empty.dir/rule
 
 # Convenience name for target.
@@ -1016,7 +1019,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/empty.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\sharing.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\sharing.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=61,62 "Built target sharing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=63,64 "Built target sharing"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/all
 
 # Include target in all.
@@ -1026,9 +1029,9 @@ all: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 15
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 15
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/rule
 
 # Convenience name for target.
@@ -1053,7 +1056,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/sharing.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/tearing.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\tearing.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/tearing.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\tearing.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/tearing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=67,68,69 "Built target tearing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=69,70,71 "Built target tearing"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/tearing.dir/all
 
 # Include target in all.
@@ -1063,9 +1066,9 @@ all: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/tearing.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/tearing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 16
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 16
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/tearing.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/tearing.dir/rule
 
 # Convenience name for target.
@@ -1090,7 +1093,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/tearing.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/threads.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\threads.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/threads.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\threads.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/threads.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=70,71,72 "Built target threads"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=72,73,74 "Built target threads"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/threads.dir/all
 
 # Include target in all.
@@ -1100,9 +1103,9 @@ all: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/threads.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/threads.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 16
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 16
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/threads.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/threads.dir/rule
 
 # Convenience name for target.
@@ -1127,7 +1130,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/threads.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\title.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\title.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=73,74 "Built target title"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=75,76 "Built target title"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/all
 
 # Include target in all.
@@ -1137,9 +1140,9 @@ all: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 15
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 15
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/rule
 
 # Convenience name for target.
@@ -1164,7 +1167,7 @@ clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/clean
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/windows.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\windows.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/windows.dir/depend
 	$(MAKE) -f dependencies\libs\glfw-3.1.2\tests\CMakeFiles\windows.dir\build.make dependencies/libs/glfw-3.1.2/tests/CMakeFiles/windows.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=77,78 "Built target windows"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=79,80 "Built target windows"
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/windows.dir/all
 
 # Include target in all.
@@ -1174,9 +1177,9 @@ all: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/windows.dir/all
 
 # Build rule for subdir invocation for target.
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/windows.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 15
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 15
 	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/windows.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/windows.dir/rule
 
 # Convenience name for target.
@@ -1191,6 +1194,61 @@ dependencies/libs/glfw-3.1.2/tests/CMakeFiles/windows.dir/clean:
 
 # clean rule for target.
 clean: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/windows.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory dependencies/libs/glfw-3.1.2/docs
+
+# Convenience name for "all" pass in the directory.
+dependencies/libs/glfw-3.1.2/docs/all: dependencies/libs/glfw-3.1.2/docs/CMakeFiles/docs.dir/all
+
+.PHONY : dependencies/libs/glfw-3.1.2/docs/all
+
+# Convenience name for "clean" pass in the directory.
+dependencies/libs/glfw-3.1.2/docs/clean: dependencies/libs/glfw-3.1.2/docs/CMakeFiles/docs.dir/clean
+
+.PHONY : dependencies/libs/glfw-3.1.2/docs/clean
+
+# Convenience name for "preinstall" pass in the directory.
+dependencies/libs/glfw-3.1.2/docs/preinstall:
+
+.PHONY : dependencies/libs/glfw-3.1.2/docs/preinstall
+
+#=============================================================================
+# Target rules for target dependencies/libs/glfw-3.1.2/docs/CMakeFiles/docs.dir
+
+# All Build rule for target.
+dependencies/libs/glfw-3.1.2/docs/CMakeFiles/docs.dir/all:
+	$(MAKE) -f dependencies\libs\glfw-3.1.2\docs\CMakeFiles\docs.dir\build.make dependencies/libs/glfw-3.1.2/docs/CMakeFiles/docs.dir/depend
+	$(MAKE) -f dependencies\libs\glfw-3.1.2\docs\CMakeFiles\docs.dir\build.make dependencies/libs/glfw-3.1.2/docs/CMakeFiles/docs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=15 "Built target docs"
+.PHONY : dependencies/libs/glfw-3.1.2/docs/CMakeFiles/docs.dir/all
+
+# Include target in all.
+all: dependencies/libs/glfw-3.1.2/docs/CMakeFiles/docs.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+dependencies/libs/glfw-3.1.2/docs/CMakeFiles/docs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 1
+	$(MAKE) -f CMakeFiles\Makefile2 dependencies/libs/glfw-3.1.2/docs/CMakeFiles/docs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles 0
+.PHONY : dependencies/libs/glfw-3.1.2/docs/CMakeFiles/docs.dir/rule
+
+# Convenience name for target.
+docs: dependencies/libs/glfw-3.1.2/docs/CMakeFiles/docs.dir/rule
+
+.PHONY : docs
+
+# clean rule for target.
+dependencies/libs/glfw-3.1.2/docs/CMakeFiles/docs.dir/clean:
+	$(MAKE) -f dependencies\libs\glfw-3.1.2\docs\CMakeFiles\docs.dir\build.make dependencies/libs/glfw-3.1.2/docs/CMakeFiles/docs.dir/clean
+.PHONY : dependencies/libs/glfw-3.1.2/docs/CMakeFiles/docs.dir/clean
+
+# clean rule for target.
+clean: dependencies/libs/glfw-3.1.2/docs/CMakeFiles/docs.dir/clean
 
 .PHONY : clean
 

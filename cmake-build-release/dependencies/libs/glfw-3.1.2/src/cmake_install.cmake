@@ -1,4 +1,4 @@
-# Install script for directory: D:/workspace_programming/Workspace C++/CL projects/Vivid/dependencies/libs/glfw-3.1.2/src
+# Install script for directory: C:/Users/Ole/Documents/programming/c++/Vivid/dependencies/libs/glfw-3.1.2/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -28,6 +28,6 @@ if(NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "D:/workspace_programming/Workspace C++/CL projects/Vivid/cmake-build-release/dependencies/libs/glfw-3.1.2/src/libglfw3.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/Ole/Documents/programming/c++/Vivid/cmake-build-release/dependencies/libs/glfw-3.1.2/src/libglfw3.a")
 endif()
 

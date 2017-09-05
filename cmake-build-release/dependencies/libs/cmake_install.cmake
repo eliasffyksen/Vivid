@@ -1,4 +1,4 @@
-# Install script for directory: D:/workspace_programming/Workspace C++/CL projects/Vivid/dependencies/libs
+# Install script for directory: C:/Users/Ole/Documents/programming/c++/Vivid/dependencies/libs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,7 +29,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("D:/workspace_programming/Workspace C++/CL projects/Vivid/cmake-build-release/dependencies/libs/glfw-3.1.2/cmake_install.cmake")
+  include("C:/Users/Ole/Documents/programming/c++/Vivid/cmake-build-release/dependencies/libs/glfw-3.1.2/cmake_install.cmake")
 
 endif()
 

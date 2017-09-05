@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\programs\CLion\CLion 2017.2.1\bin\cmake\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\programs\CLion\CLion 2017.2.1\bin\cmake\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "D:\workspace_programming\Workspace C++\CL projects\Vivid"
+CMAKE_SOURCE_DIR = C:\Users\Ole\Documents\programming\c++\Vivid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release"
+CMAKE_BINARY_DIR = C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release
 
 # Include any dependencies generated for this target.
 include dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/depend.make
@@ -59,16 +59,16 @@ include dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/flags.mak
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.obj: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/flags.make
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.obj: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/includes_C.rsp
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.obj: ../dependencies/libs/glfw-3.1.2/examples/particles.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.obj"
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples" && D:\MinGW-64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\particles.dir\particles.c.obj   -c "D:\workspace_programming\Workspace C++\CL projects\Vivid\dependencies\libs\glfw-3.1.2\examples\particles.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.obj"
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\particles.dir\particles.c.obj   -c C:\Users\Ole\Documents\programming\c++\Vivid\dependencies\libs\glfw-3.1.2\examples\particles.c
 
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/particles.dir/particles.c.i"
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples" && D:\MinGW-64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\workspace_programming\Workspace C++\CL projects\Vivid\dependencies\libs\glfw-3.1.2\examples\particles.c" > CMakeFiles\particles.dir\particles.c.i
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ole\Documents\programming\c++\Vivid\dependencies\libs\glfw-3.1.2\examples\particles.c > CMakeFiles\particles.dir\particles.c.i
 
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/particles.dir/particles.c.s"
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples" && D:\MinGW-64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\workspace_programming\Workspace C++\CL projects\Vivid\dependencies\libs\glfw-3.1.2\examples\particles.c" -o CMakeFiles\particles.dir\particles.c.s
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ole\Documents\programming\c++\Vivid\dependencies\libs\glfw-3.1.2\examples\particles.c -o CMakeFiles\particles.dir\particles.c.s
 
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.obj.requires:
 
@@ -84,16 +84,16 @@ dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.obj.p
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.obj: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/flags.make
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.obj: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/includes_C.rsp
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.obj: ../dependencies/libs/glfw-3.1.2/deps/tinycthread.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.obj"
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples" && D:\MinGW-64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\particles.dir\__\deps\tinycthread.c.obj   -c "D:\workspace_programming\Workspace C++\CL projects\Vivid\dependencies\libs\glfw-3.1.2\deps\tinycthread.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.obj"
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\particles.dir\__\deps\tinycthread.c.obj   -c C:\Users\Ole\Documents\programming\c++\Vivid\dependencies\libs\glfw-3.1.2\deps\tinycthread.c
 
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/particles.dir/__/deps/tinycthread.c.i"
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples" && D:\MinGW-64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\workspace_programming\Workspace C++\CL projects\Vivid\dependencies\libs\glfw-3.1.2\deps\tinycthread.c" > CMakeFiles\particles.dir\__\deps\tinycthread.c.i
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ole\Documents\programming\c++\Vivid\dependencies\libs\glfw-3.1.2\deps\tinycthread.c > CMakeFiles\particles.dir\__\deps\tinycthread.c.i
 
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/particles.dir/__/deps/tinycthread.c.s"
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples" && D:\MinGW-64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\workspace_programming\Workspace C++\CL projects\Vivid\dependencies\libs\glfw-3.1.2\deps\tinycthread.c" -o CMakeFiles\particles.dir\__\deps\tinycthread.c.s
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ole\Documents\programming\c++\Vivid\dependencies\libs\glfw-3.1.2\deps\tinycthread.c -o CMakeFiles\particles.dir\__\deps\tinycthread.c.s
 
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.obj.requires:
 
@@ -109,16 +109,16 @@ dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthre
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.obj: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/flags.make
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.obj: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/includes_C.rsp
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.obj: ../dependencies/libs/glfw-3.1.2/deps/getopt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.obj"
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples" && D:\MinGW-64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\particles.dir\__\deps\getopt.c.obj   -c "D:\workspace_programming\Workspace C++\CL projects\Vivid\dependencies\libs\glfw-3.1.2\deps\getopt.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.obj"
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\particles.dir\__\deps\getopt.c.obj   -c C:\Users\Ole\Documents\programming\c++\Vivid\dependencies\libs\glfw-3.1.2\deps\getopt.c
 
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/particles.dir/__/deps/getopt.c.i"
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples" && D:\MinGW-64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\workspace_programming\Workspace C++\CL projects\Vivid\dependencies\libs\glfw-3.1.2\deps\getopt.c" > CMakeFiles\particles.dir\__\deps\getopt.c.i
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ole\Documents\programming\c++\Vivid\dependencies\libs\glfw-3.1.2\deps\getopt.c > CMakeFiles\particles.dir\__\deps\getopt.c.i
 
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/particles.dir/__/deps/getopt.c.s"
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples" && D:\MinGW-64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\workspace_programming\Workspace C++\CL projects\Vivid\dependencies\libs\glfw-3.1.2\deps\getopt.c" -o CMakeFiles\particles.dir\__\deps\getopt.c.s
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ole\Documents\programming\c++\Vivid\dependencies\libs\glfw-3.1.2\deps\getopt.c -o CMakeFiles\particles.dir\__\deps\getopt.c.s
 
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.obj.requires:
 
@@ -148,8 +148,8 @@ particles_EXTERNAL_OBJECTS =
 ../bin/debug/particles.exe: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/linklibs.rsp
 ../bin/debug/particles.exe: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/objects1.rsp
 ../bin/debug/particles.exe: dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable ..\..\..\..\..\bin\debug\particles.exe"
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\particles.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable ..\..\..\..\..\bin\debug\particles.exe"
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\particles.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/build: ../bin/debug/particles.exe
@@ -163,10 +163,10 @@ dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/requires: depende
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/requires
 
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/clean:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples" && $(CMAKE_COMMAND) -P CMakeFiles\particles.dir\cmake_clean.cmake
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples && $(CMAKE_COMMAND) -P CMakeFiles\particles.dir\cmake_clean.cmake
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/clean
 
 dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "D:\workspace_programming\Workspace C++\CL projects\Vivid" "D:\workspace_programming\Workspace C++\CL projects\Vivid\dependencies\libs\glfw-3.1.2\examples" "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples" "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Ole\Documents\programming\c++\Vivid C:\Users\Ole\Documents\programming\c++\Vivid\dependencies\libs\glfw-3.1.2\examples C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\examples\CMakeFiles\particles.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : dependencies/libs/glfw-3.1.2/examples/CMakeFiles/particles.dir/depend
 

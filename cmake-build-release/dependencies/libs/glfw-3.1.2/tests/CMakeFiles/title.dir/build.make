@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\programs\CLion\CLion 2017.2.1\bin\cmake\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\programs\CLion\CLion 2017.2.1\bin\cmake\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "D:\workspace_programming\Workspace C++\CL projects\Vivid"
+CMAKE_SOURCE_DIR = C:\Users\Ole\Documents\programming\c++\Vivid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release"
+CMAKE_BINARY_DIR = C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release
 
 # Include any dependencies generated for this target.
 include dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/depend.make
@@ -59,16 +59,16 @@ include dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/flags.make
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/title.c.obj: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/flags.make
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/title.c.obj: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/includes_C.rsp
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/title.c.obj: ../dependencies/libs/glfw-3.1.2/tests/title.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/title.c.obj"
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\tests" && D:\MinGW-64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\title.dir\title.c.obj   -c "D:\workspace_programming\Workspace C++\CL projects\Vivid\dependencies\libs\glfw-3.1.2\tests\title.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/title.c.obj"
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\tests && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\title.dir\title.c.obj   -c C:\Users\Ole\Documents\programming\c++\Vivid\dependencies\libs\glfw-3.1.2\tests\title.c
 
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/title.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/title.dir/title.c.i"
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\tests" && D:\MinGW-64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\workspace_programming\Workspace C++\CL projects\Vivid\dependencies\libs\glfw-3.1.2\tests\title.c" > CMakeFiles\title.dir\title.c.i
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\tests && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ole\Documents\programming\c++\Vivid\dependencies\libs\glfw-3.1.2\tests\title.c > CMakeFiles\title.dir\title.c.i
 
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/title.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/title.dir/title.c.s"
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\tests" && D:\MinGW-64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "D:\workspace_programming\Workspace C++\CL projects\Vivid\dependencies\libs\glfw-3.1.2\tests\title.c" -o CMakeFiles\title.dir\title.c.s
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\tests && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ole\Documents\programming\c++\Vivid\dependencies\libs\glfw-3.1.2\tests\title.c -o CMakeFiles\title.dir\title.c.s
 
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/title.c.obj.requires:
 
@@ -94,8 +94,8 @@ title_EXTERNAL_OBJECTS =
 ../bin/debug/title.exe: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/linklibs.rsp
 ../bin/debug/title.exe: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/objects1.rsp
 ../bin/debug/title.exe: dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable ..\..\..\..\..\bin\debug\title.exe"
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\tests" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\title.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable ..\..\..\..\..\bin\debug\title.exe"
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\title.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/build: ../bin/debug/title.exe
@@ -107,10 +107,10 @@ dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/requires: dependencies/l
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/requires
 
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/clean:
-	cd /d "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\tests" && $(CMAKE_COMMAND) -P CMakeFiles\title.dir\cmake_clean.cmake
+	cd /d C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\tests && $(CMAKE_COMMAND) -P CMakeFiles\title.dir\cmake_clean.cmake
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/clean
 
 dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "D:\workspace_programming\Workspace C++\CL projects\Vivid" "D:\workspace_programming\Workspace C++\CL projects\Vivid\dependencies\libs\glfw-3.1.2\tests" "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release" "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\tests" "D:\workspace_programming\Workspace C++\CL projects\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\tests\CMakeFiles\title.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Ole\Documents\programming\c++\Vivid C:\Users\Ole\Documents\programming\c++\Vivid\dependencies\libs\glfw-3.1.2\tests C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\tests C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\dependencies\libs\glfw-3.1.2\tests\CMakeFiles\title.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : dependencies/libs/glfw-3.1.2/tests/CMakeFiles/title.dir/depend
 

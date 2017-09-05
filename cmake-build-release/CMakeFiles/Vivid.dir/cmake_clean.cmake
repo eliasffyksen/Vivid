@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Vivid.dir/src/main.cpp.obj"
   "CMakeFiles/Vivid.dir/src/vivid/graphics/shader.cpp.obj"
   "CMakeFiles/Vivid.dir/src/vivid/graphics/window.cpp.obj"
+  "CMakeFiles/Vivid.dir/src/vivid/input/input.cpp.obj"
   "../bin/debug/Vivid.pdb"
   "../bin/debug/Vivid.exe"
   "../bin/debug/Vivid.exe.manifest"

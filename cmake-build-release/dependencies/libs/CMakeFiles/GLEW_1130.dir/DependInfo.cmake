@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "D:/workspace_programming/Workspace C++/CL projects/Vivid/dependencies/libs/glew-1.13.0/src/glew.c" "D:/workspace_programming/Workspace C++/CL projects/Vivid/cmake-build-release/dependencies/libs/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.obj"
+  "C:/Users/Ole/Documents/programming/c++/Vivid/dependencies/libs/glew-1.13.0/src/glew.c" "C:/Users/Ole/Documents/programming/c++/Vivid/cmake-build-release/dependencies/libs/CMakeFiles/GLEW_1130.dir/glew-1.13.0/src/glew.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
