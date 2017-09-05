@@ -20,7 +20,6 @@ namespace vivid {
 		private:
 			const char *title;
 			int width, height;
-			GLFWcursor* cursor;
 		public:
 			Window(const char *name, int width, int height);
 			~Window();
