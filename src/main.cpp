@@ -44,11 +44,10 @@ int main() {
 	int fpsCount = 0;
 	Timer timer;
 	timer.reset();
-	
+
+	double x, y;
+
 	while (!window.isClosed()) {
-		if(input.getKey(GLFW_KEY_A)){
-			LOG("DOWN");
-		}
 		float delta = timer.elapsed();
 		window.clear();
 		simple.bind();
