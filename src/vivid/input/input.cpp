@@ -4,7 +4,6 @@
 
 #include "input.h"
 
-
 namespace vivid {
 
 	Input::Input(GLFWwindow *window) {

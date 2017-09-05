@@ -62,8 +62,8 @@ CMAKE_BINARY_DIR = C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-rele
 # Target rules for target CMakeFiles/Vivid.dir
 
 # All Build rule for target.
-CMakeFiles/Vivid.dir/all: dependencies/libs/CMakeFiles/GLEW_1130.dir/all
 CMakeFiles/Vivid.dir/all: dependencies/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
+CMakeFiles/Vivid.dir/all: dependencies/libs/CMakeFiles/GLEW_1130.dir/all
 	$(MAKE) -f CMakeFiles\Vivid.dir\build.make CMakeFiles/Vivid.dir/depend
 	$(MAKE) -f CMakeFiles\Vivid.dir\build.make CMakeFiles/Vivid.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Ole\Documents\programming\c++\Vivid\cmake-build-release\CMakeFiles --progress-num=3,4,5,6,7 "Built target Vivid"
