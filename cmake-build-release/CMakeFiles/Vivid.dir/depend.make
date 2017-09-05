@@ -41,5 +41,3 @@ CMakeFiles/Vivid.dir/src/vivid/input/input.cpp.obj: ../src/vivid/input/input.h
 CMakeFiles/Vivid.dir/src/vivid/input/input.cpp.obj: ../src/vivid/util/timer.h
 CMakeFiles/Vivid.dir/src/vivid/input/input.cpp.obj: ../src/vivid/vivid.h
 
-CMakeFiles/Vivid.dir/src/vivid/util/timer.cpp.obj: ../src/vivid/util/timer.cpp
-

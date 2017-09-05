@@ -11,12 +11,13 @@ namespace vivid {
 				: title(title), width(width), height(height) {
 			if (!init())
 				glfwTerminate();
+		}
 
+		Window::~Window() {
+			glfwTerminate();
 		}
 		
 		bool Window::init() {
-			using namespace vivid;
-
 			if (!glfwInit()) {
 				LOGE("Failed to initialize GLFW.\n");
 				return false;
@@ -43,10 +44,6 @@ namespace vivid {
 			glfwSwapInterval(0); // disables VSync
 			
 			return true;
-		}
-		
-		Window::~Window() {
-			glfwTerminate();
 		}
 		
 		void Window::clear() const {

@@ -45,13 +45,11 @@ int main() {
 	Timer timer;
 	timer.reset();
 
-	double x, y;
-
 	while (!window.isClosed()) {
 		float delta = timer.elapsed();
 		window.clear();
 		simple.bind();
-		
+
 		// 1rst attribute buffer : vertices
 		glEnableVertexAttribArray(0);
 		glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
@@ -63,7 +61,7 @@ int main() {
 				0,                  // stride
 				nullptr            // array buffer offset
 		);
-		
+
 		glDrawArrays(GL_TRIANGLES, 0, 3);
 		glDisableVertexAttribArray(0);
 		
