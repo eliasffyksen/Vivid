@@ -1,51 +1,54 @@
 // Include standard headers
-#include <stdio.h>
 #include <iostream>
+#include <unistd.h>
 
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
-#include <glm/glm.hpp>
+#include "vivid/vivid.h"
 
-#include "graphics/window.h"
-#include "graphics/shader.h"
+#include "config.h"
 
 int main() {
 	using namespace vivid;
 	using namespace graphics;
-
+	
 	Window window("Window!!", 800, 600);
-	glClearColor(0.2f, 0.3f, 0.8f, 1.0f);
-
+	Input input(window.window);
+	
 	glewExperimental = GL_TRUE;
 	if (glewInit() != GLEW_OK) {
-		fprintf(stderr, "Failed to initialize GLEW\n");
+		LOGE("Failed to initialize GLEW\n");
 		getchar();
 		glfwTerminate();
 		return -1;
 	}
-
+	
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
-
+	
 	GLuint VertexArrayID;
 	glGenVertexArrays(1, &VertexArrayID);
 	glBindVertexArray(VertexArrayID);
-
+	
 	Shader simple("shaders/simple");
-
+	
 	static const GLfloat g_vertex_buffer_data[] = {
 			-1.0f, -1.0f, 0.0f,
 			1.0f, -1.0f, 0.0f,
 			0.0f, 1.0f, 0.0f,
 	};
-
+	
 	GLuint vertexBuffer;
 	glGenBuffers(1, &vertexBuffer);
 	glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
+	
+	float fpsTimer = 0.0f;
+	int fpsCount = 0;
+	Timer timer;
+	timer.reset();
 
 	while (!window.isClosed()) {
+		float delta = timer.elapsed();
+		
 		window.clear();
-
 		simple.bind();
 
 		// 1rst attribute buffer : vertices
@@ -62,13 +65,21 @@ int main() {
 
 		glDrawArrays(GL_TRIANGLES, 0, 3);
 		glDisableVertexAttribArray(0);
-
+		
+		input.clear();
 		window.update();
+		fpsTimer += delta;
+		fpsCount++;
+		if(fpsTimer >= 1) {
+			fpsTimer--;
+			LOG(fpsCount << " fps");
+			fpsCount = 0;
+		}
 	}
-
+	
 	glDeleteBuffers(1, &vertexBuffer);
 	glDeleteVertexArrays(1, &VertexArrayID);
-
+	
 	return 0;
 }
 
