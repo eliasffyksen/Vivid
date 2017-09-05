@@ -13,14 +13,6 @@ int main() {
 	Window window("Window!!", 800, 600);
 	Input input(window.window);
 	
-	glewExperimental = GL_TRUE;
-	if (glewInit() != GLEW_OK) {
-		LOGE("Failed to initialize GLEW\n");
-		getchar();
-		glfwTerminate();
-		return -1;
-	}
-	
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
 	
 	GLuint VertexArrayID;
@@ -30,9 +22,12 @@ int main() {
 	Shader simple("shaders/simple");
 	
 	static const GLfloat g_vertex_buffer_data[] = {
-			-1.0f, -1.0f, 0.0f,
-			1.0f, -1.0f, 0.0f,
-			0.0f, 1.0f, 0.0f,
+			-.5f, .5f, 0.0f,
+			-.3f, .5f, 0.0f,
+			0.0f, -.3f, 0.0f,
+			0.3f, .5f, 0.0f,
+			0.5f, .5f, 0.0f,
+			.0f, -.5f, 0.0f,
 	};
 	
 	GLuint vertexBuffer;
@@ -64,7 +59,7 @@ int main() {
 				nullptr            // array buffer offset
 		);
 		
-		glDrawArrays(GL_TRIANGLES, 0, 3);
+		glDrawArrays(GL_TRIANGLES, 0, 6);
 		glDisableVertexAttribArray(0);
 		
 		window.update();
