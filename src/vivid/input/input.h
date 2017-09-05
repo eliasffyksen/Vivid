@@ -6,7 +6,7 @@
 
 #include "../vivid.h"
 
-#undef DELETE
+//#undef DELETE
 
 namespace vivid {
 
@@ -47,22 +47,22 @@ namespace vivid {
 		static void mouseButtonCallback(GLFWwindow*, int, int, int);
 
 	public:
-		enum KEYS {
+		enum Keys {
 				A = 65, B, C, D, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z,
-				ZERO = 48, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE,
-				SPACE = 32, APOSTROPHE = 39,
-				COMMA = 44, MINUES, PERIOD, SLASH,
-				SEMI_COLON = 59, EQUAL = 61,
-				LEFT_BRACKET = 91, BACKSLASH, RIGHT_BRACKET,
-				ESCAPE = 256, TAB, BACKSPACE, DELETE,
-				RIGHT, LEFT, DOWN, UP,
-				PAGE_UP, PAGE_DOWN, HOME, END,
-				CAPS_LOCK = 280, SCROLL_LOCK, PRINT_SCREEN, PAUSE,
+				Zero = 48, One, Two, Three, Four, Five, Six, Seven, Eight, Nine,
+				Space = 32, Apostrophe = 39,
+				Comma = 44, Minus, Period, Slash,
+				Semi_colon = 59, Equal = 61,
+				Left_bracket = 91, Backslash, Right_bracket,
+				Escape = 256, Tab, Backspace, Delete,
+				Right, Left, Down, Up,
+				Page_up, Page_down, Home, End,
+				Caps_lock = 280, Scroll_lock, Print_screen, Pause,
 				F1,F2,F3,F4,F5,F6,F7,F8,F9,F10,F11,F12,F13,F14,F15,F16,F17,F18,F19,F20,F21,F22,F23,F24,F25,
 				KP0 = 320, KP1,KP2,KP3,KP4,KP5,KP6,KP7,KP8,KP9,
-				KP_DECIMAL, KP_DIVIDE, KP_MULTIPLY, KP_SUBTRACT, KP_ADD, KP_ENTER, KP_EQUAL,
-				LEFT_SHIFT = 340, LEFT_CONTROL, LEFT_ALT, LEFT_SUPER,
-				RIGHT_SHIFT, RIGHT_CONTROL, RIGHT_ALT, RIGHT_SUPER, MENU
+				KP_Decimal, KP_Divide, KP_Multiply, KP_Subtract, KP_Add, KP_Enter, KP_Equal,
+				Left_shift = 340, Left_control, Left_alt, Left_super,
+				Right_shift, Right_control, Right_alt, Right_super, Menu
 		};
 	};
 }
