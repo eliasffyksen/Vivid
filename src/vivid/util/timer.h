@@ -4,40 +4,33 @@
 
 #pragma once
 
-#include <Windows.h>
+#include <chrono>
 #include "../vivid.h"
 
 namespace vivid {
 	
 	class Timer {
 	private:
-		LARGE_INTEGER start;
-		double frequency;
+		std::chrono::high_resolution_clock timer;
+		std::chrono::time_point<std::chrono::system_clock> start;
 	public:
-		Timer() {
-			LARGE_INTEGER frequency;
-			QueryPerformanceFrequency(&frequency);
-			this->frequency = 1.0 / frequency.QuadPart;
-			QueryPerformanceCounter(&start);
-		}
+		Timer()
+		: start(timer.now())
+		{}
 		
 		void reset() {
-			QueryPerformanceCounter(&start);
+			start = timer.now();
 		}
 		
 		float elapsed() {
-			LARGE_INTEGER current;
-			QueryPerformanceCounter(&current);
-			unsigned __int64 cycles = current.QuadPart - start.QuadPart;
+			auto current = timer.now();
+			float deltaTime = std::chrono::duration_cast<std::chrono::microseconds>(current - start).count() / 1000000.0f;
 			start = current;
-			return (float) (cycles * frequency);
-					}
+			return deltaTime;
+		}
 		
 		float time() {
-			LARGE_INTEGER current;
-			QueryPerformanceCounter(&current);
-			unsigned __int64 cycles = current.QuadPart - start.QuadPart;
-			return (float) (cycles * frequency);
+			float dt = std::chrono::duration_cast<std::chrono::microseconds>(timer.now() - start).count() / 1000000.0f;
 		}
 		
 	};

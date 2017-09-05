@@ -47,6 +47,7 @@ int main() {
 
 	while (!window.isClosed()) {
 		float delta = timer.elapsed();
+		
 		window.clear();
 		simple.bind();
 
@@ -65,6 +66,7 @@ int main() {
 		glDrawArrays(GL_TRIANGLES, 0, 3);
 		glDisableVertexAttribArray(0);
 		
+		input.clear();
 		window.update();
 		fpsTimer += delta;
 		fpsCount++;
