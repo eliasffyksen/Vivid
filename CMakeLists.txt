@@ -3,9 +3,6 @@ cmake_minimum_required(VERSION 3.7)
 #----PROJECT VARIABLES----#
 project(Vivid)
 
-MESSAGE(WARNING ${CMAKE_CXX_FLAGS_RELEASE})
-MESSAGE(WARNING ${CMAKE_CXX_FLAGS_DEBUG})
-
 if(${CMAKE_BUILD_TYPE} MATCHES "Debug")
 	set(DEBUG true)
 else()
