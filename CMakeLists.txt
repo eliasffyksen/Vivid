@@ -28,7 +28,7 @@ endif (WIN32)
 # Create the configuration file for the C++ code
 configure_file(
 		${PROJECT_SOURCE_DIR}/config.h.in
-		${PROJECT_SOURCE_DIR}/src/config.h
+		${PROJECT_SOURCE_DIR}/src/vivid/util/config.h
 )
 
 set(CMAKE_CXX_STANDARD 11)
@@ -87,7 +87,7 @@ set(ALL_LIBS
 		)
 
 # Adds all the source files (CLion automatically does this when creating a file)
-set(SOURCE_FILES src/config.h src/main.cpp src/vivid/graphics/shader.h src/vivid/graphics/shader.cpp src/vivid/graphics/window.h src/vivid/graphics/window.cpp src/vivid/vivid.h src/vivid/util/timer.h src/vivid/input/input.cpp src/vivid/input/input.h)
+set(SOURCE_FILES src/vivid/util/config.h src/main.cpp src/vivid/graphics/shader.h src/vivid/graphics/shader.cpp src/vivid/graphics/window.h src/vivid/graphics/window.cpp src/vivid/vivid.h src/vivid/util/timer.h src/vivid/input/input.cpp src/vivid/input/input.h)
 
 add_executable(${PROJECT_NAME} ${EXE_ARGUMENT} ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} ${ALL_LIBS})

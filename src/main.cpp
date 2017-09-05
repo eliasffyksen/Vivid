@@ -4,8 +4,6 @@
 
 #include "vivid/vivid.h"
 
-#include "config.h"
-
 int main() {
 	using namespace vivid;
 	using namespace graphics;
@@ -44,13 +42,18 @@ int main() {
 	int fpsCount = 0;
 	Timer timer;
 	timer.reset();
-
+	
+	input.registerKeyAlias("Let's go", Input::UP);
+	
 	while (!window.isClosed()) {
 		float delta = timer.elapsed();
 		
+		if (input.keyPressed("Let's go"))
+			LOG("IT'S GOING DOW... up?!");
+		
 		window.clear();
 		simple.bind();
-
+		
 		// 1rst attribute buffer : vertices
 		glEnableVertexAttribArray(0);
 		glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
@@ -62,7 +65,7 @@ int main() {
 				0,                  // stride
 				nullptr            // array buffer offset
 		);
-
+		
 		glDrawArrays(GL_TRIANGLES, 0, 3);
 		glDisableVertexAttribArray(0);
 		
@@ -70,7 +73,7 @@ int main() {
 		window.update();
 		fpsTimer += delta;
 		fpsCount++;
-		if(fpsTimer >= 1) {
+		if (fpsTimer >= 1) {
 			fpsTimer--;
 			LOG(fpsCount << " fps");
 			fpsCount = 0;

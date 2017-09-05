@@ -5,6 +5,7 @@
 #pragma once
 
 #include "../vivid.h"
+#include <unordered_map>
 
 namespace vivid {
 
@@ -26,17 +27,31 @@ namespace vivid {
 
 		double mouseX, mouseY;
 
+		mutable std::unordered_map<std::string, int> keyAliasMap;
+		
+		
 	public:
 		Input(GLFWwindow*);
 
-		bool keyDown(int);
-		bool keyPressed(int);
-		bool keyRelease(int);
-		bool mouseButtonDown(int);
-		bool mouseButtonPressed(int);
-		bool mouseButtonReleased(int);
+		bool keyDown(int) const;
+		bool keyPressed(int) const;
+		bool keyRelease(int) const;
+		bool mouseButtonDown(int) const;
+		bool mouseButtonPressed(int) const;
+		bool mouseButtonReleased(int) const;
+		
+		bool keyDown(const std::string& alias) const;
+		bool keyPressed(const std::string& alias) const;
+		bool keyRelease(const std::string& alias) const;
+		bool mouseButtonDown(const std::string& alias) const;
+		bool mouseButtonPressed(const std::string& alias) const;
+		bool mouseButtonReleased(const std::string& alias) const;
 
-		void getCursorPosition(double &, double &);
+		void getCursorPosition(double &, double &) const;
+		
+		void registerKeyAlias(const std::string& alias, int key) const;
+		void deleteKeyAlias(const std::string& alias) const;
+		
 		void clear();
 	private:
 		static void keyCallback(GLFWwindow *, int, int, int, int);
