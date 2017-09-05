@@ -30,28 +30,28 @@ namespace vivid {
 		glfwSetMouseButtonCallback(window, Input::mouseButtonCallback);
 	}
 
-	bool Input::getKey(int key) {
+	bool Input::keyDown(int key) {
 		return keys[key];
 	}
 
-	bool Input::getKeyDown(int key) {
+	bool Input::keyPressed(int key) {
 		return keysDown[key] == inputCounter;
 	}
 
-	bool Input::getKeyUp(int key) {
+	bool Input::keyRelease(int key) {
 		return keysUp[key] == inputCounter;
 	}
 
-	bool Input::getMouseButtonDown(int button) {
+	bool Input::mouseButtonDown(int button) {
+		return mouseButtons[button];
+	}
+
+	bool Input::mouseButtonPressed(int button) {
 		return mouseButtonsDown[button] == inputCounter;
 	}
 
-	bool Input::getMouseButtonUp(int button) {
+	bool Input::mouseButtonReleased(int button) {
 		return mouseButtonsUp[button] == inputCounter;
-	}
-
-	bool Input::getMouseButton(int button) {
-		return mouseButtons[button];
 	}
 
 	void Input::getCursorPosition(double &x, double &y) {

@@ -28,12 +28,12 @@ namespace vivid {
 	public:
 		Input(GLFWwindow*);
 
-		bool getKey(int);
-		bool getKeyDown(int);
-		bool getKeyUp(int);
-		bool getMouseButton(int);
-		bool getMouseButtonDown(int);
-		bool getMouseButtonUp(int);
+		bool keyDown(int);
+		bool keyPressed(int);
+		bool keyRelease(int);
+		bool mouseButtonDown(int);
+		bool mouseButtonPressed(int);
+		bool mouseButtonReleased(int);
 
 		void getCursorPosition(double &, double &);
 		void clear();
