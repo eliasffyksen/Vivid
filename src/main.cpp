@@ -41,6 +41,11 @@ int main() {
 	timer.reset();
 
 	while (!window.isClosed()) {
+
+		if(input.keyPressed(GLFW_KEY_SPACE))
+			LOG("DOWN");
+		input.clear();
+
 		float delta = timer.elapsed();
 		window.clear();
 		simple.bind();
@@ -56,7 +61,7 @@ int main() {
 				0,                  // stride
 				nullptr            // array buffer offset
 		);
-		
+
 		glDrawArrays(GL_TRIANGLES, 0, 6);
 		glDisableVertexAttribArray(0);
 		
