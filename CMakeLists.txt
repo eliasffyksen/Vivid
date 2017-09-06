@@ -80,7 +80,7 @@ set(ALL_LIBS
 		${OPENGL_LIBRARY}
 		glfw
 		GLEW_1130
-		)
+)
 
 # Adds all the source files (CLion automatically does this when creating a file)
 set(SOURCE_FILES src/config.h src/main.cpp src/vivid/graphics/shader.h src/vivid/graphics/shader.cpp src/vivid/graphics/window.h src/vivid/graphics/window.cpp src/vivid/vivid.h src/vivid/util/timer.h src/vivid/input/input.cpp src/vivid/input/input.h)
