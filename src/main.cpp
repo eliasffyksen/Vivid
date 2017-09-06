@@ -4,8 +4,6 @@
 
 #include "vivid/vivid.h"
 
-#include "config.h"
-
 int main() {
 	using namespace vivid;
 	using namespace graphics;
@@ -22,12 +20,18 @@ int main() {
 	Shader simple("shaders/simple");
 	
 	static const GLfloat g_vertex_buffer_data[] = {
-			-.5f, .5f, 0.0f,
-			-.3f, .5f, 0.0f,
-			0.0f, -.3f, 0.0f,
-			0.3f, .5f, 0.0f,
-			0.5f, .5f, 0.0f,
-			.0f, -.5f, 0.0f,
+			-1.0f, -1.0f,  0.0f,
+			-1.0f,  0.0f,  0.0f,
+			 0.0f,  0.0f,  0.0f,
+			 0.0f, -1.0f,  0.0f,
+			 0.0f,  0.0f,  0.0f,
+			 1.0f,  0.0f,  0.0f,
+			-1.0f,  0.0f,  0.0f,
+			-1.0f,  1.0f,  0.0f,
+			 0.0f,  1.0f,  0.0f,
+			 0.0f,  0.0f,  0.0f,
+			 0.0f,  1.0f,  0.0f,
+			 1.0f,  1.0f,  0.0f,
 	};
 	
 	GLuint vertexBuffer;
@@ -39,7 +43,9 @@ int main() {
 	int fpsCount = 0;
 	Timer timer;
 	timer.reset();
-
+	
+	input.registerKeyAlias("Let's go", Input::UP);
+	
 	while (!window.isClosed()) {
 
 		if(input.keyPressed(GLFW_KEY_SPACE))
@@ -47,6 +53,10 @@ int main() {
 		input.clear();
 
 		float delta = timer.elapsed();
+		
+		if (input.keyPressed("Let's go"))
+			LOG("IT'S GOING DOW... up?!");
+
 		window.clear();
 		simple.bind();
 
@@ -61,14 +71,15 @@ int main() {
 				0,                  // stride
 				nullptr            // array buffer offset
 		);
-
-		glDrawArrays(GL_TRIANGLES, 0, 6);
+		
+		glDrawArrays(GL_TRIANGLES, 0, 12);
 		glDisableVertexAttribArray(0);
 		
+		input.clear();
 		window.update();
 		fpsTimer += delta;
 		fpsCount++;
-		if(fpsTimer >= 1) {
+		if (fpsTimer >= 1) {
 			fpsTimer--;
 			LOG(fpsCount << " fps");
 			fpsCount = 0;
