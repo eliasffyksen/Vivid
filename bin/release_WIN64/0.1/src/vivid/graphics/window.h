@@ -4,10 +4,12 @@
 
 #pragma once
 
+#include <unordered_map>
 #include <string>
 #include <iostream>
 
 #include "../vivid.h"
+#include "../../config.h"
 
 namespace vivid { namespace graphics {
 	

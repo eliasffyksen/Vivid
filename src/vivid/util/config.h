@@ -4,10 +4,10 @@
 
 #pragma once
 
-#define VERSION_MAJOR @VERSION_MAJOR@
-#define VERSION_MINOR @VERSION_MINOR@
-#define DEBUG @DEBUG@
-#define PLATFORM @PLATFORM@
+#define VERSION_MAJOR 0
+#define VERSION_MINOR 1
+#define DEBUG true
+#define PLATFORM WIN64
 
 #if DEBUG
 	#define LOG(x) std::cout << x << std::endl
