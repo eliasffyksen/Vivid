@@ -11,14 +11,6 @@ int main() {
 	Window window("Window!!", 800, 600);
 	Input input(window.window);
 	
-	glewExperimental = GL_TRUE;
-	if (glewInit() != GLEW_OK) {
-		LOGE("Failed to initialize GLEW\n");
-		getchar();
-		glfwTerminate();
-		return -1;
-	}
-	
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
 	
 	GLuint VertexArrayID;
@@ -28,9 +20,18 @@ int main() {
 	Shader simple("shaders/simple");
 	
 	static const GLfloat g_vertex_buffer_data[] = {
-			-1.0f, -1.0f, 0.0f,
-			1.0f, -1.0f, 0.0f,
-			0.0f, 1.0f, 0.0f,
+			-1.0f, -1.0f,  0.0f,
+			-1.0f,  0.0f,  0.0f,
+			 0.0f,  0.0f,  0.0f,
+			 0.0f, -1.0f,  0.0f,
+			 0.0f,  0.0f,  0.0f,
+			 1.0f,  0.0f,  0.0f,
+			-1.0f,  0.0f,  0.0f,
+			-1.0f,  1.0f,  0.0f,
+			 0.0f,  1.0f,  0.0f,
+			 0.0f,  0.0f,  0.0f,
+			 0.0f,  1.0f,  0.0f,
+			 1.0f,  1.0f,  0.0f,
 	};
 	
 	GLuint vertexBuffer;
@@ -46,14 +47,19 @@ int main() {
 	input.registerKeyAlias("Let's go", Input::UP);
 	
 	while (!window.isClosed()) {
+
+		if(input.keyPressed(GLFW_KEY_SPACE))
+			LOG("DOWN");
+		input.clear();
+
 		float delta = timer.elapsed();
 		
 		if (input.keyPressed("Let's go"))
 			LOG("IT'S GOING DOW... up?!");
-		
+
 		window.clear();
 		simple.bind();
-		
+
 		// 1rst attribute buffer : vertices
 		glEnableVertexAttribArray(0);
 		glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
@@ -66,7 +72,7 @@ int main() {
 				nullptr            // array buffer offset
 		);
 		
-		glDrawArrays(GL_TRIANGLES, 0, 3);
+		glDrawArrays(GL_TRIANGLES, 0, 12);
 		glDisableVertexAttribArray(0);
 		
 		input.clear();
