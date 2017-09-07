@@ -5,9 +5,8 @@
 #include "input.h"
 
 namespace vivid {
-
+	
 	Input::Input(GLFWwindow* window) {
-
 		setWindowPointer(window, VIVID_INPUT_PNTR, this);
 		
 		for (int i = 0; i < VIVID_MAX_KEYS; i++) {
@@ -122,7 +121,6 @@ namespace vivid {
 			}
 		}
 	}
-
 	void Input::keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
 		
 		Input* input = getWindowPointer<Input>(window, VIVID_INPUT_PNTR);
@@ -138,16 +136,16 @@ namespace vivid {
 				break;
 		}
 	}
-	
-	void Input::cursorPositionCallback(GLFWwindow* window, double xpos, double ypos) {
-		Input* input = getWindowPointer<Input>(window, VIVID_INPUT_PNTR);
-		
+
+	void Input::cursorPositionCallback(GLFWwindow *window, double xpos, double ypos) {
+		Input *input = getWindowPointer<Input>(window, VIVID_INPUT_PNTR);
+
 		input->mouseX = xpos;
 		input->mouseY = ypos;
 	}
-	
-	void Input::mouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
-		Input* input = getWindowPointer<Input>(window, VIVID_INPUT_PNTR);
+
+	void Input::mouseButtonCallback(GLFWwindow *window, int button, int action, int mods) {
+		Input *input = getWindowPointer<Input>(window, VIVID_INPUT_PNTR);
 
 		switch (action) {
 			case GLFW_PRESS:
