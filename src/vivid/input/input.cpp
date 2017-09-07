@@ -5,8 +5,14 @@
 #include "input.h"
 
 namespace vivid {
+<<<<<<< HEAD
 
+	Input::Input(GLFWwindow *window) {
+=======
+	
 	Input::Input(GLFWwindow* window) {
+		
+>>>>>>> input
 		setWindowPointer(window, VIVID_INPUT_PNTR, this);
 		
 		for (int i = 0; i < VIVID_MAX_KEYS; i++) {
@@ -121,10 +127,18 @@ namespace vivid {
 			}
 		}
 	}
+<<<<<<< HEAD
 
 	void Input::keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods) {
 		Input *input = getWindowPointer<Input>(window, VIVID_INPUT_PNTR);
 
+=======
+	
+	void Input::keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+		
+		Input* input = getWindowPointer<Input>(window, VIVID_INPUT_PNTR);
+		
+>>>>>>> input
 		switch (action) {
 			case GLFW_PRESS:
 				input->keys[key] = true;
@@ -136,8 +150,22 @@ namespace vivid {
 				break;
 		}
 	}
+<<<<<<< HEAD
+
+	void Input::cursorPositionCallback(GLFWwindow *window, double xpos, double ypos) {
+		Input *input = getWindowPointer<Input>(window, VIVID_INPUT_PNTR);
+
+		input->mouseX = xpos;
+		input->mouseY = ypos;
+	}
+
+	void Input::mouseButtonCallback(GLFWwindow *window, int button, int action, int mods) {
+		Input *input = getWindowPointer<Input>(window, VIVID_INPUT_PNTR);
+
+=======
 	
 	void Input::cursorPositionCallback(GLFWwindow* window, double xpos, double ypos) {
+		
 		Input* input = getWindowPointer<Input>(window, VIVID_INPUT_PNTR);
 		
 		input->mouseX = xpos;
@@ -145,8 +173,10 @@ namespace vivid {
 	}
 	
 	void Input::mouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
+		
 		Input* input = getWindowPointer<Input>(window, VIVID_INPUT_PNTR);
-
+		
+>>>>>>> input
 		switch (action) {
 			case GLFW_PRESS:
 				input->mouseButtons[button] = true;

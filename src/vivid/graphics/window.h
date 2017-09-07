@@ -15,10 +15,10 @@ namespace vivid { namespace graphics {
 	public:
 		GLFWwindow* window;
 	private:
-		std::string title;
+		const char* title;
 		int width, height;
 	public:
-		Window(const std::string& name, int width, int height);
+		Window(const char* name, int width, int height);
 		~Window();
 		
 		void update();
