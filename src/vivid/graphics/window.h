@@ -15,7 +15,7 @@ namespace vivid { namespace graphics {
 	public:
 		GLFWwindow* window;
 	private:
-		const char* title;
+		std::string title;
 		int width, height;
 	public:
 		Window(std::string title, int width, int height);
