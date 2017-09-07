@@ -20,9 +20,9 @@ namespace vivid {
 			std::string VertexShaderCode;
 			std::ifstream VertexShaderStream(vertex_file_path, std::ios::in);
 			if (VertexShaderStream.is_open()) {
-				std::string Line = "";
-				while (getline(VertexShaderStream, Line))
-					VertexShaderCode += "\n" + Line;
+				std::string line = "";
+				while (getline(VertexShaderStream, line))
+					VertexShaderCode += "\n" + line;
 				
 				VertexShaderStream.close();
 			} else {
