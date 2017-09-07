@@ -50,7 +50,8 @@ int main() {
 
 		if(input.keyPressed(GLFW_KEY_SPACE))
 			LOG("DOWN");
-		input.clear();
+		if(input.keyReleased(GLFW_KEY_SPACE))
+			LOG("UP");
 
 		float delta = timer.elapsed();
 		

@@ -35,14 +35,14 @@ namespace vivid {
 
 		bool keyDown(int) const;
 		bool keyPressed(int) const;
-		bool keyRelease(int) const;
+		bool keyReleased(int) const;
 		bool mouseButtonDown(int) const;
 		bool mouseButtonPressed(int) const;
 		bool mouseButtonReleased(int) const;
 		
 		bool keyDown(const std::string& alias) const;
 		bool keyPressed(const std::string& alias) const;
-		bool keyRelease(const std::string& alias) const;
+		bool keyReleased(const std::string &alias) const;
 		bool mouseButtonDown(const std::string& alias) const;
 		bool mouseButtonPressed(const std::string& alias) const;
 		bool mouseButtonReleased(const std::string& alias) const;
