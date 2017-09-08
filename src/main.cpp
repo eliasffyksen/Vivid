@@ -4,9 +4,6 @@
 
 #include "vivid/vivid.h"
 #include "vivid/graphics/sprite.h"
-#include "vivid/graphics/buffers/buffer.h"
-#include "vivid/graphics/buffers/indexbuffer.h"
-#include "vivid/graphics/buffers/vertexarray.h"
 #include "vivid/graphics/batchrenderer2D.h"
 
 #include "time.h"
@@ -31,7 +28,7 @@ int main() {
 	
 	for (float y = -1.0f; y < 1.0f; y += affinity) {
 		for (float x = -1.0f; x < 1.0f; x += affinity) {
-			 sprites.push_back(new Sprite(x, y, affinity, affinity, glm::vec4((rand() % 1000) / 1000.0, 0, 0, 1)));
+			 sprites.push_back(new Sprite(x, y, affinity, affinity, glm::vec4((rand() % 1000) / 1000.0, (rand() % 1000) / 1000.0, (rand() % 1000) / 1000.0, 1)));
 		}
 	}
 	
@@ -39,18 +36,12 @@ int main() {
 	
 	LOG(sprites.size() << " sprites");
 	
-	input.registerKeyAlias("Let's go", Input::UP);
-	
 	float fpsTimer = 0.0f;
 	int fpsCount = 0;
 	Timer timer;
 	timer.reset();
 	while (!window.isClosed()) {
-		
 		float delta = timer.elapsed();
-		
-		if (input.keyPressed("Let's go"))
-			LOG("IT'S GOING DOW... up?!");
 		
 		window.clear();
 		simple.bind();

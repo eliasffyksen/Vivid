@@ -20,6 +20,9 @@ namespace vivid {
 			explicit Shader(std::string path);
 			~Shader();
 			
+			void registerUniform();
+			void setUniform();
+			
 			void bind() const;
 		};
 		
