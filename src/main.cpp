@@ -46,10 +46,6 @@ int main() {
 	Timer timer;
 	timer.reset();
 	while (!window.isClosed()) {
-		if (input.keyPressed(GLFW_KEY_SPACE))
-			LOG("DOWN");
-		if (input.keyReleased(GLFW_KEY_SPACE))
-			LOG("UP");
 		
 		float delta = timer.elapsed();
 		
