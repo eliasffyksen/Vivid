@@ -27,7 +27,7 @@ namespace vivid {
 				VertexShaderStream.close();
 			} else {
 				printf("Impossible to open %s. Are you in the right directory ? Don't forget to read the FAQ !\n",
-				       vertex_file_path);
+					   vertex_file_path);
 				getchar();
 				return 0;
 			}
@@ -43,7 +43,7 @@ namespace vivid {
 				FragmentShaderStream.close();
 			} else {
 				printf("Impossible to open %s. Are you in the right directory ? Don't forget to read the FAQ !\n",
-				       vertex_file_path);
+					   vertex_file_path);
 				getchar();
 				return 0;
 			}
@@ -113,8 +113,48 @@ namespace vivid {
 			glDeleteProgram(programID);
 		}
 		
+		void Shader::loadUniform(const std::string& name) {
+			GLint location = glGetUniformLocation(programID, name.c_str());
+			if (location != -1) {
+				uniformLocations[name] = location;
+			}
+		}
+		
+		inline void Shader::setUniform(const std::string& name, float& value) {
+			glUniform1f(getUniformLocation(name), value);
+		}
+		inline void Shader::setUniform(const std::string& name, float& x, float& y) {
+			glUniform2f(getUniformLocation(name), x, y);
+		}
+		inline void Shader::setUniform(const std::string& name, glm::vec2& vec) {
+			glUniform2f(getUniformLocation(name), vec.x, vec.y);
+		}
+		inline void Shader::setUniform(const std::string& name, float& x, float& y, float& z) {
+			glUniform3f(getUniformLocation(name), x, y, z);
+		}
+		inline void Shader::setUniform(const std::string& name, glm::vec3& vec) {
+			glUniform3f(getUniformLocation(name), vec.x, vec.y, vec.z);
+		}
+		inline void Shader::setUniform(const std::string& name, float& x, float& y, float& z, float& w) {
+			glUniform4f(getUniformLocation(name), x, y, z, w);
+		}
+		inline void Shader::setUniform(const std::string& name, glm::vec4& vec) {
+			glUniform4f(getUniformLocation(name), vec.x, vec.y, vec.z, vec.w);
+		}
+		inline void Shader::setUniform(const std::string& name, glm::mat4& mat) {
+			glUniformMatrix4fv(getUniformLocation(name), 1, GL_FALSE, &mat[0][0]);
+		}
+		
 		void Shader::bind() const {
 			glUseProgram(programID);
+		}
+		
+		int Shader::getUniformLocation(const std::string& name) {
+			auto it = uniformLocations.find(name);
+			if (it != uniformLocations.end()) {
+				return it->second;
+			}
+			return -1;
 		}
 		
 	}
