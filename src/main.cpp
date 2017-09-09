@@ -45,6 +45,7 @@ int main() {
 		
 		window.clear();
 		simple.bind();
+		simple.setUniform("uColor", 2);
 		
 		batch.begin();
 		for(auto renderable : sprites)

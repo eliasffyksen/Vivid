@@ -11,9 +11,6 @@ in DATA
 
 void main()
 {
-
-	// Output color = red 
-	//color = vec3(1,0,0);
+	//color = uColor;
 	color = fs_in.color;
-
 }

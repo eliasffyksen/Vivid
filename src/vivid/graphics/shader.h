@@ -13,7 +13,7 @@ namespace vivid {
 		
 		class Shader {
 		public:
-			static GLuint LoadShaders(const char* vertex_file_path, const char* fragment_file_path);
+			static GLuint createShader(const char* vertex_file_path, const char* fragment_file_path);
 		private:
 			GLuint programID;
 			std::unordered_map<std::string, int> uniformLocations;
@@ -21,16 +21,16 @@ namespace vivid {
 			explicit Shader(std::string path);
 			~Shader();
 			
-			void loadUniform(const std::string& name);
+			bool loadUniform(const std::string& name);
 			
-			inline void setUniform(const std::string& name, float& value);
-			inline void setUniform(const std::string& name, float& x, float& y);
-			inline void setUniform(const std::string& name, glm::vec2& vec);
-			inline void setUniform(const std::string& name, float& x, float& y, float& z);
-			inline void setUniform(const std::string& name, glm::vec3& vec);
-			inline void setUniform(const std::string& name, float& x, float& y, float& z, float& w);
-			inline void setUniform(const std::string& name, glm::vec4& vec);
-			inline void setUniform(const std::string& name, glm::mat4& vec);
+			void setUniform(const std::string& name, const float& value);
+			void setUniform(const std::string& name, const float& x, const float& y);
+			void setUniform(const std::string& name, const glm::vec2& vec);
+			void setUniform(const std::string& name, const float& x, const float& y, const float& z);
+			void setUniform(const std::string& name, const glm::vec3& vec);
+			void setUniform(const std::string& name, const float& x, const float& y, const float& z, const float& w);
+			void setUniform(const std::string& name, const glm::vec4& vec);
+			void setUniform(const std::string& name, const glm::mat4& vec);
 			
 			void bind() const;
 		private:
