@@ -3,20 +3,20 @@ cmake_minimum_required(VERSION 3.7)
 #----PROJECT VARIABLES----#
 project(Vivid)
 
-if(${CMAKE_BUILD_TYPE} MATCHES "Debug")
+if (${CMAKE_BUILD_TYPE} MATCHES "Debug")
 	set(DEBUG true)
-else()
+else ()
 	set(DEBUG true)
-endif()
+endif ()
 set(VERSION_MAJOR 0)
 set(VERSION_MINOR 1)
 #-------------------------#
 
 # Find the platform of the compiling system
 if (WIN32)
-	if(NOT DEBUG)
+	if (NOT DEBUG)
 		SET(EXE_ARGUMENT ${EXE_ARGUMENT} WIN32)
-	endif()
+	endif ()
 
 	if (CMAKE_SIZEOF_VOID_P EQUAL 8)
 		set(PLATFORM WIN64)
@@ -84,10 +84,37 @@ set(ALL_LIBS
 		${OPENGL_LIBRARY}
 		glfw
 		GLEW_1130
-)
+		)
 
 # Adds all the source files (CLion automatically does this when creating a file)
-set(SOURCE_FILES src/vivid/util/config.h src/main.cpp src/vivid/graphics/shader.h src/vivid/graphics/shader.cpp src/vivid/graphics/window.h src/vivid/graphics/window.cpp src/vivid/vivid.h src/vivid/util/timer.h src/vivid/input/input.cpp src/vivid/input/input.h src/vivid/graphics/renderer2D.h src/vivid/graphics/renderable2D.h src/vivid/graphics/batchrenderer2D.cpp src/vivid/graphics/batchrenderer2D.h src/vivid/graphics/buffers/buffer.cpp src/vivid/graphics/buffers/buffer.h src/vivid/graphics/buffers/indexbuffer.cpp src/vivid/graphics/buffers/indexbuffer.h src/vivid/graphics/buffers/vertexarray.cpp src/vivid/graphics/buffers/vertexarray.h src/vivid/graphics/buffers/buffers.h src/vivid/graphics/sprite.h src/vivid/graphics/sprite.cpp)
+set(SOURCE_FILES src/vivid/util/config.h
+		src/main.cpp
+		src/vivid/graphics/shader.h
+		src/vivid/graphics/shader.cpp
+		src/vivid/graphics/window.h
+		src/vivid/graphics/window.cpp
+		src/vivid/vivid.h
+		src/vivid/util/timer.h
+		src/vivid/input/input.cpp
+		src/vivid/input/input.h
+		src/vivid/graphics/renderer2D.h
+		src/vivid/graphics/renderable2D.h
+		src/vivid/graphics/batchrenderer2D.cpp
+		src/vivid/graphics/batchrenderer2D.h
+		src/vivid/graphics/buffers/buffer.cpp
+		src/vivid/graphics/buffers/buffer.h
+		src/vivid/graphics/buffers/indexbuffer.cpp
+		src/vivid/graphics/buffers/indexbuffer.h
+		src/vivid/graphics/buffers/vertexarray.cpp
+		src/vivid/graphics/buffers/vertexarray.h
+		src/vivid/graphics/buffers/buffers.h
+		src/vivid/graphics/sprite.h
+		src/vivid/graphics/sprite.cpp
+		src/vivid/graphics/imported/upng/upng.c
+		src/vivid/graphics/imported/upng/upng.h
+		src/vivid/graphics/texture.cpp
+		src/vivid/graphics/texture.h
+)
 
 add_executable(${PROJECT_NAME} ${EXE_ARGUMENT} ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} ${ALL_LIBS})

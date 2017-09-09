@@ -7,8 +7,7 @@
 #include <vector>
 #include <fstream>
 
-namespace vivid {
-	namespace graphics {
+namespace vivid { namespace graphics {
 		
 		GLuint Shader::createShader(const char* vertex_file_path, const char* fragment_file_path) { // Not my code:))
 			// Create the shaders
@@ -155,5 +154,4 @@ namespace vivid {
 			return -1;
 		}
 		
-	}
-}
+}}

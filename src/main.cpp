@@ -5,12 +5,25 @@
 #include "vivid/vivid.h"
 #include "vivid/graphics/sprite.h"
 #include "vivid/graphics/batchrenderer2D.h"
+#include "vivid/graphics/imported/upng/upng.h"
 
 #include "time.h"
 
 int main() {
 	using namespace vivid;
 	using namespace graphics;
+	
+	upng_t* image;
+	
+	image = upng_new_from_file("images/image.png");
+	if (image != NULL) {
+		upng_decode(image);
+		if (upng_get_error(image) == UPNG_EOK) {
+			LOG(upng_get_height(image));
+		}
+		
+		upng_free(image);
+	}
 	
 	Window window("Window!!", 800, 600);
 	Input input(window.window);
