@@ -56,6 +56,9 @@ namespace vivid { namespace graphics {
 	}
 
 	void BatchRenderer2D::submit(const Renderable2D* renderable) {
+		if(indexCount >= BATCH_RENDERER_INDICES_SIZE)
+			return;
+		
 		const glm::vec3& position = renderable->getPosition();
 		const glm::vec2& size = renderable->getSize();
 		const glm::vec4& color = renderable->getColor();
@@ -67,19 +70,19 @@ namespace vivid { namespace graphics {
 		
 		unsigned int c = a << 24 | b << 16 | g << 8 | r;
 		
-		buffer->position = position;
+		buffer->position = glm::vec3(currentTransformation * glm::vec4(position, 1));
 		buffer->color = c;
 		buffer++;
 		
-		buffer->position = glm::vec3(position.x, position.y + size.y, position.z);
+		buffer->position = glm::vec3(currentTransformation * glm::vec4(position.x, position.y + size.y, position.z, 1));
 		buffer->color = c;
 		buffer++;
 		
-		buffer->position = glm::vec3(position.x + size.x, position.y + size.y, position.z);
+		buffer->position = glm::vec3(currentTransformation * glm::vec4(position.x + size.x, position.y + size.y, position.z, 1));
 		buffer->color = c;
 		buffer++;
 		
-		buffer->position = glm::vec3(position.x + size.x, position.y, position.z);
+		buffer->position = glm::vec3(currentTransformation * glm::vec4(position.x + size.x, position.y, position.z, 1));
 		buffer->color = c;
 		buffer++;
 		
@@ -95,7 +98,7 @@ namespace vivid { namespace graphics {
 		glBindVertexArray(vao);
 		ibo->bind();
 		
-		glDrawElements(GL_TRIANGLES, indexCount, GL_UNSIGNED_INT, NULL);
+		glDrawElements(GL_TRIANGLES, indexCount, GL_UNSIGNED_INT, nullptr);
 		
 		ibo->unbind();
 		glBindVertexArray(0);

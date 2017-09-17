@@ -5,7 +5,7 @@
 #include "vivid/vivid.h"
 #include "vivid/graphics/sprite.h"
 #include "vivid/graphics/batchrenderer2D.h"
-#include "vivid/graphics/imported/upng/upng.h"
+#include "vivid/scenegraph/gameobject.h"
 
 #include "time.h"
 
@@ -13,19 +13,9 @@ int main() {
 	using namespace vivid;
 	using namespace graphics;
 	
-	upng_t* image;
+	GameObject ob;
 	
-	image = upng_new_from_file("images/image.png");
-	if (image != NULL) {
-		upng_decode(image);
-		if (upng_get_error(image) == UPNG_EOK) {
-			LOG(upng_get_height(image));
-		}
-		
-		upng_free(image);
-	}
-	
-	Window window("Window!!", 800, 600);
+	Window window("Window!!", 600, 600);
 	Input input(window.window);
 	
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
@@ -33,6 +23,9 @@ int main() {
 	Shader simple("shaders/simple");
 	
 	BatchRenderer2D batch;
+//	glm::mat4 transform = glm::rotate(3.141592f / 4, glm::vec3(0, 0, 1));
+	glm::mat4 transform = glm::translate(glm::vec3(1.0f, 0.0f, 0.0f));
+	batch.pushMatrix(transform);
 	std::vector<Renderable2D*> sprites;
 	srand(time(NULL));
 	
@@ -49,6 +42,9 @@ int main() {
 	
 	LOG(sprites.size() << " sprites");
 	
+	double ox=-1, oy=-1;
+	double x, y;
+	
 	float fpsTimer = 0.0f;
 	int fpsCount = 0;
 	Timer timer;
@@ -56,9 +52,17 @@ int main() {
 	while (!window.isClosed()) {
 		float delta = timer.elapsed();
 		
+		input.getCursorPosition(x, y);
+		if(x != ox || y != oy) {
+			ox = x;
+			oy = y;
+			
+			batch.popMatrix();
+			batch.pushMatrix(glm::translate(glm::vec3(2.0f * (x / window.getWidth() - 0.5f), 2.0f * (0.5f - y / window.getHeight()), 0.0f)));
+		}
+		
 		window.clear();
 		simple.bind();
-		simple.setUniform("uColor", 2);
 		
 		batch.begin();
 		for(auto renderable : sprites)

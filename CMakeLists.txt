@@ -80,14 +80,19 @@ add_subdirectory(dependencies/libs)
 include_directories(dependencies/include)
 
 # Pack all the necessary libraries in one convenient variable
-set(ALL_LIBS
+set(
+		ALL_LIBS
+
 		${OPENGL_LIBRARY}
 		glfw
 		GLEW_1130
-		)
+)
 
 # Adds all the source files (CLion automatically does this when creating a file)
-set(SOURCE_FILES src/vivid/util/config.h
+set(
+		SOURCE_FILES
+
+		src/vivid/util/config.h
 		src/main.cpp
 		src/vivid/graphics/shader.h
 		src/vivid/graphics/shader.cpp
@@ -110,11 +115,11 @@ set(SOURCE_FILES src/vivid/util/config.h
 		src/vivid/graphics/buffers/buffers.h
 		src/vivid/graphics/sprite.h
 		src/vivid/graphics/sprite.cpp
-		src/vivid/graphics/imported/upng/upng.c
-		src/vivid/graphics/imported/upng/upng.h
 		src/vivid/graphics/texture.cpp
 		src/vivid/graphics/texture.h
-)
+		src/vivid/scenegraph/gameobject.cpp
+		src/vivid/scenegraph/gameobject.h
+		src/vivid/scenegraph/camera.cpp src/vivid/scenegraph/camera.h)
 
 add_executable(${PROJECT_NAME} ${EXE_ARGUMENT} ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} ${ALL_LIBS})
