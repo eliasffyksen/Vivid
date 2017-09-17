@@ -11,9 +11,9 @@ namespace vivid { namespace graphics {
 	
 	class Renderer2D {
 	private:
-		std::vector<glm::mat4> transformationStack;
+		mutable std::vector<glm::mat4> transformationStack;
 	protected:
-		glm::mat4 currentTransformation;
+		mutable glm::mat4 currentTransformation;
 	public:
 		Renderer2D() {
 			transformationStack.emplace_back(glm::mat4());
@@ -33,7 +33,7 @@ namespace vivid { namespace graphics {
 		}
 		
 		virtual void begin() {}
-		virtual void submit(const Renderable2D*) = 0;
+		virtual void submit(const Renderable2D*) const = 0;
 		virtual void end() {}
 		virtual void flush() = 0;
 	};

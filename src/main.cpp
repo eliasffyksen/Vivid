@@ -23,9 +23,6 @@ int main() {
 	Shader simple("shaders/simple");
 	
 	BatchRenderer2D batch;
-//	glm::mat4 transform = glm::rotate(3.141592f / 4, glm::vec3(0, 0, 1));
-	glm::mat4 transform = glm::translate(glm::vec3(1.0f, 0.0f, 0.0f));
-	batch.pushMatrix(transform);
 	std::vector<Renderable2D*> sprites;
 	srand(time(NULL));
 	

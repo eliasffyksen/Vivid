@@ -4,9 +4,9 @@
 
 #pragma once
 
-class camera {
+#include <glm/glm.hpp>
 
-	
+class camera {
 
 };
 
