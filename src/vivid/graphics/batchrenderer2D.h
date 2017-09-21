@@ -22,9 +22,9 @@ namespace vivid { namespace graphics {
 	class BatchRenderer2D : public Renderer2D {
 	private:
 		GLuint vao;
+		GLuint vbo;
 		IndexBuffer* ibo;
 		mutable GLsizei indexCount;
-		GLuint vbo;
 		mutable Vertex* buffer;
 	public:
 		BatchRenderer2D();
