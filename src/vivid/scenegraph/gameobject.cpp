@@ -37,7 +37,7 @@ namespace vivid { namespace graphics {
 		renderer.popMatrix();
 	}
 	
-	virtual const glm::mat4& GameObject::getModelMatrix() final {
+	const glm::mat4& GameObject::getModelMatrix() {
 		return modelMatrix;
 	}
 	

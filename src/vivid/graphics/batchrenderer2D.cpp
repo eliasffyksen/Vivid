@@ -55,7 +55,7 @@ namespace vivid { namespace graphics {
 		buffer = (Vertex*) glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
 	}
 
-	void BatchRenderer2D::submit(const Renderable2D* renderable) {
+	void BatchRenderer2D::submit(const Renderable2D* renderable) const {
 		if(indexCount >= BATCH_RENDERER_INDICES_SIZE)
 			return;
 		

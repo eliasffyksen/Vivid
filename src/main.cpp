@@ -1,6 +1,5 @@
 // Include standard headers
 #include <iostream>
-#include <unistd.h>
 
 #include "vivid/vivid.h"
 #include "vivid/graphics/sprite.h"

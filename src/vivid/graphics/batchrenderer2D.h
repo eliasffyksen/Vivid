@@ -23,15 +23,15 @@ namespace vivid { namespace graphics {
 	private:
 		GLuint vao;
 		IndexBuffer* ibo;
-		GLsizei indexCount;
+		mutable GLsizei indexCount;
 		GLuint vbo;
-		Vertex* buffer;
+		mutable Vertex* buffer;
 	public:
 		BatchRenderer2D();
 		~BatchRenderer2D();
 		
 		void begin() override;
-		void submit(const Renderable2D*) override;
+		void submit(const Renderable2D* renderable) const override;
 		void end() override;
 		void flush() override;
 	private:
