@@ -5,9 +5,14 @@
 #pragma once
 
 #include <glm/glm.hpp>
+#include "gameobject.h"
 
-class camera {
+namespace vivid { namespace graphics {
+	
+	class camera : public GameObject {
+	
+	};
 
-};
+}}
 
 

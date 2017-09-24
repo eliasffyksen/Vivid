@@ -6,13 +6,29 @@
 #include "vivid/graphics/batchrenderer2D.h"
 #include "vivid/scenegraph/gameobject.h"
 
+//#include "FreeImage/Source/FreeImage.h"
+
 #include "time.h"
 
 int main() {
 	using namespace vivid;
 	using namespace graphics;
 	
-	GameObject ob;
+//	FREE_IMAGE_FORMAT fif = FIF_UNKNOWN;
+//	FIBITMAP *dib = nullptr;
+//	BYTE* bits = nullptr;
+//	unsigned int width = 0, height = 0;
+//
+//	fif = FreeImage_GetFileType("images/test.png", 0);
+//	if(fif == FIF_UNKNOWN)
+//		fif = FreeImage_GetFIFFromFilename("images/test.png");
+//	if(fif == FIF_UNKNOWN)
+//		return false;
+//
+//	if(FreeImage_FIFSupportsReading(fif))
+//		dib = FreeImage_Load(fif, "images/test.png");
+//	if(!dib)
+//		return false;
 	
 	Window window("Window!!", 600, 600);
 	Input input(window.window);

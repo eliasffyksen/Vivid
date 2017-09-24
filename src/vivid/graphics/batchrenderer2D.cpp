@@ -34,7 +34,7 @@ namespace vivid { namespace graphics {
 		
 		GLuint indices[BATCH_RENDERER_INDICES_SIZE];
 		unsigned int offset = 0;
-		for(int i = 0; i < BATCH_RENDERER_INDICES_SIZE; i += 6) {
+		for (int i = 0; i < BATCH_RENDERER_INDICES_SIZE; i += 6) {
 			indices[i + 0] = offset + 0;
 			indices[i + 1] = offset + 1;
 			indices[i + 2] = offset + 2;
@@ -54,19 +54,19 @@ namespace vivid { namespace graphics {
 		glBindBuffer(GL_ARRAY_BUFFER, vbo);
 		buffer = (Vertex*) glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
 	}
-
+	
 	void BatchRenderer2D::submit(const Renderable2D* renderable) const {
-		if(indexCount >= BATCH_RENDERER_INDICES_SIZE)
+		if (indexCount >= BATCH_RENDERER_INDICES_SIZE)
 			return;
 		
 		const glm::vec3& position = renderable->getPosition();
 		const glm::vec2& size = renderable->getSize();
 		const glm::vec4& color = renderable->getColor();
 		
-		unsigned int r = color.x * 255.0f;
-		unsigned int g = color.y * 255.0f;
-		unsigned int b = color.z * 255.0f;
-		unsigned int a = color.w * 255.0f;
+		unsigned int r = (unsigned int) (color.x * 255.0f);
+		unsigned int g = (unsigned int) (color.y * 255.0f);
+		unsigned int b = (unsigned int) (color.z * 255.0f);
+		unsigned int a = (unsigned int) (color.w * 255.0f);
 		
 		unsigned int c = a << 24 | b << 16 | g << 8 | r;
 		
@@ -105,5 +105,5 @@ namespace vivid { namespace graphics {
 		
 		indexCount = 0;
 	}
-
+	
 }}
