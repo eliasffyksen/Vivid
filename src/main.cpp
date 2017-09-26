@@ -6,7 +6,7 @@
 #include "vivid/graphics/batchrenderer2D.h"
 #include "vivid/scenegraph/gameobject.h"
 
-//#include "FreeImage/Source/FreeImage.h"
+//#include "FreeImage.h"
 
 #include "time.h"
 

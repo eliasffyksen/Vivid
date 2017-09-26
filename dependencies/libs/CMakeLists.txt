@@ -1,4 +1,4 @@
-## GLFW ###
+### GLFW ###
 
 add_subdirectory (glfw-3.1.2)
 
@@ -41,3 +41,10 @@ target_link_libraries(GLEW_1130
 	${OPENGL_LIBRARY}
 	${EXTRA_LIBS}
 )
+
+### images pls ###
+#
+#file(GLOB_RECURSE FREEIMAGE_SOURCE zlib-master/*.c)
+#file(GLOB_RECURSE FREEIMAGE_HEADERS zlib-master/*.h)
+#
+#add_library(FreeImageLib STATIC ${FREEIMAGE_SOURCE} ${FREEIMAGE_HEADERS})
