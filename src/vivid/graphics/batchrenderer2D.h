@@ -17,7 +17,8 @@ namespace vivid { namespace graphics {
 #define BATCH_RENDERER_INDICES_SIZE (BATCH_RENDERER_MAX_SPRITES * 6)
 
 #define SHADER_POSITION_INDEX 0
-#define SHADER_COLOR_INDEX 1
+#define SHADER_TEXCOORDS_INDEX 1
+#define SHADER_COLOR_INDEX 2
 	
 	class BatchRenderer2D : public Renderer2D {
 	private:

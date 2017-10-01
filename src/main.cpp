@@ -5,8 +5,7 @@
 #include "vivid/graphics/sprite.h"
 #include "vivid/graphics/batchrenderer2D.h"
 #include "vivid/scenegraph/gameobject.h"
-
-//#include "FreeImage.h"
+#include "vivid/graphics/texture.h"
 
 #include "time.h"
 
@@ -14,21 +13,7 @@ int main() {
 	using namespace vivid;
 	using namespace graphics;
 	
-//	FREE_IMAGE_FORMAT fif = FIF_UNKNOWN;
-//	FIBITMAP *dib = nullptr;
-//	BYTE* bits = nullptr;
-//	unsigned int width = 0, height = 0;
-//
-//	fif = FreeImage_GetFileType("images/test.png", 0);
-//	if(fif == FIF_UNKNOWN)
-//		fif = FreeImage_GetFIFFromFilename("images/test.png");
-//	if(fif == FIF_UNKNOWN)
-//		return false;
-//
-//	if(FreeImage_FIFSupportsReading(fif))
-//		dib = FreeImage_Load(fif, "images/test.png");
-//	if(!dib)
-//		return false;
+	Texture texture("images/wood.png");
 	
 	Window window("Window!!", 600, 600);
 	Input input(window.window);
@@ -41,7 +26,7 @@ int main() {
 	std::vector<Renderable2D*> sprites;
 	srand(time(NULL));
 	
-	float size = 100.0f;
+	float size = 200.0f;
 	float affinity = 2.0f/size;
 	
 	for (float y = -1.0f; y < 1.0f; y += affinity) {
@@ -54,7 +39,7 @@ int main() {
 	
 	LOG(sprites.size() << " sprites");
 	
-	double ox=-1, oy=-1;
+	double ox=0, oy=0;
 	double x, y;
 	
 	float fpsTimer = 0.0f;
@@ -65,22 +50,27 @@ int main() {
 		float delta = timer.elapsed();
 		
 		input.getCursorPosition(x, y);
-		if(x != ox || y != oy) {
-			ox = x;
-			oy = y;
-			
-			batch.popMatrix();
-			batch.pushMatrix(glm::translate(glm::vec3(2.0f * (x / window.getWidth() - 0.5f), 2.0f * (0.5f - y / window.getHeight()), 0.0f)));
-		}
+//		if(x != ox || y != oy) {
+//			ox = x;
+//			oy = y;
+//
+//			batch.popMatrix();
+//			batch.pushMatrix(glm::translate(glm::vec3(2.0f * (x / window.getWidth() - 0.5f), 2.0f * (0.5f - y / window.getHeight()), 0.0f)));
+//		}
 		
 		window.clear();
-		simple.bind();
 		
+		texture.bind(0);
+		simple.bind();
 		batch.begin();
-		for(auto renderable : sprites)
-			batch.submit(renderable);
+//		for(auto renderable : sprites)
+//			batch.submit(renderable);
+		batch.submit(&sprite);
 		batch.end();
+		
 		batch.flush();
+		texture.unbind();
+		simple.unbind();
 		
 		input.clear();
 		window.update();

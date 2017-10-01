@@ -87,6 +87,7 @@ set(
 		${OPENGL_LIBRARY}
 		glfw
 		GLEW_1130
+		VividImage
 )
 
 # Adds all the source files (CLion automatically does this when creating a file)
@@ -125,4 +126,3 @@ set(
 
 add_executable(${PROJECT_NAME} ${EXE_ARGUMENT} ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} ${ALL_LIBS})
-#target_link_libraries(${PROJECT_NAME} FreeImageLib)

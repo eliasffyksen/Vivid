@@ -33,6 +33,7 @@ namespace vivid {
 			void setUniform(const std::string& name, const glm::mat4& vec);
 			
 			void bind() const;
+			void unbind() const;
 		private:
 			int getUniformLocation(const std::string& name);
 		};

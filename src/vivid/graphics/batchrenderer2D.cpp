@@ -23,18 +23,20 @@ namespace vivid { namespace graphics {
 		
 		glBindVertexArray(vao);
 		glBindBuffer(GL_ARRAY_BUFFER, vbo);
-		glBufferData(GL_ARRAY_BUFFER, BATCH_RENDERER_BUFFER_SIZE, NULL, GL_DYNAMIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, BATCH_RENDERER_BUFFER_SIZE, nullptr, GL_DYNAMIC_DRAW);
 		
 		glEnableVertexAttribArray(SHADER_POSITION_INDEX);
+		glEnableVertexAttribArray(SHADER_TEXCOORDS_INDEX);
 		glEnableVertexAttribArray(SHADER_COLOR_INDEX);
-		glVertexAttribPointer(SHADER_POSITION_INDEX, 3, GL_FLOAT, GL_FALSE, BATCH_RENDERER_VERTEX_SIZE, (const GLvoid*) 0);
+		
+		glVertexAttribPointer(SHADER_POSITION_INDEX, 3, GL_FLOAT, GL_FALSE, BATCH_RENDERER_VERTEX_SIZE, (const GLvoid*) nullptr);
+		glVertexAttribPointer(SHADER_TEXCOORDS_INDEX, 2, GL_FLOAT, GL_FALSE, BATCH_RENDERER_VERTEX_SIZE, (const GLvoid*) (offsetof(Vertex, Vertex::textureCoordinates)));
 		glVertexAttribPointer(SHADER_COLOR_INDEX, 4, GL_UNSIGNED_BYTE, GL_TRUE, BATCH_RENDERER_VERTEX_SIZE, (const GLvoid*) (offsetof(Vertex, Vertex::color)));
 		
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 		
 		GLuint indices[BATCH_RENDERER_INDICES_SIZE];
-		unsigned int offset = 0;
-		for (int i = 0; i < BATCH_RENDERER_INDICES_SIZE; i += 6) {
+		for (unsigned int offset = 0, i = 0; i < BATCH_RENDERER_INDICES_SIZE; i += 6) {
 			indices[i + 0] = offset + 0;
 			indices[i + 1] = offset + 1;
 			indices[i + 2] = offset + 2;
@@ -72,18 +74,22 @@ namespace vivid { namespace graphics {
 		
 		buffer->position = glm::vec3(currentTransformation * glm::vec4(position, 1));
 		buffer->color = c;
+		buffer->textureCoordinates = glm::vec2(0, 0);
 		buffer++;
 		
 		buffer->position = glm::vec3(currentTransformation * glm::vec4(position.x, position.y + size.y, position.z, 1));
 		buffer->color = c;
+		buffer->textureCoordinates = glm::vec2(0, 1);
 		buffer++;
 		
 		buffer->position = glm::vec3(currentTransformation * glm::vec4(position.x + size.x, position.y + size.y, position.z, 1));
 		buffer->color = c;
+		buffer->textureCoordinates = glm::vec2(1, 1);
 		buffer++;
 		
 		buffer->position = glm::vec3(currentTransformation * glm::vec4(position.x + size.x, position.y, position.z, 1));
 		buffer->color = c;
+		buffer->textureCoordinates = glm::vec2(1, 0);
 		buffer++;
 		
 		indexCount += 6;

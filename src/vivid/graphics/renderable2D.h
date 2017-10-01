@@ -12,6 +12,7 @@ namespace vivid { namespace graphics {
 	public:
 		glm::vec3 position;
 		unsigned int color;
+		glm::vec2 textureCoordinates;
 	};
 	
 	class Renderable2D {

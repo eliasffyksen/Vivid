@@ -18,9 +18,11 @@ namespace vivid { namespace graphics {
 		Texture(const std::string& path);
 		~Texture();
 		
-		void bind() const;
-		const unsigned int& getWidth() const;
-		const unsigned int& getHeight() const;
+		void bind(const unsigned int& index) const;
+		void unbind() const;
+		
+		inline const unsigned int& getWidth() const { return width; }
+		inline const unsigned int& getHeight() const { return height; }
 	private:
 		void init();
 	};
