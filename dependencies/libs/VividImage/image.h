@@ -36,7 +36,7 @@ struct Pixel {
 	Pixel()
 			: alpha(0), red(0), green(0), blue(0) {}
 	
-	unsigned int color() { return a << 24 | r << 16 | g << 8 | b; }
+	unsigned int color() const { return a << 24 | r << 16 | g << 8 | b; }
 };
 
 struct ImageFormat {

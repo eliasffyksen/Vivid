@@ -18,16 +18,26 @@ namespace vivid { namespace graphics {
 		height = image.getHeight();
 		
 		unsigned char pixels[] = {
-				255, 0, 255
+				255, 0, 255, 100
 		};
+		unsigned char* pp = (unsigned char*) image.getPixels();
+		LOG((unsigned int) pp[0] << " " << (unsigned int) image.getPixels()[0].red);
+		LOG((unsigned int) pp[1] << " " << (unsigned int) image.getPixels()[0].green);
+		LOG((unsigned int) pp[2] << " " << (unsigned int) image.getPixels()[0].blue);
+		LOG((unsigned int) pp[3] << " " << (unsigned int) image.getPixels()[0].alpha);
+		std::printf("%08X\n", image.getPixels()[0].color());
 		
 		glGenTextures(1, &textureID);
 		glBindTexture(GL_TEXTURE_2D, textureID);
 		
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, 1, 1, 0, GL_RGB, GL_UNSIGNED_BYTE, (void*) pixels);//image.getPixels());
+//		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 1, 1, 0, GL_RGBA, GL_UNSIGNED_BYTE, (const void*) pixels);
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, (const void*) image.getPixels());
 		
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+		
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 		
 		glBindTexture(GL_TEXTURE_2D, 0);
 	}

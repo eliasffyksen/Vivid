@@ -74,22 +74,22 @@ namespace vivid { namespace graphics {
 		
 		buffer->position = glm::vec3(currentTransformation * glm::vec4(position, 1));
 		buffer->color = c;
-		buffer->textureCoordinates = glm::vec2(0, 0);
+		buffer->textureCoordinates = glm::vec2(0, 1);
 		buffer++;
 		
 		buffer->position = glm::vec3(currentTransformation * glm::vec4(position.x, position.y + size.y, position.z, 1));
 		buffer->color = c;
-		buffer->textureCoordinates = glm::vec2(0, 1);
+		buffer->textureCoordinates = glm::vec2(0, 0);
 		buffer++;
 		
 		buffer->position = glm::vec3(currentTransformation * glm::vec4(position.x + size.x, position.y + size.y, position.z, 1));
 		buffer->color = c;
-		buffer->textureCoordinates = glm::vec2(1, 1);
+		buffer->textureCoordinates = glm::vec2(1, 0);
 		buffer++;
 		
 		buffer->position = glm::vec3(currentTransformation * glm::vec4(position.x + size.x, position.y, position.z, 1));
 		buffer->color = c;
-		buffer->textureCoordinates = glm::vec2(1, 0);
+		buffer->textureCoordinates = glm::vec2(1, 1);
 		buffer++;
 		
 		indexCount += 6;

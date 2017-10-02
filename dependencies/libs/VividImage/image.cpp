@@ -27,6 +27,7 @@ Image::Image(const std::string& path) {
 		std::ifstream stream(path, std::ifstream::in | std::ifstream::ate | std::ifstream::binary);
 		auto size = (unsigned int) stream.tellg();
 		if (!stream.good()) {
+			std::cerr << "Could not load: \"" << path << "\"" << std::endl;
 			pixels = new Pixel(0, 0, 0, 0);
 			format.width = 1;
 			format.height = 1;

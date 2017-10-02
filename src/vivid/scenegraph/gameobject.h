@@ -13,6 +13,8 @@
 namespace vivid { namespace graphics {
 	
 	class GameObject {
+	protected:
+		GameObject* parent = 0;
 	private:
 		std::vector<GameObject*> children;
 		
@@ -28,13 +30,13 @@ namespace vivid { namespace graphics {
 		virtual void removeChild(GameObject& child) final;
 		
 		virtual void updateObject(const Input& input) final;
-		virtual void renderObject(Renderer2D& renderer) final;
-		
-		virtual void update(const Input& input) {}
-		virtual void render(const Renderer2D& renderer) {}
+		virtual void renderObject(Renderer2D* renderer) final;
 		
 		virtual const glm::mat4& getModelMatrix() final;
 	private:
+		virtual void update(const Input& input) {}
+		virtual void render(const Renderer2D* renderer) {}
+		
 		GameObject(GameObject& other) {}
 		void operator=(GameObject& other) {}
 		

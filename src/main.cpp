@@ -13,12 +13,13 @@ int main() {
 	using namespace vivid;
 	using namespace graphics;
 	
-	Texture texture("images/wood.png");
-	
-	Window window("Window!!", 600, 600);
+	Window window("Window!!", 600, 600); // THIS HAS TO BE THE FIRST THING!!
 	Input input(window.window);
 	
-	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // todo: actual alpha stufffffsss
+	
+	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 	
 	Shader simple("shaders/simple");
 	
@@ -27,19 +28,20 @@ int main() {
 	srand(time(NULL));
 	
 	float size = 200.0f;
-	float affinity = 2.0f/size;
+	float affinity = 2.0f / size;
 	
-	for (float y = -1.0f; y < 1.0f; y += affinity) {
-		for (float x = -1.0f; x < 1.0f; x += affinity) {
-			 sprites.push_back(new Sprite(x, y, affinity, affinity, glm::vec4((rand() % 1000) / 1000.0, (rand() % 1000) / 1000.0, (rand() % 1000) / 1000.0, 1)));
-		}
-	}
+	for (float y = -1.0f; y < 1.0f; y += affinity)
+		for (float x = -1.0f; x < 1.0f; x += affinity)
+			sprites.push_back(new Sprite(x, y, affinity, affinity, glm::vec4((rand() % 1000) / 1000.0, (rand() % 1000) / 1000.0, (rand() % 1000) / 1000.0, 1)));
 	
 	Sprite sprite(-0.5f, -0.5f, 1.0f, 1.0f, glm::vec4(0.6, 0, 0.6, 1));
 	
+	Texture texture("images/cartoon_goat.png");
+	texture.bind(0);
+	
 	LOG(sprites.size() << " sprites");
 	
-	double ox=0, oy=0;
+	double ox = 0, oy = 0;
 	double x, y;
 	
 	float fpsTimer = 0.0f;
@@ -60,7 +62,6 @@ int main() {
 		
 		window.clear();
 		
-		texture.bind(0);
 		simple.bind();
 		batch.begin();
 //		for(auto renderable : sprites)
@@ -69,7 +70,7 @@ int main() {
 		batch.end();
 		
 		batch.flush();
-		texture.unbind();
+//		texture.unbind();
 		simple.unbind();
 		
 		input.clear();

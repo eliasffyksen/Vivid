@@ -122,7 +122,7 @@ set(
 		src/vivid/scenegraph/gameobject.cpp
 		src/vivid/scenegraph/gameobject.h
 		src/vivid/scenegraph/camera.cpp
-		src/vivid/scenegraph/camera.h)
+		src/vivid/scenegraph/camera.h src/vivid/scenegraph/layer.cpp src/vivid/scenegraph/layer.h)
 
 add_executable(${PROJECT_NAME} ${EXE_ARGUMENT} ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} ${ALL_LIBS})
