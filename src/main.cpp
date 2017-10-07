@@ -19,15 +19,15 @@ int main() {
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // todo: actual alpha stufffffsss
 	
-	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+	glClearColor(0.0f, 0.0f, 0.3f, 0.0f);
 	
 	Shader simple("shaders/simple");
 	
 	BatchRenderer2D batch;
 	std::vector<Renderable2D*> sprites;
-	srand(time(NULL));
+	srand((unsigned int) time(NULL));
 	
-	float size = 200.0f;
+	float size = 12.0f;
 	float affinity = 2.0f / size;
 	
 	for (float y = -1.0f; y < 1.0f; y += affinity)
@@ -41,6 +41,8 @@ int main() {
 	
 	LOG(sprites.size() << " sprites");
 	
+	double tx = 0, ty = 0;
+	double sx = 0, sy = 0;
 	double ox = 0, oy = 0;
 	double x, y;
 	
@@ -52,21 +54,23 @@ int main() {
 		float delta = timer.elapsed();
 		
 		input.getCursorPosition(x, y);
-//		if(x != ox || y != oy) {
-//			ox = x;
-//			oy = y;
-//
-//			batch.popMatrix();
-//			batch.pushMatrix(glm::translate(glm::vec3(2.0f * (x / window.getWidth() - 0.5f), 2.0f * (0.5f - y / window.getHeight()), 0.0f)));
-//		}
+		
+		if (input.mouseButtonDown(0))
+			if (x != ox || y != oy) {
+				ox = x;
+				oy = y;
+				
+				batch.popMatrix();
+				batch.pushMatrix(glm::translate(glm::vec3(2.0f * (x / window.getWidth() - 0.5f), 2.0f * (0.5f - y / window.getHeight()), 0.0f)));
+			}
 		
 		window.clear();
 		
 		simple.bind();
 		batch.begin();
-//		for(auto renderable : sprites)
-//			batch.submit(renderable);
-		batch.submit(&sprite);
+		for (auto renderable : sprites)
+			batch.submit(renderable);
+//		batch.submit(&sprite);
 		batch.end();
 		
 		batch.flush();
