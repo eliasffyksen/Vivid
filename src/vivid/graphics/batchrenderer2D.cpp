@@ -4,8 +4,6 @@
 
 #include "batchrenderer2D.h"
 
-#include <cstddef>
-
 namespace vivid { namespace graphics {
 	
 	BatchRenderer2D::BatchRenderer2D() {

@@ -31,7 +31,7 @@ namespace vivid { namespace graphics {
 	}
 	
 	void GameObject::renderObject(Renderer2D* renderer) {
-		renderer->pushMatrix(modelMatrix);
+		renderer->pushMatrix(transform.getModelMatrix());
 		
 		render(renderer);
 		
@@ -42,11 +42,16 @@ namespace vivid { namespace graphics {
 	}
 	
 	const glm::mat4& GameObject::getModelMatrix() {
-		return modelMatrix;
+		return transform.getModelMatrix();
 	}
 	
 	void GameObject::updateModelMatrix() {
-		modelMatrix = glm::toMat4(rotation) * glm::scale(scale) * glm::translate(position);
+		if(parent != nullptr) {
+			parent->updateModelMatrix();
+			transform.updateModelMatrix(&(parent->transform));
+		} else {
+			transform.updateModelMatrix();
+		}
 	}
 	
 }}

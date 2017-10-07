@@ -8,20 +8,17 @@
 #include <vector>
 #include "../graphics/renderer2D.h"
 #include "../input/input.h"
-#include "glm/gtx/quaternion.hpp"
+#include "transform.h"
 
 namespace vivid { namespace graphics {
 	
 	class GameObject {
 	protected:
-		GameObject* parent = 0;
+		GameObject* parent = nullptr;
 	private:
 		std::vector<GameObject*> children;
 		
-		glm::vec3 position;
-		glm::quat rotation;
-		glm::vec3 scale;
-		glm::mat4 modelMatrix;
+		Transform transform;
 	public:
 		GameObject() = default;
 		virtual ~GameObject() = default;

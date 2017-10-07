@@ -16,6 +16,12 @@ int main() {
 	Window window("Window!!", 600, 600); // THIS HAS TO BE THE FIRST THING!!
 	Input input(window.window);
 	
+#if VIVID_DEBUG // random stuff that looks kinda cool
+	LOG("Running Vivid Engine version " << VIVID_VERSION_MAJOR << "." << VIVID_VERSION_MINOR << (VIVID_DEBUG ? " (test build)" : ""));
+	LOG("Opengl " << glGetString(GL_VERSION));
+	LOG("");
+#endif
+	
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // todo: actual alpha stufffffsss
 	
