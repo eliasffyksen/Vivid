@@ -2,7 +2,7 @@
 #include <iostream>
 
 #include "vivid/vivid.h"
-#include "vivid/graphics/sprite.h"
+#include "vivid/scenegraph/sprite.h"
 #include "vivid/graphics/batchrenderer2D.h"
 #include "vivid/scenegraph/gameobject.h"
 #include "vivid/graphics/texture.h"

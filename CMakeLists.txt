@@ -115,8 +115,8 @@ set(
 		src/vivid/graphics/buffers/vertexarray.cpp
 		src/vivid/graphics/buffers/vertexarray.h
 		src/vivid/graphics/buffers/buffers.h
-		src/vivid/graphics/sprite.h
-		src/vivid/graphics/sprite.cpp
+		src/vivid/scenegraph/sprite.h
+		src/vivid/scenegraph/sprite.cpp
 		src/vivid/graphics/texture.cpp
 		src/vivid/graphics/texture.h
 		src/vivid/scenegraph/gameobject.cpp

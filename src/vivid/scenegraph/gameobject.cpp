@@ -42,15 +42,10 @@ namespace vivid { namespace graphics {
 	}
 	
 	const glm::mat4& GameObject::getModelMatrix() {
-		return transform.getModelMatrix();
-	}
-	
-	void GameObject::updateModelMatrix() {
-		if(parent != nullptr) {
-			parent->updateModelMatrix();
-			transform.updateModelMatrix(&(parent->transform));
+		if(parent == nullptr) {
+			return parent->getModelMatrix() * transform.getModelMatrix();
 		} else {
-			transform.updateModelMatrix();
+			return transform.getModelMatrix();
 		}
 	}
 	

@@ -4,7 +4,6 @@
 
 #pragma once
 
-
 #include <vector>
 #include "../graphics/renderer2D.h"
 #include "../input/input.h"
@@ -36,8 +35,6 @@ namespace vivid { namespace graphics {
 		
 		GameObject(GameObject& other) {}
 		void operator=(GameObject& other) {}
-		
-		void updateModelMatrix();
 	};
 	
 }}

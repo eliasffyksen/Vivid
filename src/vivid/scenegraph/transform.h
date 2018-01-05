@@ -15,19 +15,12 @@ namespace vivid { namespace graphics {
 		glm::vec3 position;
 		glm::quat rotation;
 		glm::vec3 scale;
-		
-		glm::mat4 modelMatrix;
 	public:
-		Transform() {
-			position = glm::vec3();
-			rotation = glm::quat();
-			scale = glm::vec3();
-			modelMatrix = glm::mat4();
-		}
+		Transform()
+				: position(glm::vec3()), rotation(glm::quat()), scale(glm::vec3()) {}
 		
-		inline const glm::mat4& getModelMatrix() { return modelMatrix; }
+		inline const glm::mat4& getModelMatrix() { return glm::translate(position) * glm::toMat4(rotation) * glm::scale(scale);; }
 		
-		void updateModelMatrix(Transform* parent = nullptr);
 	};
 	
 }}

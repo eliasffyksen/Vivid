@@ -6,13 +6,7 @@
 
 
 namespace vivid { namespace graphics {
-	
-	void Transform::updateModelMatrix(Transform* parent) {
-		if(parent != nullptr)
-			modelMatrix = parent->getModelMatrix() * glm::translate(position) * glm::toMat4(rotation) * glm::scale(scale);
-		else
-			modelMatrix = glm::translate(position) * glm::toMat4(rotation) * glm::scale(scale);
-			
-	}
-	
+
+
+
 }}

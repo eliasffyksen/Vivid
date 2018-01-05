@@ -5,7 +5,7 @@
 #pragma once
 
 #include "renderer2D.h"
-#include "sprite.h"
+#include "../scenegraph/sprite.h"
 #include "buffers/buffers.h"
 
 namespace vivid { namespace graphics {
