@@ -15,6 +15,8 @@ namespace vivid { namespace graphics {
 		Renderable2D renderable;
 	public:
 		Sprite(float x, float y, float width, float height, const glm::vec4& color);
+		
+		inline const Renderable2D& getRenderable() const { return renderable; }
 	private:
 		void render(const Renderer2D* renderer) override;
 	};

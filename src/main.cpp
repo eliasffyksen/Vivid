@@ -17,20 +17,24 @@ int main() {
 	Input input(window.window);
 	
 #if VIVID_DEBUG // random stuff that looks kinda cool
-	LOG("Running Vivid Engine version " << VIVID_VERSION_MAJOR << "." << VIVID_VERSION_MINOR << (VIVID_DEBUG ? " (test build)" : ""));
-	LOG("Opengl " << glGetString(GL_VERSION));
+	LOG("--------------------------------------------------------------------------");
+	LOG("  Running Vivid Engine version " << VIVID_VERSION_MAJOR << "." << VIVID_VERSION_MINOR << (VIVID_DEBUG ? " (test build)" : ""));
+	LOG("  Opengl " << glGetString(GL_VERSION));
+	LOG("--------------------------------------------------------------------------");
 	LOG("");
 #endif
 	
+	//glEnable(GL_POLYGON_SMOOTH);
+	
 	glEnable(GL_BLEND);
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // todo: actual alpha stufffffsss
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // todo: actual alpha stufffffsss IT'S GONNA BE HELL
 	
 	glClearColor(0.0f, 0.0f, 0.3f, 0.0f);
 	
 	Shader simple("shaders/simple");
 	
 	BatchRenderer2D batch;
-	std::vector<Renderable2D*> sprites;
+	std::vector<Sprite*> sprites;
 	srand((unsigned int) time(NULL));
 	
 	float size = 12.0f;
@@ -47,35 +51,38 @@ int main() {
 	
 	LOG(sprites.size() << " sprites");
 	
-	double tx = 0, ty = 0;
-	double sx = 0, sy = 0;
-	double ox = 0, oy = 0;
-	double x, y;
+	double sx = 0.2, sy = 0;
+	double x = 0, y = 0;
 	
 	float fpsTimer = 0.0f;
 	int fpsCount = 0;
 	Timer timer;
 	timer.reset();
 	while (!window.isClosed()) {
+		window.clear();
 		float delta = timer.elapsed();
 		
-		input.getCursorPosition(x, y);
+		//input.getCursorPosition(x, y);
 		
-		if (input.mouseButtonDown(0))
-			if (x != ox || y != oy) {
-				ox = x;
-				oy = y;
-				
-				batch.popMatrix();
-				batch.pushMatrix(glm::translate(glm::vec3(2.0f * (x / window.getWidth() - 0.5f), 2.0f * (0.5f - y / window.getHeight()), 0.0f)));
-			}
+		x += delta * sx;
+		y += delta * sy;
 		
-		window.clear();
+		if((input.keyDown(Input::LEFT_CONTROL) || input.keyDown(Input::RIGHT_CONTROL)) && input.keyPressed(Input::R)) {
+			x = y = 0;
+		}
+		if((input.keyDown(Input::LEFT_CONTROL) || input.keyDown(Input::RIGHT_CONTROL)) && input.keyPressed(Input::W)) {
+			glfwSetWindowShouldClose(window.window, GL_TRUE);
+		}
+		
+		batch.popMatrix();
+		batch.pushMatrix(glm::translate(glm::vec3(x, y, 0)));
+//		batch.pushMatrix(glm::translate(glm::vec3(2.0f * (x / window.getWidth() - 0.5f), 2.0f * (0.5f - y / window.getHeight()), 0.0f)));
+		
 		
 		simple.bind();
 		batch.begin();
-		for (auto renderable : sprites)
-			batch.submit(renderable);
+		for (auto sprite : sprites)
+			batch.submit(&(sprite->getRenderable()));
 //		batch.submit(&sprite);
 		batch.end();
 		
