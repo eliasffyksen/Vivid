@@ -41,7 +41,7 @@ namespace vivid { namespace graphics {
 		renderer->popMatrix();
 	}
 	
-	const glm::mat4 GameObject::getModelMatrix() {
+	const glm::mat4& GameObject::getModelMatrix() {
 		if(parent == nullptr) {
 			return parent->getModelMatrix() * transform.getModelMatrix();
 		} else {

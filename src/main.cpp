@@ -74,16 +74,16 @@ int main() {
 			glfwSetWindowShouldClose(window.window, GL_TRUE);
 		}
 		
-//		batch.popMatrix();
-//		batch.pushMatrix(glm::translate(glm::vec3(x, y, 0)));
+		batch.popMatrix();
+		batch.pushMatrix(glm::translate(glm::vec3(x, y, 0)));
 //		batch.pushMatrix(glm::translate(glm::vec3(2.0f * (x / window.getWidth() - 0.5f), 2.0f * (0.5f - y / window.getHeight()), 0.0f)));
 		
 		
 		simple.bind();
 		batch.begin();
-//		for (auto sprite : sprites)
-//			batch.submit(&(sprite->getRenderable()));
-		batch.submit(&littlesprite.getRenderable());
+		for (auto sprite : sprites)
+			batch.submit(&(sprite->getRenderable()));
+//		batch.submit(&littlesprite);
 		batch.end();
 		
 		batch.flush();

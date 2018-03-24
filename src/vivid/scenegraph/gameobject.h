@@ -28,7 +28,7 @@ namespace vivid { namespace graphics {
 		virtual void updateObject(const Input& input) final;
 		virtual void renderObject(Renderer2D* renderer) final;
 		
-		virtual const glm::mat4 getModelMatrix() final;
+		virtual const glm::mat4& getModelMatrix() final;
 	private:
 		virtual void update(const Input& input) {}
 		virtual void render(const Renderer2D* renderer) {}
