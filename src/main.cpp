@@ -44,7 +44,7 @@ int main() {
 		for (float x = -1.0f; x < 1.0f; x += affinity)
 			sprites.push_back(new Sprite(x, y, affinity, affinity, glm::vec4((rand() % 1000) / 1000.0, (rand() % 1000) / 1000.0, (rand() % 1000) / 1000.0, 1)));
 	
-	Sprite sprite(-0.5f, -0.5f, 1.0f, 1.0f, glm::vec4(0.6, 0, 0.6, 1));
+	Sprite littlesprite(-0.5f, -0.5f, 1.0f, 1.0f, glm::vec4(0.6, 0, 0.6, 1));
 	
 	Texture texture("images/cartoon_goat.png");
 	texture.bind(0);
@@ -83,7 +83,7 @@ int main() {
 		batch.begin();
 		for (auto sprite : sprites)
 			batch.submit(&(sprite->getRenderable()));
-//		batch.submit(&sprite);
+//		batch.submit(&littlesprite);
 		batch.end();
 		
 		batch.flush();
