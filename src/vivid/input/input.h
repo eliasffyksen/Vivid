@@ -29,7 +29,6 @@ namespace vivid {
 
 		mutable std::unordered_map<std::string, int> keyAliasMap;
 		
-		
 	public:
 		Input(GLFWwindow*);
 
