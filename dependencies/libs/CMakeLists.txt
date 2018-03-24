@@ -1,4 +1,4 @@
-## GLFW ###
+### GLFW ###
 
 add_subdirectory (glfw-3.1.2)
 
@@ -41,3 +41,7 @@ target_link_libraries(GLEW_1130
 	${OPENGL_LIBRARY}
 	${EXTRA_LIBS}
 )
+
+### VividImage ###
+
+add_subdirectory(VividImage)

@@ -3,20 +3,20 @@ cmake_minimum_required(VERSION 3.7)
 #----PROJECT VARIABLES----#
 project(Vivid)
 
-if(${CMAKE_BUILD_TYPE} MATCHES "Debug")
+if (${CMAKE_BUILD_TYPE} MATCHES "Debug")
 	set(DEBUG true)
-else()
-	set(DEBUG false)
-endif()
+else ()
+	set(DEBUG true)
+endif ()
 set(VERSION_MAJOR 0)
 set(VERSION_MINOR 1)
 #-------------------------#
 
 # Find the platform of the compiling system
 if (WIN32)
-	if(NOT DEBUG)
+	if (NOT DEBUG)
 		SET(EXE_ARGUMENT ${EXE_ARGUMENT} WIN32)
-	endif()
+	endif ()
 
 	if (CMAKE_SIZEOF_VOID_P EQUAL 8)
 		set(PLATFORM WIN64)
@@ -78,16 +78,51 @@ add_subdirectory(dependencies/libs)
 
 # Include header files
 include_directories(dependencies/include)
+include_directories(dependencies/libs/FreeImage/Source)
 
 # Pack all the necessary libraries in one convenient variable
-set(ALL_LIBS
+set(
+		ALL_LIBS
+
 		${OPENGL_LIBRARY}
 		glfw
 		GLEW_1130
+		VividImage
 )
 
 # Adds all the source files (CLion automatically does this when creating a file)
-set(SOURCE_FILES src/vivid/util/config.h src/main.cpp src/vivid/graphics/shader.h src/vivid/graphics/shader.cpp src/vivid/graphics/window.h src/vivid/graphics/window.cpp src/vivid/vivid.h src/vivid/util/timer.h src/vivid/input/input.cpp src/vivid/input/input.h)
+set(
+		SOURCE_FILES
+
+		src/vivid/util/config.h
+		src/main.cpp
+		src/vivid/graphics/shader.h
+		src/vivid/graphics/shader.cpp
+		src/vivid/graphics/window.h
+		src/vivid/graphics/window.cpp
+		src/vivid/vivid.h
+		src/vivid/util/timer.h
+		src/vivid/input/input.cpp
+		src/vivid/input/input.h
+		src/vivid/graphics/renderer2D.h
+		src/vivid/graphics/renderable2D.h
+		src/vivid/graphics/batchrenderer2D.cpp
+		src/vivid/graphics/batchrenderer2D.h
+		src/vivid/graphics/buffers/buffer.cpp
+		src/vivid/graphics/buffers/buffer.h
+		src/vivid/graphics/buffers/indexbuffer.cpp
+		src/vivid/graphics/buffers/indexbuffer.h
+		src/vivid/graphics/buffers/vertexarray.cpp
+		src/vivid/graphics/buffers/vertexarray.h
+		src/vivid/graphics/buffers/buffers.h
+		src/vivid/scenegraph/sprite.h
+		src/vivid/scenegraph/sprite.cpp
+		src/vivid/graphics/texture.cpp
+		src/vivid/graphics/texture.h
+		src/vivid/scenegraph/gameobject.cpp
+		src/vivid/scenegraph/gameobject.h
+		src/vivid/scenegraph/camera.cpp
+		src/vivid/scenegraph/camera.h src/vivid/scenegraph/layer.cpp src/vivid/scenegraph/layer.h src/vivid/scenegraph/transform.cpp src/vivid/scenegraph/transform.h)
 
 add_executable(${PROJECT_NAME} ${EXE_ARGUMENT} ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} ${ALL_LIBS})

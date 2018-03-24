@@ -1,12 +1,20 @@
 #version 330 core
 
-// Input vertex data, different for all executions of this shader.
+// Input vertex data
 layout(location = 0) in vec3 position;
+layout(location = 1) in vec2 texCoords;
+layout(location = 2) in vec4 colour;
 
-void main(){
+out DATA {
+    vec3 position;
+    vec2 texCoords;
+    vec4 color;
+} vs_out;
 
+void main() {
+    vs_out.position = position;
+    vs_out.texCoords = texCoords;
+    vs_out.color = colour;
     gl_Position.xyz = position;
-    gl_Position.w = 1.0;
-
+    gl_Position.w = 1;
 }
-
