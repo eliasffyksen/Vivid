@@ -35,14 +35,14 @@ namespace vivid {
 
 		bool keyDown(int) const;
 		bool keyPressed(int) const;
-		bool keyRelease(int) const;
+		bool keyReleased(int) const;
 		bool mouseButtonDown(int) const;
 		bool mouseButtonPressed(int) const;
 		bool mouseButtonReleased(int) const;
 		
 		bool keyDown(const std::string& alias) const;
 		bool keyPressed(const std::string& alias) const;
-		bool keyRelease(const std::string& alias) const;
+		bool keyReleased(const std::string &alias) const;
 		bool mouseButtonDown(const std::string& alias) const;
 		bool mouseButtonPressed(const std::string& alias) const;
 		bool mouseButtonReleased(const std::string& alias) const;
@@ -58,8 +58,8 @@ namespace vivid {
 		static void cursorPositionCallback(GLFWwindow*, double, double);
 		static void mouseButtonCallback(GLFWwindow*, int, int, int);
 	public:
-		enum KeyCodes : int {
-			A = 65, B, C, D, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z,
+		enum : int {
+			A = 65, B, C, E, D, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z,
 			ZERO = 48, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE,
 			SPACE = 32, APOSTROPHE = 39,
 			COMMA = 44, MINUS, PERIOD, SLASH,

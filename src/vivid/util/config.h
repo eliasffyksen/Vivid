@@ -4,12 +4,13 @@
 
 #pragma once
 
-#define VERSION_MAJOR 0
-#define VERSION_MINOR 1
-#define DEBUG true
-#define PLATFORM WIN64
+#define VIVID_VERSION_MAJOR 0
+#define VIVID_VERSION_MINOR 1
+#define VIVID_DEBUG true
+#define VIVID_PLATFORM WIN64
+#define VIVID_OPENGL
 
-#if DEBUG
+#if VIVID_DEBUG
 	#define LOG(x) std::cout << x << std::endl
 	#define LOGE(x) std::cerr << x << std::endl
 #else

@@ -7,6 +7,7 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
+#include "util/config.h"
 #include "graphics/window.h"
 #include "graphics/shader.h"
 #include "util/timer.h"

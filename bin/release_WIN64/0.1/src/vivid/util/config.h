@@ -2,8 +2,7 @@
 // Created by Elias on 31.08.2017.
 //
 
-#ifndef CONFIG_H
-#define CONFIG_H
+#pragma once
 
 #define VERSION_MAJOR 0
 #define VERSION_MINOR 1
@@ -16,6 +15,4 @@
 #else
 	#define LOG(x)
 	#define LOGE(x)
-#endif
-
 #endif

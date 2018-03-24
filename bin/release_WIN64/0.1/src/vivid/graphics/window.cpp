@@ -42,6 +42,14 @@ namespace vivid {
 			
 			glfwSetFramebufferSizeCallback(window, Window::framebufferSizeCallback);
 			glfwSwapInterval(0); // disables VSync
+
+			glewExperimental = GL_TRUE;
+			if (glewInit() != GLEW_OK) {
+				LOGE("Failed to initialize GLEW\n");
+				getchar();
+				glfwTerminate();
+				return false;
+			}
 			
 			return true;
 		}

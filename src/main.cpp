@@ -1,79 +1,94 @@
 // Include standard headers
 #include <iostream>
-#include <unistd.h>
 
 #include "vivid/vivid.h"
+#include "vivid/scenegraph/sprite.h"
+#include "vivid/graphics/batchrenderer2D.h"
+#include "vivid/scenegraph/gameobject.h"
+#include "vivid/graphics/texture.h"
+
+#include "time.h"
 
 int main() {
 	using namespace vivid;
 	using namespace graphics;
 	
-	Window window("Window!!", 800, 600);
+	Window window("Window!!", 600, 600); // THIS HAS TO BE THE FIRST THING!!
 	Input input(window.window);
 	
-	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
+#if VIVID_DEBUG // random stuff that looks kinda cool
+	LOG("--------------------------------------------------------------------------");
+	LOG("  Running Vivid Engine version " << VIVID_VERSION_MAJOR << "." << VIVID_VERSION_MINOR << (VIVID_DEBUG ? " (test build)" : ""));
+	LOG("  Opengl " << glGetString(GL_VERSION));
+	LOG("--------------------------------------------------------------------------");
+	LOG("");
+#endif
 	
-	GLuint VertexArrayID;
-	glGenVertexArrays(1, &VertexArrayID);
-	glBindVertexArray(VertexArrayID);
+	//glEnable(GL_POLYGON_SMOOTH);
+	
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // todo: actual alpha stufffffsss IT'S GONNA BE HELL
+	
+	glClearColor(0.0f, 0.0f, 0.3f, 0.0f);
 	
 	Shader simple("shaders/simple");
 	
-	static const GLfloat g_vertex_buffer_data[] = {
-			-1.0f, -1.0f,  0.0f,
-			-1.0f,  0.0f,  0.0f,
-			 0.0f,  0.0f,  0.0f,
-			 0.0f, -1.0f,  0.0f,
-			 0.0f,  0.0f,  0.0f,
-			 1.0f,  0.0f,  0.0f,
-			-1.0f,  0.0f,  0.0f,
-			-1.0f,  1.0f,  0.0f,
-			 0.0f,  1.0f,  0.0f,
-			 0.0f,  0.0f,  0.0f,
-			 0.0f,  1.0f,  0.0f,
-			 1.0f,  1.0f,  0.0f,
-	};
+	BatchRenderer2D batch;
+	std::vector<Sprite*> sprites;
+	srand((unsigned int) time(NULL));
 	
-	GLuint vertexBuffer;
-	glGenBuffers(1, &vertexBuffer);
-	glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
+	float size = 12.0f;
+	float affinity = 2.0f / size;
+	
+	for (float y = -1.0f; y < 1.0f; y += affinity)
+		for (float x = -1.0f; x < 1.0f; x += affinity)
+			sprites.push_back(new Sprite(x, y, affinity, affinity, glm::vec4((rand() % 1000) / 1000.0, (rand() % 1000) / 1000.0, (rand() % 1000) / 1000.0, 1)));
+	
+	Sprite sprite(-0.5f, -0.5f, 1.0f, 1.0f, glm::vec4(0.6, 0, 0.6, 1));
+	
+	Texture texture("images/cartoon_goat.png");
+	texture.bind(0);
+	
+	LOG(sprites.size() << " sprites");
+	
+	double sx = 0.2, sy = 0;
+	double x = 0, y = 0;
 	
 	float fpsTimer = 0.0f;
 	int fpsCount = 0;
 	Timer timer;
 	timer.reset();
-	
-	input.registerKeyAlias("Let's go", Input::UP);
-	
 	while (!window.isClosed()) {
-
-		if(input.keyPressed(GLFW_KEY_SPACE))
-			LOG("DOWN");
-		input.clear();
-
+		window.clear();
 		float delta = timer.elapsed();
 		
-		if (input.keyPressed("Let's go"))
-			LOG("IT'S GOING DOW... up?!");
-
-		window.clear();
-		simple.bind();
-
-		// 1rst attribute buffer : vertices
-		glEnableVertexAttribArray(0);
-		glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
-		glVertexAttribPointer(
-				0,                  // attribute 0. No particular reason for 0, but must match the layout in the shader.
-				3,                  // size
-				GL_FLOAT,           // type
-				GL_FALSE,           // normalized?
-				0,                  // stride
-				nullptr            // array buffer offset
-		);
+		//input.getCursorPosition(x, y);
 		
-		glDrawArrays(GL_TRIANGLES, 0, 12);
-		glDisableVertexAttribArray(0);
+		x += delta * sx;
+		y += delta * sy;
+		
+		if((input.keyDown(Input::LEFT_CONTROL) || input.keyDown(Input::RIGHT_CONTROL)) && input.keyPressed(Input::R)) {
+			x = y = 0;
+		}
+		if((input.keyDown(Input::LEFT_CONTROL) || input.keyDown(Input::RIGHT_CONTROL)) && input.keyPressed(Input::W)) {
+			glfwSetWindowShouldClose(window.window, GL_TRUE);
+		}
+		
+		batch.popMatrix();
+		batch.pushMatrix(glm::translate(glm::vec3(x, y, 0)));
+//		batch.pushMatrix(glm::translate(glm::vec3(2.0f * (x / window.getWidth() - 0.5f), 2.0f * (0.5f - y / window.getHeight()), 0.0f)));
+		
+		
+		simple.bind();
+		batch.begin();
+		for (auto sprite : sprites)
+			batch.submit(&(sprite->getRenderable()));
+//		batch.submit(&sprite);
+		batch.end();
+		
+		batch.flush();
+//		texture.unbind();
+		simple.unbind();
 		
 		input.clear();
 		window.update();
@@ -85,9 +100,6 @@ int main() {
 			fpsCount = 0;
 		}
 	}
-	
-	glDeleteBuffers(1, &vertexBuffer);
-	glDeleteVertexArrays(1, &VertexArrayID);
 	
 	return 0;
 }

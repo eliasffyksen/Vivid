@@ -4,12 +4,13 @@
 
 #pragma once
 
-#define VERSION_MAJOR @VERSION_MAJOR@
-#define VERSION_MINOR @VERSION_MINOR@
-#define DEBUG @DEBUG@
-#define PLATFORM @PLATFORM@
+#define VIVID_VERSION_MAJOR @VERSION_MAJOR@
+#define VIVID_VERSION_MINOR @VERSION_MINOR@
+#define VIVID_DEBUG @DEBUG@
+#define VIVID_PLATFORM @PLATFORM@
+#define VIVID_OPENGL
 
-#if DEBUG
+#if VIVID_DEBUG
 	#define LOG(x) std::cout << x << std::endl
 	#define LOGE(x) std::cerr << x << std::endl
 #else

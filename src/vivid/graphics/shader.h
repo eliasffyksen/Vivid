@@ -4,23 +4,38 @@
 
 #pragma once
 
-#include <iostream>
+#include <glm/glm.hpp>
 #include "../vivid.h"
+#include <unordered_map>
 
 namespace vivid {
 	namespace graphics {
 		
 		class Shader {
 		public:
-			static GLuint LoadShaders(const char* vertex_file_path, const char* fragment_file_path);
-		
+			static GLuint createShader(const char* vertex_file_path, const char* fragment_file_path);
 		private:
 			GLuint programID;
+			std::unordered_map<std::string, int> uniformLocations;
 		public:
 			explicit Shader(std::string path);
 			~Shader();
 			
+			bool loadUniform(const std::string& name);
+			
+			void setUniform(const std::string& name, const float& value);
+			void setUniform(const std::string& name, const float& x, const float& y);
+			void setUniform(const std::string& name, const glm::vec2& vec);
+			void setUniform(const std::string& name, const float& x, const float& y, const float& z);
+			void setUniform(const std::string& name, const glm::vec3& vec);
+			void setUniform(const std::string& name, const float& x, const float& y, const float& z, const float& w);
+			void setUniform(const std::string& name, const glm::vec4& vec);
+			void setUniform(const std::string& name, const glm::mat4& vec);
+			
 			void bind() const;
+			void unbind() const;
+		private:
+			int getUniformLocation(const std::string& name);
 		};
 		
 	}
