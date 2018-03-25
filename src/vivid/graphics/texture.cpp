@@ -13,14 +13,18 @@ namespace vivid { namespace graphics {
 	}
 	
 	void Texture::init() {
-		Image image(path);
+		util::Image image(path);
 		width = image.getWidth();
 		height = image.getHeight();
 		
 		glGenTextures(1, &textureID);
 		glBindTexture(GL_TEXTURE_2D, textureID);
-		
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, (const void*) image.getPixels());
+
+		if(image.getColorFormat() == GL_RGB)
+			glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+		else
+			glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, image.getColorFormat(), GL_UNSIGNED_BYTE, (const void*) image.getPixels());
 		
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR_MIPMAP_NEAREST);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEAREST);

@@ -78,7 +78,6 @@ add_subdirectory(dependencies/libs)
 
 # Include header files
 include_directories(dependencies/include)
-include_directories(dependencies/libs/FreeImage/Source)
 
 # Pack all the necessary libraries in one convenient variable
 set(
@@ -122,7 +121,12 @@ set(
 		src/vivid/scenegraph/gameobject.cpp
 		src/vivid/scenegraph/gameobject.h
 		src/vivid/scenegraph/camera.cpp
-		src/vivid/scenegraph/camera.h src/vivid/scenegraph/layer.cpp src/vivid/scenegraph/layer.h src/vivid/scenegraph/transform.cpp src/vivid/scenegraph/transform.h)
+		src/vivid/scenegraph/camera.h
+		src/vivid/scenegraph/layer.cpp
+		src/vivid/scenegraph/layer.h
+		src/vivid/scenegraph/transform.cpp
+		src/vivid/scenegraph/transform.h
+)
 
 add_executable(${PROJECT_NAME} ${EXE_ARGUMENT} ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} ${ALL_LIBS})
