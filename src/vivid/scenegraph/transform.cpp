@@ -6,7 +6,20 @@
 
 
 namespace vivid { namespace graphics {
-
-
+	
+	Transform* Transform::setPosition(glm::vec3 position) {
+		this->position = position;
+		return this;
+	}
+	
+	Transform* Transform::setRotation(glm::quat rotation) {
+		this->rotation = rotation;
+		return this;
+	}
+	
+	Transform* Transform::setScale(glm::vec3 scale) {
+		this->scale = scale;
+		return this;
+	}
 
 }}

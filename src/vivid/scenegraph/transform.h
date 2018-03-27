@@ -19,8 +19,15 @@ namespace vivid { namespace graphics {
 		Transform()
 				: position(glm::vec3()), rotation(glm::quat()), scale(glm::vec3()) {}
 		
-		inline const glm::mat4 getModelMatrix() { return glm::translate(position) * glm::toMat4(rotation) * glm::scale(scale); }
+		Transform* setPosition(glm::vec3 position);
+		Transform* setRotation(glm::quat rotation);
+		Transform* setScale(glm::vec3 scale);
 		
+		inline glm::vec3& getPosition() { return position; }
+		inline glm::quat& getRotation() { return rotation; }
+		inline glm::vec3& getScale() { return scale; }
+		
+		inline const glm::mat4 getModelMatrix() { return glm::translate(position) * glm::toMat4(rotation) * glm::scale(scale); }
 	};
 	
 }}

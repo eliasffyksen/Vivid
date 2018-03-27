@@ -7,8 +7,6 @@
 #include "vivid/scenegraph/gameobject.h"
 #include "vivid/graphics/texture.h"
 
-#include "time.h"
-
 int main() {
 	using namespace vivid;
 	using namespace graphics;
@@ -23,8 +21,6 @@ int main() {
 	LOG("--------------------------------------------------------------------------");
 	LOG("");
 #endif
-	
-	//glEnable(GL_POLYGON_SMOOTH);
 	
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // todo: actual alpha stufffffsss IT'S GONNA BE HELL
@@ -53,6 +49,8 @@ int main() {
 	
 	double sx = 0.2, sy = 0;
 	double x = 0, y = 0;
+	float angle = 0;
+	float omega = (float) (M_PI * 2.0f / 18.0f);
 	
 	float fpsTimer = 0.0f;
 	int fpsCount = 0;
@@ -66,6 +64,7 @@ int main() {
 		
 		x += delta * sx;
 		y += delta * sy;
+		angle += omega * delta;
 		
 		if((input.keyDown(Input::LEFT_CONTROL) || input.keyDown(Input::RIGHT_CONTROL)) && input.keyPressed(Input::R)) {
 			x = y = 0;
@@ -74,10 +73,10 @@ int main() {
 			glfwSetWindowShouldClose(window.window, GL_TRUE);
 		}
 		
-//		batch.popMatrix();
-//		batch.pushMatrix(glm::translate(glm::vec3(x, y, 0)));
 //		batch.pushMatrix(glm::translate(glm::vec3(2.0f * (x / window.getWidth() - 0.5f), 2.0f * (0.5f - y / window.getHeight()), 0.0f)));
-		
+//		batch.pushMatrix(glm::translate(glm::vec3(x, y, 0)));
+		batch.pushMatrix(glm::rotate(angle, glm::vec3(0.0, 0.0, -1.0)));
+		batch.pushMatrix(glm::scale(glm::vec3(2.0, 2.0, 2.0)));
 		
 		simple.bind();
 		batch.begin();
@@ -85,6 +84,10 @@ int main() {
 //			batch.submit(&(sprite->getRenderable()));
 		batch.submit(&littlesprite.getRenderable());
 		batch.end();
+		
+		batch.popMatrix();
+		batch.popMatrix();
+//		batch.popMatrix();
 		
 		batch.flush();
 //		texture.unbind();
