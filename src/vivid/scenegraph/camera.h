@@ -9,9 +9,13 @@
 
 namespace vivid { namespace graphics {
 	
-	class camera : public GameObject {
-	
-	};
+	class Camera : public GameObject {};
+
+	Camera* currentCamera;
+
+	glm::mat4 getViewMatrix() {
+		return currentCamera->getModelMatrix();
+	}
 
 }}
 

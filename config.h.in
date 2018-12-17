@@ -11,6 +11,7 @@
 #define VIVID_OPENGL
 
 #if VIVID_DEBUG
+	#include <iostream>
 	#define LOG(x) std::cout << x << std::endl
 	#define LOGE(x) std::cerr << x << std::endl
 #else

@@ -4,10 +4,8 @@
 
 #pragma once
 
-#include <string>
-#include <iostream>
-
 #include "../vivid.h"
+#include <string>
 
 namespace vivid { namespace graphics {
 	

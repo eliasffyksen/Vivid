@@ -22,7 +22,7 @@ namespace vivid { namespace graphics {
 			return false;
 		}
 
-		glfwWindowHint(GLFW_SAMPLES, 4);
+		glfwWindowHint(GLFW_SAMPLES, 16); // TODO: Make this configurable
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 		glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // To make MacOS happy; should not be needed
@@ -72,6 +72,7 @@ namespace vivid { namespace graphics {
 		win->height = height;
 
 		glViewport(0, 0, width, height);
+
 	}
 
 }}

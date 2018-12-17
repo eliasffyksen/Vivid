@@ -21,7 +21,8 @@ int main() {
 	LOG("--------------------------------------------------------------------------");
 	LOG("");
 #endif
-	
+
+	glEnable(GL_MULTISAMPLE);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // todo: actual alpha stufffffsss IT'S GONNA BE HELL
 	

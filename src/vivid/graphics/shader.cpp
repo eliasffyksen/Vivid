@@ -24,7 +24,7 @@ namespace vivid { namespace graphics {
 			
 			VertexShaderStream.close();
 		} else {
-			printf("Impossible to open %s. Are you in the right directory ? Don't forget to read the FAQ !\n", vertex_file_path);
+			LOGE("Impossible to open " << vertex_file_path);
 			getchar();
 			return 0;
 		}
@@ -39,7 +39,7 @@ namespace vivid { namespace graphics {
 			
 			FragmentShaderStream.close();
 		} else {
-			printf("Impossible to open %s. Are you in the right directory ? Don't forget to read the FAQ !\n", vertex_file_path);
+			LOGE("Impossible to open " << fragment_file_path);
 			getchar();
 			return 0;
 		}
@@ -58,7 +58,8 @@ namespace vivid { namespace graphics {
 		if (InfoLogLength > 0) {
 			std::vector<char> VertexShaderErrorMessage((unsigned long long int) (InfoLogLength + 1));
 			glGetShaderInfoLog(VertexShaderID, InfoLogLength, nullptr, &VertexShaderErrorMessage[0]);
-			printf("%s\n", &VertexShaderErrorMessage[0]);
+			char* error = &VertexShaderErrorMessage[0];
+			LOGE(error);
 		}
 		
 		// Compile Fragment Shader
