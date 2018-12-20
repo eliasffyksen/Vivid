@@ -1,11 +1,14 @@
-// Include standard headers
-#include <iostream>
+#include <cstdlib> // for testing
 
-#include "vivid/vivid.h"
-#include "vivid/scenegraph/sprite.h"
-#include "vivid/graphics/batchrenderer2D.h"
-#include "vivid/scenegraph/gameobject.h"
-#include "vivid/graphics/texture.h"
+// Include standard headers
+#include <vivid/vivid.h>
+#include <vivid/graphics/window.h>
+#include <vivid/input/input.h>
+#include <vivid/graphics/shader.h>
+#include <vivid/scenegraph/sprite.h>
+#include <vivid/graphics/batchrenderer2D.h>
+#include <vivid/scenegraph/gameobject.h>
+#include <vivid/graphics/texture.h>
 
 int main() {
 	using namespace vivid;

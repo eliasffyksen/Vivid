@@ -4,7 +4,10 @@
 
 #pragma once
 
-#include "../vivid.h"
+#include <vivid/vivid.h>
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+
 #include <string>
 
 namespace vivid { namespace graphics {

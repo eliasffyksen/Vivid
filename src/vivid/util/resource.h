@@ -4,29 +4,20 @@
 
 #pragma once
 
-#define VIVID_PNTR_MAX 16
+#include <vivid/util/config.h>
 
-#define VIVID_WINDOW_PNTR 0
-#define VIVID_INPUT_PNTR 1
-
-#include "../vivid.h"
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
 
 namespace vivid {
 
-	inline void initWindowPointer(GLFWwindow *window) {
-		glfwSetWindowUserPointer(window, new void *[VIVID_PNTR_MAX]);
-	}
+	std::string loadTextFile(std::string filePath);
+
+	void initWindowPointer(GLFWwindow *window);
 
 	template<typename P>
-	inline P *getWindowPointer(GLFWwindow *window, int pointerID) {
-		P **ptrList = (P **) glfwGetWindowUserPointer(window);
-		P *ptr = ptrList[pointerID];
-		return ptr;
-	}
+	P *getWindowPointer(GLFWwindow *window, int pointerID);
 
-	inline void setWindowPointer(GLFWwindow *window, int pointerID, void *pointer) {
-		void **ptrList = (void **) glfwGetWindowUserPointer(window);
-		ptrList[pointerID] = pointer;
-	}
+	void setWindowPointer(GLFWwindow *window, int pointerID, void *pointer);
 
 }

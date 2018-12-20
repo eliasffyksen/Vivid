@@ -1,7 +1,7 @@
 #version 330 core
 
 // Output data
-layout (location = 0) out vec4 color;
+layout(location = 0) out vec4 color;
 
 in DATA {
     vec3 position;

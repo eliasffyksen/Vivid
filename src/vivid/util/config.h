@@ -4,6 +4,11 @@
 
 #pragma once
 
+#define VIVID_POINTER_MAX 16
+
+#define VIVID_WINDOW_POINTER 0
+#define VIVID_INPUT_POINTER 1
+
 #define VIVID_VERSION_MAJOR 0
 #define VIVID_VERSION_MINOR 1
 #define VIVID_DEBUG true
@@ -17,4 +22,10 @@
 #else
 	#define LOG(x)
 	#define LOGE(x)
+#endif
+
+#if VIVID_BUILD
+	#define VIVID_API __declspec(dllexport)
+#else
+	#define VIVID_API __declspec(dllimport)
 #endif

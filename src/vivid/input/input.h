@@ -4,8 +4,8 @@
 
 #pragma once
 
-#include "../vivid.h"
 #include <unordered_map>
+#include <vivid/util/resource.h>
 
 namespace vivid {
 

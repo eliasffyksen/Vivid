@@ -12,10 +12,8 @@ namespace vivid {
 	namespace graphics {
 		
 		class Shader {
-		public:
-			static GLuint createShader(const char* vertex_file_path, const char* fragment_file_path);
 		private:
-			GLuint programID;
+			unsigned int program;
 			std::unordered_map<std::string, int> uniformLocations;
 		public:
 			explicit Shader(std::string path);

@@ -37,7 +37,7 @@ namespace vivid { namespace graphics {
 
 		glfwMakeContextCurrent(window);
 		initWindowPointer(window);
-		setWindowPointer(window, VIVID_WINDOW_PNTR, this);
+		setWindowPointer(window, VIVID_WINDOW_POINTER, this);
 
 		glfwSetFramebufferSizeCallback(window, Window::framebufferSizeCallback);
 		glfwSwapInterval(0); // disables VSync
@@ -67,12 +67,11 @@ namespace vivid { namespace graphics {
 	}
 
 	void Window::framebufferSizeCallback(GLFWwindow *window, int width, int height) {
-		auto win = getWindowPointer<Window>(window, VIVID_WINDOW_PNTR);
+		auto win = getWindowPointer<Window>(window, VIVID_WINDOW_POINTER);
 		win->width = width;
 		win->height = height;
 
 		glViewport(0, 0, width, height);
-
 	}
 
 }}

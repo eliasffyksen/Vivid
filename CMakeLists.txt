@@ -7,8 +7,10 @@ set(CMAKE_CXX_STANDARD 17)
 
 if (${CMAKE_BUILD_TYPE} MATCHES "Debug")
 	set(DEBUG true)
+	set(BUILD true)
 else ()
 	set(DEBUG false)
+	set(BUILD false)
 endif ()
 set(VERSION_MAJOR 0)
 set(VERSION_MINOR 1)
@@ -126,7 +128,16 @@ set(
 		src/vivid/scenegraph/layer.h
 		src/vivid/scenegraph/transform.cpp
 		src/vivid/scenegraph/transform.h
-		src/vivid/util/maths/maths.h src/vivid/util/resource.cpp src/vivid/util/resource.h)
+		src/vivid/util/maths/maths.cpp
+		src/vivid/util/maths/maths.h
+		src/vivid/util/resource.cpp
+		src/vivid/util/resource.h)
+
+add_compile_definitions(VIVID_BUILD=true)
+
+install(DIRECTORY src/ DESTINATION include/myproj FILES_MATCHING PATTERN "*.h")
+#file(COPY ${HEADER_FILES} DESTINATION "${PROJECT_SOURCE_DIR}/test")
 
 add_executable(${PROJECT_NAME} ${EXE_ARGUMENT} ${SOURCE_FILES})
+target_include_directories(${PROJECT_NAME} PRIVATE src)
 target_link_libraries(${PROJECT_NAME} ${ALL_LIBS})

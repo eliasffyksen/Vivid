@@ -4,14 +4,6 @@
 
 #pragma once
 
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
-#include <glm/glm.hpp>
-#include <glm/gtx/transform.hpp>
-
-#include "util/config.h"
-#include "util/resource.h"
-#include "graphics/window.h"
-#include "graphics/shader.h"
-#include "util/timer.h"
-#include "input/input.h"
+#include <vivid/util/config.h>
+#include <vivid/util/resource.h>
+#include <vivid/util/timer.h>

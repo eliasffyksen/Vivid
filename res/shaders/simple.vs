@@ -15,6 +15,5 @@ void main() {
     vs_out.position = position;
     vs_out.texCoords = texCoords;
     vs_out.color = colour;
-    gl_Position.xyz = position;
-    gl_Position.w = 1;
+    gl_Position = vec4(position, 1.0);
 }
