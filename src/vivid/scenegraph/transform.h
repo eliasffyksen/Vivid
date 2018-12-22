@@ -8,7 +8,7 @@
 #include "glm/gtx/quaternion.hpp"
 #include "glm/glm.hpp"
 
-namespace vivid { namespace graphics {
+namespace vivid {
 	
 	class Transform {
 	private:
@@ -17,7 +17,7 @@ namespace vivid { namespace graphics {
 		glm::vec3 scale;
 	public:
 		Transform()
-				: position(glm::vec3()), rotation(glm::quat()), scale(glm::vec3()) {}
+				: position(glm::vec3(0.0f, 0.0f, 0.0f)), rotation(glm::quat()), scale(glm::vec3(1.0f, 1.0f, 1.0f)) {}
 		
 		Transform* setPosition(glm::vec3 position);
 		Transform* setRotation(glm::quat rotation);
@@ -30,4 +30,4 @@ namespace vivid { namespace graphics {
 		inline const glm::mat4 getModelMatrix() { return glm::translate(position) * glm::toMat4(rotation) * glm::scale(scale); }
 	};
 	
-}}
+}

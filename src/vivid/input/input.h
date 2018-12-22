@@ -6,6 +6,7 @@
 
 #include <unordered_map>
 #include <vivid/util/resource.h>
+#include <vivid/graphics/window.h>
 
 namespace vivid {
 
@@ -15,6 +16,8 @@ namespace vivid {
 #define VIVID_MAX_MOUSE_BUTTONS 32
 
 	private:
+		graphics::Window *window;
+
 		bool keys[VIVID_MAX_KEYS];
 		bool mouseButtons[VIVID_MAX_MOUSE_BUTTONS];
 
@@ -30,7 +33,7 @@ namespace vivid {
 		mutable std::unordered_map<std::string, int> keyAliasMap;
 		
 	public:
-		Input(GLFWwindow*);
+		Input(graphics::Window& window);
 
 		bool keyDown(int) const;
 		bool keyPressed(int) const;
@@ -52,10 +55,10 @@ namespace vivid {
 		void deleteKeyAlias(const std::string& alias) const;
 		
 		void clear();
-	private:
-		static void keyCallback(GLFWwindow *, int, int, int, int);
-		static void cursorPositionCallback(GLFWwindow*, double, double);
-		static void mouseButtonCallback(GLFWwindow*, int, int, int);
+	public:
+		void keyCallback(int, int, int, int);
+		void cursorPositionCallback(double, double);
+		void mouseButtonCallback(int, int, int);
 	public:
 		enum : int {
 			A = 65, B, C, E, D, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z,
@@ -77,7 +80,3 @@ namespace vivid {
 	};
 	
 }
-
-
-
-

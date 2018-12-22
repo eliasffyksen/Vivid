@@ -55,7 +55,7 @@ namespace vivid { namespace graphics {
 		buffer = (Vertex*) glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
 	}
 	
-	void BatchRenderer2D::submit(const Renderable2D* renderable) const {
+	void BatchRenderer2D::submit(const Quad* renderable) const {
 		if (indexCount >= BATCH_RENDERER_INDICES_SIZE)
 			return;
 		
@@ -68,7 +68,7 @@ namespace vivid { namespace graphics {
 		unsigned int b = (unsigned int) (color.z * 255.0f);
 		unsigned int a = (unsigned int) (color.w * 255.0f);
 		
-		unsigned int c = a << 24 | b << 16 | g << 8 | r;
+		unsigned int c = (a << 24) | (b << 16) | (g << 8) | (r);
 		
 		buffer->position = glm::vec3(currentTransformation * glm::vec4(position, 1));
 		buffer->color = c;

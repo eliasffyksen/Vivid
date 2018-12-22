@@ -4,8 +4,9 @@
 
 #pragma once
 
-#include <glm/glm.hpp>
 #include "../vivid.h"
+#include <GL/glew.h>
+#include <glm/glm.hpp>
 #include <unordered_map>
 
 namespace vivid {

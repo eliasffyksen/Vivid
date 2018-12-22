@@ -6,8 +6,8 @@
 
 namespace vivid {
 	
-	Input::Input(GLFWwindow* window) {
-		setWindowPointer(window, VIVID_INPUT_POINTER, this);
+	Input::Input(graphics::Window& window)
+			: window(&window) {
 		
 		for (int i = 0; i < VIVID_MAX_KEYS; i++) {
 			keys[i] = false;
@@ -22,10 +22,8 @@ namespace vivid {
 		
 		mouseX = 0;
 		mouseY = 0;
-		
-		glfwSetKeyCallback(window, Input::keyCallback);
-		glfwSetCursorPosCallback(window, Input::cursorPositionCallback);
-		glfwSetMouseButtonCallback(window, Input::mouseButtonCallback);
+
+		window.registerInputListener(this);
 	}
 	
 	bool Input::keyDown(int key) const {
@@ -55,43 +53,49 @@ namespace vivid {
 	bool Input::keyDown(const std::string& alias) const {
 		auto it = keyAliasMap.find(alias);
 		if (it != keyAliasMap.end()) {
-			keyDown(keyAliasMap[alias]);
+			return keyDown(keyAliasMap[alias]);
 		}
+		return false;
 	}
 	
 	bool Input::keyPressed(const std::string& alias) const {
 		auto it = keyAliasMap.find(alias);
 		if (it != keyAliasMap.end()) {
-			keyPressed(keyAliasMap[alias]);
+			return keyPressed(keyAliasMap[alias]);
 		}
+		return false;
 	}
 	
 	bool Input::keyReleased(const std::string &alias) const {
 		auto it = keyAliasMap.find(alias);
 		if (it != keyAliasMap.end()) {
-			keyReleased(keyAliasMap[alias]);
+			return keyReleased(keyAliasMap[alias]);
 		}
+		return false;
 	}
 	
 	bool Input::mouseButtonDown(const std::string& alias) const {
 		auto it = keyAliasMap.find(alias);
 		if (it != keyAliasMap.end()) {
-			mouseButtonDown(keyAliasMap[alias]);
+			return mouseButtonDown(keyAliasMap[alias]);
 		}
+		return false;
 	}
 	
 	bool Input::mouseButtonPressed(const std::string& alias) const {
 		auto it = keyAliasMap.find(alias);
 		if (it != keyAliasMap.end()) {
-			mouseButtonPressed(keyAliasMap[alias]);
+			return mouseButtonPressed(keyAliasMap[alias]);
 		}
+		return false;
 	}
 	
 	bool Input::mouseButtonReleased(const std::string& alias) const {
 		auto it = keyAliasMap.find(alias);
 		if (it != keyAliasMap.end()) {
-			mouseButtonReleased(keyAliasMap[alias]);
+			return mouseButtonReleased(keyAliasMap[alias]);
 		}
+		return false;
 	}
 	
 	void Input::getCursorPosition(double& x, double& y) const {
@@ -121,40 +125,38 @@ namespace vivid {
 			}
 		}
 	}
-	void Input::keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
-		
-		Input* input = getWindowPointer<Input>(window, VIVID_INPUT_POINTER);
 
+	void Input::keyCallback(int key, int scancode, int action, int mods) {
 		switch (action) {
 			case GLFW_PRESS:
-				input->keys[key] = true;
-				input->keysDown[key] = input->inputCounter;
+				keys[key] = true;
+				keysDown[key] = inputCounter;
 				break;
 			case GLFW_RELEASE:
-				input->keys[key] = false;
-				input->keysUp[key] = input->inputCounter;
+				keys[key] = false;
+				keysUp[key] = inputCounter;
+				break;
+			default:
 				break;
 		}
 	}
 
-	void Input::cursorPositionCallback(GLFWwindow *window, double xpos, double ypos) {
-		Input *input = getWindowPointer<Input>(window, VIVID_INPUT_POINTER);
-
-		input->mouseX = xpos;
-		input->mouseY = ypos;
+	void Input::cursorPositionCallback(double xpos, double ypos) {
+		mouseX = xpos;
+		mouseY = ypos;
 	}
 
-	void Input::mouseButtonCallback(GLFWwindow *window, int button, int action, int mods) {
-		Input *input = getWindowPointer<Input>(window, VIVID_INPUT_POINTER);
-
+	void Input::mouseButtonCallback(int button, int action, int mods) {
 		switch (action) {
 			case GLFW_PRESS:
-				input->mouseButtons[button] = true;
-				input->mouseButtonsDown[button] = input->inputCounter;
+				mouseButtons[button] = true;
+				mouseButtonsDown[button] = inputCounter;
 				break;
 			case GLFW_RELEASE:
-				input->mouseButtons[button] = false;
-				input->mouseButtonsUp[button] = input->inputCounter;
+				mouseButtons[button] = false;
+				mouseButtonsUp[button] = inputCounter;
+				break;
+			default:
 				break;
 		}
 	}

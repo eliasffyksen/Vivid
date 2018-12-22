@@ -15,18 +15,19 @@ namespace vivid { namespace graphics {
 		glm::vec2 textureCoordinates;
 	};
 	
-	class Renderable2D {
+	class Quad {
+	private:
 		glm::vec3 position;
 		glm::vec2 size;
 		glm::vec4 color;
 	public:
-		Renderable2D(float x, float y, float width, float height, const glm::vec4& color)
+		Quad(float x, float y, float width, float height, const glm::vec4& color)
 				: position(x, y, 0), size(width, height), color(color) {}
 		
-		Renderable2D(const glm::vec3& position, const glm::vec2& size, const glm::vec4& color)
+		Quad(const glm::vec3& position, const glm::vec2& size, const glm::vec4& color)
 				: position(position), size(size), color(color) {}
 		
-		virtual ~Renderable2D() = default;
+		virtual ~Quad() = default;
 		
 		inline glm::vec3& getPosition() const { return (glm::vec3&) position; }
 		inline glm::vec2& getSize() const { return (glm::vec2&)  size; }
