@@ -5,11 +5,11 @@
 #pragma once
 
 #include <vector>
-#include "../graphics/renderer2D.h"
-#include "../input/input.h"
+#include <vivid/graphics/renderer2D.h>
+#include <vivid/input/input.h>
 #include "transform.h"
 
-namespace vivid { namespace graphics {
+namespace vivid {
 	
 	class GameObject {
 	protected:
@@ -26,16 +26,17 @@ namespace vivid { namespace graphics {
 		virtual void removeChild(GameObject& child) final;
 		
 		virtual void updateObject(const Input& input) final;
-		virtual void renderObject(Renderer2D* renderer) final;
+		virtual void renderObject(graphics::Renderer2D* renderer) final;
+
+		inline Transform& getTransform() {
+			return transform;
+		}
 		
 		virtual const glm::mat4 getModelMatrix() final;
-	private:
+	public:
 		virtual void update(const Input& input) {}
-		virtual void render(const Renderer2D* renderer) {}
-		
-		GameObject(GameObject& other) {}
-		void operator=(GameObject& other) {}
+		virtual void render(const graphics::Renderer2D* renderer) {}
 	};
 	
-}}
+}
 

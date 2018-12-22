@@ -5,7 +5,7 @@
 #pragma once
 
 #include <vector>
-#include "renderable2D.h"
+#include "quad.h"
 
 namespace vivid { namespace graphics {
 	
@@ -33,7 +33,7 @@ namespace vivid { namespace graphics {
 		}
 		
 		virtual void begin() {}
-		virtual void submit(const Renderable2D*) const = 0;
+		virtual void submit(const Quad*) const = 0;
 		virtual void end() {}
 		virtual void flush() = 0;
 	};

@@ -10,7 +10,7 @@
 namespace vivid { namespace graphics {
 
 	unsigned int createShader(const unsigned int& type, const std::string& filePath) {
-		GLuint shader = glCreateShader(type);
+		unsigned int shader = glCreateShader(type);
 
 		const std::string vertexSource = loadTextFile(filePath);
 		const char *const vertexPointer = vertexSource.c_str();

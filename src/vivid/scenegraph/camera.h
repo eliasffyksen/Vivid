@@ -7,16 +7,10 @@
 #include <glm/glm.hpp>
 #include "gameobject.h"
 
-namespace vivid { namespace graphics {
+namespace vivid {
 	
 	class Camera : public GameObject {};
 
-	Camera* currentCamera;
-
-	glm::mat4 getViewMatrix() {
-		return currentCamera->getModelMatrix();
-	}
-
-}}
+}
 
 

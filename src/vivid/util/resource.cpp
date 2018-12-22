@@ -24,21 +24,4 @@ namespace vivid {
 
 		return res;
 	}
-
-	void initWindowPointer(GLFWwindow *window) {
-		glfwSetWindowUserPointer(window, new void *[VIVID_POINTER_MAX]);
-	}
-
-	template<typename P>
-	P *getWindowPointer(GLFWwindow *window, int pointerID) {
-		P **ptrList = (P **) glfwGetWindowUserPointer(window);
-		P *ptr = ptrList[pointerID];
-		return ptr;
-	}
-
-	void setWindowPointer(GLFWwindow *window, int pointerID, void *pointer) {
-		void **ptrList = (void **) glfwGetWindowUserPointer(window);
-		ptrList[pointerID] = pointer;
-	}
-
 }

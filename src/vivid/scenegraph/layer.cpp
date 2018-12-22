@@ -4,16 +4,20 @@
 
 #include "layer.h"
 
-namespace vivid { namespace graphics {
+namespace vivid {
 	
 	Layer::Layer() {}
 	
-	void Layer::setRenderer(Renderer2D* renderer) {
+	void Layer::setRenderer(graphics::Renderer2D* renderer) {
 		this->renderer = renderer;
 	}
+
+	glm::mat4 Layer::getViewMatrix() {
+		return currentCamera->getModelMatrix();
+	}
 	
-	void Layer::update() {
-	
+	void Layer::update(const Input& input) {
+		root.updateObject(input);
 	}
 	
 	void Layer::render() {
@@ -31,4 +35,4 @@ namespace vivid { namespace graphics {
 		root.removeChild(child);
 	}
 	
-}}
+}

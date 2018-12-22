@@ -6,7 +6,7 @@
 #include <algorithm>
 #include <iostream>
 
-namespace vivid { namespace graphics {
+namespace vivid {
 	
 	void GameObject::addChild(GameObject& child) {
 		if (std::find(children.begin(), children.end(), &child) == children.end()) {
@@ -30,7 +30,7 @@ namespace vivid { namespace graphics {
 			children[i]->updateObject(input);
 	}
 	
-	void GameObject::renderObject(Renderer2D* renderer) {
+	void GameObject::renderObject(graphics::Renderer2D* renderer) {
 		renderer->pushMatrix(transform.getModelMatrix());
 		
 		render(renderer);
@@ -49,4 +49,4 @@ namespace vivid { namespace graphics {
 		}
 	}
 	
-}}
+}

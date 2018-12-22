@@ -5,7 +5,7 @@
 #include "transform.h"
 
 
-namespace vivid { namespace graphics {
+namespace vivid {
 	
 	Transform* Transform::setPosition(glm::vec3 position) {
 		this->position = position;
@@ -22,4 +22,4 @@ namespace vivid { namespace graphics {
 		return this;
 	}
 
-}}
+}

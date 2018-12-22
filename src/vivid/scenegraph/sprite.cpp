@@ -4,13 +4,13 @@
 
 #include "sprite.h"
 
-namespace vivid { namespace graphics {
+namespace vivid {
 	
 	Sprite::Sprite(float x, float y, float width, float height, const glm::vec4& color)
-			: renderable(x, y, width, height, color) {}
+			: quad(x, y, width, height, color) {}
 	
-	void Sprite::render(const Renderer2D* renderer) {
-		renderer->submit(&renderable);
+	void Sprite::render(const graphics::Renderer2D* renderer) {
+		renderer->submit(&quad);
 	}
 	
-}}
+}

@@ -4,24 +4,28 @@
 
 #pragma once
 
-#include "gameobject.h"
+#include <vivid/scenegraph/gameobject.h>
+#include <vivid/scenegraph/camera.h>
 
-namespace vivid { namespace graphics {
+namespace vivid {
 	
 	class Layer {
 	private:
 		GameObject root;
-		Renderer2D* renderer;
+		graphics::Renderer2D* renderer;
+		Camera* currentCamera;
 	public:
 		Layer();
 		
-		void setRenderer(Renderer2D* renderer);
+		void setRenderer(graphics::Renderer2D* renderer);
+
+		glm::mat4 getViewMatrix();
 		
-		void update();
+		void update(const Input& input);
 		void render();
 		
 		void addChild(GameObject& child);
 		void removeChild(GameObject& child);
 	};
 	
-}}
+}

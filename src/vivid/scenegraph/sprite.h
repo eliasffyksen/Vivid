@@ -5,20 +5,20 @@
 #pragma once
 
 #include "glm/glm.hpp"
-#include "../graphics/renderable2D.h"
+#include "vivid/graphics/quad.h"
 #include "gameobject.h"
 
-namespace vivid { namespace graphics {
+namespace vivid {
 	
 	class Sprite : public GameObject {
 	private:
-		Renderable2D renderable;
+		graphics::Quad quad;
 	public:
 		Sprite(float x, float y, float width, float height, const glm::vec4& color);
 		
-		inline const Renderable2D& getRenderable() const { return renderable; }
-	private:
-		void render(const Renderer2D* renderer) override;
+		inline const graphics::Quad& getQuad() const { return quad; }
+	public:
+		void render(const graphics::Renderer2D* renderer) override;
 	};
 	
-}}
+}

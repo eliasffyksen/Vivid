@@ -5,34 +5,35 @@
 #pragma once
 
 #include <chrono>
-#include "../vivid.h"
+#include <vivid/vivid.h>
 
 namespace vivid {
-	
+
 	class Timer {
 	private:
 		std::chrono::high_resolution_clock timer;
+		std::chrono::time_point<std::chrono::system_clock> last;
 		std::chrono::time_point<std::chrono::system_clock> start;
 	public:
 		Timer()
-		: start(timer.now())
+				: last(timer.now()), start(timer.now())
 		{}
-		
+
 		void reset() {
 			start = timer.now();
 		}
-		
-		float elapsed() {
-			auto current = timer.now();
-			float deltaTime = std::chrono::duration_cast<std::chrono::microseconds>(current - start).count() / 1000000.0f;
-			start = current;
+
+		double elapsed() {
+			auto now = timer.now();
+			double deltaTime = std::chrono::duration_cast<std::chrono::microseconds>(now - last).count() / 1000000.0;
+			last = now;
 			return deltaTime;
 		}
-		
-		float time() {
-			float dt = std::chrono::duration_cast<std::chrono::microseconds>(timer.now() - start).count() / 1000000.0f;
+
+		double time() {
+			return std::chrono::duration_cast<std::chrono::microseconds>(timer.now() - start).count() / 1000000.0;
 		}
-		
+
 	};
 	
 }

@@ -106,7 +106,7 @@ set(
 		src/vivid/input/input.cpp
 		src/vivid/input/input.h
 		src/vivid/graphics/renderer2D.h
-		src/vivid/graphics/renderable2D.h
+		src/vivid/graphics/quad.h
 		src/vivid/graphics/batchrenderer2D.cpp
 		src/vivid/graphics/batchrenderer2D.h
 		src/vivid/graphics/buffers/buffer.cpp
@@ -124,14 +124,14 @@ set(
 		src/vivid/scenegraph/gameobject.h
 		src/vivid/scenegraph/camera.cpp
 		src/vivid/scenegraph/camera.h
-		src/vivid/scenegraph/layer.cpp
-		src/vivid/scenegraph/layer.h
+        src/vivid/scenegraph/layer.cpp
+        src/vivid/scenegraph/layer.h
 		src/vivid/scenegraph/transform.cpp
 		src/vivid/scenegraph/transform.h
-		src/vivid/util/maths/maths.cpp
-		src/vivid/util/maths/maths.h
+        src/vivid/util/maths.cpp
+        src/vivid/util/maths.h
 		src/vivid/util/resource.cpp
-		src/vivid/util/resource.h)
+		src/vivid/util/resource.h src/vivid/scenegraph/scene.cpp src/vivid/scenegraph/scene.h)
 
 add_compile_definitions(VIVID_BUILD=true)
 
