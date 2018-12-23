@@ -15,17 +15,19 @@ namespace vivid {
 		Layer layer;
 		int priority; // higher means closer to screen
 
-		SortedLayer() = default;
+		SortedLayer(graphics::Renderer2D* renderer, const int& priority)
+		: layer(renderer), priority(priority) {}
 	};
 
 	class Scene {
 	private:
-		std::vector<SortedLayer> layers;
+		std::vector<SortedLayer*> layers;
 	public:
 		Scene() = default;
 		virtual ~Scene() = default;
 
-		Layer* createLayer(const int& priority);
+		Layer* createLayer(graphics::Renderer2D* renderer, const int& priority);
+		std::vector<SortedLayer*>& getLayers();
 
 		void update(const Input& input);
 		void render();

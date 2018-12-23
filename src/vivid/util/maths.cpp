@@ -228,7 +228,6 @@ namespace vivid { namespace maths {
 		float cosHalfAngle = std::cos(angle / 2.0f);
 
 		w = (float) cosHalfAngle;
-		LOG("actual w: " << w);
 		x = (float) (axis.x * sinHalfAngle);
 		y = (float) (axis.y * sinHalfAngle);
 		z = (float) (axis.z * sinHalfAngle);

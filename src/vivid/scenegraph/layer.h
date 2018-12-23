@@ -15,10 +15,8 @@ namespace vivid {
 		graphics::Renderer2D* renderer;
 		Camera* currentCamera;
 	public:
-		Layer();
+		Layer(graphics::Renderer2D* renderer);
 		
-		void setRenderer(graphics::Renderer2D* renderer);
-
 		glm::mat4 getViewMatrix();
 		
 		void update(const Input& input);

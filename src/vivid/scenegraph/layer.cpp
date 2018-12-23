@@ -6,12 +6,9 @@
 
 namespace vivid {
 	
-	Layer::Layer() {}
+	Layer::Layer(graphics::Renderer2D* renderer)
+	: renderer(renderer) {}
 	
-	void Layer::setRenderer(graphics::Renderer2D* renderer) {
-		this->renderer = renderer;
-	}
-
 	glm::mat4 Layer::getViewMatrix() {
 		return currentCamera->getModelMatrix();
 	}

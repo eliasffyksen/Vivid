@@ -25,14 +25,12 @@ int main() {
 	Window window("Vivid", 600, 600); // THIS HAS TO BE THE FIRST THING!!
 	Input input(window);
 
-#if VIVID_DEBUG // random stuff that looks kinda cool
 	LOG("--------------------------------------------------------------------------");
-	LOG("  Running Vivid Engine version " << VIVID_VERSION_MAJOR << "." << VIVID_VERSION_MINOR
-	                                      << (VIVID_DEBUG ? " (test build)" : ""));
-	LOG("  Opengl " << glGetString(GL_VERSION));
+	LOG("    Running Vivid Engine version " << VIVID_VERSION_MAJOR << "." << VIVID_VERSION_MINOR
+											<< (VIVID_DEBUG ? " (test build)" : ""));
+	LOG("    Opengl " << glGetString(GL_VERSION));
 	LOG("--------------------------------------------------------------------------");
 	LOG("");
-#endif
 
 	glEnable(GL_MULTISAMPLE);
 	glEnable(GL_BLEND);
@@ -43,6 +41,7 @@ int main() {
 	Shader simple("shaders/simple");
 
 	BatchRenderer2D batch;
+	BatchRenderer2D batchgui;
 	std::vector<Sprite *> sprites;
 	GameObject root;
 	srand((unsigned int) time(NULL));
@@ -53,48 +52,70 @@ int main() {
 	for (float y = -1.0f; y < 1.0f; y += affinity)
 		for (float x = -1.0f; x < 1.0f; x += affinity)
 			sprites.push_back(new Sprite(x, y, affinity, affinity,
-			                             glm::vec4((rand() % 1000) / 1000.0, (rand() % 1000) / 1000.0,
-			                                       (rand() % 1000) / 1000.0, 1)));
+										 glm::vec4((rand() % 1000) / 1000.0, (rand() % 1000) / 1000.0,
+												   (rand() % 1000) / 1000.0, 1)));
 
 	for (int i = 0; i < sprites.size(); i++) {
 		root.addChild(*sprites[i]);
 	}
 
-	Sprite littlesprite(-0.5f, -0.5f, 1.0f, 1.0f, glm::vec4(1.0, 0, 1.0, 1));
+	Sprite goat(-0.5f, -0.5f, 1.0f, 1.0f, glm::vec4(1.0, 0, 1.0, 1));
+//    Sprite goat2(-0.5f, -0.5f, 1.0f, 1.0f, glm::vec4(1.0, 0, 1.0, 1));
 
 	Texture texture("images/cartoon_goat.png");
 
 	LOG(sprites.size() << " sprites");
 
 	Scene scene;
-//	Layer *guiLayer = scene.createLayer(100);
-	Layer *worldLayer = scene.createLayer(0);
+	Layer *worldLayer = scene.createLayer(&batchgui, 1);
+	Layer *guiLayer = scene.createLayer(&batch, 10);
 
-	worldLayer->setRenderer(&batch);
-	worldLayer->addChild(littlesprite);
-//	guiLayer->setRenderer(&batch);
-//	guiLayer->addChild(littlesprite);
+	worldLayer->addChild(goat);
+	guiLayer->addChild(root);
 
-	double sx = 0.2, sy = 0;
+	root.getTransform().setScale(glm::vec3(0.1, 0.1, 1));
+	root.getTransform().setPosition(glm::vec3(-0.9f, 0.9f, 0));
+
+	double sx = 0.5, sy = 0.5;
 	double x = 0, y = 0;
 	float angle = 0;
 	float omega = (float) (M_PI * 2.0f / 18.0f);
 
-	float fpsTimer = 0.0f;
+	float fpsTime = 0.0f;
 	int fpsCount = 0;
 	Timer timer;
 	timer.reset();
 	timer.elapsed();
 
+	input.registerKeyAlias("up", Input::UP);
+	input.registerKeyAlias("down", Input::DOWN);
+	input.registerKeyAlias("left", Input::LEFT);
+	input.registerKeyAlias("right", Input::RIGHT);
+
+//    window.close();
+
 	while (!window.isClosed()) {
 		window.clear();
 		float delta = (float) timer.elapsed();
 
-		//input.getCursorPosition(x, y);
+//		input.getCursorPosition(x, y);
 
-		x += delta * sx;
-		y += delta * sy;
+//		x += delta * sx;
+//		y += delta * sy;
 		angle += omega * delta;
+
+		if (input.keyDown("up")) {
+			y += delta * sy;
+		}
+		if (input.keyDown("down")) {
+			y -= delta * sy;
+		}
+		if (input.keyDown("left")) {
+			x -= delta * sx;
+		}
+		if (input.keyDown("right")) {
+			x += delta * sx;
+		}
 
 		if ((input.keyDown(Input::LEFT_CONTROL) || input.keyDown(Input::RIGHT_CONTROL)) && input.keyPressed(Input::R)) {
 			x = y = 0;
@@ -103,46 +124,29 @@ int main() {
 			window.close();
 		}
 
-
-//		batch.pushMatrix(glm::translate(glm::vec3(2.0f * (x / window.getWidth() - 0.5f), 2.0f * (0.5f - y / window.getHeight()), 0.0f)));
-//		batch.pushMatrix(glm::translate(glm::vec3(x, y, 0)));
-		batch.pushMatrix(glm::rotate(angle, glm::vec3(0.0, 0.0, -1.0)));
-//		batch.pushMatrix(glm::scale(glm::vec3(2.0, 2.0, 2.0)));
-
 		simple.bind();
 		texture.bind(0);
 
-//		batch.begin();
-//		for (auto sprite : sprites)
-//			batch.submit(&(sprite->getRenderable()));
-//		batch.submit(&littlesprite.getQuad());
-//		batch.end();
+//		maths::quat q(angle, maths::vec3(0, 0, 1));
+		goat.getTransform().setPosition(glm::vec3(x, y, 0));
+//		goat.getTransform().setRotation(glm::quat(-q.w, q.x, q.y, q.z));
 
-//		batch.popMatrix();
-
-//		batch.flush();
-
-		//littlesprite.getTransform().setRotation(gtx::quaternion::angleAxis(0, glm::vec3(1, 0, 0)))
+//		guiLayer->render();
+//		worldLayer->render();
 		scene.render();
-//		batch.submit(&littlesprite.getQuad());
-//		littlesprite.renderObject(&batch);
 
 		texture.unbind();
 		simple.unbind();
 
-//		batch.popMatrix();
-		batch.popMatrix();
-
 		input.clear();
 		window.update();
-		fpsTimer += delta;
+		fpsTime += delta;
 		fpsCount++;
-		if (fpsTimer >= 1) {
-			fpsTimer--;
+		if (fpsTime >= 1) {
+			fpsTime--;
 			LOG(fpsCount << " fps");
 			fpsCount = 0;
 		}
-		LOG(timer.time());
 	}
 
 	return 0;

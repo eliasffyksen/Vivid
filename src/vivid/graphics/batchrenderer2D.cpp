@@ -58,6 +58,11 @@ namespace vivid { namespace graphics {
 	void BatchRenderer2D::submit(const Quad* renderable) const {
 		if (indexCount >= BATCH_RENDERER_INDICES_SIZE)
 			return;
+
+		if(buffer == nullptr) {
+			LOGE("[ERROR] Render buffer is a nullptr, may be caused by opening more than one renderer at the same time");
+			return;
+		}
 		
 		const glm::vec3& position = renderable->getPosition();
 		const glm::vec2& size = renderable->getSize();
@@ -99,12 +104,14 @@ namespace vivid { namespace graphics {
 	}
 	
 	void BatchRenderer2D::flush() {
-		glBindVertexArray(vao);
+        glBindVertexArray(vao);
+        glBindBuffer(GL_ARRAY_BUFFER, vbo);
 		ibo->bind();
 		
 		glDrawElements(GL_TRIANGLES, indexCount, GL_UNSIGNED_INT, nullptr);
 		
 		ibo->unbind();
+        glBindBuffer(GL_ARRAY_BUFFER, 0);
 		glBindVertexArray(0);
 		
 		indexCount = 0;
