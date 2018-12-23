@@ -8,8 +8,9 @@
 #include "gameobject.h"
 
 namespace vivid {
-	
-	class Camera : public GameObject {};
+
+	class Camera : public GameObject {
+	};
 
 }
 

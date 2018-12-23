@@ -16,8 +16,7 @@ namespace vivid {
 		std::chrono::time_point<std::chrono::system_clock> start;
 	public:
 		Timer()
-				: last(timer.now()), start(timer.now())
-		{}
+				: last(timer.now()), start(timer.now()) {}
 
 		void reset() {
 			start = timer.now();
@@ -35,5 +34,5 @@ namespace vivid {
 		}
 
 	};
-	
+
 }

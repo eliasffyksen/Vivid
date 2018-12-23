@@ -31,9 +31,9 @@ namespace vivid {
 		double mouseX, mouseY;
 
 		mutable std::unordered_map<std::string, int> keyAliasMap;
-		
+
 	public:
-		Input(graphics::Window& window);
+		explicit Input(graphics::Window &window);
 
 		bool keyDown(int) const;
 		bool keyPressed(int) const;
@@ -41,19 +41,19 @@ namespace vivid {
 		bool mouseButtonDown(int) const;
 		bool mouseButtonPressed(int) const;
 		bool mouseButtonReleased(int) const;
-		
-		bool keyDown(const std::string& alias) const;
-		bool keyPressed(const std::string& alias) const;
+
+		bool keyDown(const std::string &alias) const;
+		bool keyPressed(const std::string &alias) const;
 		bool keyReleased(const std::string &alias) const;
-		bool mouseButtonDown(const std::string& alias) const;
-		bool mouseButtonPressed(const std::string& alias) const;
-		bool mouseButtonReleased(const std::string& alias) const;
+		bool mouseButtonDown(const std::string &alias) const;
+		bool mouseButtonPressed(const std::string &alias) const;
+		bool mouseButtonReleased(const std::string &alias) const;
 
 		void getCursorPosition(double &, double &) const;
-		
-		void registerKeyAlias(const std::string& alias, int key) const;
-		void deleteKeyAlias(const std::string& alias) const;
-		
+
+		void registerKeyAlias(const std::string &alias, int key) const;
+		void deleteKeyAlias(const std::string &alias) const;
+
 		void clear();
 	public:
 		void keyCallback(int, int, int, int);
@@ -78,5 +78,5 @@ namespace vivid {
 			RIGHT_SHIFT, RIGHT_CONTROL, RIGHT_ALT, RIGHT_SUPER, MENU
 		};
 	};
-	
+
 }

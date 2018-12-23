@@ -135,7 +135,7 @@ namespace vivid { namespace maths {
 
 		mat4 mul(const mat4 &right) const;
 		vec4 mul(const vec4 &vec) const;
-		vec4 mul(const vec3 &vec, const float& w) const;
+		vec4 mul(const vec3 &vec, const float &w) const;
 	public:
 		static mat4 translation(const vec3 &translation);
 		static mat4 rotation(const quat &rotation);

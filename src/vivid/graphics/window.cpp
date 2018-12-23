@@ -102,7 +102,7 @@ namespace vivid { namespace graphics {
 
 	void Window::framebufferSizeCallback(GLFWwindow *window, int width, int height) {
 		auto win = getWindowPointer<Window>(window, VIVID_WINDOW_POINTER);
-		if(win != nullptr) {
+		if (win != nullptr) {
 			win->width = width;
 			win->height = height;
 		}
@@ -111,19 +111,19 @@ namespace vivid { namespace graphics {
 
 	void Window::keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods) {
 		auto input = getWindowPointer<Input>(window, VIVID_INPUT_POINTER);
-		if(input != nullptr)
+		if (input != nullptr)
 			input->keyCallback(key, scancode, action, mods);
 	}
 
 	void Window::cursorPositionCallback(GLFWwindow *window, double xpos, double ypos) {
 		auto input = getWindowPointer<Input>(window, VIVID_INPUT_POINTER);
-		if(input != nullptr)
+		if (input != nullptr)
 			input->cursorPositionCallback(xpos, ypos);
 	}
 
 	void Window::mouseButtonCallback(GLFWwindow *window, int button, int action, int mods) {
 		auto input = getWindowPointer<Input>(window, VIVID_INPUT_POINTER);
-		if(input != nullptr)
+		if (input != nullptr)
 			input->mouseButtonCallback(button, action, mods);
 	}
 

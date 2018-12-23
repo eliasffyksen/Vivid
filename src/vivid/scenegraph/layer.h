@@ -8,22 +8,24 @@
 #include <vivid/scenegraph/camera.h>
 
 namespace vivid {
-	
+
 	class Layer {
 	private:
 		GameObject root;
-		graphics::Renderer2D* renderer;
-		Camera* currentCamera;
+		graphics::Renderer2D *renderer;
+		Camera *currentCamera;
 	public:
-		Layer(graphics::Renderer2D* renderer);
-		
+		Layer(graphics::Renderer2D *renderer);
+
 		glm::mat4 getViewMatrix();
-		
-		void update(const Input& input);
+
+		void update(const Input &input);
+
 		void render();
-		
-		void addChild(GameObject& child);
-		void removeChild(GameObject& child);
+
+		void addChild(GameObject &child);
+
+		void removeChild(GameObject &child);
 	};
-	
+
 }

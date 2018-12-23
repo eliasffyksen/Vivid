@@ -297,11 +297,11 @@ namespace vivid { namespace maths {
 	mat4 mat4::transpose() {
 		mat4 res(0);
 
-		for(int i = 0; i < 16; i++) {
-			int x = i%4;
-			int y = i/4;
+		for (int i = 0; i < 16; i++) {
+			int x = i % 4;
+			int y = i / 4;
 
-			res.m[y + x * 4] = this->m[x + y*4];
+			res.m[y + x * 4] = this->m[x + y * 4];
 		}
 
 		return res;
@@ -333,7 +333,7 @@ namespace vivid { namespace maths {
 		return res;
 	}
 
-	vec4 mat4::mul(const vec3 &vec, const float& w) const {
+	vec4 mat4::mul(const vec3 &vec, const float &w) const {
 		return mul(vec4(vec, w));
 	}
 
@@ -364,10 +364,22 @@ namespace vivid { namespace maths {
 		const float y = rotation.y;
 		const float z = rotation.z;
 
-		res.m[0 * 4 + 0] = w*w + x*x - y*y - z*z; res.m[0 * 4 + 1] = 2*x*y - 2*w*z;         res.m[0 * 4 + 2] = 2*x*z + 2*w*y;         res.m[0 * 4 + 3] = 0;
-		res.m[1 * 4 + 0] = 2*x*y + 2*w*z;         res.m[1 * 4 + 1] = w*w - x*x + y*y - z*z; res.m[1 * 4 + 2] = 2*y*z-2*w*x;         res.m[1 * 4 + 3] = 0;
-		res.m[2 * 4 + 0] = 2*x*z - 2*w*y;         res.m[2 * 4 + 1] = 2*y*z + 2*w*x;           res.m[2 * 4 + 2] = w*w - x*x - y*y + z*z; res.m[2 * 4 + 3] = 0;
-		res.m[3 * 4 + 0] = 0;                     res.m[3 * 4 + 1] = 0;                     res.m[3 * 4 + 2] = 0;                     res.m[3 * 4 + 3] = w*w + x*x + y*y + z*z;
+		res.m[0 * 4 + 0] = w * w + x * x - y * y - z * z;
+		res.m[0 * 4 + 1] = 2 * x * y - 2 * w * z;
+		res.m[0 * 4 + 2] = 2 * x * z + 2 * w * y;
+		res.m[0 * 4 + 3] = 0;
+		res.m[1 * 4 + 0] = 2 * x * y + 2 * w * z;
+		res.m[1 * 4 + 1] = w * w - x * x + y * y - z * z;
+		res.m[1 * 4 + 2] = 2 * y * z - 2 * w * x;
+		res.m[1 * 4 + 3] = 0;
+		res.m[2 * 4 + 0] = 2 * x * z - 2 * w * y;
+		res.m[2 * 4 + 1] = 2 * y * z + 2 * w * x;
+		res.m[2 * 4 + 2] = w * w - x * x - y * y + z * z;
+		res.m[2 * 4 + 3] = 0;
+		res.m[3 * 4 + 0] = 0;
+		res.m[3 * 4 + 1] = 0;
+		res.m[3 * 4 + 2] = 0;
+		res.m[3 * 4 + 3] = w * w + x * x + y * y + z * z;
 
 		return res;
 	}

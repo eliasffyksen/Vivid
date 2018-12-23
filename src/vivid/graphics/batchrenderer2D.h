@@ -32,7 +32,7 @@ namespace vivid { namespace graphics {
 		~BatchRenderer2D();
 		
 		void begin() override;
-		void submit(const Quad* renderable) const override;
+		void submit(const Quad* quad) const override;
 		void end() override;
 		void flush() override;
 	private:

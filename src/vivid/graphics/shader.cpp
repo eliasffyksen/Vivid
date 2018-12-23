@@ -9,7 +9,7 @@
 
 namespace vivid { namespace graphics {
 
-	unsigned int createShader(const unsigned int& type, const std::string& filePath) {
+	unsigned int createShader(const unsigned int &type, const std::string &filePath) {
 		unsigned int shader = glCreateShader(type);
 
 		const std::string vertexSource = loadTextFile(filePath);
@@ -57,12 +57,12 @@ namespace vivid { namespace graphics {
 		glDeleteShader(vertexShader);
 		glDeleteShader(fragmentShader);
 	}
-	
+
 	Shader::~Shader() {
 		glDeleteProgram(program);
 	}
-	
-	bool Shader::loadUniform(const std::string& name) {
+
+	bool Shader::loadUniform(const std::string &name) {
 		GLint location = glGetUniformLocation(program, name.c_str());
 		if (location != -1) {
 			uniformLocations[name] = location;
@@ -70,46 +70,46 @@ namespace vivid { namespace graphics {
 		}
 		return false;
 	}
-	
-	void Shader::setUniform(const std::string& name, const float& value) {
+
+	void Shader::setUniform(const std::string &name, const float &value) {
 		glUniform1f(getUniformLocation(name), value);
 	}
-	void Shader::setUniform(const std::string& name, const float& x, const float& y) {
+	void Shader::setUniform(const std::string &name, const float &x, const float &y) {
 		glUniform2f(getUniformLocation(name), x, y);
 	}
-	void Shader::setUniform(const std::string& name, const glm::vec2& vec) {
+	void Shader::setUniform(const std::string &name, const glm::vec2 &vec) {
 		glUniform2f(getUniformLocation(name), vec.x, vec.y);
 	}
-	void Shader::setUniform(const std::string& name, const float& x, const float& y, const float& z) {
+	void Shader::setUniform(const std::string &name, const float &x, const float &y, const float &z) {
 		glUniform3f(getUniformLocation(name), x, y, z);
 	}
-	void Shader::setUniform(const std::string& name, const glm::vec3& vec) {
+	void Shader::setUniform(const std::string &name, const glm::vec3 &vec) {
 		glUniform3f(getUniformLocation(name), vec.x, vec.y, vec.z);
 	}
-	void Shader::setUniform(const std::string& name, const float& x, const float& y, const float& z, const float& w) {
+	void Shader::setUniform(const std::string &name, const float &x, const float &y, const float &z, const float &w) {
 		glUniform4f(getUniformLocation(name), x, y, z, w);
 	}
-	void Shader::setUniform(const std::string& name, const glm::vec4& vec) {
+	void Shader::setUniform(const std::string &name, const glm::vec4 &vec) {
 		glUniform4f(getUniformLocation(name), vec.x, vec.y, vec.z, vec.w);
 	}
-	void Shader::setUniform(const std::string& name, const glm::mat4& mat) {
+	void Shader::setUniform(const std::string &name, const glm::mat4 &mat) {
 		glUniformMatrix4fv(getUniformLocation(name), 1, GL_FALSE, &mat[0][0]);
 	}
-	
+
 	void Shader::bind() const {
 		glUseProgram(program);
 	}
-	
+
 	void Shader::unbind() const {
 		glUseProgram(0);
 	}
-	
-	int Shader::getUniformLocation(const std::string& name) {
+
+	int Shader::getUniformLocation(const std::string &name) {
 		auto it = uniformLocations.find(name);
 		if (it != uniformLocations.end()) {
 			return it->second;
 		}
 		return -1;
 	}
-	
+
 }}
