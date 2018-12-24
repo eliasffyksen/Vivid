@@ -9,15 +9,21 @@
 #include <GLFW/glfw3.h>
 
 #include <string>
+#include <vivid/events/event.h>
 
 namespace vivid { namespace graphics {
+
+	struct WindowData {
+		std::string title;
+		int width, height;
+		void (*eventCallback)(event::Event&);
+	};
 
 	class Window {
 	public:
 		GLFWwindow *window;
 	private:
-		std::string title;
-		int width, height;
+		WindowData data;
 	public:
 		Window(std::string title, int width, int height);
 		~Window();
@@ -27,16 +33,10 @@ namespace vivid { namespace graphics {
 		void close();
 		bool isClosed() const;
 
-		template<typename P>
-		P *getWindowPointer(int pointerID);
-		void setWindowPointer(int pointerID, void *pointer);
+		void setEventCallback(void(*eventCallbackFunction)(event::Event&));
 
-		void registerInputListener(void *input);
-
-		inline int getWidth() const { return width; }
-
-		inline int getHeight() const { return height; }
-
+		inline int getWidth() const { return data.width; }
+		inline int getHeight() const { return data.height; }
 	private:
 		bool init();
 
@@ -44,10 +44,6 @@ namespace vivid { namespace graphics {
 		static void keyCallback(GLFWwindow *window, int, int, int, int);
 		static void cursorPositionCallback(GLFWwindow *window, double, double);
 		static void mouseButtonCallback(GLFWwindow *window, int, int, int);
-
-		static void setWindowPointer(GLFWwindow *window, int pointerID, void *pointer);
-		template<typename P>
-		static P *getWindowPointer(GLFWwindow *window, int pointerID);
 	};
 
 }}

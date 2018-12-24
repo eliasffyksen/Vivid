@@ -6,9 +6,7 @@
 
 namespace vivid {
 
-	Input::Input(graphics::Window &window)
-			: window(&window) {
-
+	Input::Input() {
 		for (int i = 0; i < VIVID_MAX_KEYS; i++) {
 			keys[i] = false;
 			keysDown[i] = 0;
@@ -22,8 +20,6 @@ namespace vivid {
 
 		mouseX = 0;
 		mouseY = 0;
-
-		window.registerInputListener(this);
 	}
 
 	bool Input::keyDown(int key) const {
@@ -126,19 +122,12 @@ namespace vivid {
 		}
 	}
 
-	void Input::keyCallback(int key, int scancode, int action, int mods) {
-		switch (action) {
-			case GLFW_PRESS:
-				keys[key] = true;
-				keysDown[key] = inputCounter;
-				break;
-			case GLFW_RELEASE:
-				keys[key] = false;
-				keysUp[key] = inputCounter;
-				break;
-			default:
-				break;
-		}
+	void Input::keyPressCallback(int key, int repeats) {
+		keys[key] = true;
+	}
+
+	void Input::keyReleaseCallback(int key) {
+		keys[key] = false;
 	}
 
 	void Input::cursorPositionCallback(double xpos, double ypos) {

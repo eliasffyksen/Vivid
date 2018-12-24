@@ -33,7 +33,7 @@ namespace vivid {
 		mutable std::unordered_map<std::string, int> keyAliasMap;
 
 	public:
-		explicit Input(graphics::Window &window);
+		Input();
 
 		bool keyDown(int) const;
 		bool keyPressed(int) const;
@@ -56,7 +56,8 @@ namespace vivid {
 
 		void clear();
 	public:
-		void keyCallback(int, int, int, int);
+		void keyPressCallback(int key, int repeats);
+		void keyReleaseCallback(int key);
 		void cursorPositionCallback(double, double);
 		void mouseButtonCallback(int, int, int);
 	public:

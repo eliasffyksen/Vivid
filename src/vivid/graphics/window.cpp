@@ -5,11 +5,16 @@
 #include "window.h"
 
 #include <vivid/input/input.h>
+#include <vivid/events/windowEvent.h>
+#include <vivid/events/keyEvent.h>
+#include <vivid/events/mouseEvent.h>
 
 namespace vivid { namespace graphics {
 
-	Window::Window(std::string title, int width, int height)
-			: title(std::move(title)), width(width), height(height) {
+	Window::Window(std::string title, int width, int height) {
+		data.title = std::move(title);
+		data.width = width;
+		data.height = height;
 		if (!init())
 			glfwTerminate();
 	}
@@ -19,6 +24,8 @@ namespace vivid { namespace graphics {
 	}
 
 	bool Window::init() {
+		data.eventCallback = nullptr;
+
 		if (!glfwInit()) {
 			LOGE("Failed to initialize GLFW.\n");
 			return false;
@@ -30,7 +37,7 @@ namespace vivid { namespace graphics {
 		glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // To make MacOS happy; should not be needed
 		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-		window = glfwCreateWindow(width, height, title.c_str(), nullptr, nullptr);
+		window = glfwCreateWindow(data.width, data.height, data.title.c_str(), nullptr, nullptr);
 		if (!window) {
 			glfwTerminate();
 			std::cout << "Failed to create window..." << std::endl;
@@ -38,8 +45,7 @@ namespace vivid { namespace graphics {
 		}
 
 		glfwMakeContextCurrent(window);
-		glfwSetWindowUserPointer(window, new void *[VIVID_POINTER_MAX]);
-		setWindowPointer(window, VIVID_WINDOW_POINTER, this);
+		glfwSetWindowUserPointer(window, &data);
 
 		glfwSetFramebufferSizeCallback(window, Window::framebufferSizeCallback);
 		glfwSetKeyCallback(window, Window::keyCallback);
@@ -75,56 +81,63 @@ namespace vivid { namespace graphics {
 		return glfwWindowShouldClose(window) == 1;
 	}
 
-	template<typename P>
-	P *Window::getWindowPointer(int pointerID) {
-		return getWindowPointer<P>(this->window, pointerID);
-	}
-
-	void Window::setWindowPointer(int pointerID, void *pointer) {
-		setWindowPointer(this->window, pointerID, pointer);
-	}
-
-	void Window::registerInputListener(void *input) {
-		setWindowPointer(VIVID_INPUT_POINTER, input);
-	}
-
-	void Window::setWindowPointer(GLFWwindow *window, int pointerID, void *pointer) {
-		void **ptrList = (void **) glfwGetWindowUserPointer(window);
-		ptrList[pointerID] = pointer;
-	}
-
-	template<typename P>
-	P *Window::getWindowPointer(GLFWwindow *window, int pointerID) {
-		P **ptrList = (P **) glfwGetWindowUserPointer(window);
-		P *ptr = ptrList[pointerID];
-		return ptr;
+	void Window::setEventCallback(void(*eventCallbackFunction)(event::Event &)) {
+		data.eventCallback = eventCallbackFunction;
 	}
 
 	void Window::framebufferSizeCallback(GLFWwindow *window, int width, int height) {
-		auto win = getWindowPointer<Window>(window, VIVID_WINDOW_POINTER);
-		if (win != nullptr) {
-			win->width = width;
-			win->height = height;
-		}
-		glViewport(0, 0, width, height);
+		WindowData& win = *(WindowData*) glfwGetWindowUserPointer(window);
+		win.width = width;
+		win.height = height;
+		vivid::event::WindowResizeEvent event(width, height);
+		win.eventCallback(event);
 	}
 
 	void Window::keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods) {
-		auto input = getWindowPointer<Input>(window, VIVID_INPUT_POINTER);
-		if (input != nullptr)
-			input->keyCallback(key, scancode, action, mods);
+		WindowData& win = *(WindowData*) glfwGetWindowUserPointer(window);
+		switch (action) {
+			case GLFW_PRESS: {
+				event::KeyPressEvent event(key, 0);
+				win.eventCallback(event);
+				break;
+			}
+			case GLFW_RELEASE: {
+				event::KeyReleaseEvent event(key);
+				win.eventCallback(event);
+				break;
+			}
+			case GLFW_REPEAT: {
+				event::KeyPressEvent event(key, 1);
+				win.eventCallback(event);
+				break;
+			}
+			default:
+				break;
+		}
 	}
 
-	void Window::cursorPositionCallback(GLFWwindow *window, double xpos, double ypos) {
-		auto input = getWindowPointer<Input>(window, VIVID_INPUT_POINTER);
-		if (input != nullptr)
-			input->cursorPositionCallback(xpos, ypos);
+	void Window::cursorPositionCallback(GLFWwindow *window, double xPos, double yPos) {
+		WindowData& win = *(WindowData*) glfwGetWindowUserPointer(window);
+		event::MouseMoveEvent event((float) xPos, (float) yPos);
+		win.eventCallback(event);
 	}
 
 	void Window::mouseButtonCallback(GLFWwindow *window, int button, int action, int mods) {
-		auto input = getWindowPointer<Input>(window, VIVID_INPUT_POINTER);
-		if (input != nullptr)
-			input->mouseButtonCallback(button, action, mods);
+		WindowData& win = *(WindowData*) glfwGetWindowUserPointer(window);
+		switch (action) {
+			case GLFW_PRESS: {
+				event::MouseButtonPressEvent event(button);
+				win.eventCallback(event);
+				break;
+			}
+			case GLFW_RELEASE: {
+				event::MouseButtonReleaseEvent event(button);
+				win.eventCallback(event);
+				break;
+			}
+			default:
+				break;
+		}
 	}
 
 }}

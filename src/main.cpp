@@ -18,16 +18,31 @@
 #include <glm/gtx/quaternion.hpp>
 #include <glm/gtc/quaternion.hpp>
 
+#include "vivid/events/windowEvent.h"
+
+bool handleResize(vivid::event::WindowResizeEvent &event) {
+	//LOG("Resizing to " << event.width << "x" << event.height);
+	return true;
+}
+
+void handleEvents(vivid::event::Event &event) {
+	LOG(event);
+
+	vivid::event::EventDispatcher dispatcher(event);
+	dispatcher.dispatch<vivid::event::WindowResizeEvent>(handleResize);
+}
+
 int main() {
 	using namespace vivid;
 	using namespace graphics;
 
 	Window window("Vivid", 600, 600); // THIS HAS TO BE THE FIRST THING!!
-	Input input(window);
+	window.setEventCallback(handleEvents);
+	Input input;
 
 	LOG("--------------------------------------------------------------------------");
 	LOG("    Running Vivid Engine version " << VIVID_VERSION_MAJOR << "." << VIVID_VERSION_MINOR
-											<< (VIVID_DEBUG ? " (test build)" : ""));
+	                                        << (VIVID_DEBUG ? " (test build)" : ""));
 	LOG("    Opengl " << glGetString(GL_VERSION));
 	LOG("--------------------------------------------------------------------------");
 	LOG("");
@@ -52,8 +67,8 @@ int main() {
 	for (float y = -1.0f; y < 1.0f; y += affinity)
 		for (float x = -1.0f; x < 1.0f; x += affinity)
 			sprites.push_back(new Sprite(x, y, affinity, affinity,
-										 glm::vec4((rand() % 1000) / 1000.0, (rand() % 1000) / 1000.0,
-												   (rand() % 1000) / 1000.0, 1)));
+			                             glm::vec4((rand() % 1000) / 1000.0, (rand() % 1000) / 1000.0,
+			                                       (rand() % 1000) / 1000.0, 1)));
 
 	for (int i = 0; i < sprites.size(); i++) {
 		root.addChild(*sprites[i]);
@@ -121,7 +136,8 @@ int main() {
 			x = y = 0;
 		}
 		if ((input.keyDown(Input::LEFT_CONTROL) || input.keyDown(Input::RIGHT_CONTROL)) && input.keyPressed(Input::W)) {
-			window.close();
+			event::WindowCloseEvent close;
+			handleEvents(close);
 		}
 
 		simple.bind();

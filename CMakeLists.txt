@@ -131,7 +131,7 @@ set(
         src/vivid/util/maths.cpp
         src/vivid/util/maths.h
 		src/vivid/util/resource.cpp
-		src/vivid/util/resource.h src/vivid/scenegraph/scene.cpp src/vivid/scenegraph/scene.h)
+		src/vivid/util/resource.h src/vivid/scenegraph/scene.cpp src/vivid/scenegraph/scene.h src/vivid/events/event.h src/vivid/events/windowEvent.h src/vivid/events/keyEvent.h src/vivid/events/mouseEvent.h src/vivid/core.cpp src/vivid/core.h)
 
 add_compile_definitions(VIVID_BUILD=true)
 
