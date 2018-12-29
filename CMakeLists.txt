@@ -101,7 +101,7 @@ set(
 		src/vivid/graphics/shader.cpp
 		src/vivid/graphics/window.h
 		src/vivid/graphics/window.cpp
-		src/vivid/vivid.h
+		src/vivid/core.h
 		src/vivid/util/timer.h
 		src/vivid/input/input.cpp
 		src/vivid/input/input.h
@@ -131,7 +131,7 @@ set(
         src/vivid/util/maths.cpp
         src/vivid/util/maths.h
 		src/vivid/util/resource.cpp
-		src/vivid/util/resource.h src/vivid/scenegraph/scene.cpp src/vivid/scenegraph/scene.h src/vivid/events/event.h src/vivid/events/windowEvent.h src/vivid/events/keyEvent.h src/vivid/events/mouseEvent.h src/vivid/core.cpp src/vivid/core.h)
+		src/vivid/util/resource.h src/vivid/scenegraph/scene.cpp src/vivid/scenegraph/scene.h src/vivid/events/event.h src/vivid/events/windowEvent.h src/vivid/events/keyEvent.h src/vivid/events/mouseEvent.h src/vivid/vivid.cpp src/vivid/vivid.h)
 
 add_compile_definitions(VIVID_BUILD=true)
 

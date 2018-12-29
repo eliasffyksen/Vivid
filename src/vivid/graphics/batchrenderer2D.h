@@ -4,9 +4,9 @@
 
 #pragma once
 
-#include "renderer2D.h"
-#include "../scenegraph/sprite.h"
-#include "buffers/buffers.h"
+#include <vivid/graphics/renderer2D.h>
+#include <vivid/scenegraph/sprite.h>
+#include <vivid/graphics/buffers/buffers.h>
 
 namespace vivid { namespace graphics {
 

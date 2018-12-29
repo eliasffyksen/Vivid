@@ -9,7 +9,7 @@
 #include "tree.h"
 #include <vector>
 
-namespace vivid { namespace util {
+namespace vivid {
 
 // The order of which symbol comes first in the 3-bit lengths specifications for the first huffman tree
 // (the meta tree, aka the one that is used to create the literal and distance trees)
@@ -22,15 +22,35 @@ namespace vivid { namespace util {
 	static const unsigned int offsets[30] = {1, 2, 3, 4, 5, 7, 9, 13, 17, 25, 33, 49, 65, 97, 129, 193, 257, 385, 513, 769, 1025, 1537, 2049, 3073, 4097, 6145, 8193, 12289, 16385, 24577};
 // How many extra bits are needed to specify the actual offset for the offset code
 	static const unsigned int offsetsExtraBits[30] = {0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13};
-	
-	Image::Image(const std::string& path) {
+
+	Image::Image(const unsigned char *const data, const unsigned int &width, const unsigned int &height, const unsigned int &colorFormat) {
+		this->data = new unsigned char[(colorFormat == VIVID_IMAGE_FORMAT_RGBA ? 4 : 3) * width * height];
+		memcpy(this->data, data, (colorFormat == VIVID_IMAGE_FORMAT_RGBA ? 4 : 3) * width * height);
+		format.width = width;
+		format.height = height;
+		format.bitDepth = 8;
+		format.colorFormat = colorFormat;
+	}
+
+	Image::Image(const float *const data, const unsigned int &width, const unsigned int &height, const unsigned int &colorFormat) {
+		this->data = new unsigned char[(colorFormat == VIVID_IMAGE_FORMAT_RGBA ? 4 : 3) * width * height];
+		for (int i = 0; i < (colorFormat == VIVID_IMAGE_FORMAT_RGBA ? 4 : 3) * width * height; ++i) {
+			this->data[i] = (unsigned char) (data[i] * 255);
+		}
+		format.width = width;
+		format.height = height;
+		format.bitDepth = 8;
+		format.colorFormat = colorFormat;
+	}
+
+	Image::Image(const std::string &path) {
 		std::vector<Chunk> chunks;
 		{
 			// Loads the image file and formats the data in chunks (as per the PNG specification)
 			std::ifstream stream(path, std::ifstream::in | std::ifstream::ate | std::ifstream::binary);
 			auto size = (unsigned int) stream.tellg();
 			if (!stream.good()) {
-				data = new unsigned char[3] {0, 0, 0};
+				data = new unsigned char[3]{0, 0, 0};
 				format.width = 1;
 				format.height = 1;
 				format.bitDepth = 8;
@@ -38,19 +58,19 @@ namespace vivid { namespace util {
 				return;
 			}
 			stream.seekg(0, std::ifstream::beg);
-			
+
 			unsigned char fileData[size];
 			unsigned int position = 0;
 			char in;
 			while (stream.get(in))
 				fileData[position++] = (unsigned char) in;
-			
+
 			stream.close();
-			
+
 			loadChunks(chunks, fileData, size);
-			
+
 			// Sets the format of the image
-			std::vector<unsigned char>& dataIDHR = chunks[0].data; // the IDAT chunk
+			std::vector<unsigned char> &dataIDHR = chunks[0].data; // the IDAT chunk
 			format.width = dataIDHR[0] << 24 | dataIDHR[1] << 16 | dataIDHR[2] << 8 | dataIDHR[3];
 			format.height = dataIDHR[4] << 24 | dataIDHR[5] << 16 | dataIDHR[6] << 8 | dataIDHR[7];
 			format.bitDepth = dataIDHR[8];
@@ -60,7 +80,7 @@ namespace vivid { namespace util {
 			format.interlaceMethod = dataIDHR[12];
 			if (format.colorFormat == 0 || format.colorFormat == 4) {
 				std::cerr << "ERROR - wrong color type: " << format.colorFormat << std::endl;
-				data = new unsigned char[3] {0, 0, 0};
+				data = new unsigned char[3]{0, 0, 0};
 				format.width = 1;
 				format.height = 1;
 				format.bitDepth = 8;
@@ -68,35 +88,35 @@ namespace vivid { namespace util {
 				return;
 			}
 		}
-		
-		std::vector<int>* palette = nullptr;
-		
-		if(format.colorFormat == 3) {
+
+		std::vector<int> *palette = nullptr;
+
+		if (format.colorFormat == 3) {
 			unsigned int indexPLTE = 0;
-			while(chunks[++indexPLTE].type != "PLTE");
-			
+			while (chunks[++indexPLTE].type != "PLTE");
+
 			Chunk PLTE = chunks[indexPLTE];
-			
-			palette = new std::vector<int>(PLTE.length/3);
-			
-			for(int i = 0; i < PLTE.length/3; i++) {
-				(*palette)[i] = PLTE.data[3 * i] << 16 | PLTE.data[3*i + 1] << 8 | PLTE.data[3*i + 2];
+
+			palette = new std::vector<int>(PLTE.length / 3);
+
+			for (int i = 0; i < PLTE.length / 3; i++) {
+				(*palette)[i] = PLTE.data[3 * i] << 16 | PLTE.data[3 * i + 1] << 8 | PLTE.data[3 * i + 2];
 			}
 		}
-		
+
 		// figures out how many IDAT chunks exist
 		unsigned int firstIDAT = 0;
 		while (chunks[++firstIDAT].type != "IDAT");
 		unsigned int lastIDAT = firstIDAT;
 		while (++lastIDAT < chunks.size() && chunks[lastIDAT].type == "IDAT");
-		
+
 		Chunk firstPixelChunk = chunks[firstIDAT];
-		std::vector<unsigned char>& firstCompressedData = firstPixelChunk.data;
+		std::vector<unsigned char> &firstCompressedData = firstPixelChunk.data;
 //		todo: use dict and stuff
 		BitArray flagBits(firstCompressedData[1], 8);
 		bool fDict = flagBits.read(5, 1) != 0;
 		//std::cout << "has dict: " << fDict << std::endl;
-		
+
 		unsigned int pos = 0; // The current position in the bitstream
 		// The bit stream containing all the bits of the compressed data and then adds all the data to the bitstream
 		BitArray bitStream;
@@ -105,7 +125,7 @@ namespace vivid { namespace util {
 		for (unsigned int index = firstIDAT + 1; index < lastIDAT; index++)
 			for (unsigned char i : chunks[index].data)
 				bitStream.pushBack(i);
-		
+
 		std::vector<unsigned int> fixedTreeSymbols;
 		fixedTreeSymbols.reserve(288);
 		std::vector<unsigned int> fixedTreeLengths;
@@ -122,22 +142,22 @@ namespace vivid { namespace util {
 				fixedTreeLengths.push_back(8);
 		}
 		Tree fixedTree = Tree(fixedTreeSymbols, fixedTreeLengths);
-		
+
 		std::vector<unsigned char> dataStream;
 		dataStream.reserve((1 + format.width) * format.height);
-		
+
 		bool lastBlock = false;
 		while (!lastBlock) {
 			lastBlock = bitStream.read(pos, 1) == 1;
 			pos += 1;
 			unsigned short compressionMethod = (unsigned short) bitStream.read(pos, 2);
 			pos += 2;
-			
+
 			if (compressionMethod == 1) {
 				while (true) {
 					unsigned int code = fixedTree.uncompressOneCode(bitStream, pos, &pos);
-					
-					
+
+
 					if (code < 256) {
 						dataStream.emplace_back(code);
 					} else if (code == 256) {
@@ -147,13 +167,13 @@ namespace vivid { namespace util {
 						unsigned int length = lengths[code];
 						length += bitStream.read(pos, lengthsExtraBits[code]);
 						pos += lengthsExtraBits[code];
-						
+
 						unsigned int offsetCode = bitStream.read(pos, 5, true); // reads inverted
 						pos += 5;
 						unsigned int offset = offsets[offsetCode];
 						offset += bitStream.read(pos, offsetsExtraBits[offsetCode]);
 						pos += offsetsExtraBits[offsetCode];
-						
+
 						for (int i = 0; i < length; i++) {
 							dataStream.emplace_back(dataStream[dataStream.size() - offset]);
 						}
@@ -165,7 +185,7 @@ namespace vivid { namespace util {
 				unsigned int hdist = bitStream.read(pos + 5, 5) + 1;
 				unsigned int hlen = bitStream.read(pos + 10, 4) + 4;
 				pos += 14;
-				
+
 				// Creates the huffman tree that reads the length of the literal and distance trees
 				std::vector<unsigned int> metaTreeSymbols;
 				metaTreeSymbols.reserve(19);
@@ -183,50 +203,50 @@ namespace vivid { namespace util {
 					}
 				}
 				Tree metaTree(metaTreeSymbols, metaTreeLengths);
-				
+
 				std::vector<unsigned int> litAndDistLengths;
 				litAndDistLengths.reserve(hlit + hdist);
-				
+
 				while (litAndDistLengths.size() < hlit + hdist) {
 					unsigned int code = metaTree.uncompressOneCode(bitStream, pos, &pos);
-					
+
 					if (code <= 15) {
 						litAndDistLengths.push_back(code);
 					} else if (code == 16) {
 						unsigned int extra = bitStream.read(pos, 2);
 						pos += 2;
-						
-						unsigned int copyPos = (unsigned int) (litAndDistLengths.size() - 1);
+
+						unsigned int copyPos = ((unsigned int) litAndDistLengths.size() - 1);
 						for (unsigned int i = 0; i < 3 + extra; i++) {
 							litAndDistLengths.push_back(litAndDistLengths[copyPos]);
 						}
 					} else if (code == 17) {
 						unsigned int extra = bitStream.read(pos, 3);
 						pos += 3;
-						
+
 						for (unsigned int i = 0; i < 3 + extra; i++) {
 							litAndDistLengths.emplace_back(0);
 						}
 					} else/*if (code == 18)*/{
 						unsigned int extra = bitStream.read(pos, 7);
 						pos += 7;
-						
+
 						for (unsigned int i = 0; i < 11 + extra; i++) {
 							litAndDistLengths.emplace_back(0);
 						}
 					}
 				}
-				
+
 				std::vector<unsigned int> litSymbols;
 				litSymbols.reserve(hlit);
 				std::vector<unsigned int> distSymbols;
 				distSymbols.reserve(hdist);
-				
+
 				for (unsigned int i = 0; i < hlit; i++)
 					litSymbols.push_back(i);
 				for (unsigned int i = 0; i < hdist; i++)
 					distSymbols.push_back(i);
-				
+
 				std::vector<unsigned int> litLengths;
 				litLengths.reserve(hlit);
 				std::vector<unsigned int> distLengths;
@@ -235,13 +255,13 @@ namespace vivid { namespace util {
 					litLengths.emplace_back(litAndDistLengths[i]);
 				for (unsigned int i = 0; i < hdist; i++)
 					distLengths.emplace_back(litAndDistLengths[hlit + i]);
-				
+
 				Tree literalTree(litSymbols, litLengths);
 				Tree distTree(distSymbols, distLengths);
-				
+
 				while (true) {
 					unsigned int code = literalTree.uncompressOneCode(bitStream, pos, &pos);
-					
+
 					if (code < 256) {
 						dataStream.push_back((unsigned char) code);
 					} else if (code == 256) {
@@ -251,13 +271,13 @@ namespace vivid { namespace util {
 						unsigned int length = lengths[code];
 						length += bitStream.read(pos, lengthsExtraBits[code]);
 						pos += lengthsExtraBits[code];
-						
+
 						unsigned int offsetCode = distTree.uncompressOneCode(bitStream, pos, &pos);
-						
+
 						unsigned int offset = offsets[offsetCode];
 						offset += bitStream.read(pos, offsetsExtraBits[offsetCode], false);
 						pos += offsetsExtraBits[offsetCode];
-						
+
 						for (int i = 0; i < length; i++) {
 							dataStream.push_back(dataStream[dataStream.size() - offset]);
 						}
@@ -267,21 +287,21 @@ namespace vivid { namespace util {
 				unsigned int offsetFromByte = pos & 0x7;
 				if (offsetFromByte != 0)
 					pos += (8 - offsetFromByte);
-				
+
 				unsigned int length = bitStream.read(pos, 16);
 				pos += 32;
-				
+
 				for (unsigned int i = 0; i < length; i++) {
 					dataStream.emplace_back(bitStream.read(pos, 8));
 					pos += 8;
 				}
 			}
 		}
-		
-		// todo: add pixel creation for types 3, 2 and 4
+
+		// todo: add pixel creation for type 4 and check that type 2 and 3 actually work
 		if (format.colorFormat == 3) {
-			PixelRGB* pixels = new PixelRGB[format.width * format.height];
-			
+			auto *pixels = new PixelRGB[format.width * format.height];
+
 			unsigned int actualWidth = 1 + format.width;
 			for (unsigned int y = 0; y < format.height; y++) {
 				for (unsigned int x = 0; x < format.width; x++) {
@@ -291,12 +311,12 @@ namespace vivid { namespace util {
 					pixels[x + y * format.width].b = (unsigned char) ((*palette)[dataStream[i]] & 0xFF);
 				}
 			}
-			
-			data = (unsigned char*) pixels;
+
+			data = (unsigned char *) pixels;
 			format.colorFormat = VIVID_IMAGE_FORMAT_RGB;
 		} else if (format.colorFormat == 2) {
-			PixelRGB* pixels = new PixelRGB[format.width * format.height];
-			
+			auto *pixels = new PixelRGB[format.width * format.height];
+
 			unsigned int actualWidth = 1 + format.width * 3;
 			for (unsigned int y = 0; y < format.height; y++) {
 				for (unsigned int x = 0; x < format.width; x++) {
@@ -306,12 +326,12 @@ namespace vivid { namespace util {
 					pixels[x + y * format.width].b = (unsigned char) dataStream[i + 2];
 				}
 			}
-			
-			data = (unsigned char*) pixels;
+
+			data = (unsigned char *) pixels;
 			format.colorFormat = VIVID_IMAGE_FORMAT_RGB;
 		} else if (format.colorFormat == 6) {
-			PixelRGBA* pixels = new PixelRGBA[format.width * format.height];
-			
+			auto *pixels = new PixelRGBA[format.width * format.height];
+
 			unsigned int actualWidth = 1 + format.width * 4;
 			for (unsigned int y = 0; y < format.height; y++) {
 				for (unsigned int x = 0; x < format.width; x++) {
@@ -322,26 +342,26 @@ namespace vivid { namespace util {
 					pixels[x + y * format.width].a = (unsigned char) dataStream[i + 3];
 				}
 			}
-			
-			data = (unsigned char*) pixels;
+
+			data = (unsigned char *) pixels;
 			format.colorFormat = VIVID_IMAGE_FORMAT_RGBA;
 		}
 	}
-	
+
 	Image::~Image() {
 		delete[] data;
 	}
-	
-	void Image::loadChunks(std::vector<Chunk>& chunks, const unsigned char* data, unsigned int size) {
+
+	void Image::loadChunks(std::vector<Chunk> &chunks, const unsigned char *data, unsigned int size) {
 		unsigned int offset = 8;
 		while (offset < size)
 			chunks.push_back(loadChunk(data, offset));
 	}
-	
-	Chunk Image::loadChunk(const unsigned char* data, unsigned int& offset) {
+
+	Chunk Image::loadChunk(const unsigned char *data, unsigned int &offset) {
 		unsigned int chunkLength = (data[offset + 0] << 24) | (data[offset + 1] << 16) | (data[offset + 2] << 8) | (data[offset + 3]);
 		offset += 4;
-		
+
 		char charArray[5];
 		charArray[0] = data[offset + 0];
 		charArray[1] = data[offset + 1];
@@ -350,19 +370,27 @@ namespace vivid { namespace util {
 		charArray[4] = 0;
 		std::string chunkType(charArray);
 		offset += 4;
-		
+
 		std::vector<unsigned char> chunkData;
 		chunkData.reserve(chunkLength);
-		
+
 		for (int p = 0; p < chunkLength; p++) {
 			chunkData.push_back(data[offset + p]);
 		}
 		offset += chunkLength;
-		
+
 		unsigned int chunkCRC = (data[offset + 0] << 24) | (data[offset + 1] << 16) | (data[offset + 2] << 8) | (data[offset + 3]);
 		offset += 4;
-		
+
 		return Chunk(chunkLength, chunkType, chunkData, chunkCRC);
 	}
-	
-}}
+
+	const PixelRGBA Image::getPixel(const unsigned int &x, const unsigned int &y) {
+		if (getColorFormat() == VIVID_IMAGE_FORMAT_RGBA)
+			return ((PixelRGBA *) data)[x + y * format.width];
+		if (getColorFormat() == VIVID_IMAGE_FORMAT_RGB)
+			return PixelRGBA(((PixelRGB *) data)[x + y * format.width]);
+		return PixelRGBA(((PixelRGB *) data)[x + y * format.width]); // Shouldn't happen
+	}
+
+}

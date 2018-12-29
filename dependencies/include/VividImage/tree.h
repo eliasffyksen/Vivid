@@ -9,7 +9,7 @@
 #include <vector>
 #include <map>
 
-namespace vivid { namespace util {
+namespace vivid {
 	
 	class Tree {
 	private:
@@ -34,4 +34,4 @@ namespace vivid { namespace util {
 		void saveCodes();
 	};
 	
-}}
+}

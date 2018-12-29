@@ -37,20 +37,22 @@ namespace vivid { namespace graphics {
 		glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // To make MacOS happy; should not be needed
 		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-		window = glfwCreateWindow(data.width, data.height, data.title.c_str(), nullptr, nullptr);
-		if (!window) {
+		data.window = glfwCreateWindow(data.width, data.height, data.title.c_str(), nullptr, nullptr);
+		if (!data.window) {
 			glfwTerminate();
 			std::cout << "Failed to create window..." << std::endl;
 			return false;
 		}
 
-		glfwMakeContextCurrent(window);
-		glfwSetWindowUserPointer(window, &data);
+		glfwMakeContextCurrent(data.window);
+		glfwSetWindowUserPointer(data.window, &data);
 
-		glfwSetFramebufferSizeCallback(window, Window::framebufferSizeCallback);
-		glfwSetKeyCallback(window, Window::keyCallback);
-		glfwSetMouseButtonCallback(window, Window::mouseButtonCallback);
-		glfwSetCursorPosCallback(window, Window::cursorPositionCallback);
+		glfwSetWindowCloseCallback(data.window, Window::windowCloseCallback);
+		glfwSetWindowFocusCallback(data.window, Window::windowFocusCallback);
+		glfwSetFramebufferSizeCallback(data.window, Window::framebufferSizeCallback);
+		glfwSetKeyCallback(data.window, Window::keyCallback);
+		glfwSetMouseButtonCallback(data.window, Window::mouseButtonCallback);
+		glfwSetCursorPosCallback(data.window, Window::cursorPositionCallback);
 		glfwSwapInterval(0); // disables VSync
 
 		glewExperimental = GL_TRUE;
@@ -65,7 +67,7 @@ namespace vivid { namespace graphics {
 	}
 
 	void Window::update() {
-		glfwSwapBuffers(window);
+		glfwSwapBuffers(data.window);
 		glfwPollEvents();
 	}
 
@@ -74,22 +76,36 @@ namespace vivid { namespace graphics {
 	}
 
 	void Window::close() {
-		glfwSetWindowShouldClose(window, GL_TRUE);
+		glfwSetWindowShouldClose(data.window, GL_TRUE);
+		event::WindowCloseEvent event;
+		data.eventCallback(event);
 	}
 
 	bool Window::isClosed() const {
-		return glfwWindowShouldClose(window) == 1;
+		return glfwWindowShouldClose(data.window) == 1;
 	}
 
-	void Window::setEventCallback(void(*eventCallbackFunction)(event::Event &)) {
-		data.eventCallback = eventCallbackFunction;
+	void Window::setEventCallback(EventCallbackFunction eventCallback) {
+		data.eventCallback = std::move(eventCallback);
+	}
+
+	void Window::windowCloseCallback(GLFWwindow *window) {
+		WindowData& win = *(WindowData*) glfwGetWindowUserPointer(window);
+		event::WindowCloseEvent event;
+		win.eventCallback(event);
+	}
+
+	void Window::windowFocusCallback(GLFWwindow *window, int gainedFocus) {
+		WindowData& win = *(WindowData*) glfwGetWindowUserPointer(window);
+		event::WindowFocusEvent event(gainedFocus == 1);
+		win.eventCallback(event);
 	}
 
 	void Window::framebufferSizeCallback(GLFWwindow *window, int width, int height) {
 		WindowData& win = *(WindowData*) glfwGetWindowUserPointer(window);
 		win.width = width;
 		win.height = height;
-		vivid::event::WindowResizeEvent event(width, height);
+		event::WindowResizeEvent event(width, height);
 		win.eventCallback(event);
 	}
 

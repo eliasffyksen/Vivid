@@ -6,6 +6,7 @@
 
 #include <string>
 #include <GL/glew.h>
+#include <VividImage/image.h>
 
 namespace vivid { namespace graphics {
 
@@ -15,7 +16,8 @@ namespace vivid { namespace graphics {
 		GLuint textureID;
 		unsigned int width, height;
 	public:
-		Texture(const std::string &path);
+		explicit Texture(const std::string &path);
+		explicit Texture(const Image &image);
 		~Texture();
 
 		void bind(const unsigned int &index) const;
@@ -24,7 +26,7 @@ namespace vivid { namespace graphics {
 		inline const unsigned int &getWidth() const { return width; }
 		inline const unsigned int &getHeight() const { return height; }
 	private:
-		void init();
+		void init(const Image &image);
 	};
 
 }}

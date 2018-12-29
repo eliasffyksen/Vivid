@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include <vivid/vivid.h>
+#include <vivid/core.h>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
@@ -13,15 +13,16 @@
 
 namespace vivid { namespace graphics {
 
+	typedef std::function<void(event::Event&)> EventCallbackFunction;
+
 	struct WindowData {
+		GLFWwindow *window;
 		std::string title;
 		int width, height;
-		void (*eventCallback)(event::Event&);
+		EventCallbackFunction eventCallback;
 	};
 
 	class Window {
-	public:
-		GLFWwindow *window;
 	private:
 		WindowData data;
 	public:
@@ -33,13 +34,15 @@ namespace vivid { namespace graphics {
 		void close();
 		bool isClosed() const;
 
-		void setEventCallback(void(*eventCallbackFunction)(event::Event&));
+		void setEventCallback(EventCallbackFunction eventCallback);
 
 		inline int getWidth() const { return data.width; }
 		inline int getHeight() const { return data.height; }
 	private:
 		bool init();
 
+		static void windowCloseCallback(GLFWwindow *window);
+		static void windowFocusCallback(GLFWwindow *window, int gainedFocus);
 		static void framebufferSizeCallback(GLFWwindow *window, int width, int height);
 		static void keyCallback(GLFWwindow *window, int, int, int, int);
 		static void cursorPositionCallback(GLFWwindow *window, double, double);

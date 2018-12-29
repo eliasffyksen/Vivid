@@ -8,6 +8,10 @@
 #include <vivid/util/resource.h>
 #include <vivid/graphics/window.h>
 
+#include <vivid/events/keyEvent.h>
+#include <vivid/events/mouseEvent.h>
+#include <vivid/util/maths.h>
+
 namespace vivid {
 
 	class Input {
@@ -16,22 +20,22 @@ namespace vivid {
 #define VIVID_MAX_MOUSE_BUTTONS 32
 
 	private:
-		graphics::Window *window;
+		int frameWidth, frameHeight;
 
 		bool keys[VIVID_MAX_KEYS];
 		bool mouseButtons[VIVID_MAX_MOUSE_BUTTONS];
 
-		unsigned int inputCounter = 1;
+		unsigned int inputCounter;
 
 		unsigned int keysDown[VIVID_MAX_KEYS];
 		unsigned int keysUp[VIVID_MAX_KEYS];
 		unsigned int mouseButtonsDown[VIVID_MAX_MOUSE_BUTTONS];
 		unsigned int mouseButtonsUp[VIVID_MAX_MOUSE_BUTTONS];
 
-		double mouseX, mouseY;
+		float mouseX, mouseY;
+		float xScrollOffset, yScrollOffset;
 
 		mutable std::unordered_map<std::string, int> keyAliasMap;
-
 	public:
 		Input();
 
@@ -49,20 +53,27 @@ namespace vivid {
 		bool mouseButtonPressed(const std::string &alias) const;
 		bool mouseButtonReleased(const std::string &alias) const;
 
-		void getCursorPosition(double &, double &) const;
+		void getCursorPosition(float &xPos, float & yPos) const;
+		void getCursorPosition(vdm::vec2& pos) const;
+		void getMouseScroll(float &xOffset, float &yOffset) const;
+		void getMouseScroll(vdm::vec2& scroll) const;
 
 		void registerKeyAlias(const std::string &alias, int key) const;
 		void deleteKeyAlias(const std::string &alias) const;
 
+		void setFrameSize(const int& width, const int &height);
+
 		void clear();
 	public:
-		void keyPressCallback(int key, int repeats);
-		void keyReleaseCallback(int key);
-		void cursorPositionCallback(double, double);
-		void mouseButtonCallback(int, int, int);
+		bool keyPressCallback(event::KeyPressEvent& event);
+		bool keyReleaseCallback(event::KeyReleaseEvent& event);
+		bool mouseMoveCallback(event::MouseMoveEvent& event);
+		bool mouseButtonPressCallback(event::MouseButtonPressEvent& event);
+		bool mouseButtonReleaseCallback(event::MouseButtonReleaseEvent& event);
+		bool mouseScrollCallback(event::MouseScrollEvent& event);
 	public:
 		enum : int {
-			A = 65, B, C, E, D, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z,
+			A = 65, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z,
 			ZERO = 48, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE,
 			SPACE = 32, APOSTROPHE = 39,
 			COMMA = 44, MINUS, PERIOD, SLASH,

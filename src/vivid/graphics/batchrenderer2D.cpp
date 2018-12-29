@@ -28,11 +28,9 @@ namespace vivid { namespace graphics {
 		glEnableVertexAttribArray(SHADER_COLOR_INDEX);
 
 		glVertexAttribPointer(SHADER_POSITION_INDEX, 3, GL_FLOAT, GL_FALSE, BATCH_RENDERER_VERTEX_SIZE,
-							  (const GLvoid *) nullptr);
+		                      (const GLvoid *) nullptr);
 		glVertexAttribPointer(SHADER_TEXCOORDS_INDEX, 2, GL_FLOAT, GL_FALSE, BATCH_RENDERER_VERTEX_SIZE,
-							  (const GLvoid *) (offsetof(Vertex, Vertex::textureCoordinates)));
-		glVertexAttribPointer(SHADER_COLOR_INDEX, 4, GL_UNSIGNED_BYTE, GL_TRUE, BATCH_RENDERER_VERTEX_SIZE,
-							  (const GLvoid *) (offsetof(Vertex, Vertex::color)));
+		                      (const GLvoid *) (offsetof(Vertex, Vertex::textureCoordinates)));
 
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 
@@ -67,36 +65,23 @@ namespace vivid { namespace graphics {
 			return;
 		}
 
-		const glm::vec3 &position = quad->getPosition();
-		const glm::vec2 &size = quad->getSize();
-		const glm::vec4 &color = quad->getColor();
+		const vdm::vec3 &position = quad->getPosition();
+		const vdm::vec2 &size = quad->getSize();
 
-		unsigned int r = (unsigned int) (color.x * 255.0f);
-		unsigned int g = (unsigned int) (color.y * 255.0f);
-		unsigned int b = (unsigned int) (color.z * 255.0f);
-		unsigned int a = (unsigned int) (color.w * 255.0f);
-
-		unsigned int c = (a << 24) | (b << 16) | (g << 8) | (r);
-
-		buffer->position = glm::vec3(currentTransformation * glm::vec4(position, 1));
-		buffer->color = c;
-		buffer->textureCoordinates = glm::vec2(0, 1);
+		buffer->position = (currentTransformation * vdm::vec4(position, 1)).xyz();
+		buffer->textureCoordinates = vdm::vec2(0, 1);
 		buffer++;
 
-		buffer->position = glm::vec3(currentTransformation * glm::vec4(position.x, position.y + size.y, position.z, 1));
-		buffer->color = c;
-		buffer->textureCoordinates = glm::vec2(0, 0);
+		buffer->position = (currentTransformation * vdm::vec4(position.x, position.y + size.y, position.z, 1)).xyz();
+		buffer->textureCoordinates = vdm::vec2(0, 0);
 		buffer++;
 
-		buffer->position = glm::vec3(
-				currentTransformation * glm::vec4(position.x + size.x, position.y + size.y, position.z, 1));
-		buffer->color = c;
-		buffer->textureCoordinates = glm::vec2(1, 0);
+		buffer->position = (currentTransformation * vdm::vec4(position.x + size.x, position.y + size.y, position.z, 1)).xyz();
+		buffer->textureCoordinates = vdm::vec2(1, 0);
 		buffer++;
 
-		buffer->position = glm::vec3(currentTransformation * glm::vec4(position.x + size.x, position.y, position.z, 1));
-		buffer->color = c;
-		buffer->textureCoordinates = glm::vec2(1, 1);
+		buffer->position = (currentTransformation * vdm::vec4(position.x + size.x, position.y, position.z, 1)).xyz();
+		buffer->textureCoordinates = vdm::vec2(1, 1);
 		buffer++;
 
 		indexCount += 6;

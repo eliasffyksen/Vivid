@@ -11,7 +11,7 @@ namespace vivid { namespace event {
 
 	class WindowResizeEvent : public Event {
 	public:
-		EVENT_TYPE(WindowResize)
+	EVENT_TYPE(WindowResize)
 
 		inline WindowResizeEvent(int width, int height)
 				: width(width), height(height) {}
@@ -29,7 +29,7 @@ namespace vivid { namespace event {
 
 	class WindowCloseEvent : public Event {
 	public:
-		EVENT_TYPE(WindowClose)
+	EVENT_TYPE(WindowClose)
 
 		inline virtual std::string toString() override {
 			std::stringstream ss;
@@ -38,6 +38,21 @@ namespace vivid { namespace event {
 		}
 
 		inline WindowCloseEvent() = default;
+	};
+
+	class WindowFocusEvent : public Event {
+	EVENT_TYPE(WindowFocus)
+
+		inline WindowFocusEvent(bool hasFocus)
+				: hasFocus(hasFocus) {}
+
+		inline virtual std::string toString() override {
+			std::stringstream ss;
+			ss << "[" << getName() << "Event] " << (hasFocus ? "Gained Focus" : "Lost focus");
+			return ss.str();
+		}
+	public:
+		bool hasFocus;
 	};
 
 }}

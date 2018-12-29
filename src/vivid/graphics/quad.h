@@ -4,34 +4,31 @@
 
 #pragma once
 
-#include "glm/glm.hpp"
+#include <vivid/util/maths.h>
 
 namespace vivid { namespace graphics {
 
 	struct Vertex {
 	public:
-		glm::vec3 position;
-		unsigned int color;
-		glm::vec2 textureCoordinates;
+		vdm::vec3 position;
+		vdm::vec2 textureCoordinates;
 	};
 
 	class Quad {
 	private:
-		glm::vec3 position;
-		glm::vec2 size;
-		glm::vec4 color;
+		vdm::vec3 position;
+		vdm::vec2 size;
 	public:
-		Quad(float x, float y, float width, float height, const glm::vec4 &color)
-				: position(x, y, 0), size(width, height), color(color) {}
+		Quad(float x, float y, float width, float height)
+				: position(x, y, 0), size(width, height) {}
 
-		Quad(const glm::vec3 &position, const glm::vec2 &size, const glm::vec4 &color)
-				: position(position), size(size), color(color) {}
+		Quad(const vdm::vec3 &position, const vdm::vec2 &size)
+				: position(position), size(size) {}
 
 		virtual ~Quad() = default;
 
-		inline glm::vec3 &getPosition() const { return (glm::vec3 &) position; }
-		inline glm::vec2 &getSize() const { return (glm::vec2 &) size; }
-		inline glm::vec4 &getColor() const { return (glm::vec4 &) color; }
+		inline vdm::vec3 &getPosition() const { return (vdm::vec3 &) position; }
+		inline vdm::vec2 &getSize() const { return (vdm::vec2 &) size; }
 	};
 
 }}

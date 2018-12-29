@@ -7,6 +7,7 @@
 #include <vector>
 #include <vivid/graphics/renderer2D.h>
 #include <vivid/input/input.h>
+#include <vivid/util/maths.h>
 #include "transform.h"
 
 namespace vivid {
@@ -35,7 +36,7 @@ namespace vivid {
 			return transform;
 		}
 
-		virtual const glm::mat4 getModelMatrix() final;
+		virtual const vdm::mat4 getModelMatrix() final;
 
 	public:
 		virtual void update(const Input &input) {}

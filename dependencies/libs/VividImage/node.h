@@ -9,7 +9,7 @@
 #include <iostream>
 #include <map>
 
-namespace vivid { namespace util {
+namespace vivid {
 	
 	class Node {
 	public:
@@ -79,4 +79,4 @@ namespace vivid { namespace util {
 		}
 	};
 	
-}}
+}

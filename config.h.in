@@ -19,9 +19,11 @@
 	#include <iostream>
 	#define LOG(x) std::cout << x << std::endl
 	#define LOGE(x) std::cerr << x << std::endl
+	#define ASSERT(x) if(!(x)) __debugbreak()
 #else
 	#define LOG(x)
 	#define LOGE(x)
+	#define ASSERT(x)
 #endif
 
 #if VIVID_BUILD

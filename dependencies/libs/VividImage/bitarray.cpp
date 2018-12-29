@@ -4,7 +4,7 @@
 
 #include "bitarray.h"
 
-namespace vivid { namespace util {
+namespace vivid {
 	
 	BitArray::BitArray() {
 		current = new std::bitset<BITSET_SIZE>();
@@ -176,4 +176,4 @@ namespace vivid { namespace util {
 		return stream << array->toString();
 	}
 	
-}}
+}

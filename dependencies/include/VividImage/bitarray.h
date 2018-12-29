@@ -10,7 +10,7 @@
 
 #define BITSET_SIZE 128
 
-namespace vivid { namespace util {
+namespace vivid {
 	
 	class BitArray {
 	private:
@@ -53,4 +53,4 @@ namespace vivid { namespace util {
 	std::ostream& operator<<(std::ostream& stream, const BitArray& array);
 	std::ostream& operator<<(std::ostream& stream, const BitArray* const array);
 	
-}}
+}

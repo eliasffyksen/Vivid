@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-namespace vivid { namespace util {
+namespace vivid {
 	
 	Tree::Tree(std::vector<Leaf*>& data) {
 		if (data.empty())
@@ -274,4 +274,4 @@ namespace vivid { namespace util {
 		root->saveCode(codes, "");
 	}
 	
-}}
+}

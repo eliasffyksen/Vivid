@@ -7,6 +7,7 @@
 namespace vivid {
 
 	Input::Input() {
+		inputCounter = 1;
 		for (int i = 0; i < VIVID_MAX_KEYS; i++) {
 			keys[i] = false;
 			keysDown[i] = 0;
@@ -94,9 +95,22 @@ namespace vivid {
 		return false;
 	}
 
-	void Input::getCursorPosition(double &x, double &y) const {
-		x = mouseX;
-		y = mouseY;
+	void Input::getCursorPosition(float &x, float &y) const {
+		x = (2 * mouseX - frameWidth) / frameHeight;
+		y = (frameHeight - 2 * mouseY) / frameHeight;
+	}
+
+	void Input::getCursorPosition(vdm::vec2& pos) const {
+		getCursorPosition(pos.x, pos.y);
+	}
+
+	void Input::getMouseScroll(float &xOffset, float &yOffset) const {
+		xOffset = xScrollOffset;
+		yOffset = yScrollOffset;
+	}
+
+	void Input::getMouseScroll(vdm::vec2& scroll) const {
+		getMouseScroll(scroll.x, scroll.y);
 	}
 
 	void Input::registerKeyAlias(const std::string &alias, int key) const {
@@ -105,6 +119,11 @@ namespace vivid {
 
 	void Input::deleteKeyAlias(const std::string &alias) const {
 		keyAliasMap.erase(alias);
+	}
+
+	void Input::setFrameSize(const int &width, const int &height) {
+		frameWidth = width;
+		frameHeight = height;
 	}
 
 	void Input::clear() {
@@ -122,32 +141,48 @@ namespace vivid {
 		}
 	}
 
-	void Input::keyPressCallback(int key, int repeats) {
-		keys[key] = true;
-	}
-
-	void Input::keyReleaseCallback(int key) {
-		keys[key] = false;
-	}
-
-	void Input::cursorPositionCallback(double xpos, double ypos) {
-		mouseX = xpos;
-		mouseY = ypos;
-	}
-
-	void Input::mouseButtonCallback(int button, int action, int mods) {
-		switch (action) {
-			case GLFW_PRESS:
-				mouseButtons[button] = true;
-				mouseButtonsDown[button] = inputCounter;
-				break;
-			case GLFW_RELEASE:
-				mouseButtons[button] = false;
-				mouseButtonsUp[button] = inputCounter;
-				break;
-			default:
-				break;
+	bool Input::keyPressCallback(event::KeyPressEvent &event) {
+		keys[event.key] = true;
+		if (event.repeats == 0) {
+			keysDown[event.key] = inputCounter;
 		}
+
+		return true;
+	}
+
+	bool Input::keyReleaseCallback(event::KeyReleaseEvent &event) {
+		keys[event.key] = false;
+		keysUp[event.key] = inputCounter;
+
+		return true;
+	}
+
+	bool Input::mouseMoveCallback(event::MouseMoveEvent &event) {
+		mouseX = (float) event.xPos;
+		mouseY = (float) event.yPos;
+
+		return true;
+	}
+
+	bool Input::mouseButtonPressCallback(event::MouseButtonPressEvent &event) {
+		mouseButtons[event.button] = true;
+		mouseButtonsDown[event.button] = inputCounter;
+
+		return true;
+	}
+
+	bool Input::mouseButtonReleaseCallback(event::MouseButtonReleaseEvent &event) {
+		mouseButtons[event.button] = false;
+		mouseButtonsUp[event.button] = inputCounter;
+
+		return true;
+	}
+
+	bool Input::mouseScrollCallback(event::MouseScrollEvent &event) {
+		xScrollOffset = (float) event.xOffset;
+		yScrollOffset = (float) event.yOffset;
+
+		return true;
 	}
 
 }

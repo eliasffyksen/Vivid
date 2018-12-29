@@ -6,6 +6,7 @@
 
 #include <vivid/scenegraph/gameobject.h>
 #include <vivid/scenegraph/camera.h>
+#include <vivid/util/maths.h>
 
 namespace vivid {
 
@@ -17,7 +18,7 @@ namespace vivid {
 	public:
 		Layer(graphics::Renderer2D *renderer);
 
-		glm::mat4 getViewMatrix();
+		vdm::mat4 getViewMatrix();
 
 		void update(const Input &input);
 

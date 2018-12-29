@@ -77,23 +77,23 @@ namespace vivid { namespace graphics {
 	void Shader::setUniform(const std::string &name, const float &x, const float &y) {
 		glUniform2f(getUniformLocation(name), x, y);
 	}
-	void Shader::setUniform(const std::string &name, const glm::vec2 &vec) {
+	void Shader::setUniform(const std::string &name, const vdm::vec2 &vec) {
 		glUniform2f(getUniformLocation(name), vec.x, vec.y);
 	}
 	void Shader::setUniform(const std::string &name, const float &x, const float &y, const float &z) {
 		glUniform3f(getUniformLocation(name), x, y, z);
 	}
-	void Shader::setUniform(const std::string &name, const glm::vec3 &vec) {
+	void Shader::setUniform(const std::string &name, const vdm::vec3 &vec) {
 		glUniform3f(getUniformLocation(name), vec.x, vec.y, vec.z);
 	}
 	void Shader::setUniform(const std::string &name, const float &x, const float &y, const float &z, const float &w) {
 		glUniform4f(getUniformLocation(name), x, y, z, w);
 	}
-	void Shader::setUniform(const std::string &name, const glm::vec4 &vec) {
+	void Shader::setUniform(const std::string &name, const vdm::vec4 &vec) {
 		glUniform4f(getUniformLocation(name), vec.x, vec.y, vec.z, vec.w);
 	}
-	void Shader::setUniform(const std::string &name, const glm::mat4 &mat) {
-		glUniformMatrix4fv(getUniformLocation(name), 1, GL_FALSE, &mat[0][0]);
+	void Shader::setUniform(const std::string &name, const vdm::mat4 &mat) {
+		glUniformMatrix4fv(getUniformLocation(name), 1, GL_FALSE, &mat.m[0]);
 	}
 
 	void Shader::bind() const {

@@ -5,7 +5,7 @@
 #pragma once
 
 #include <chrono>
-#include <vivid/vivid.h>
+#include <vivid/core.h>
 
 namespace vivid {
 

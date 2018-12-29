@@ -1,9 +1,9 @@
 //
-// Created by stroh on 24/12/2018.
+// Created by Elias on 04.09.2017.
 //
 
 #pragma once
 
-class core {
-
-};
+#include <vivid/util/config.h>
+#include <vivid/util/resource.h>
+#include <vivid/util/timer.h>

@@ -59,19 +59,20 @@ namespace vivid { namespace event {
 	};
 
 	class MouseScrollEvent : public Event {
+	public:
 		EVENT_TYPE(MouseScroll)
 
 		inline MouseScrollEvent(float xOffset, float yOffset)
-				: xPos(xOffset), yPos(yOffset) {}
+				: xOffset(xOffset), yOffset(yOffset) {}
 
 		inline std::string toString() {
 			std::stringstream ss;
-			ss << "[" << getName() << "Event] " << xPos << ", " << yPos;
+			ss << "[" << getName() << "Event] " << xOffset << ", " << yOffset;
 			return ss.str();
 		}
 	public:
-		double xPos;
-		double yPos;
+		double xOffset;
+		double yOffset;
 	};
 
 }}

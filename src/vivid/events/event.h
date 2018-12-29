@@ -11,17 +11,19 @@ namespace vivid { namespace event {
 
 	enum class EventType {
 		None = 0,
-		WindowClose, WindowResize, WindowFocus, WindowLostFocus,
+		WindowClose, WindowResize, WindowFocus,
 		KeyPress, KeyRelease,
 		MouseButtonPress, MouseButtonRelease, MouseMove, MouseScroll,
 		EventCount
 	};
 
-#define EVENT_TYPE(x) inline static EventType getStaticEventType() { return EventType::x; }\
+#define EVENT_TYPE(x) public:\
+inline static EventType getStaticEventType() { return EventType::x; }\
 inline virtual EventType getEventType() override { return EventType::x; }\
 inline virtual const char* getName() override { return #x; }
 
-#define BIND(x) [](auto event) { return x(event); }
+#define BIND(x) std::bind(&x, this, std::placeholders::_1)
+//#define BIND(x, y) std::bind(&x, y, std::placeholders::_1)
 
 	class Event {
 	public:
@@ -36,15 +38,18 @@ inline virtual const char* getName() override { return #x; }
 	};
 
 	class EventDispatcher {
+		template<typename T>
+		using EventFunction = std::function<bool(T&)>;
 	public:
 
 		inline EventDispatcher(Event &event)
 				: event(event) {}
 
 		template<typename T>
-		inline bool dispatch(bool (*func)(T &)) {
+		inline bool dispatch(EventFunction<T> handle) {
 			if (event.getEventType() == T::getStaticEventType()) {
-				event.handled = func((T &) event);
+				event.handled = handle((T &) event);
+				return true;
 			}
 			return false;
 		}

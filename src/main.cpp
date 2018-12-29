@@ -1,49 +1,31 @@
 #include <cstdlib> // for testing
 
 // Include standard headers
-#include <vivid/vivid.h>
+#include <vivid/core.h>
 #include <vivid/graphics/window.h>
-#include <glm/glm.hpp>
 #include <vivid/input/input.h>
+#include <vivid/vivid.h>
 #include <vivid/graphics/shader.h>
 #include <vivid/scenegraph/sprite.h>
 #include <vivid/graphics/batchrenderer2D.h>
 #include <vivid/scenegraph/gameobject.h>
 #include <vivid/graphics/texture.h>
 #include <vivid/scenegraph/scene.h>
-
 #include <vivid/util/maths.h>
-
-#include <glm/gtx/transform.hpp>
-#include <glm/gtx/quaternion.hpp>
-#include <glm/gtc/quaternion.hpp>
+#include <VividImage/image.h>
 
 #include "vivid/events/windowEvent.h"
-
-bool handleResize(vivid::event::WindowResizeEvent &event) {
-	//LOG("Resizing to " << event.width << "x" << event.height);
-	return true;
-}
-
-void handleEvents(vivid::event::Event &event) {
-	LOG(event);
-
-	vivid::event::EventDispatcher dispatcher(event);
-	dispatcher.dispatch<vivid::event::WindowResizeEvent>(handleResize);
-}
 
 int main() {
 	using namespace vivid;
 	using namespace graphics;
 
-	Window window("Vivid", 600, 600); // THIS HAS TO BE THE FIRST THING!!
-	window.setEventCallback(handleEvents);
-	Input input;
+	VividApplication app("Vivid", 600, 600);
 
 	LOG("--------------------------------------------------------------------------");
 	LOG("    Running Vivid Engine version " << VIVID_VERSION_MAJOR << "." << VIVID_VERSION_MINOR
 	                                        << (VIVID_DEBUG ? " (test build)" : ""));
-	LOG("    Opengl " << glGetString(GL_VERSION));
+	LOG("    OpenGL " << glGetString(GL_VERSION));
 	LOG("--------------------------------------------------------------------------");
 	LOG("");
 
@@ -66,17 +48,25 @@ int main() {
 
 	for (float y = -1.0f; y < 1.0f; y += affinity)
 		for (float x = -1.0f; x < 1.0f; x += affinity)
-			sprites.push_back(new Sprite(x, y, affinity, affinity,
-			                             glm::vec4((rand() % 1000) / 1000.0, (rand() % 1000) / 1000.0,
-			                                       (rand() % 1000) / 1000.0, 1)));
+			sprites.push_back(new Sprite(x, y, affinity, affinity));
 
 	for (int i = 0; i < sprites.size(); i++) {
 		root.addChild(*sprites[i]);
 	}
 
-	Sprite goat(-0.5f, -0.5f, 1.0f, 1.0f, glm::vec4(1.0, 0, 1.0, 1));
+	Sprite goat(-0.5f, -0.5f, 1.0f, 1.0f);
 //    Sprite goat2(-0.5f, -0.5f, 1.0f, 1.0f, glm::vec4(1.0, 0, 1.0, 1));
 
+
+	float pixels[] {
+			1.0f, 0.0f, 1.0f, 1.0f,
+			1.0f, 0.0f, 1.0f, 1.0f,
+			1.0f, 0.0f, 1.0f, 1.0f,
+			1.0f, 0.0f, 1.0f, 1.0f
+	};
+
+	Image image(pixels, 1, 1, VIVID_IMAGE_FORMAT_RGBA);
+//	Texture texture(image);
 	Texture texture("images/cartoon_goat.png");
 
 	LOG(sprites.size() << " sprites");
@@ -88,13 +78,15 @@ int main() {
 	worldLayer->addChild(goat);
 	guiLayer->addChild(root);
 
-	root.getTransform().setScale(glm::vec3(0.1, 0.1, 1));
-	root.getTransform().setPosition(glm::vec3(-0.9f, 0.9f, 0));
+	root.getTransform().setScale(vdm::vec3(0.1, 0.1, 1));
+	root.getTransform().setPosition(vdm::vec3(-0.9f, 0.9f, 0));
 
-	double sx = 0.5, sy = 0.5;
-	double x = 0, y = 0;
-	float angle = 0;
-	float omega = (float) (M_PI * 2.0f / 18.0f);
+	float mx, my;
+	float sx = 0.5, sy = 0.5;
+	float x = 0, y = 0;
+	float angle = 0.5;
+	float omega = (VD_PI * 2.0f / 5.0f);
+	bool toggled = false;
 
 	float fpsTime = 0.0f;
 	int fpsCount = 0;
@@ -102,56 +94,86 @@ int main() {
 	timer.reset();
 	timer.elapsed();
 
+	Input &input = app.getInput();
 	input.registerKeyAlias("up", Input::UP);
 	input.registerKeyAlias("down", Input::DOWN);
 	input.registerKeyAlias("left", Input::LEFT);
 	input.registerKeyAlias("right", Input::RIGHT);
 
-//    window.close();
+	input.registerKeyAlias("rotate right", Input::E);
+	input.registerKeyAlias("rotate left", Input::Q);
 
-	while (!window.isClosed()) {
+	input.registerKeyAlias("toggle", Input::SPACE);
+
+	Window &window = app.getWindow();
+
+	vdm::vec2 mouse;
+
+	app.start();
+	while (app.isRunning()) {
 		window.clear();
-		float delta = (float) timer.elapsed();
+		auto delta = (float) timer.elapsed();
 
-//		input.getCursorPosition(x, y);
+		input.getCursorPosition(mouse);
 
-//		x += delta * sx;
-//		y += delta * sy;
-		angle += omega * delta;
+		if (input.keyPressed("rotate left")) {
+			angle += 0.25f;
+			if (angle >= 1)
+				angle = 1;
+		}
+		if (input.keyPressed("rotate right")) {
+			angle -= 0.25f;
+			if (angle < 0)
+				angle = 0;
+		}
 
-		if (input.keyDown("up")) {
+		if (input.keyDown("up"))
 			y += delta * sy;
-		}
-		if (input.keyDown("down")) {
+		if (input.keyDown("down"))
 			y -= delta * sy;
-		}
-		if (input.keyDown("left")) {
+		if (input.keyDown("left"))
 			x -= delta * sx;
-		}
-		if (input.keyDown("right")) {
+		if (input.keyDown("right"))
 			x += delta * sx;
+
+		if (input.keyPressed("toggle")) {
+			toggled = !toggled;
 		}
 
 		if ((input.keyDown(Input::LEFT_CONTROL) || input.keyDown(Input::RIGHT_CONTROL)) && input.keyPressed(Input::R)) {
 			x = y = 0;
 		}
 		if ((input.keyDown(Input::LEFT_CONTROL) || input.keyDown(Input::RIGHT_CONTROL)) && input.keyPressed(Input::W)) {
-			event::WindowCloseEvent close;
-			handleEvents(close);
+			window.close();
 		}
 
 		simple.bind();
+//		texture.bind(0);
 		texture.bind(0);
 
-//		maths::quat q(angle, maths::vec3(0, 0, 1));
-		goat.getTransform().setPosition(glm::vec3(x, y, 0));
-//		goat.getTransform().setRotation(glm::quat(-q.w, q.x, q.y, q.z));
+		goat.getTransform().setPosition(vdm::vec3(x, y, 0));
+		float omega = 10;
 
-//		guiLayer->render();
-//		worldLayer->render();
+		vdm::vec2 dir = mouse - goat.getTransform().getPosition().xy();
+		vdm::quat goal = vdm::quat((float) atan2(dir.y, dir.x), vdm::vec3(0, 0, 1));
+		vdm::quat qOffset(-VD_PI_2, vdm::vec3(0, 0, 1));
+		goal = qOffset * goal;
+		vdm::quat cur = vdm::quat(goat.getTransform().getRotation().w, goat.getTransform().getRotation().x, goat.getTransform().getRotation().y, goat.getTransform().getRotation().z);
+		vdm::quat q = vdm::slerp(cur, goal, vdm::clamp(omega * delta * vdm::angle(cur, goal), 0.005f, 1.0f));
+		if (toggled)
+			goat.getTransform().setRotation(q);
+
+		if (toggled) {
+			q = vdm::quat(VD_PI_4, vdm::vec3(0, 0, -1));
+		} else {
+			q = vdm::quat(0, vdm::vec3(0, 0, -1));
+		}
+		root.getTransform().setRotation(q);
+
 		scene.render();
 
 		texture.unbind();
+//		texture.unbind();
 		simple.unbind();
 
 		input.clear();

@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include <glm/glm.hpp>
+#include <vivid/util/maths.h>
 #include "gameobject.h"
 
 namespace vivid {

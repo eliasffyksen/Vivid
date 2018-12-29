@@ -9,11 +9,16 @@ namespace vivid { namespace graphics {
 
 	Texture::Texture(const std::string &path)
 			: path(path) {
-		init();
+		Image image(path);
+		init(image);
 	}
 
-	void Texture::init() {
-		util::Image image(path);
+	Texture::Texture(const Image &image)
+			: path("") {
+		init(image);
+	}
+
+	void Texture::init(const Image &image) {
 		width = image.getWidth();
 		height = image.getHeight();
 
@@ -24,7 +29,7 @@ namespace vivid { namespace graphics {
 			glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 		else
 			glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, image.getColorFormat(), GL_UNSIGNED_BYTE, (const void *) image.getPixels());
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, image.getColorFormat(), GL_UNSIGNED_BYTE, (void *) image.getPixels());
 
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR_MIPMAP_NEAREST);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEAREST);

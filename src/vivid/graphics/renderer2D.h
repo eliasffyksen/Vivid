@@ -5,22 +5,23 @@
 #pragma once
 
 #include <vector>
+#include <vivid/util/maths.h>
 #include "quad.h"
 
 namespace vivid { namespace graphics {
 
 	class Renderer2D {
 	private:
-		mutable std::vector<glm::mat4> transformationStack;
+		mutable std::vector<vdm::mat4> transformationStack;
 	protected:
-		mutable glm::mat4 currentTransformation;
+		mutable vdm::mat4 currentTransformation;
 	public:
 		Renderer2D() {
-			transformationStack.emplace_back(glm::mat4());
+			transformationStack.emplace_back(vdm::mat4());
 			currentTransformation = transformationStack.back();
 		}
 
-		virtual void pushMatrix(const glm::mat4 &matrix) final {
+		virtual void pushMatrix(const vdm::mat4 &matrix) final {
 			currentTransformation = currentTransformation * matrix;
 			transformationStack.push_back(currentTransformation);
 		}

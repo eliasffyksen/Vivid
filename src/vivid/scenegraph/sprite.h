@@ -4,9 +4,9 @@
 
 #pragma once
 
-#include "glm/glm.hpp"
-#include "vivid/graphics/quad.h"
-#include "gameobject.h"
+#include <vivid/util/maths.h>
+#include <vivid/graphics/quad.h>
+#include <vivid/scenegraph/gameobject.h>
 
 namespace vivid {
 
@@ -14,10 +14,9 @@ namespace vivid {
 	private:
 		graphics::Quad quad;
 	public:
-		Sprite(float x, float y, float width, float height, const glm::vec4 &color);
+		Sprite(float x, float y, float width, float height);
 
 		inline const graphics::Quad &getQuad() const { return quad; }
-
 	public:
 		void render(const graphics::Renderer2D *renderer) override;
 	};
