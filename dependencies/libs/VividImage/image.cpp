@@ -32,6 +32,21 @@ namespace vivid {
 		format.colorFormat = colorFormat;
 	}
 
+	Image::Image(const unsigned int *data, const unsigned int &width, const unsigned int &height, const unsigned int &colorFormat) {
+		this->data = new unsigned char[(colorFormat == VIVID_IMAGE_FORMAT_RGBA ? 4 : 3) * width * height];
+		for (int i = 0; i < width * height; i++) {
+			this->data[(colorFormat == VIVID_IMAGE_FORMAT_RGBA ? 4 : 3) * i + 0] = (unsigned char) ((data[i] >> 16) & 0xFF);
+			this->data[(colorFormat == VIVID_IMAGE_FORMAT_RGBA ? 4 : 3) * i + 1] = (unsigned char) ((data[i] >> 8) & 0xFF);
+			this->data[(colorFormat == VIVID_IMAGE_FORMAT_RGBA ? 4 : 3) * i + 2] = (unsigned char) ((data[i]) & 0xFF);
+			if(colorFormat == VIVID_IMAGE_FORMAT_RGBA)
+				this->data[4 * i + 3] = (unsigned char) ((data[i] >> 24) & 0xFF);
+		}
+		format.width = width;
+		format.height = height;
+		format.bitDepth = 8;
+		format.colorFormat = colorFormat;
+	}
+
 	Image::Image(const float *const data, const unsigned int &width, const unsigned int &height, const unsigned int &colorFormat) {
 		this->data = new unsigned char[(colorFormat == VIVID_IMAGE_FORMAT_RGBA ? 4 : 3) * width * height];
 		for (int i = 0; i < (colorFormat == VIVID_IMAGE_FORMAT_RGBA ? 4 : 3) * width * height; ++i) {

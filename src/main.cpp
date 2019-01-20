@@ -15,6 +15,7 @@
 #include <VividImage/image.h>
 
 #include "vivid/events/windowEvent.h"
+#include "../dependencies/VividFont/src/font.h"
 
 int main() {
 	using namespace vivid;
@@ -55,28 +56,32 @@ int main() {
 	}
 
 	Sprite goat(-0.5f, -0.5f, 1.0f, 1.0f);
-//    Sprite goat2(-0.5f, -0.5f, 1.0f, 1.0f, glm::vec4(1.0, 0, 1.0, 1));
+	goat.getTransform().setScale(vdm::vec3(2, 2, 2));
 
+	unsigned int width = 128;
+	unsigned int height = width;
 
-	float pixels[] {
-			1.0f, 0.0f, 1.0f, 1.0f,
-			1.0f, 0.0f, 1.0f, 1.0f,
-			1.0f, 0.0f, 1.0f, 1.0f,
-			1.0f, 0.0f, 1.0f, 1.0f
-	};
+	unsigned int pixels[width * height];
+	for (int i = 0; i < width * height; i++)
+		pixels[i] = 0xFF000000;
 
-	Image image(pixels, 1, 1, VIVID_IMAGE_FORMAT_RGBA);
-//	Texture texture(image);
-	Texture texture("images/cartoon_goat.png");
+//	Font font("fonts/roboto-slab/RobotoSlab-Light.ttf");
+	Font font("fonts/Aaargh/Aaargh.ttf");
+//	font.renderBitmap(pixels, width, height, '@');
+	font.renderBitmap(pixels, width, height, 'A');
+	Image image(pixels, width, height, VIVID_IMAGE_FORMAT_RGBA);
 
-	LOG(sprites.size() << " sprites");
+	Texture texture(image);
+//	Texture texture("images/cartoon_goat.png");
+
+//	LOG(sprites.size() << " sprites");
 
 	Scene scene;
 	Layer *worldLayer = scene.createLayer(&batchgui, 1);
-	Layer *guiLayer = scene.createLayer(&batch, 10);
+	//Layer *guiLayer = scene.createLayer(&batch, 10);
 
 	worldLayer->addChild(goat);
-	guiLayer->addChild(root);
+//	guiLayer->addChild(root);
 
 	root.getTransform().setScale(vdm::vec3(0.1, 0.1, 1));
 	root.getTransform().setPosition(vdm::vec3(-0.9f, 0.9f, 0));
@@ -182,7 +187,7 @@ int main() {
 		fpsCount++;
 		if (fpsTime >= 1) {
 			fpsTime--;
-			LOG(fpsCount << " fps");
+//			LOG(fpsCount << " fps");
 			fpsCount = 0;
 		}
 	}

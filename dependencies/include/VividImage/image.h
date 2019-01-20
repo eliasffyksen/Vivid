@@ -89,6 +89,7 @@ namespace vivid {
 	public:
 		explicit Image(const std::string &path);
 		explicit Image(const unsigned char * data, const unsigned int &width, const unsigned int &height, const unsigned int &colorFormat);
+		explicit Image(const unsigned int * data, const unsigned int &width, const unsigned int &height, const unsigned int &colorFormat);
 		explicit Image(const float * data, const unsigned int &width, const unsigned int &height, const unsigned int &colorFormat);
 		~Image();
 
