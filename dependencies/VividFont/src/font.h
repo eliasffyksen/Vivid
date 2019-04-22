@@ -115,6 +115,7 @@ namespace vivid {
 		~Font();
 
 		void renderBitmap(unsigned int *pixels, const unsigned int &width, const unsigned int &height, const unsigned char &character);
+		void renderBitmapOutline(unsigned int *pixels, const unsigned int &width, const unsigned int &height, const unsigned char &character);
 	private:
 		LOCAtable loca;
 		CMAPtable cmap;

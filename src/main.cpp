@@ -24,8 +24,7 @@ int main() {
 	VividApplication app("Vivid", 600, 600);
 
 	LOG("--------------------------------------------------------------------------");
-	LOG("    Running Vivid Engine version " << VIVID_VERSION_MAJOR << "." << VIVID_VERSION_MINOR
-	                                        << (VIVID_DEBUG ? " (test build)" : ""));
+	LOG("    Running Vivid Engine version " << VIVID_VERSION_MAJOR << "." << VIVID_VERSION_MINOR << (VIVID_DEBUG ? " (test build)" : ""));
 	LOG("    OpenGL " << glGetString(GL_VERSION));
 	LOG("--------------------------------------------------------------------------");
 	LOG("");
@@ -67,8 +66,10 @@ int main() {
 
 //	Font font("fonts/roboto-slab/RobotoSlab-Light.ttf");
 	Font font("fonts/Aaargh/Aaargh.ttf");
+//	font.renderBitmapOutline(pixels, width, height, '@');
 //	font.renderBitmap(pixels, width, height, '@');
 	font.renderBitmap(pixels, width, height, 'A');
+//	font.renderBitmapOutline(pixels, width, height, 'A');
 	Image image(pixels, width, height, VIVID_IMAGE_FORMAT_RGBA);
 
 	Texture texture(image);
