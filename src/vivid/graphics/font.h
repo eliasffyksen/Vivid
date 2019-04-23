@@ -6,8 +6,9 @@
 
 #include <string>
 #include <vector>
+#include <vivid/graphics/texture.h>
 
-namespace vivid {
+namespace vivid { namespace graphics {
 
 	struct Table {
 		unsigned int tag;
@@ -104,7 +105,7 @@ namespace vivid {
 		std::vector<Glyph> glyphs;
 
 		GLYFtable(Table table, const MAXPtable &maxp)
-		: table(table) {
+				: table(table) {
 			glyphs.resize(maxp.numGlyphs);
 		}
 	};
@@ -114,12 +115,18 @@ namespace vivid {
 		explicit Font(const std::string &path);
 		~Font();
 
+		void init();
+
+		Texture &getTexture(const unsigned char &character);
+
 		void renderBitmap(unsigned int *pixels, const unsigned int &width, const unsigned int &height, const unsigned char &character);
 		void renderBitmapOutline(unsigned int *pixels, const unsigned int &width, const unsigned int &height, const unsigned char &character);
 	private:
+		Texture *textures[128];
+
 		LOCAtable loca;
 		CMAPtable cmap;
-		GLYFtable* glyf;
+		GLYFtable *glyf;
 	};
 
-}
+}}

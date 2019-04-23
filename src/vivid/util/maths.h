@@ -73,6 +73,7 @@ namespace vivid { namespace vdm {
 		};
 
 		vec3();
+		vec3(const float &v);
 		vec3(const float &x, const float &y, const float &z);
 		vec3(const vec3 &other) = default;
 

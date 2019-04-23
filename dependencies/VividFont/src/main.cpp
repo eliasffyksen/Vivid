@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "font.h"
+#include "vivid/graphics/font.h"
 
 int main() {
 	using namespace vivid;

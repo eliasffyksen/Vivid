@@ -9,7 +9,7 @@
 #include <math.h>
 #include "font.h"
 
-namespace vivid {
+namespace vivid { namespace graphics {
 
 #define ON_CURVE_BIT (1 << 0)
 #define X_SHORT_VEC_BIT (1 << 1)
@@ -635,7 +635,7 @@ namespace vivid {
 	}
 
 	int ipart(float x) {
-		return floor(x);
+		return (int) floor(x);
 	}
 
 	float fpart(float x) {
@@ -712,45 +712,7 @@ namespace vivid {
 		}
 	}
 
-	int intersectsBezier(int x0, int y0, int xc, int yc, int x1, int y1, int xl, int my) {
-		int a = x0 + 2 * xc + x1;
-		int b = -2 * (x0 + xc);
-		int c = x0 - xl;
-
-		float discriminant = b * b - 4 * a * c;
-		if (discriminant < 0.0f)
-			return 0;
-
-		float t0 = (-b + sqrt(discriminant)) / (2 * a);
-		float yt0 = (1 - t0) * (1 - t0) * y0 + 2 * t0 * (1 - t0) * yc + t0 * t0 * y1;
-		float t1 = (-b - sqrt(discriminant)) / (2 * a);
-		float yt1 = (1 - t1) * (1 - t1) * y0 + 2 * t1 * (1 - t1) * yc + t1 * t1 * y1;
-
-		int intersections = 0;
-		if (t0 >= 0.0f && t0 <= 1.0f && yt0 >= my)
-			intersections++;
-		if (t1 >= 0.0f && t1 <= 1.0f && yt1 >= my)
-			intersections++;
-
-		return intersections;
-	}
-
-	int intersectsLine(float x0, float y0, float x1, float y1, int xl, int ym) {
-		if (std::abs(x0 - x1) < 1e-4) {
-			return 0;
-		}
-
-		float t = (xl - x0) / (x1 - x0);
-		float yt = (1 - t) * y0 + t * y1;
-
-		if (t >= 0.0f && t <= 1.0f && yt < ym)
-			return 1;
-		else
-			return 0;
-	}
-
-	void drawBezier(unsigned int *pixels, const int &width, const int &height, int x0, int y0, int xc, int yc, int x1,
-	                int y1) {
+	void drawBezier(unsigned int *pixels, const int &width, const int &height, int x0, int y0, int xc, int yc, int x1, int y1) {
 		int steps = 100;
 		for (int it = 0; it <= steps; it++) {
 			float t = (float) it / steps;
@@ -760,55 +722,111 @@ namespace vivid {
 		}
 	}
 
+	int intersectsBezier(float x0, float y0, float xc, float yc, float x1, float y1, float xl, float ym) {
+		float a = x0 - 2 * xc + x1;
+		float b = 2 * (xc - x0);
+		float c = x0 - xl;
+
+		float discriminant = b * b - 4 * a * c;
+		if (discriminant < 0.0f || a == 0)
+			return 0;
+
+		float t0 = (-b + sqrt(discriminant)) / (2 * a);
+		float yt0 = (1 - t0) * (1 - t0) * y0 + 2 * t0 * (1 - t0) * yc + t0 * t0 * y1;
+		float t1 = (-b - sqrt(discriminant)) / (2 * a);
+		float yt1 = (1 - t1) * (1 - t1) * y0 + 2 * t1 * (1 - t1) * yc + t1 * t1 * y1;
+
+		int intersections = 0;
+		if (t0 > 0.0f && t0 < 1.0f && (int) (yt0 + 0.5f) <= ym)
+			intersections++;
+		if (t1 > 0.0f && t1 < 1.0f && (int) (yt1 + 0.5f) <= ym)
+			intersections++;
+
+		return intersections;
+	}
+
+	int intersectsLine(float x0, float y0, float x1, float y1, float xl, float ym) {
+		if (std::abs(x0 - x1) < 1e-4) {
+			return 0;
+		}
+
+		float t = (xl - x0) / (x1 - x0);
+		float yt = (1 - t) * y0 + t * y1;
+
+		if (t > 0.0f && t < 1.0f && yt < ym) {
+			return 1;
+		} else {
+			return 0;
+		}
+	}
+
+	int edgeIntersect(float x0, float xc, float yc, float x1, float xl, float ym) {
+		if (xc == xl && yc < ym && ((x0 <= xl && xl < x1) || (x1 < xl && xl <= x0)))
+			return 1;
+		return 0;
+	}
+
+	bool inGlyph(const Glyph &glyph, const float &x, const float &y) {
+		bool inGlyph = false;
+		for (int c = 0; c < glyph.endPoints.size(); c++) {
+			int intersections = 0;
+			int s = (c == 0 ? 0 : glyph.endPoints[c - 1] + 1);
+
+			int cur = s;
+			do {
+				int next = (cur + 1 > glyph.endPoints[c] ? cur - glyph.endPoints[c] + s : cur + 1);
+				int dnext = (cur + 2 > glyph.endPoints[c] ? cur + 1 - glyph.endPoints[c] + s : cur + 2);
+				int tnext = (cur + 3 > glyph.endPoints[c] ? cur + 2 - glyph.endPoints[c] + s : cur + 3);
+				if (glyph.onGlyph[cur] && glyph.onGlyph[next]) {
+					intersections += intersectsLine(glyph.xCoords[cur], glyph.yCoords[cur], glyph.xCoords[next], glyph.yCoords[next], x, y);
+					intersections += edgeIntersect(glyph.xCoords[cur], glyph.xCoords[next], glyph.yCoords[next], glyph.xCoords[dnext], x, y);
+				} else if (glyph.onGlyph[cur] && !glyph.onGlyph[next] && glyph.onGlyph[dnext]) {
+					intersections += intersectsBezier(glyph.xCoords[cur], glyph.yCoords[cur], glyph.xCoords[next], glyph.yCoords[next], glyph.xCoords[dnext], glyph.yCoords[dnext], x, y);
+					intersections += edgeIntersect(glyph.xCoords[next], glyph.xCoords[dnext], glyph.yCoords[dnext], glyph.xCoords[tnext], x, y);
+					cur++;
+				} else if (glyph.onGlyph[cur] && !glyph.onGlyph[next] && !glyph.onGlyph[dnext]) {
+					intersections += intersectsBezier(glyph.xCoords[cur], glyph.yCoords[cur], glyph.xCoords[next], glyph.yCoords[next], (glyph.xCoords[next] + glyph.xCoords[dnext]) / 2, (glyph.yCoords[next] + glyph.yCoords[dnext]) / 2, x, y);
+					intersections += edgeIntersect(glyph.xCoords[next], (glyph.xCoords[next] + glyph.xCoords[dnext]) / 2, (glyph.yCoords[next] + glyph.yCoords[dnext]) / 2, glyph.xCoords[dnext], x, y);
+				} else if (!glyph.onGlyph[cur] && !glyph.onGlyph[next] && !glyph.onGlyph[dnext]) {
+					intersections += intersectsBezier((glyph.xCoords[cur] + glyph.xCoords[next]) / 2, (glyph.yCoords[cur] + glyph.yCoords[next]) / 2, glyph.xCoords[next], glyph.yCoords[next], (glyph.xCoords[next] + glyph.xCoords[dnext]) / 2, (glyph.yCoords[next] + glyph.yCoords[dnext]) / 2, x, y);
+					intersections += edgeIntersect(glyph.xCoords[next], (glyph.xCoords[next] + glyph.xCoords[dnext]) / 2, (glyph.yCoords[next] + glyph.yCoords[dnext]) / 2, glyph.xCoords[dnext], x, y);
+				} else if (!glyph.onGlyph[cur] && !glyph.onGlyph[next] && glyph.onGlyph[dnext]) {
+					intersections += intersectsBezier((glyph.xCoords[cur] + glyph.xCoords[next]) / 2, (glyph.yCoords[cur] + glyph.yCoords[next]) / 2, glyph.xCoords[next], glyph.yCoords[next], glyph.xCoords[dnext], glyph.yCoords[dnext], x, y);
+					intersections += edgeIntersect(glyph.xCoords[next], glyph.xCoords[dnext], glyph.yCoords[dnext], glyph.xCoords[tnext], x, y);
+					cur++;
+				} else {
+					printf("Nothing matches (%d%c, %d%c, %d%c)\n", cur, (glyph.onGlyph[cur] ? 'n' : 'f'), next, (glyph.onGlyph[next] ? 'n' : 'f'), dnext, (glyph.onGlyph[dnext] ? 'n' : 'f'));
+				}
+			} while (++cur <= glyph.endPoints[c]);
+
+			if (intersections % 2 == 1)
+				inGlyph = !inGlyph;
+		}
+		return inGlyph;
+	}
+
+	unsigned int grayscale(const float &intensity) {
+		unsigned int curInt = (unsigned int) (intensity * 0xFF);
+		if (curInt > 0xFF)
+			curInt = 0xFF;
+		return curInt << 24 | curInt << 16 | curInt << 8 | curInt;
+	}
+
 	void render(unsigned int *pixels, const unsigned int &width, const unsigned int &height, const Glyph &glyph) {
 		for (int y = 0; y < height; y++) {
 			for (int x = 0; x < width; x++) {
-				int intersections = 0;
-				for (int c = 0; c < glyph.endPoints.size(); c++) {
-					int s = (c == 0 ? 0 : glyph.endPoints[c - 1] + 1);
-
-					int cur = s;
-					do {
-						int next = (cur + 1 > glyph.endPoints[c] ? cur - glyph.endPoints[c] + s : cur + 1);
-						int dnext = (cur + 2 > glyph.endPoints[c] ? cur + 1 - glyph.endPoints[c] + s : cur + 2);
-						if (glyph.onGlyph[cur] && glyph.onGlyph[next]) {
-							intersections += intersectsLine(glyph.xCoords[cur], glyph.yCoords[cur],
-							                                glyph.xCoords[next], glyph.yCoords[next], x, y);
-						} else if (glyph.onGlyph[cur] && !glyph.onGlyph[next] && glyph.onGlyph[dnext]) {
-							intersections += intersectsBezier((int) glyph.xCoords[cur], (int) glyph.yCoords[cur],
-							                                  (int) glyph.xCoords[next], (int) glyph.yCoords[next], (int) glyph.xCoords[dnext],
-							                                  (int) glyph.yCoords[dnext], x, y);
-							cur++;
-						} else if (glyph.onGlyph[cur] && !glyph.onGlyph[next] && !glyph.onGlyph[dnext]) {
-							intersections += intersectsBezier((int) glyph.xCoords[cur], (int) glyph.yCoords[cur],
-							                                  (int) glyph.xCoords[next], (int) glyph.yCoords[next],
-							                                  (int) (glyph.xCoords[next] + glyph.xCoords[dnext]) / 2,
-							                                  (int) (glyph.yCoords[next] + glyph.yCoords[dnext]) / 2, x, y);
-						} else if (!glyph.onGlyph[cur] && !glyph.onGlyph[next] && !glyph.onGlyph[dnext]) {
-							intersections += intersectsBezier((int) (glyph.xCoords[cur] + glyph.xCoords[next]) / 2,
-							                                  (int) (glyph.yCoords[cur] + glyph.yCoords[next]) / 2, (int) glyph.xCoords[next],
-							                                  (int) glyph.yCoords[next],
-							                                  (int) (glyph.xCoords[next] + glyph.xCoords[dnext]) / 2,
-							                                  (int) (glyph.yCoords[next] + glyph.yCoords[dnext]) / 2, x, y);
-						} else if (!glyph.onGlyph[cur] && !glyph.onGlyph[next] && glyph.onGlyph[dnext]) {
-							intersections += intersectsBezier((int) (glyph.xCoords[cur] + glyph.xCoords[next]) / 2,
-							                                  (int) (glyph.yCoords[cur] + glyph.yCoords[next]) / 2, (int) glyph.xCoords[next],
-							                                  (int) glyph.yCoords[next], (int) glyph.xCoords[dnext],
-							                                  (int) glyph.yCoords[dnext], x, y);
-							cur++;
-						} else {
-							printf("Nothing matches (%d%c, %d%c, %d%c)\n", cur, (glyph.onGlyph[cur] ? 'n' : 'f'), next,
-							       (glyph.onGlyph[next] ? 'n' : 'f'), dnext, (glyph.onGlyph[dnext] ? 'n' : 'f'));
-						}
-					} while (++cur <= glyph.endPoints[c]);
+				int hits = 0;
+				int total_hits = 8;
+				float offsets[8] = {5, 0, 3, 6, 2, 3, 4, 7};
+				for (int p = 0; p < total_hits; p++) {
+					if (inGlyph(glyph, x + offsets[p] / total_hits, y + p / total_hits))
+						hits++;
 				}
-
-				if (intersections % 2 == 1) {
-					pixels[x + y * width] = 0xFFFFFFFF;
-				} else {
-					pixels[x + y * width] = 0xFF000000;
-				}
-//				setPixel(pixels, width, height, x, y, intersections / 12.0f);
+//				if (hits > 0) {
+					pixels[x + y * width] = grayscale(hits / 4.0f);
+//				} else {
+//					pixels[x + y * width] = 0xFF000000;
+//				}
 			}
 		}
 	}
@@ -822,31 +840,19 @@ namespace vivid {
 				int next = (cur + 1 > glyph.endPoints[c] ? cur - glyph.endPoints[c] + s : cur + 1);
 				int dnext = (cur + 2 > glyph.endPoints[c] ? cur + 1 - glyph.endPoints[c] + s : cur + 2);
 				if (glyph.onGlyph[cur] && glyph.onGlyph[next]) {
-					drawLine(pixels, width, height, (int) glyph.xCoords[cur], (int) glyph.yCoords[cur],
-					         (int) glyph.xCoords[next], (int) glyph.yCoords[next]);
+					drawLine(pixels, width, height, (int) glyph.xCoords[cur], (int) glyph.yCoords[cur], (int) glyph.xCoords[next], (int) glyph.yCoords[next]);
 				} else if (glyph.onGlyph[cur] && !glyph.onGlyph[next] && glyph.onGlyph[dnext]) {
-					drawBezier(pixels, width, height, (int) glyph.xCoords[cur], (int) glyph.yCoords[cur],
-					           (int) glyph.xCoords[next], (int) glyph.yCoords[next], (int) glyph.xCoords[dnext],
-					           (int) glyph.yCoords[dnext]);
+					drawBezier(pixels, width, height, (int) glyph.xCoords[cur], (int) glyph.yCoords[cur], (int) glyph.xCoords[next], (int) glyph.yCoords[next], (int) glyph.xCoords[dnext], (int) glyph.yCoords[dnext]);
 					cur++;
 				} else if (glyph.onGlyph[cur] && !glyph.onGlyph[next] && !glyph.onGlyph[dnext]) {
-					drawBezier(pixels, width, height, (int) glyph.xCoords[cur], (int) glyph.yCoords[cur],
-					           (int) glyph.xCoords[next], (int) glyph.yCoords[next],
-					           (int) (glyph.xCoords[next] + glyph.xCoords[dnext]) / 2,
-					           (int) (glyph.yCoords[next] + glyph.yCoords[dnext]) / 2);
+					drawBezier(pixels, width, height, (int) glyph.xCoords[cur], (int) glyph.yCoords[cur], (int) glyph.xCoords[next], (int) glyph.yCoords[next], (int) (glyph.xCoords[next] + glyph.xCoords[dnext]) / 2, (int) (glyph.yCoords[next] + glyph.yCoords[dnext]) / 2);
 				} else if (!glyph.onGlyph[cur] && !glyph.onGlyph[next] && !glyph.onGlyph[dnext]) {
-					drawBezier(pixels, width, height, (int) (glyph.xCoords[cur] + glyph.xCoords[next]) / 2,
-					           (int) (glyph.yCoords[cur] + glyph.yCoords[next]) / 2, (int) glyph.xCoords[next],
-					           (int) glyph.yCoords[next], (int) (glyph.xCoords[next] + glyph.xCoords[dnext]) / 2,
-					           (int) (glyph.yCoords[next] + glyph.yCoords[dnext]) / 2);
+					drawBezier(pixels, width, height, (int) (glyph.xCoords[cur] + glyph.xCoords[next]) / 2, (int) (glyph.yCoords[cur] + glyph.yCoords[next]) / 2, (int) glyph.xCoords[next], (int) glyph.yCoords[next], (int) (glyph.xCoords[next] + glyph.xCoords[dnext]) / 2, (int) (glyph.yCoords[next] + glyph.yCoords[dnext]) / 2);
 				} else if (!glyph.onGlyph[cur] && !glyph.onGlyph[next] && glyph.onGlyph[dnext]) {
-					drawBezier(pixels, width, height, (int) (glyph.xCoords[cur] + glyph.xCoords[next]) / 2,
-					           (int) (glyph.yCoords[cur] + glyph.yCoords[next]) / 2, (int) glyph.xCoords[next],
-					           (int) glyph.yCoords[next], (int) glyph.xCoords[dnext], (int) glyph.yCoords[dnext]);
+					drawBezier(pixels, width, height, (int) (glyph.xCoords[cur] + glyph.xCoords[next]) / 2, (int) (glyph.yCoords[cur] + glyph.yCoords[next]) / 2, (int) glyph.xCoords[next], (int) glyph.yCoords[next], (int) glyph.xCoords[dnext], (int) glyph.yCoords[dnext]);
 					cur++;
 				} else {
-					printf("Nothing matches (%d%c, %d%c, %d%c)\n", cur, (glyph.onGlyph[cur] ? 'n' : 'f'), next,
-					       (glyph.onGlyph[next] ? 'n' : 'f'), dnext, (glyph.onGlyph[dnext] ? 'n' : 'f'));
+					printf("Nothing matches (%d%c, %d%c, %d%c)\n", cur, (glyph.onGlyph[cur] ? 'n' : 'f'), next, (glyph.onGlyph[next] ? 'n' : 'f'), dnext, (glyph.onGlyph[dnext] ? 'n' : 'f'));
 				}
 			} while (++cur <= glyph.endPoints[c]);
 		}
@@ -908,6 +914,27 @@ namespace vivid {
 		delete glyf;
 	}
 
+	void Font::init() {
+		std::string s = "XAB";
+		for(const unsigned char &c : s) {
+			if(c >= 128)
+				continue;
+
+			unsigned int width = 128;
+			unsigned int height = width;
+			unsigned int pixels[width * height];
+			renderBitmap(pixels, width, height, c);
+			Image image(pixels, width, height, VIVID_IMAGE_FORMAT_RGBA);
+			textures[c] = new Texture(image);
+		}
+	}
+
+	Texture& Font::getTexture(const unsigned char &character) {
+		if(character < 0 || character >= 128 || textures[character] == nullptr)
+			return *(textures['X']);
+		return *(textures[character]);
+	}
+
 	void Font::renderBitmap(unsigned int *pixels, const unsigned int &width, const unsigned int &height,
 	                        const unsigned char &character) {
 		Glyph &glyph = glyf->glyphs[cmap.glyphIndices[character]];
@@ -932,4 +959,4 @@ namespace vivid {
 		renderOutline(pixels, width, height, glyph);
 	}
 
-}
+}}

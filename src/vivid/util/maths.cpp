@@ -150,6 +150,9 @@ namespace vivid { namespace vdm {
 	vec3::vec3()
 			: x(0), y(0), z(0) {}
 
+	vec3::vec3(const float &v)
+			: x(v), y(v), z(v) {}
+
 	vec3::vec3(const float &x, const float &y, const float &z)
 			: x(x), y(y), z(z) {}
 

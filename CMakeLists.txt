@@ -132,7 +132,7 @@ set(
         src/vivid/util/maths.h
 		src/vivid/util/resource.cpp
 		src/vivid/util/resource.h src/vivid/scenegraph/scene.cpp src/vivid/scenegraph/scene.h src/vivid/events/event.h src/vivid/events/windowEvent.h src/vivid/events/keyEvent.h src/vivid/events/mouseEvent.h src/vivid/vivid.cpp src/vivid/vivid.h
-		dependencies/VividFont/src/font.h dependencies/VividFont/src/font.cpp)
+		src/vivid/graphics/font.h src/vivid/graphics/font.cpp)
 
 add_compile_definitions(VIVID_BUILD=true)
 

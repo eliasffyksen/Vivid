@@ -15,7 +15,7 @@
 #include <VividImage/image.h>
 
 #include "vivid/events/windowEvent.h"
-#include "../dependencies/VividFont/src/font.h"
+#include "vivid/graphics/font.h"
 
 int main() {
 	using namespace vivid;
@@ -56,6 +56,7 @@ int main() {
 
 	Sprite goat(-0.5f, -0.5f, 1.0f, 1.0f);
 	goat.getTransform().setScale(vdm::vec3(2, 2, 2));
+	goat.getTransform().setScale(vdm::vec3(0.1f));
 
 	unsigned int width = 128;
 	unsigned int height = width;
@@ -66,13 +67,16 @@ int main() {
 
 //	Font font("fonts/roboto-slab/RobotoSlab-Light.ttf");
 	Font font("fonts/Aaargh/Aaargh.ttf");
+	font.init();
 //	font.renderBitmapOutline(pixels, width, height, '@');
+//	font.renderBitmapOutline(pixels, width, height, 'C');
+//	font.renderBitmap(pixels, width, height, 'C');
 //	font.renderBitmap(pixels, width, height, '@');
-	font.renderBitmap(pixels, width, height, 'A');
+//	font.renderBitmap(pixels, width, height, 'A');
 //	font.renderBitmapOutline(pixels, width, height, 'A');
-	Image image(pixels, width, height, VIVID_IMAGE_FORMAT_RGBA);
+//	Image image(pixels, width, height, VIVID_IMAGE_FORMAT_RGBA);
 
-	Texture texture(image);
+	Texture& texture = font.getTexture(200);
 //	Texture texture("images/cartoon_goat.png");
 
 //	LOG(sprites.size() << " sprites");
