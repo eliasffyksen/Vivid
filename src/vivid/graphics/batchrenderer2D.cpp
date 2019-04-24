@@ -27,10 +27,8 @@ namespace vivid { namespace graphics {
 		glEnableVertexAttribArray(SHADER_TEXCOORDS_INDEX);
 		glEnableVertexAttribArray(SHADER_COLOR_INDEX);
 
-		glVertexAttribPointer(SHADER_POSITION_INDEX, 3, GL_FLOAT, GL_FALSE, BATCH_RENDERER_VERTEX_SIZE,
-		                      (const GLvoid *) nullptr);
-		glVertexAttribPointer(SHADER_TEXCOORDS_INDEX, 2, GL_FLOAT, GL_FALSE, BATCH_RENDERER_VERTEX_SIZE,
-		                      (const GLvoid *) (offsetof(Vertex, Vertex::textureCoordinates)));
+		glVertexAttribPointer(SHADER_POSITION_INDEX, 3, GL_FLOAT, GL_FALSE, BATCH_RENDERER_VERTEX_SIZE, (const GLvoid *) nullptr);
+		glVertexAttribPointer(SHADER_TEXCOORDS_INDEX, 2, GL_FLOAT, GL_FALSE, BATCH_RENDERER_VERTEX_SIZE, (const GLvoid *) (offsetof(Vertex, Vertex::textureCoordinates)));
 
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 
@@ -68,20 +66,32 @@ namespace vivid { namespace graphics {
 		const vdm::vec3 &position = quad->getPosition();
 		const vdm::vec2 &size = quad->getSize();
 
+		float uvLeft = 0.0f;
+		float uvTop = 0.0f;
+		float uvRight = 1.0f;
+		float uvBottom = 1.0f;
+
+		if(quad->getTextureHandle() != nullptr) {
+			uvLeft = quad->getTextureHandle()->uvMin.u;
+			uvTop = quad->getTextureHandle()->uvMin.v;
+			uvRight = quad->getTextureHandle()->uvMax.u;
+			uvBottom = quad->getTextureHandle()->uvMax.v;
+		}
+
 		buffer->position = (currentTransformation * vdm::vec4(position, 1)).xyz();
-		buffer->textureCoordinates = vdm::vec2(0, 1);
+		buffer->textureCoordinates = vdm::vec2(uvLeft, uvBottom);
 		buffer++;
 
 		buffer->position = (currentTransformation * vdm::vec4(position.x, position.y + size.y, position.z, 1)).xyz();
-		buffer->textureCoordinates = vdm::vec2(0, 0);
+		buffer->textureCoordinates = vdm::vec2(uvLeft, uvTop);
 		buffer++;
 
 		buffer->position = (currentTransformation * vdm::vec4(position.x + size.x, position.y + size.y, position.z, 1)).xyz();
-		buffer->textureCoordinates = vdm::vec2(1, 0);
+		buffer->textureCoordinates = vdm::vec2(uvRight, uvTop);
 		buffer++;
 
 		buffer->position = (currentTransformation * vdm::vec4(position.x + size.x, position.y, position.z, 1)).xyz();
-		buffer->textureCoordinates = vdm::vec2(1, 1);
+		buffer->textureCoordinates = vdm::vec2(uvRight, uvBottom);
 		buffer++;
 
 		indexCount += 6;
