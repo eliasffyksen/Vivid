@@ -8,7 +8,6 @@
 #include <sstream>
 #include <math.h>
 #include "font.h"
-#include "vivid/scenegraph/textureatlas.h"
 
 namespace vivid { namespace graphics {
 
@@ -925,8 +924,8 @@ namespace vivid { namespace graphics {
 			unsigned int height = width;
 			unsigned int pixels[width * height];
 			renderBitmap(pixels, width, height, c);
-			Image* image = new Image(pixels, width, height, VIVID_IMAGE_FORMAT_RGBA);
-			textures[c] = new Texture(*image);
+			Image image(pixels, width, height, VIVID_IMAGE_FORMAT_RGBA);
+			textures[c] = new Texture(image);
 		}
 	}
 

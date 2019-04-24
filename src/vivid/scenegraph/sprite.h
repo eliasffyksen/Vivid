@@ -7,7 +7,6 @@
 #include <vivid/util/maths.h>
 #include <vivid/graphics/quad.h>
 #include <vivid/scenegraph/gameobject.h>
-#include <vivid/scenegraph/textureatlas.h>
 
 namespace vivid {
 
@@ -15,7 +14,7 @@ namespace vivid {
 	private:
 		graphics::Quad quad;
 	public:
-		Sprite(float x, float y, float width, float height, TextureHandle *handle);
+		Sprite(float x, float y, float width, float height);
 
 		inline const graphics::Quad &getQuad() const { return quad; }
 	public:
