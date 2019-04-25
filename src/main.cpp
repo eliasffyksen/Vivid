@@ -40,27 +40,6 @@ int main() {
 
 	BatchRenderer2D batch;
 	BatchRenderer2D batchgui;
-	std::vector<Sprite *> sprites;
-	GameObject root;
-	srand((unsigned int) time(NULL));
-
-	float size = 12.0f;
-	float affinity = 2.0f / size;
-
-//	for (float y = -1.0f; y < 1.0f; y += affinity)
-//		for (float x = -1.0f; x < 1.0f; x += affinity)
-//			sprites.push_back(new Sprite(x, y, affinity, affinity));
-
-	for (int i = 0; i < sprites.size(); i++) {
-		root.addChild(*sprites[i]);
-	}
-
-	unsigned int width = 128;
-	unsigned int height = width;
-
-	unsigned int pixels[width * height];
-	for (int i = 0; i < width * height; i++)
-		pixels[i] = 0xFF000000;
 
 	Font font("fonts/Aaargh/Aaargh.ttf");
 	font.init();
@@ -96,14 +75,10 @@ int main() {
 	worldLayer->addChild(guy);
 	worldLayer->addChild(goat);
 	worldLayer->addChild(arrow);
-//	guiLayer->addChild(root);
-
-	root.getTransform().setScale(vdm::vec3(0.1, 0.1, 1));
-	root.getTransform().setPosition(vdm::vec3(-0.9f, 0.9f, 0));
 
 	float sx = 0.5, sy = 0.5;
 	float x = 0, y = 0;
-	float angle = 0.5;
+	float angle = 0;
 	float omega = (VD_PI * 2.0f / 5.0f);
 	bool toggled = false;
 
@@ -154,15 +129,11 @@ int main() {
 			}
 		}
 
-		if (input.keyPressed("rotate left")) {
-			angle += 0.25f;
-			if (angle >= 1)
-				angle = 1;
+		if (input.keyDown("rotate left")) {
+			angle += omega * delta;
 		}
-		if (input.keyPressed("rotate right")) {
-			angle -= 0.25f;
-			if (angle < 0)
-				angle = 0;
+		if (input.keyDown("rotate right")) {
+			angle -= omega * delta;
 		}
 
 		if (input.keyDown("up") || input.keyDown(Input::W))
@@ -180,37 +151,32 @@ int main() {
 
 		if ((input.keyDown(Input::LEFT_CONTROL) || input.keyDown(Input::RIGHT_CONTROL)) && input.keyPressed(Input::R)) {
 			x = y = 0;
+			angle = 0;
 		}
 		if ((input.keyDown(Input::LEFT_CONTROL) || input.keyDown(Input::RIGHT_CONTROL)) && input.keyPressed(Input::W)) {
 			window.close();
 		}
+		goat.getTransform().setRotation(vdm::quat(angle, vdm::vec3(0, 0, 1)));
+		goat.getTransform().setPosition(vdm::vec3(x, y, 0));
 
 		simple.bind();
-//		texture.bind(0);
-		atlas.bind(0);
-
-		goat.getTransform().setPosition(vdm::vec3(x, y, 0));
-		float omega = 10;
-
-		vdm::vec2 dir = mouse - arrow.getTransform().getPosition().xy();
-		vdm::quat goal = vdm::quat((float) atan2(dir.y, dir.x), vdm::vec3(0, 0, 1));
-		vdm::quat qOffset(-VD_PI_2, vdm::vec3(0, 0, 1));
-		goal = qOffset * goal;
-		vdm::quat cur = vdm::quat(arrow.getTransform().getRotation().w, arrow.getTransform().getRotation().x, arrow.getTransform().getRotation().y, arrow.getTransform().getRotation().z);
-		vdm::quat q = vdm::slerp(cur, goal, vdm::clamp(omega * delta * vdm::angle(cur, goal), 0.005f, 1.0f));
-		if (toggled)
-			arrow.getTransform().setRotation(q);
+		atlas.bind(Texture::TEXTURE_MAP);
 
 		if (toggled) {
-			q = vdm::quat(VD_PI_4, vdm::vec3(0, 0, -1));
-		} else {
-			q = vdm::quat(0, vdm::vec3(0, 0, -1));
+			float omegaArrow = 10;
+
+			vdm::vec2 dir = mouse - arrow.getTransform().getPosition().xy();
+			vdm::quat goal = vdm::quat((float) atan2(dir.y, dir.x), vdm::vec3(0, 0, 1));
+			vdm::quat qOffset(-VD_PI_2, vdm::vec3(0, 0, 1));
+			goal = qOffset * goal;
+			vdm::quat cur = vdm::quat(arrow.getTransform().getRotation().w, arrow.getTransform().getRotation().x, arrow.getTransform().getRotation().y, arrow.getTransform().getRotation().z);
+			vdm::quat q = vdm::slerp(cur, goal, vdm::clamp(omegaArrow * delta * vdm::angle(cur, goal), 0.005f, 1.0f));
+
+			arrow.getTransform().setRotation(q);
 		}
-		root.getTransform().setRotation(q);
 
 		scene.render();
 
-//		texture.unbind();
 		atlas.unbind();
 		simple.unbind();
 

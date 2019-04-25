@@ -27,6 +27,12 @@ namespace vivid { namespace graphics {
 		inline const unsigned int &getHeight() const { return height; }
 	private:
 		void init(const Image &image);
+
+	public:
+		enum {
+			TEXTURE_MAP = 0,
+			SHADOW_MAP
+		};
 	};
 
 }}

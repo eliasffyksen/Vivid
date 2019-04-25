@@ -48,7 +48,7 @@ namespace vivid { namespace graphics {
 	}
 
 	void Texture::bind(const unsigned int &index) const {
-		glActiveTexture(GL_TEXTURE0);
+		glActiveTexture(GL_TEXTURE0 + index);
 		glBindTexture(GL_TEXTURE_2D, textureID);
 	}
 
