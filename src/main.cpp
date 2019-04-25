@@ -41,10 +41,7 @@ int main() {
 	BatchRenderer2D batch;
 	BatchRenderer2D batchgui;
 
-	Font font("fonts/Aaargh/Aaargh.ttf");
-	font.init();
-
-	TextureAtlas atlas(2);
+	TextureAtlas atlas(1);
 	Image atlas1("images/atlas1.png");
 	Image atlas2("images/atlas2.png");
 	Image atlas3("images/atlas3.png");
@@ -55,16 +52,30 @@ int main() {
 	atlas.registerTexture(atlas3);
 	auto guyhandle = atlas.registerTexture(atlas4);
 	auto goathandle = atlas.registerTexture(atlasgoat);
-	atlas.update();
 
-	Sprite goat(-0.5f, -0.5f, 1.0f, 1.0f, goathandle);
-	goat.getTransform().setScale(vdm::vec3(2, 2, 2));
-	goat.getTransform().setScale(vdm::vec3(1));
+	Font font("fonts/Aaargh/Aaargh.ttf", atlas);
+	font.init(12);
+
+	GameObject goat;
+	goat.getTransform().setScale(0.5f);
+	Sprite goatSprite(-0.5f, -0.5f, 1.0f, 1.0f, goathandle);
+//	Sprite goat(-0.5f, -0.5f, 1.0f, 1.0f, &font.getTexture('X'));
+//	goat.getTransform().setScale(vdm::vec3(2.0f));
+//	goat.getTransform().setScale(vdm::vec3(1.0f));
 //	goat.getTransform().setScale(vdm::vec3(0.1f));
 	Sprite guy(-0.5f, -0.5f, 1.0f, 1.0f, guyhandle);
 	guy.getTransform().setScale(vdm::vec3(1))->setPosition(vdm::vec3(0.5f, 0, 0));
 	Sprite arrow(-0.5f, -0.5f, 1.0f, 1.0f, arrowHandle);
 	arrow.getTransform().setScale(0.5);
+
+	Sprite spriteX(0.025, -0.0f, 0.304348f, 0.423913f, &font.getTexture('X'));
+	Sprite spriteA(0.36413, -0.0f, 0.336957f, 0.423913f, &font.getTexture('A'));
+	Sprite spriteh(0.36413+0.359783+0.0516304, -0.0f, 0.271739f, 0.5f, &font.getTexture('h'));
+	Sprite spritex(0.36413+0.359783+0.360326+0.0163043, -0.0f, 0.271739f, 0.304348f, &font.getTexture('x'));
+//	spriteX.getTransform().setScale(0.2);
+//	spriteA.getTransform().setScale(0.2);
+//	spriteh.getTransform().setScale(0.2);
+//	spritex.getTransform().setScale(0.2);
 
 //	LOG(sprites.size() << " sprites");
 
@@ -72,9 +83,14 @@ int main() {
 	Layer *worldLayer = scene.createLayer(&batchgui, 1);
 	//Layer *guiLayer = scene.createLayer(&batch, 10);
 
-	worldLayer->addChild(guy);
+//	worldLayer->addChild(guy);
 	worldLayer->addChild(goat);
-	worldLayer->addChild(arrow);
+//	goat.addChild(goatSprite);
+	goat.addChild(spriteX);
+	goat.addChild(spriteA);
+	goat.addChild(spriteh);
+	goat.addChild(spritex);
+//	worldLayer->addChild(arrow);
 
 	float sx = 0.5, sy = 0.5;
 	float x = 0, y = 0;
@@ -160,6 +176,7 @@ int main() {
 		goat.getTransform().setPosition(vdm::vec3(x, y, 0));
 
 		simple.bind();
+		atlas.update();
 		atlas.bind(Texture::TEXTURE_MAP);
 
 		if (toggled) {

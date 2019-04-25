@@ -40,6 +40,7 @@ namespace vivid {
 		void remove(TextureHandle *handle);
 	private:
 		unsigned int border;
+		bool invalidated;
 
 		std::vector<std::pair<Image*, TextureHandle*>> textures;
 		graphics::Texture* atlasTexture;

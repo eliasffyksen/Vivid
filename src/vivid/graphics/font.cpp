@@ -412,8 +412,64 @@ namespace vivid { namespace graphics {
 		return cmap;
 	}
 
-	void parseLOCAtable(LOCAtable &loca, const Table &table, const HEADtable &head, const MAXPtable &maxp) {
+	HHEAtable parseHHEAtable(const Table &table) {
 		const unsigned char *p = table.table;
+		HHEAtable hhea;
+		hhea.version = getFixed(p);
+		p += 4;
+		hhea.ascent = getINT16(p);
+		p += 2;
+		hhea.descent = getINT16(p);
+		p += 2;
+		hhea.lineGap = getINT16(p);
+		p += 2;
+		hhea.advanceWidthMax = getUINT16(p);
+		p += 2;
+		hhea.minLeftSideBearing = getINT16(p);
+		p += 2;
+		hhea.minRightSideBearing = getINT16(p);
+		p += 2;
+		hhea.xMaxExtent = getINT16(p);
+		p += 2;
+		hhea.caretSlopeRise = getINT16(p);
+		p += 2;
+		hhea.caretSlopeRun = getINT16(p);
+		p += 2;
+		hhea.caretOffset = getINT16(p);
+		p += 2;
+		p += 4 * 2;
+		hhea.metricDataFormat = getINT16(p);
+		p += 2;
+		hhea.numOfLongHorMetrics = getUINT16(p);
+
+		return hhea;
+	}
+
+	HMTXtable parseHMTXtable(const Table &table, const HHEAtable &hhea, const MAXPtable &maxp) {
+		const unsigned char *p = table.table;
+		HMTXtable hmtx;
+		hmtx.advanceWidth.resize(maxp.numGlyphs);
+		hmtx.leftSideBearing.resize(maxp.numGlyphs);
+
+		for(int g = 0; g < hhea.numOfLongHorMetrics; g++) {
+			hmtx.advanceWidth[g] = getUINT16(p);
+			p += 2;
+			hmtx.leftSideBearing[g] = getINT16(p);
+			p += 2;
+		}
+		for(int g = hhea.numOfLongHorMetrics; g < maxp.numGlyphs; g++) {
+			hmtx.advanceWidth[g] = hmtx.advanceWidth[hhea.numOfLongHorMetrics-1];
+			hmtx.leftSideBearing[g] = getINT16(p);
+			p += 2;
+		}
+
+		return hmtx;
+	}
+
+
+	LOCAtable parseLOCAtable(const Table &table, const HEADtable &head, const MAXPtable &maxp) {
+		const unsigned char *p = table.table;
+		LOCAtable loca;
 
 		for (int i = 0; i < maxp.numGlyphs + 1; i++) {
 			if (head.indexToLocFormat == 1) {
@@ -424,6 +480,8 @@ namespace vivid { namespace graphics {
 				p += 2;
 			}
 		}
+
+		return loca;
 	}
 
 	void readSimpleGlyph(const unsigned char *p, const unsigned int &nContours, Glyph &glyph, const float &scale) {
@@ -491,13 +549,13 @@ namespace vivid { namespace graphics {
 				}
 			}
 			if (xc == 0) {
-				glyph.xMin = (int) glyph.xCoords[0];
-				glyph.xMax = (int) glyph.xCoords[0];
+				glyph.xMin = glyph.xCoords[0];
+				glyph.xMax = glyph.xCoords[0];
 			} else {
 				if (glyph.xCoords[xc] > glyph.xMax)
-					glyph.xMax = (int) glyph.xCoords[xc];
+					glyph.xMax = glyph.xCoords[xc];
 				if (glyph.xCoords[xc] < glyph.xMin)
-					glyph.xMin = (int) glyph.xCoords[xc];
+					glyph.xMin = glyph.xCoords[xc];
 			}
 		}
 
@@ -533,9 +591,11 @@ namespace vivid { namespace graphics {
 			}
 		}
 
+		glyph.xMax -= glyph.xMin;
+		glyph.yMax -= glyph.yMin;
 		for (int c = 0; c < glyph.xCoords.size(); c++) {
-			glyph.xCoords[c] = (int) ((float) (glyph.xCoords[c] - glyph.xMin)) / scale;
-			glyph.yCoords[c] = (int) ((float) (glyph.yCoords[c] - glyph.yMin)) / scale;
+			glyph.xCoords[c] = ((float) (glyph.xCoords[c] - glyph.xMin)) / glyph.yMax;
+			glyph.yCoords[c] = ((float) (glyph.yCoords[c] - glyph.yMin)) / glyph.yMax;
 		}
 
 //		for (int point = 0; point < numPoints; point++) {
@@ -810,7 +870,7 @@ namespace vivid { namespace graphics {
 		unsigned int curInt = (unsigned int) (intensity * 0xFF);
 		if (curInt > 0xFF)
 			curInt = 0xFF;
-		return curInt << 24 | curInt << 16 | curInt << 8 | curInt;
+		return (curInt << 24) | (curInt << 16) | (curInt << 8) | curInt;
 	}
 
 	void render(unsigned int *pixels, const unsigned int &width, const unsigned int &height, const Glyph &glyph) {
@@ -823,11 +883,7 @@ namespace vivid { namespace graphics {
 					if (inGlyph(glyph, x + offsets[p] / total_hits, y + p / total_hits))
 						hits++;
 				}
-//				if (hits > 0) {
-					pixels[x + y * width] = grayscale(hits / 4.0f);
-//				} else {
-//					pixels[x + y * width] = 0xFF000000;
-//				}
+				pixels[x + y * width] = grayscale(hits / 4.0f) | 0x00FFFFFF;
 			}
 		}
 	}
@@ -859,8 +915,8 @@ namespace vivid { namespace graphics {
 		}
 	}
 
-	Font::Font(const std::string &path) {
-//		std::cout << "Opening \'" << path << "\'" << std::endl << std::endl;
+	Font::Font(const std::string &path, TextureAtlas &atlas)
+			: atlas(&atlas) {
 		std::vector<Table> tables;
 		unsigned char *fileData;
 		{
@@ -889,13 +945,13 @@ namespace vivid { namespace graphics {
 
 		int index = -1;
 		while (tables[++index].tag != tagToUINT32("head"));
-		HEADtable head = parseHEADtable(tables[index]);
+		head = parseHEADtable(tables[index]);
 		index = -1;
 		while (tables[++index].tag != tagToUINT32("maxp"));
 		MAXPtable maxp = parseMAXPtable(tables[index]);
 		index = -1;
 		while (tables[++index].tag != tagToUINT32("loca"));
-		parseLOCAtable(loca, tables[index], head, maxp);
+		loca = parseLOCAtable(tables[index], head, maxp);
 
 		index = -1;
 		while (tables[++index].tag != tagToUINT32("glyf"));
@@ -904,6 +960,14 @@ namespace vivid { namespace graphics {
 		index = -1;
 		while (tables[++index].tag != tagToUINT32("cmap"));
 		cmap = parseCMAPtable(tables[index]);
+
+		index = -1;
+		while (tables[++index].tag != tagToUINT32("hhea"));
+		hhea = parseHHEAtable(tables[index]);
+
+		index = -1;
+		while (tables[++index].tag != tagToUINT32("hmtx"));
+		hmtx = parseHMTXtable(tables[index], hhea, maxp);
 
 		index = -1;
 		while (tables[++index].tag != tagToUINT32("glyf"));
@@ -915,41 +979,50 @@ namespace vivid { namespace graphics {
 		delete glyf;
 	}
 
-	void Font::init() {
-		std::string s = "XAB";
-		for(const unsigned char &c : s) {
-			if(c >= 128)
+	void Font::init(const unsigned int &pointSize) {
+		this->pointSize = pointSize;
+
+		std::string s = "XAhx";
+		for (const unsigned char &c : s) {
+			if (c >= 128)
 				continue;
 
-			unsigned int width = 128;
-			unsigned int height = width;
+			Glyph &glyph = glyf->glyphs[cmap.glyphIndices[c]];
+			if (!glyph.initialized)
+				parseGLYFtable(*glyf, loca, cmap.glyphIndices[c]);
+
+			float pixelSize = pointSize * 300.0f / 72.0f / head.unitsPerEm;
+
+			unsigned int width = (unsigned int) (glyph.xMax * pixelSize);
+			unsigned int height = (unsigned int) (glyph.yMax * pixelSize);
+			std::cout << c << ": " << width / (2*46.0f) << "f, " << height / (2*46.0f) << "f" << std::endl;
+			std::cout << "Advance: " << hmtx.advanceWidth[cmap.glyphIndices[c]] * pixelSize / (2*46.0f) << std::endl;
+			std::cout << "Bearing: " << hmtx.leftSideBearing[cmap.glyphIndices[c]] * pixelSize / (2*46.0f) << std::endl;
 			unsigned int pixels[width * height];
 			renderBitmap(pixels, width, height, c);
-			Image* image = new Image(pixels, width, height, VIVID_IMAGE_FORMAT_RGBA);
-			textures[c] = new Texture(*image);
+			Image *image = new Image(pixels, width, height, VIVID_IMAGE_FORMAT_RGBA);
+			textures[c] = atlas->registerTexture(*image);
 		}
 	}
 
-	Texture& Font::getTexture(const unsigned char &character) {
-		if(character < 0 || character >= 128 || textures[character] == nullptr)
+	TextureHandle &Font::getTexture(const unsigned char &character) {
+		if (character < 0 || character >= 128 || textures[character] == nullptr)
 			return *(textures['X']);
 		return *(textures[character]);
 	}
 
-	void Font::renderBitmap(unsigned int *pixels, const unsigned int &width, const unsigned int &height,
-	                        const unsigned char &character) {
+	void Font::renderBitmap(unsigned int *pixels, unsigned int &width, unsigned int &height, const unsigned char &character) {
 		Glyph &glyph = glyf->glyphs[cmap.glyphIndices[character]];
-		if (!glyph.initialized)
-			parseGLYFtable(*glyf, loca, cmap.glyphIndices[character]);
+//		std::cout << character << ": " << glyph.xMin << " -> " << glyph.xMax << "\t " << glyph.yMin << " -> " << glyph.yMax << std::endl;
+//		std::cout << character << ": " << width << " x " << height << std::endl;
 		for (int c = 0; c < glyph.xCoords.size(); c++) {
-			glyph.xCoords[c] = (int) ((float) glyph.xCoords[c] * (width - 1));
-			glyph.yCoords[c] = height - 1 - (int) ((float) glyph.yCoords[c] * (width - 1));
+			glyph.xCoords[c] = (int) ((float) glyph.xCoords[c] * (height - 1));
+			glyph.yCoords[c] = height - 1 - (int) ((float) glyph.yCoords[c] * (height - 1));
 		}
 		render(pixels, width, height, glyph);
 	}
 
-	void Font::renderBitmapOutline(unsigned int *pixels, const unsigned int &width, const unsigned int &height,
-	                               const unsigned char &character) {
+	void Font::renderBitmapOutline(unsigned int *pixels, const unsigned int &width, const unsigned int &height, const unsigned char &character) {
 		Glyph &glyph = glyf->glyphs[cmap.glyphIndices[character]];
 		if (!glyph.initialized)
 			parseGLYFtable(*glyf, loca, cmap.glyphIndices[character]);
@@ -958,6 +1031,16 @@ namespace vivid { namespace graphics {
 			glyph.yCoords[c] = height - 1 - (int) ((float) glyph.yCoords[c] * (width - 1));
 		}
 		renderOutline(pixels, width, height, glyph);
+	}
+
+	float Font::getAdvance(const unsigned char &character, const float &size) {
+		float pixelSize = size * pointSize * 300.0f / 72.0f / head.unitsPerEm;
+		return hmtx.advanceWidth[cmap.glyphIndices[character]] * pixelSize;
+	}
+
+	float Font::getLeftSideBearing(const unsigned char &character, const float &size) {
+		float pixelSize = size * pointSize * 300.0f / 72.0f / head.unitsPerEm;
+		return hmtx.leftSideBearing[cmap.glyphIndices[character]] * pixelSize;
 	}
 
 }}

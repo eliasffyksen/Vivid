@@ -27,7 +27,7 @@ namespace vivid {
 			: id(id), uvMin(0, 0), uvMax(0, 0) {}
 
 	TextureAtlas::TextureAtlas(const unsigned int &border)
-	: border(border) {}
+	: border(border), invalidated(false) {}
 
 	TextureAtlas::~TextureAtlas() {
 		if (atlasTexture != nullptr)
@@ -35,6 +35,10 @@ namespace vivid {
 	}
 
 	void TextureAtlas::update() {
+		if(!invalidated)
+			return;
+
+		invalidated = false;
 		std::vector<unsigned int> sortedImages;
 		sortedImages.reserve(textures.size());
 		std::vector<bool> used(textures.size(), false);
@@ -141,6 +145,10 @@ namespace vivid {
 	}
 
 	TextureHandle *TextureAtlas::registerTexture(Image &image) {
+		if(image.getWidth() == 0 || image.getHeight() == 0)
+			return nullptr;
+
+		invalidated = true;
 		TextureHandle *handle = new TextureHandle(textures.size());
 		textures.emplace_back(&image, handle);
 		return handle;

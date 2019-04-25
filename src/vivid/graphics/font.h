@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 #include <vivid/graphics/texture.h>
+#include <vivid/scenegraph/textureatlas.h>
 
 namespace vivid { namespace graphics {
 
@@ -59,6 +60,27 @@ namespace vivid { namespace graphics {
 		unsigned int maxComponentDepth;
 	};
 
+	struct HHEAtable {
+		float version;
+		int ascent;
+		int descent;
+		int lineGap;
+		unsigned int advanceWidthMax;
+		int minLeftSideBearing;
+		int minRightSideBearing;
+		int xMaxExtent;
+		int caretSlopeRise;
+		int caretSlopeRun;
+		int caretOffset;
+		int metricDataFormat;
+		unsigned int numOfLongHorMetrics;
+	};
+
+	struct HMTXtable {
+		std::vector<unsigned int> advanceWidth;
+		std::vector<int> leftSideBearing;
+	};
+
 	struct LOCAtable {
 		std::vector<unsigned int> offsets;
 
@@ -90,10 +112,10 @@ namespace vivid { namespace graphics {
 	struct Glyph {
 		bool initialized = false;
 		bool normalized = false;
-		int xMin;
-		int xMax;
-		int yMin;
-		int yMax;
+		float xMin;
+		float xMax;
+		float yMin;
+		float yMax;
 		std::vector<unsigned int> endPoints;
 		std::vector<float> xCoords;
 		std::vector<float> yCoords;
@@ -112,21 +134,30 @@ namespace vivid { namespace graphics {
 
 	class Font {
 	public:
-		explicit Font(const std::string &path);
+		explicit Font(const std::string &path, TextureAtlas &atlas);
 		~Font();
 
-		void init();
+		void init(const unsigned int &pointSize);
 
-		Texture &getTexture(const unsigned char &character);
+		TextureHandle &getTexture(const unsigned char &character);
 
-		void renderBitmap(unsigned int *pixels, const unsigned int &width, const unsigned int &height, const unsigned char &character);
+		void renderBitmap(unsigned int *pixels, unsigned int &width, unsigned int &height, const unsigned char &character);
 		void renderBitmapOutline(unsigned int *pixels, const unsigned int &width, const unsigned int &height, const unsigned char &character);
 	private:
-		Texture *textures[128];
+		float getAdvance(const unsigned char &character, const float &size);
+		float getLeftSideBearing(const unsigned char &character, const float &size);
+	private:
+		unsigned int pointSize;
 
+		TextureAtlas *atlas;
+		TextureHandle *textures[128];
+
+		HEADtable head;
 		LOCAtable loca;
 		CMAPtable cmap;
 		GLYFtable *glyf;
+		HHEAtable hhea;
+		HMTXtable hmtx;
 	};
 
 }}
