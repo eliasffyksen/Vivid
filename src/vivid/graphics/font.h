@@ -164,7 +164,7 @@ namespace vivid { namespace graphics {
 
 		TextureHandle &getTexture(const unsigned char &character) const;
 
-		void renderBitmap(unsigned int *pixels, unsigned int &width, unsigned int &height, const unsigned char &character);
+		void renderBitmap(unsigned int *pixels, const unsigned int &width, const unsigned int &height, const unsigned char &character);
 		void renderBitmapOutline(unsigned int *pixels, const unsigned int &width, const unsigned int &height, const unsigned char &character);
 
 		float getWidth(const unsigned char &character) const;

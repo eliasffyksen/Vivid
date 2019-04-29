@@ -473,9 +473,9 @@ namespace vivid { namespace graphics {
 		p += 4;
 		vhea.vertTypoAscender = getINT16(p);
 		p += 2;
-		vhea.vertTypoDescender= getINT16(p);
+		vhea.vertTypoDescender = getINT16(p);
 		p += 2;
-		vhea.vertTypeLineGap= getINT16(p);
+		vhea.vertTypeLineGap = getINT16(p);
 		p += 2;
 		vhea.advanceHeightMax = getUINT16(p);
 		p += 2;
@@ -923,17 +923,108 @@ namespace vivid { namespace graphics {
 		return (curInt << 24) | (curInt << 16) | (curInt << 8) | curInt;
 	}
 
+	struct Edge {
+		float x0, y0, x1, y1;
+
+		Edge(const float &x0, const float &y0, const float &x1, const float &y1)
+				: x0(x0), y0(y0), x1(x1), y1(y1) {}
+	};
+
 	void render(unsigned int *pixels, const unsigned int &width, const unsigned int &height, const Glyph &glyph) {
-		for (int y = 0; y < height; y++) {
-			for (int x = 0; x < width; x++) {
-				int hits = 0;
-				int total_hits = 8;
-				float offsets[8] = {5, 0, 3, 6, 2, 3, 4, 7};
-				for (int p = 0; p < total_hits; p++) {
-					if (inGlyph(glyph, x + offsets[p] / total_hits, y + p / total_hits))
-						hits++;
+//		for (int y = 0; y < height; y++) {
+//			for (int x = 0; x < width; x++) {
+//				int hits = 0;
+//				int total_hits = 8;
+//				float offsets[8] = {5, 0, 3, 6, 2, 3, 4, 7};
+//				for (int p = 0; p < total_hits; p++) {
+//					if (inGlyph(glyph, x + offsets[p] / total_hits, y + p / total_hits))
+//						hits++;
+//				}
+//				pixels[x + y * width] = grayscale(hits / 4.0f) | 0x00FFFFFF;
+//			}
+//		}
+
+		const int edgeCount = glyph.xCoords.size();
+		std::vector<Edge> sortedEdges;
+		sortedEdges.reserve(edgeCount);
+		std::vector<unsigned int> used(edgeCount, 0); // 0 - unused, 1 - used in sorting, 2 - out of bounds of scanline
+
+		for (int c = 0; c < glyph.endPoints.size(); c++) {
+			int s = (c == 0 ? 0 : glyph.endPoints[c - 1] + 1);
+			for (unsigned int i = 0; i < edgeCount; i++) {
+				unsigned int biggestYMax = 0;
+				unsigned int biggestIndex = 0;
+				float x0, y0, x1, y1;
+				for (unsigned int e = 0; e < edgeCount; e++) {
+					if (used[e] == 1)
+						continue;
+
+					int cur = s + e;
+					int next = (cur + 1 > glyph.endPoints[c] ? cur - glyph.endPoints[c] + s : cur + 1);
+					unsigned int yMax = std::max(glyph.yCoords[cur], glyph.yCoords[next]);
+					if (yMax > biggestYMax) {
+						biggestYMax = yMax;
+						biggestIndex = cur;
+						x0 = glyph.xCoords[cur];
+						y0 = glyph.yCoords[cur];
+						x1 = glyph.xCoords[next];
+						y1 = glyph.yCoords[next];
+					}
 				}
-				pixels[x + y * width] = grayscale(hits / 4.0f) | 0x00FFFFFF;
+				used[biggestIndex] = 1;
+				sortedEdges.emplace_back(x0, y0, x1, y1);
+			}
+		}
+
+		for (int y = height - 1; y >= 0; y--) {
+			int A[width];
+			int X[width];
+			for(int k = 0; k < width; k++) {
+				X[k] = 0;
+			}
+			for (int i = 0; i < edgeCount; i++) {
+				Edge &e = sortedEdges[i];
+				if (std::max(e.y0, e.y1) <= y)
+					break;
+				if (std::min(e.y0, e.y1) >= (y + 1))
+					continue;
+
+//				std::cout << "\t" << y << std::endl;
+//				std::cout << "(" << e.x0 << ", " << e.y0 << ") -> (" << e.x1 << ", " << e.y1 << ")" << std::endl;
+				if(e.y0 == e.y1)
+					continue;
+				// y = y0*(1-t) + t * y1
+				// y = y0 + t * (y1 - y0)
+				float tu = ((y+1) - e.y0) / (e.y1 - e.y0);
+				if(tu < 0.0f)
+					tu = 0.0f;
+				if(tu > 1.0f)
+					tu = 1.0f;
+				float tl = (y - e.y0) / (e.y1 - e.y0);
+				if(tl < 0.0f)
+					tl = 0.0f;
+				if(tl > 1.0f)
+					tl = 1.0f;
+
+				float xu = e.x0*(1-tu) + tu * e.x1;
+				float xl = e.x0*(1-tl) + tl * e.x1;
+				int xMin = (int) std::min(xu, xl);
+				int xMax = (int) std::max(xu, xl);
+
+				if(e.y0 <= e.y1) {
+					X[xMin] += 1;
+				} else {
+					X[xMax] -= 1;
+				}
+			}
+			int S = 0;
+			for(int x = 0; x < width; x++) {
+				S += X[x];
+				if(S > 0)
+//					pixels[x + y * width] = grayscale(S / 10);
+					pixels[x + y * width] = 0xFFFFFFFF;
+				else
+					pixels[x + y * width] = 0xFF000000;
 			}
 		}
 	}
@@ -986,7 +1077,7 @@ namespace vivid { namespace graphics {
 
 			stream.close();
 
-			hexdump(fileData, 0, 320);
+//			hexdump(fileData, 0, 320);
 
 			parseData(tables, fileData);
 		}
@@ -1040,7 +1131,7 @@ namespace vivid { namespace graphics {
 	void Font::init(const unsigned int &pointSize) {
 		this->pointSize = pointSize;
 
-		std::string s = "brown";
+		std::string s = "A";
 		std::cout << s << std::endl;
 		for (const auto &c : s) {
 			if (c >= MAX_GLYPHS)
@@ -1054,8 +1145,8 @@ namespace vivid { namespace graphics {
 
 			float pixelSize = pointSize * 300.0f / 72.0f / head.unitsPerEm;
 
-			unsigned int width = (unsigned int) (glyph.xMax * pixelSize);
-			unsigned int height = (unsigned int) (glyph.yMax * pixelSize);
+			unsigned int width = (unsigned int) (glyph.xMax * pixelSize * 2);
+			unsigned int height = (unsigned int) (glyph.yMax * pixelSize * 2);
 			unsigned int pixels[width * height];
 			renderBitmap(pixels, width, height, c);
 			Image *image = new Image(pixels, width, height, VIVID_IMAGE_FORMAT_RGBA);
@@ -1069,13 +1160,11 @@ namespace vivid { namespace graphics {
 		return *(textures[character]);
 	}
 
-	void Font::renderBitmap(unsigned int *pixels, unsigned int &width, unsigned int &height, const unsigned char &character) {
+	void Font::renderBitmap(unsigned int *pixels, const unsigned int &width, const unsigned int &height, const unsigned char &character) {
 		Glyph &glyph = glyf->glyphs[cmap.glyphIndices[character]];
-//		std::cout << character << ": " << glyph.xMin << " -> " << glyph.xMax << "\t " << glyph.yMin << " -> " << glyph.yMax << std::endl;
-//		std::cout << character << ": " << width << " x " << height << std::endl;
 		for (int c = 0; c < glyph.xCoords.size(); c++) {
-			glyph.xCoords[c] = (int) ((float) glyph.xCoords[c] * (height - 1));
-			glyph.yCoords[c] = height - 1 - (int) ((float) glyph.yCoords[c] * (height - 1));
+			glyph.xCoords[c] = ((float) glyph.xCoords[c] * (height - 1));
+			glyph.yCoords[c] = height - 1 - ((float) glyph.yCoords[c] * (height - 1));
 		}
 		render(pixels, width, height, glyph);
 	}

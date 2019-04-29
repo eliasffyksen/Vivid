@@ -75,23 +75,24 @@ int main() {
 
 //	LOG(sprites.size() << " sprites");
 
-	Text text(font, "brown");
-	text.getTransform().getPosition().x = -1.0f;
+	Text text(font, "A");
+//	text.getTransform().getPosition().x = -1.0f;
+	text.getTransform().getPosition().x = -0.5f;
 	text.getTransform().setScale(vdm::vec3(0.68f));
 
 	Scene scene;
 	Layer *worldLayer = scene.createLayer(&batchgui, 1);
 	//Layer *guiLayer = scene.createLayer(&batch, 10);
 
-	worldLayer->addChild(text);
-	worldLayer->addChild(goat);
 	goat.addChild(goatSprite);
 //	goat.addChild(atlasSprite);
 //	goat.addChild(spriteX);
 //	goat.addChild(spriteA);
 //	goat.addChild(spriteh);
 //	goat.addChild(spritex);
-	worldLayer->addChild(arrow);
+	worldLayer->addChild(text);
+//	worldLayer->addChild(goat);
+//	worldLayer->addChild(arrow);
 
 	float sx = 0.5, sy = 0.5;
 	float x = 0.0f, y = 0;
