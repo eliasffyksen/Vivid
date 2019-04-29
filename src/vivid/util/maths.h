@@ -37,6 +37,7 @@ namespace vivid { namespace vdm {
 	vec4 lerp(const vec4 &v0, const vec4 &v1, const float &t);
 	quat lerp(quat q0, quat q1, const float &t);
 	quat slerp(quat q0, quat q1, float t);
+	quat slerpTowards(quat cur, quat goal, float omega);
 
 	class vec2 {
 	public:

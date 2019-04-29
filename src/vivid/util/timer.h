@@ -26,8 +26,7 @@ namespace vivid {
 		inline float elapsed() {
 			auto now = clock::now();
 			float deltaTime = std::chrono::duration_cast<std::chrono::microseconds>(now - last).count() / 1000000.0f;
-			if(deltaTime != 0.0f)
-				last = now;
+			last = now;
 			return deltaTime;
 		}
 

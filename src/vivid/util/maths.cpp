@@ -75,6 +75,51 @@ namespace vivid { namespace vdm {
 
 		return (s0 * q0) + (s1 * q1);
 	}
+	quat slerpTowards(quat cur, quat goal, float omega) {
+		if(omega == 0.0f)
+			return cur;
+
+		cur.normalize();
+		goal.normalize();
+
+		float t = omega / angle(cur, goal);
+
+		if(t < 0.0f)
+			t = 0.0f;
+		if(t > 1.0f)
+			t = 1.0f;
+
+		float dot = cur.dot(goal);
+
+		if (dot < 0.0f) {
+			goal = -goal;
+			dot = -dot;
+		}
+
+//		if(dot > 1.0f)
+//			dot = 1.0f;
+
+		ASSERT(!_isnan(dot));
+		ASSERT(!_isnan(t));
+
+		// if the dot is very close to 1, the angle is too small to be used effectively, we therefore approximate as a linear interpolation
+		if (dot > 0.95) {
+			quat res = ((1 - t) * cur) + (t * goal);
+			res.normalize();
+			return res;
+		}
+
+		double theta0 = acos((double) dot);
+		ASSERT(!_isnan(theta0));
+		double theta = theta0 * t;
+		double sintheta0 = sin(theta0);
+		double sintheta = sin(theta);
+
+		auto s0 = (float) (cos(theta) - dot * sintheta / sintheta0);
+		auto s1 = (float) (sintheta / sintheta0);
+
+		return (s0 * cur) + (s1 * goal);
+	}
 
 /// vector2f
 
