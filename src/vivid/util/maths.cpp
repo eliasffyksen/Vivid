@@ -39,6 +39,11 @@ namespace vivid { namespace vdm {
 		q0.normalize();
 		q1.normalize();
 
+		if(t < 0.0f)
+			t = 0.0f;
+		if(t > 1.0f)
+			t = 1.0f;
+
 		float dot = q0.dot(q1);
 
 		if (dot < 0.0f) {
@@ -46,15 +51,21 @@ namespace vivid { namespace vdm {
 			dot = -dot;
 		}
 
+//		if(dot > 1.0f)
+//			dot = 1.0f;
+
+		ASSERT(!_isnan(dot));
+		ASSERT(!_isnan(t));
+
 		// if the dot is very close to 1, the angle is too small to be used effectively, we therefore approximate as a linear interpolation
-		ASSERT(dot != NAN && dot != -NAN);
-		if (dot > 0.50) { // TODO: this is very glitchy
+		if (dot > 0.95) {
 			quat res = ((1 - t) * q0) + (t * q1);
 			res.normalize();
 			return res;
 		}
 
 		double theta0 = acos((double) dot);
+		ASSERT(!_isnan(theta0));
 		double theta = theta0 * t;
 		double sintheta0 = sin(theta0);
 		double sintheta = sin(theta);
@@ -353,14 +364,14 @@ namespace vivid { namespace vdm {
 	}
 
 	float quat::angle(const quat &other) const {
-		float dot = this->dot(other);
-		if (dot < 0.0)
+		float dot = this->dot(other) / length() / other.length();
+		if (dot < 0.0f)
 			dot = -dot;
-		if (dot > 1)
-			dot = 1;
+		if(dot > 1.0f)
+			dot = 1.0f;
 
-		float angle = (float) acos((double) dot);
-		ASSERT(angle >= 0 && angle <= VD_PI);
+		float angle = (float) acos(dot);
+		ASSERT(!_isnan(angle));
 		return angle;
 	}
 

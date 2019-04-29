@@ -11,6 +11,8 @@
 
 namespace vivid { namespace graphics {
 
+#define MAX_GLYPHS 300
+
 	struct Table {
 		unsigned int tag;
 		unsigned int checkSum;
@@ -81,6 +83,27 @@ namespace vivid { namespace graphics {
 		std::vector<int> leftSideBearing;
 	};
 
+	struct VHEAtable {
+		float version;
+		int vertTypoAscender;
+		int vertTypoDescender;
+		int vertTypeLineGap;
+		unsigned int advanceHeightMax;
+		int minTopSideBearing;
+		int minBottomSideBearing;
+		int yMaxExtent;
+		int caretSlopeRise;
+		int caretSlopeRun;
+		int caretOffset;
+		int metricDataFormat;
+		unsigned int numOfLongVerMetrics;
+	};
+
+	struct VMTXtable {
+		std::vector<unsigned int> advanceHeight;
+		std::vector<int> topSideBearing;
+	};
+
 	struct LOCAtable {
 		std::vector<unsigned int> offsets;
 
@@ -139,25 +162,31 @@ namespace vivid { namespace graphics {
 
 		void init(const unsigned int &pointSize);
 
-		TextureHandle &getTexture(const unsigned char &character);
+		TextureHandle &getTexture(const unsigned char &character) const;
 
 		void renderBitmap(unsigned int *pixels, unsigned int &width, unsigned int &height, const unsigned char &character);
 		void renderBitmapOutline(unsigned int *pixels, const unsigned int &width, const unsigned int &height, const unsigned char &character);
-	private:
-		float getAdvance(const unsigned char &character, const float &size);
-		float getLeftSideBearing(const unsigned char &character, const float &size);
+
+		float getWidth(const unsigned char &character) const;
+		float getHeight(const unsigned char &character) const;
+		float getAdvanceWidth(const unsigned char &character) const;
+		float getLeftSideBearing(const unsigned char &character) const;
+		float getAdvanceHeight(const unsigned char &character) const;
+		float getTopSideBearing(const unsigned char &character) const;
+
+		float getWidth(const std::string &s) const;
 	private:
 		unsigned int pointSize;
 
 		TextureAtlas *atlas;
-		TextureHandle *textures[128];
+		TextureHandle *textures[MAX_GLYPHS];
 
 		HEADtable head;
 		LOCAtable loca;
 		CMAPtable cmap;
 		GLYFtable *glyf;
-		HHEAtable hhea;
 		HMTXtable hmtx;
+		VMTXtable vmtx;
 	};
 
 }}

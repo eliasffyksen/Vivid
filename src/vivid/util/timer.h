@@ -9,28 +9,30 @@
 
 namespace vivid {
 
+	using clock = std::chrono::high_resolution_clock;
+
 	class Timer {
 	private:
-		std::chrono::high_resolution_clock timer;
 		std::chrono::time_point<std::chrono::system_clock> last;
 		std::chrono::time_point<std::chrono::system_clock> start;
 	public:
-		Timer()
-				: last(timer.now()), start(timer.now()) {}
+		inline Timer()
+				: last(clock::now()), start(clock::now()) {}
 
-		void reset() {
-			start = timer.now();
+		inline void reset() {
+			start = clock::now();
 		}
 
-		double elapsed() {
-			auto now = timer.now();
-			double deltaTime = std::chrono::duration_cast<std::chrono::microseconds>(now - last).count() / 1000000.0;
-			last = now;
+		inline float elapsed() {
+			auto now = clock::now();
+			float deltaTime = std::chrono::duration_cast<std::chrono::microseconds>(now - last).count() / 1000000.0f;
+			if(deltaTime != 0.0f)
+				last = now;
 			return deltaTime;
 		}
 
-		double time() {
-			return std::chrono::duration_cast<std::chrono::microseconds>(timer.now() - start).count() / 1000000.0;
+		inline float time() {
+			return std::chrono::duration_cast<std::chrono::microseconds>(clock::now() - start).count() / 1000000.0f;
 		}
 
 	};

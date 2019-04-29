@@ -1,10 +1,10 @@
-#include <cstdlib> // for testing
-
 // Include standard headers
 #include <vivid/core.h>
 #include <vivid/graphics/window.h>
 #include <vivid/input/input.h>
 #include <vivid/vivid.h>
+#include <vivid/events/windowEvent.h>
+
 #include <vivid/graphics/shader.h>
 #include <vivid/scenegraph/sprite.h>
 #include <vivid/graphics/batchrenderer2D.h>
@@ -14,9 +14,9 @@
 #include <vivid/util/maths.h>
 #include <VividImage/image.h>
 #include <vivid/scenegraph/textureatlas.h>
+#include <vivid/scenegraph/Text.h>
+#include <vivid/graphics/font.h>
 
-#include "vivid/events/windowEvent.h"
-#include "vivid/graphics/font.h"
 
 int main() {
 	using namespace vivid;
@@ -53,11 +53,14 @@ int main() {
 	auto guyhandle = atlas.registerTexture(atlas4);
 	auto goathandle = atlas.registerTexture(atlasgoat);
 
-	Font font("fonts/Aaargh/Aaargh.ttf", atlas);
+//	Font font("fonts/Aaargh/Aaargh.ttf", atlas);
+	Font font("fonts/roboto-slab/RobotoSlab-Light.ttf", atlas);
 	font.init(12);
 
 	GameObject goat;
-	goat.getTransform().setScale(0.5f);
+//	goat.getTransform().setScale(0.5f);
+	Sprite atlasSprite(-0.5f, -0.5f, 1.0f, 1.0f, nullptr);
+	atlasSprite.getTransform().setScale(vdm::vec3(2.0f));
 	Sprite goatSprite(-0.5f, -0.5f, 1.0f, 1.0f, goathandle);
 //	Sprite goat(-0.5f, -0.5f, 1.0f, 1.0f, &font.getTexture('X'));
 //	goat.getTransform().setScale(vdm::vec3(2.0f));
@@ -79,21 +82,27 @@ int main() {
 
 //	LOG(sprites.size() << " sprites");
 
+	Text text(font, "brown");
+	text.getTransform().getPosition().x = -1.0f;
+	text.getTransform().setScale(vdm::vec3(0.3f));
+
 	Scene scene;
 	Layer *worldLayer = scene.createLayer(&batchgui, 1);
 	//Layer *guiLayer = scene.createLayer(&batch, 10);
 
+	worldLayer->addChild(text);
 //	worldLayer->addChild(guy);
-	worldLayer->addChild(goat);
+//	worldLayer->addChild(goat);
 //	goat.addChild(goatSprite);
-	goat.addChild(spriteX);
-	goat.addChild(spriteA);
-	goat.addChild(spriteh);
-	goat.addChild(spritex);
+	goat.addChild(atlasSprite);
+//	goat.addChild(spriteX);
+//	goat.addChild(spriteA);
+//	goat.addChild(spriteh);
+//	goat.addChild(spritex);
 //	worldLayer->addChild(arrow);
 
 	float sx = 0.5, sy = 0.5;
-	float x = 0, y = 0;
+	float x = 0.0f, y = 0;
 	float angle = 0;
 	float omega = (VD_PI * 2.0f / 5.0f);
 	bool toggled = false;
@@ -126,6 +135,8 @@ int main() {
 	while (app.isRunning()) {
 		window.clear();
 		auto delta = (float) timer.elapsed();
+		if(delta == 0.0f)
+			continue;
 
 		input.getCursorPosition(mouse);
 
@@ -180,14 +191,14 @@ int main() {
 		atlas.bind(Texture::TEXTURE_MAP);
 
 		if (toggled) {
-			float omegaArrow = 10;
+			float omegaArrow = VD_PI * 2.0f / 10.0f;
 
 			vdm::vec2 dir = mouse - arrow.getTransform().getPosition().xy();
-			vdm::quat goal = vdm::quat((float) atan2(dir.y, dir.x), vdm::vec3(0, 0, 1));
+			vdm::quat goal = vdm::quat(atan2f(dir.y, dir.x), vdm::vec3(0, 0, 1));
 			vdm::quat qOffset(-VD_PI_2, vdm::vec3(0, 0, 1));
 			goal = qOffset * goal;
 			vdm::quat cur = vdm::quat(arrow.getTransform().getRotation().w, arrow.getTransform().getRotation().x, arrow.getTransform().getRotation().y, arrow.getTransform().getRotation().z);
-			vdm::quat q = vdm::slerp(cur, goal, vdm::clamp(omegaArrow * delta * vdm::angle(cur, goal), 0.005f, 1.0f));
+			vdm::quat q = vdm::slerp(cur, goal, omegaArrow * delta / vdm::angle(cur, goal));
 
 			arrow.getTransform().setRotation(q);
 		}
