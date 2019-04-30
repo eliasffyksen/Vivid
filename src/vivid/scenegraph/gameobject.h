@@ -21,15 +21,12 @@ namespace vivid {
 		Transform transform;
 	public:
 		GameObject() = default;
-
 		virtual ~GameObject() = default;
 
 		virtual void addChild(GameObject &child) final;
-
 		virtual void removeChild(GameObject &child) final;
 
 		virtual void updateObject(const Input &input) final;
-
 		virtual void renderObject(graphics::Renderer2D *renderer) final;
 
 		inline Transform &getTransform() {
@@ -37,10 +34,8 @@ namespace vivid {
 		}
 
 		virtual const vdm::mat4 getModelMatrix() final;
-
-	public:
+	protected:
 		virtual void update(const Input &input) {}
-
 		virtual void render(const graphics::Renderer2D *renderer) {}
 	};
 

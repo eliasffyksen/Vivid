@@ -12,7 +12,15 @@ namespace vivid {
 
 	class Text : public GameObject {
 	public:
-		Text(const graphics::Font &font, const std::string &s);
+		Text(const graphics::Font &font, std::string s);
+
+		void render(const vivid::graphics::Renderer2D *renderer) override;
+
+		void setText(std::string text);
+		void setFont(const graphics::Font &font);
+	private:
+		const graphics::Font * font;
+		std::string text;
 	};
 
 }

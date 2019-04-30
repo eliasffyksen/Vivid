@@ -48,9 +48,9 @@ int main() {
 	auto arrowHandle = atlas.registerTexture(atlas1);
 	auto goathandle = atlas.registerTexture(atlasgoat);
 
-//	Font font("fonts/Aaargh/Aaargh.ttf", atlas);
-	Font font("fonts/roboto-slab/RobotoSlab-Light.ttf", atlas);
-	font.init(12);
+	Font font("fonts/Aaargh/Aaargh.ttf", atlas);
+//	Font font("fonts/roboto-slab/RobotoSlab-Light.ttf", atlas);
+	font.init(24);
 
 	GameObject goat;
 //	goat.getTransform().setScale(0.5f);
@@ -75,24 +75,24 @@ int main() {
 
 //	LOG(sprites.size() << " sprites");
 
-	Text text(font, "A");
+	Text text(font, "AO");
 //	text.getTransform().getPosition().x = -1.0f;
 	text.getTransform().getPosition().x = -0.5f;
-	text.getTransform().setScale(vdm::vec3(0.68f));
+	text.getTransform().setScale(vdm::vec3(0.3f));
 
 	Scene scene;
 	Layer *worldLayer = scene.createLayer(&batchgui, 1);
 	//Layer *guiLayer = scene.createLayer(&batch, 10);
 
-	goat.addChild(goatSprite);
+//	goat.addChild(goatSprite);
 //	goat.addChild(atlasSprite);
 //	goat.addChild(spriteX);
 //	goat.addChild(spriteA);
 //	goat.addChild(spriteh);
 //	goat.addChild(spritex);
-	worldLayer->addChild(text);
-//	worldLayer->addChild(goat);
-//	worldLayer->addChild(arrow);
+	goat.addChild(text);
+	worldLayer->addChild(goat);
+//	worldLayer->addChild(arrow) ;
 
 	float sx = 0.5, sy = 0.5;
 	float x = 0.0f, y = 0;
