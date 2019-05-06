@@ -8,12 +8,12 @@ layout(location = 2) in vec4 colour;
 out DATA {
     vec3 position;
     vec2 texCoords;
-    vec4 color;
+    vec4 colour;
 } vs_out;
 
 void main() {
     vs_out.position = position;
     vs_out.texCoords = texCoords;
-    vs_out.color = colour;
+    vs_out.colour = colour;
     gl_Position = vec4(position, 1.0);
 }

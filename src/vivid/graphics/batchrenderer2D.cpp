@@ -29,6 +29,7 @@ namespace vivid { namespace graphics {
 
 		glVertexAttribPointer(SHADER_POSITION_INDEX, 3, GL_FLOAT, GL_FALSE, BATCH_RENDERER_VERTEX_SIZE, (const GLvoid *) nullptr);
 		glVertexAttribPointer(SHADER_TEXCOORDS_INDEX, 2, GL_FLOAT, GL_FALSE, BATCH_RENDERER_VERTEX_SIZE, (const GLvoid *) (offsetof(Vertex, Vertex::textureCoordinates)));
+		glVertexAttribPointer(SHADER_COLOR_INDEX, 4, GL_FLOAT, GL_FALSE, BATCH_RENDERER_VERTEX_SIZE, (const GLvoid *) (offsetof(Vertex, Vertex::colour)));
 
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 
@@ -78,20 +79,26 @@ namespace vivid { namespace graphics {
 			uvBottom = quad->getTextureHandle()->uvMax.v;
 		}
 
+		const vdm::vec4 &colour = vdm::vec4(1.0f, 0.0f, 1.0f, 0.0f);
+
 		buffer->position = (currentTransformation * vdm::vec4(position, 1)).xyz();
 		buffer->textureCoordinates = vdm::vec2(uvLeft, uvBottom);
+		buffer->colour = colour;
 		buffer++;
 
 		buffer->position = (currentTransformation * vdm::vec4(position.x, position.y + size.y, position.z, 1)).xyz();
 		buffer->textureCoordinates = vdm::vec2(uvLeft, uvTop);
+		buffer->colour = colour;
 		buffer++;
 
 		buffer->position = (currentTransformation * vdm::vec4(position.x + size.x, position.y + size.y, position.z, 1)).xyz();
 		buffer->textureCoordinates = vdm::vec2(uvRight, uvTop);
+		buffer->colour = colour;
 		buffer++;
 
 		buffer->position = (currentTransformation * vdm::vec4(position.x + size.x, position.y, position.z, 1)).xyz();
 		buffer->textureCoordinates = vdm::vec2(uvRight, uvBottom);
+		buffer->colour = colour;
 		buffer++;
 
 		indexCount += 6;

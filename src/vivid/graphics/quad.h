@@ -13,6 +13,7 @@ namespace vivid { namespace graphics {
 	public:
 		vdm::vec3 position;
 		vdm::vec2 textureCoordinates;
+		vdm::vec4 colour;
 	};
 
 	class Quad {

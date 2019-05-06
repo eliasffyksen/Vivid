@@ -649,6 +649,57 @@ namespace vivid { namespace graphics {
 			}
 		}
 
+
+		for (int c = 0; c < glyph.endPoints.size(); c++) {
+			int s = (c == 0 ? 0 : glyph.endPoints[c - 1] + 1);
+			for (unsigned int e = 0; s + e <= glyph.endPoints[c]; e++) {
+				int cur = s + e;
+				int next = (cur + 1 > glyph.endPoints[c] ? cur - glyph.endPoints[c] + s : cur + 1);
+				int dnext = (cur + 2 > glyph.endPoints[c] ? cur + 1 - glyph.endPoints[c] + s : cur + 2);
+				bool bezier = true;
+				float x0, y0, xc, yc, x1, y1;
+				if (glyph.onGlyph[cur] && !glyph.onGlyph[next] && glyph.onGlyph[dnext]) {
+					x0 = glyph.xCoords[cur];
+					y0 = glyph.yCoords[cur];
+					xc = glyph.xCoords[next];
+					yc = glyph.yCoords[next];
+					x1 = glyph.xCoords[dnext];
+					y1 = glyph.yCoords[dnext];
+					e++;
+				} else if (glyph.onGlyph[cur] && !glyph.onGlyph[next] && !glyph.onGlyph[dnext]) {
+					x0 = glyph.xCoords[cur];
+					y0 = glyph.yCoords[cur];
+					xc = glyph.xCoords[next];
+					yc = glyph.yCoords[next];
+					x1 = (glyph.xCoords[next] + glyph.xCoords[dnext]) / 2;
+					y1 = (glyph.yCoords[next] + glyph.yCoords[dnext]) / 2;
+				} else if (!glyph.onGlyph[cur] && !glyph.onGlyph[next] && !glyph.onGlyph[dnext]) {
+					x0 = (glyph.xCoords[cur] + glyph.xCoords[next]) / 2;
+					y0 = (glyph.yCoords[cur] + glyph.yCoords[next]) / 2;
+					xc = glyph.xCoords[next];
+					yc = glyph.yCoords[next];
+					x1 = (glyph.xCoords[next] + glyph.xCoords[dnext]) / 2;
+					y1 = (glyph.yCoords[next] + glyph.yCoords[dnext]) / 2;
+				} else if (!glyph.onGlyph[cur] && !glyph.onGlyph[next] && glyph.onGlyph[dnext]) {
+					x0 = (glyph.xCoords[cur] + glyph.xCoords[next]) / 2;
+					y0 = (glyph.yCoords[cur] + glyph.yCoords[next]) / 2;
+					xc = glyph.xCoords[next];
+					yc = glyph.yCoords[next];
+					x1 = glyph.xCoords[dnext];
+					y1 = glyph.yCoords[dnext];
+					e++;
+				} else {
+					printf("Nothing matches (%d%c, %d%c, %d%c)\n", cur, (glyph.onGlyph[cur] ? 'n' : 'f'), next, (glyph.onGlyph[next] ? 'n' : 'f'), dnext, (glyph.onGlyph[dnext] ? 'n' : 'f'));
+					bezier = false;
+				}
+
+				if(bezier) {
+					
+				}
+			}
+		}
+
+
 		xMaxActual -= xMinActual;
 		yMaxActual -= yMinActual;
 		glyph.xMax = xMaxActual;
@@ -657,6 +708,8 @@ namespace vivid { namespace graphics {
 			glyph.xCoords[c] = ((float) (glyph.xCoords[c] - xMinActual)) / yMaxActual;
 			glyph.yCoords[c] = ((float) (glyph.yCoords[c] - yMinActual)) / yMaxActual;
 		}
+
+
 	}
 
 	void readCompoundGlyph(const unsigned char *p, const int &nContours, Glyph &glyph) {
@@ -1145,7 +1198,7 @@ namespace vivid { namespace graphics {
 
 			unsigned int width = (unsigned int) (glyph.xMax * pixelSize);
 			unsigned int height = (unsigned int) (glyph.yMax * pixelSize);
-			unsigned int* pixels = new unsigned int[width * height];
+			unsigned int *pixels = new unsigned int[width * height];
 			renderBitmap(pixels, width, height, c);
 			Image *image = new Image(pixels, width, height, VIVID_IMAGE_FORMAT_RGBA);
 			textures[c] = atlas->registerTexture(*image);
