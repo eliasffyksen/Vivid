@@ -694,7 +694,7 @@ namespace vivid { namespace graphics {
 				}
 
 				if(bezier) {
-					
+
 				}
 			}
 		}
